@@ -64,7 +64,7 @@
             this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(922, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(922, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -73,7 +73,7 @@
             this.toolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(20, 24);
+            this.toolStripLabel1.Size = new System.Drawing.Size(20, 28);
             this.toolStripLabel1.Text = "toolStripLabel1";
             // 
             // toolStripButton1
@@ -131,7 +131,7 @@
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 27);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 31);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -150,7 +150,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.splitContainer1.Size = new System.Drawing.Size(922, 461);
+            this.splitContainer1.Size = new System.Drawing.Size(922, 457);
             this.splitContainer1.SplitterDistance = 219;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 1;
@@ -165,7 +165,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(199, 33);
             this.button6.TabIndex = 5;
-            this.button6.Text = "客服信件紀錄查詢";
+            this.button6.Text = "客服信件紀錄查詢(X)";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -179,7 +179,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(199, 33);
             this.button5.TabIndex = 4;
-            this.button5.Text = "遊戲專區";
+            this.button5.Text = "遊戲專區(X)";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -193,7 +193,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(199, 33);
             this.button4.TabIndex = 3;
-            this.button4.Text = "個人成績查詢";
+            this.button4.Text = "個人成就查詢";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -221,7 +221,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(199, 33);
             this.button2.TabIndex = 1;
-            this.button2.Text = "消費紀錄查詢";
+            this.button2.Text = "商城消費紀錄";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -261,7 +261,6 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "ＭemberCenter";
             this.Text = "ＭemberCenter";
-            //this.Load += new System.EventHandler(this.ＭemberCenter_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
