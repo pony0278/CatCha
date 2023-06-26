@@ -46,14 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsumptionRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsumptionRecord.Designer.cs">
+      <DependentUpon>ConsumptionRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerService.Designer.cs">
+      <DependentUpon>CustomerService.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game.Designer.cs">
+      <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberInformation.Designer.cs">
+      <DependentUpon>MemberInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalAchievement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalAchievement.Designer.cs">
+      <DependentUpon>PersonalAchievement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefundStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RefundStatus.Designer.cs">
+      <DependentUpon>RefundStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ＭemberCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ＭemberCenter.Designer.cs">
+      <DependentUpon>ＭemberCenter.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConsumptionRecord.resx">
+      <DependentUpon>ConsumptionRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerService.resx">
+      <DependentUpon>CustomerService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberInformation.resx">
+      <DependentUpon>MemberInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalAchievement.resx">
+      <DependentUpon>PersonalAchievement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +120,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RefundStatus.resx">
+      <DependentUpon>RefundStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ＭemberCenter.resx">
+      <DependentUpon>ＭemberCenter.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\eQc4d3.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
