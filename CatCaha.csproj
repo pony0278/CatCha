@@ -76,6 +76,12 @@
     <Compile Include="MemberInformation.Designer.cs">
       <DependentUpon>MemberInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDetails.Designer.cs">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonalAchievement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     </Compile>
     <Compile Include="RefundStatus.Designer.cs">
       <DependentUpon>RefundStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnDetails.Designer.cs">
+      <DependentUpon>ReturnDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="ＭemberCenter.cs">
       <SubType>Form</SubType>
@@ -108,6 +120,9 @@
     <EmbeddedResource Include="MemberInformation.resx">
       <DependentUpon>MemberInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrderDetails.resx">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PersonalAchievement.resx">
       <DependentUpon>PersonalAchievement.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +137,9 @@
     </Compile>
     <EmbeddedResource Include="RefundStatus.resx">
       <DependentUpon>RefundStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnDetails.resx">
+      <DependentUpon>ReturnDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ＭemberCenter.resx">
       <DependentUpon>ＭemberCenter.cs</DependentUpon>

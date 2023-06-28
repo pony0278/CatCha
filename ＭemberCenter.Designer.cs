@@ -64,7 +64,7 @@
             this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(922, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(922, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -73,7 +73,7 @@
             this.toolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(20, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(20, 24);
             this.toolStripLabel1.Text = "toolStripLabel1";
             // 
             // toolStripButton1
@@ -131,7 +131,7 @@
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 31);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 27);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -150,7 +150,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.splitContainer1.Size = new System.Drawing.Size(922, 457);
+            this.splitContainer1.Size = new System.Drawing.Size(922, 461);
             this.splitContainer1.SplitterDistance = 219;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 1;
@@ -165,7 +165,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(199, 33);
             this.button6.TabIndex = 5;
-            this.button6.Text = "客服信件紀錄查詢(X)";
+            this.button6.Text = "會員客服系統";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -207,7 +207,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(199, 33);
             this.button3.TabIndex = 2;
-            this.button3.Text = "退貨/退款狀態";
+            this.button3.Text = "退貨/換貨紀錄";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -260,7 +260,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "ＭemberCenter";
-            this.Text = "ＭemberCenter";
+            this.Text = "會員中心";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
