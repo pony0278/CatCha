@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +55,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CatChaEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatChaEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatChaEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatChaEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatChaEntities.edmx</DependentUpon>
+    </Compile>
     <Compile Include="ConsumptionRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +93,78 @@
     </Compile>
     <Compile Include="Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game_1on1訊息資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_shop_文章類型資料庫.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Shop公告.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Shop部落格資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_任務條件資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_任務總表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_全頻道聊天資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_商品總表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_商品類別表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_好友列表聊天室資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_好友資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_寵物.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_寵物總表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_成就獎勵總表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_成就總表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_扭蛋紀錄表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_會員B訊息資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_會員任務.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_物品購買紀錄表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_等級排位資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_背包物品總表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_角色成就.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_角色資訊.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_貓幣兌換紀錄.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="MemberInformation.cs">
       <SubType>Form</SubType>
@@ -101,6 +197,99 @@
     </Compile>
     <Compile Include="ReturnDetails.Designer.cs">
       <DependentUpon>ReturnDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Game_後臺管理員資料.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_付款方式資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_優惠券使用狀態表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_優惠券總表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_商品圖片表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_商品總表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_商品評論表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_商品類別表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_回覆資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_客訴狀態資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_常用地址資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_我的最愛資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_會員優惠券資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_會員客訴案件表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_會員折價券資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_會員資訊.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_案件資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_產品供應商.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_申訴類別資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_訂單明細表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_訂單狀態資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_訂單總表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_購物車.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_退換貨原因資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_退換貨處理狀態資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_退換貨資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="公告類型資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="訊息類型資料表.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="ＭemberCenter.cs">
       <SubType>Form</SubType>
@@ -144,6 +333,14 @@
     <EmbeddedResource Include="ＭemberCenter.resx">
       <DependentUpon>ＭemberCenter.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="CatChaEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CatChaEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CatChaEntities.edmx.diagram">
+      <DependentUpon>CatChaEntities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -159,6 +356,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\eQc4d3.gif" />
+    <Content Include="CatChaEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CatChaEntities.edmx</DependentUpon>
+      <LastGenOutput>CatChaEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CatChaEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CatChaEntities.edmx</DependentUpon>
+      <LastGenOutput>CatChaEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

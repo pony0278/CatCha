@@ -59,5 +59,32 @@ namespace LinqLabs
                 }
             }
         }
+
+        //搜尋按鈕
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string keyword = textBox1.Text.Trim();
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                bool found = false;
+
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value != null && cell.Value.ToString().Contains(keyword))
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+
+                row.Visible = found;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
