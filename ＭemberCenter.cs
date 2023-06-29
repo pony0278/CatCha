@@ -49,13 +49,6 @@ namespace LinqLabs
             ShowForm(form);
         }
 
-        //button5是  遊戲專區
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-            Game form = new Game();
-            ShowForm(form);
-        }
 
         //button6是  客服信件紀錄查詢
         private void button6_Click(object sender, EventArgs e)

@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Data.Entity;
 
 namespace LinqLabs
 {
@@ -18,16 +20,45 @@ namespace LinqLabs
         {
             InitializeComponent();
 
-            dataGridView1.Rows.Add(new object[] { 1, "2022-12-25", "尚未完成", "信用卡支付" });
-            dataGridView1.Rows.Add(new object[] { 2, "2022-08-16", "退款中", "信用卡支付" });
-            dataGridView1.Rows.Add(new object[] { 3, "2022-05-20", "已完成", "貓幣扣款" });
-            dataGridView1.Rows.Add(new object[] { 4, "2022-01-24", "已完成", "貓幣扣款" });
+            //dataGridView1.CellFormatting += dataGridView1_CellFormatting;
+
+            prepareMaterials();
         }
+
+        //載入預設資料
+        private void prepareMaterials()
+        {
+            try
+            {
+
+                var q = from p in dbContext.Shop_Order_Total_Table
+                        where p.Member_ID == 4
+                        select new
+                        {
+                            訂單編號 = p.Order_ID,
+                            成立日期 = (DateTime)p.Order_Creation_Date,
+                            訂單狀態 = p.Shop_Order_Status_Data.Status_Name,
+                            付款方式 = p.Shop_Payment_Method_Data.Payment_Method_Name
+                        };
+
+                //逐行將資料加入到指定格子內
+                foreach (var item in q)
+                {
+                    dataGridView1.Rows.Add(new object[] { item.訂單編號, item.成立日期, item.訂單狀態, item.付款方式 });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
+        //放在類別中供各地方可使用全域，先讓dbContext取得資料
 
         //gpt建議放入的事件
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            
 
         }
 
@@ -54,11 +85,11 @@ namespace LinqLabs
                     );
                     detailForm.ShowDialog();
                     detailForm.BringToFront();
-
-
                 }
             }
         }
+
+        int result;
 
         //搜尋按鈕
         private void button1_Click(object sender, EventArgs e)
@@ -83,6 +114,11 @@ namespace LinqLabs
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
 
         }

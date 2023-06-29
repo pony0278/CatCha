@@ -15,10 +15,10 @@ namespace CatCaha
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class 貓抓抓Entities : DbContext
+    public partial class 貓抓抓Entities1 : DbContext
     {
-        public 貓抓抓Entities()
-            : base("name=貓抓抓Entities")
+        public 貓抓抓Entities1()
+            : base("name=貓抓抓Entities1")
         {
         }
     
@@ -27,59 +27,56 @@ namespace CatCaha
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Game_1on1訊息資料表> Game_1on1訊息資料表 { get; set; }
-        public virtual DbSet<Game_shop_文章類型資料庫> Game_shop_文章類型資料庫 { get; set; }
-        public virtual DbSet<Game_Shop公告> Game_Shop公告 { get; set; }
-        public virtual DbSet<Game_Shop部落格資料表> Game_Shop部落格資料表 { get; set; }
-        public virtual DbSet<Game_任務條件資料表> Game_任務條件資料表 { get; set; }
-        public virtual DbSet<Game_任務總表> Game_任務總表 { get; set; }
-        public virtual DbSet<Game_全頻道聊天資料表> Game_全頻道聊天資料表 { get; set; }
-        public virtual DbSet<Game_好友列表聊天室資料表> Game_好友列表聊天室資料表 { get; set; }
-        public virtual DbSet<Game_好友資料表> Game_好友資料表 { get; set; }
-        public virtual DbSet<Game_成就獎勵總表> Game_成就獎勵總表 { get; set; }
-        public virtual DbSet<Game_成就總表> Game_成就總表 { get; set; }
-        public virtual DbSet<Game_扭蛋紀錄表> Game_扭蛋紀錄表 { get; set; }
-        public virtual DbSet<Game_角色成就> Game_角色成就 { get; set; }
-        public virtual DbSet<Game_物品購買紀錄表> Game_物品購買紀錄表 { get; set; }
-        public virtual DbSet<Game_商品總表> Game_商品總表 { get; set; }
-        public virtual DbSet<Game_商品類別表> Game_商品類別表 { get; set; }
-        public virtual DbSet<Game_等級排位資料表> Game_等級排位資料表 { get; set; }
-        public virtual DbSet<Game_會員B訊息資料表> Game_會員B訊息資料表 { get; set; }
-        public virtual DbSet<Game_會員任務> Game_會員任務 { get; set; }
-        public virtual DbSet<Game_貓幣兌換紀錄> Game_貓幣兌換紀錄 { get; set; }
-        public virtual DbSet<Game_寵物> Game_寵物 { get; set; }
-        public virtual DbSet<Game_寵物總表> Game_寵物總表 { get; set; }
-        public virtual DbSet<Shop_Game_後臺管理員資料> Shop_Game_後臺管理員資料 { get; set; }
-        public virtual DbSet<Shop_付款方式資料表> Shop_付款方式資料表 { get; set; }
-        public virtual DbSet<Shop_申訴類別資料表> Shop_申訴類別資料表 { get; set; }
-        public virtual DbSet<Shop_回覆資料表> Shop_回覆資料表 { get; set; }
-        public virtual DbSet<Shop_我的最愛資料表> Shop_我的最愛資料表 { get; set; }
-        public virtual DbSet<Shop_客訴狀態資料表> Shop_客訴狀態資料表 { get; set; }
-        public virtual DbSet<Shop_訂單明細表> Shop_訂單明細表 { get; set; }
-        public virtual DbSet<Shop_訂單狀態資料表> Shop_訂單狀態資料表 { get; set; }
-        public virtual DbSet<Shop_訂單總表> Shop_訂單總表 { get; set; }
-        public virtual DbSet<Shop_案件資料表> Shop_案件資料表 { get; set; }
-        public virtual DbSet<Shop_退換貨原因資料表> Shop_退換貨原因資料表 { get; set; }
-        public virtual DbSet<Shop_退換貨處理狀態資料表> Shop_退換貨處理狀態資料表 { get; set; }
-        public virtual DbSet<Shop_商品評論表> Shop_商品評論表 { get; set; }
-        public virtual DbSet<Shop_商品圖片表> Shop_商品圖片表 { get; set; }
-        public virtual DbSet<Shop_商品總表> Shop_商品總表 { get; set; }
-        public virtual DbSet<Shop_商品類別表> Shop_商品類別表 { get; set; }
-        public virtual DbSet<Shop_常用地址資料表> Shop_常用地址資料表 { get; set; }
-        public virtual DbSet<Shop_產品供應商> Shop_產品供應商 { get; set; }
-        public virtual DbSet<Shop_會員折價券資料表> Shop_會員折價券資料表 { get; set; }
-        public virtual DbSet<Shop_會員客訴案件表> Shop_會員客訴案件表 { get; set; }
-        public virtual DbSet<Shop_會員資訊> Shop_會員資訊 { get; set; }
-        public virtual DbSet<Shop_優惠券使用狀態表> Shop_優惠券使用狀態表 { get; set; }
-        public virtual DbSet<Shop_優惠券總表> Shop_優惠券總表 { get; set; }
+        public virtual DbSet<Announcement_Type_datum> Announcement_Type_Data { get; set; }
+        public virtual DbSet<Game_1on1MessageData> Game_1on1MessageData { get; set; }
+        public virtual DbSet<Game_Achievement_List> Game_Achievement_List { get; set; }
+        public virtual DbSet<Game_Achievement_Reward_List> Game_Achievement_Reward_List { get; set; }
+        public virtual DbSet<Game_Character_Achievement> Game_Character_Achievement { get; set; }
+        public virtual DbSet<Game_Coin_Exchange_Record> Game_Coin_Exchange_Record { get; set; }
+        public virtual DbSet<Game_Friend_Data> Game_Friend_Data { get; set; }
+        public virtual DbSet<Game_Friend_List_Chat_Data> Game_Friend_List_Chat_Data { get; set; }
+        public virtual DbSet<Game_Gacha_Record_Table> Game_Gacha_Record_Table { get; set; }
+        public virtual DbSet<Game_Global_Chat_Data> Game_Global_Chat_Data { get; set; }
+        public virtual DbSet<Game_Item_Purchase_Record> Game_Item_Purchase_Record { get; set; }
+        public virtual DbSet<Game_Member_B_Message_Data> Game_Member_B_Message_Data { get; set; }
+        public virtual DbSet<Game_Member_Task> Game_Member_Task { get; set; }
+        public virtual DbSet<Game_Pet> Game_Pet { get; set; }
+        public virtual DbSet<Game_Pet_Total> Game_Pet_Total { get; set; }
+        public virtual DbSet<Game_Product_Category> Game_Product_Category { get; set; }
+        public virtual DbSet<Game_Product_Total> Game_Product_Total { get; set; }
+        public virtual DbSet<Game_Rank_Data> Game_Rank_Data { get; set; }
+        public virtual DbSet<Game_Shop_Blog_Data> Game_Shop_Blog_Data { get; set; }
+        public virtual DbSet<Game_ShopAnnouncement> Game_ShopAnnouncement { get; set; }
+        public virtual DbSet<Game_shopArticleType> Game_shopArticleType { get; set; }
+        public virtual DbSet<Game_Task_Condition_Data> Game_Task_Condition_Data { get; set; }
+        public virtual DbSet<Game_Task_List> Game_Task_List { get; set; }
+        public virtual DbSet<Message_Type_datum> Message_Type_Data { get; set; }
+        public virtual DbSet<Shop_Appeal_Category_Data> Shop_Appeal_Category_Data { get; set; }
+        public virtual DbSet<Shop_Case_Data_Table> Shop_Case_Data_Table { get; set; }
+        public virtual DbSet<Shop_Common_Address_Data> Shop_Common_Address_Data { get; set; }
+        public virtual DbSet<Shop_Complaint_Status_Data> Shop_Complaint_Status_Data { get; set; }
+        public virtual DbSet<Shop_Coupon_Status_Data> Shop_Coupon_Status_Data { get; set; }
+        public virtual DbSet<Shop_Coupon_Total> Shop_Coupon_Total { get; set; }
+        public virtual DbSet<Shop_Favorite_Data_Table> Shop_Favorite_Data_Table { get; set; }
+        public virtual DbSet<Shop_Game_Admin_Data> Shop_Game_Admin_Data { get; set; }
+        public virtual DbSet<Shop_Member_Complaint_Case> Shop_Member_Complaint_Case { get; set; }
+        public virtual DbSet<Shop_Member_Coupon_Data> Shop_Member_Coupon_Data { get; set; }
+        public virtual DbSet<Shop_Member_Info> Shop_Member_Info { get; set; }
+        public virtual DbSet<Shop_Order_Detail_Table> Shop_Order_Detail_Table { get; set; }
+        public virtual DbSet<Shop_Order_Status_Data> Shop_Order_Status_Data { get; set; }
+        public virtual DbSet<Shop_Order_Total_Table> Shop_Order_Total_Table { get; set; }
+        public virtual DbSet<Shop_Payment_Method_Data> Shop_Payment_Method_Data { get; set; }
+        public virtual DbSet<Shop_Product_Category> Shop_Product_Category { get; set; }
+        public virtual DbSet<Shop_Product_Image_Table> Shop_Product_Image_Table { get; set; }
+        public virtual DbSet<Shop_Product_Review_Table> Shop_Product_Review_Table { get; set; }
+        public virtual DbSet<Shop_Product_Supplier> Shop_Product_Supplier { get; set; }
+        public virtual DbSet<Shop_Product_Total> Shop_Product_Total { get; set; }
+        public virtual DbSet<Shop_Reply_Data> Shop_Reply_Data { get; set; }
+        public virtual DbSet<Shop_Return_Reason_Data_Table> Shop_Return_Reason_Data_Table { get; set; }
+        public virtual DbSet<Shop_Return_Status_Data_Table> Shop_Return_Status_Data_Table { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<公告類型資料表> 公告類型資料表 { get; set; }
-        public virtual DbSet<訊息類型資料表> 訊息類型資料表 { get; set; }
-        public virtual DbSet<Game_角色資訊> Game_角色資訊 { get; set; }
-        public virtual DbSet<Game_背包物品總表> Game_背包物品總表 { get; set; }
-        public virtual DbSet<Shop_退換貨資料表> Shop_退換貨資料表 { get; set; }
-        public virtual DbSet<Shop_會員優惠券資料表> Shop_會員優惠券資料表 { get; set; }
-        public virtual DbSet<Shop_購物車> Shop_購物車 { get; set; }
+        public virtual DbSet<Game_Character_Info> Game_Character_Info { get; set; }
+        public virtual DbSet<Shop_Return_Data_Table> Shop_Return_Data_Table { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

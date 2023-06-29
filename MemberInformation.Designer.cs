@@ -46,6 +46,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button11
@@ -53,7 +56,7 @@
             this.button11.AutoSize = true;
             this.button11.BackColor = System.Drawing.Color.Gainsboro;
             this.button11.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(539, 303);
+            this.button11.Location = new System.Drawing.Point(539, 375);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(54, 25);
             this.button11.TabIndex = 33;
@@ -66,7 +69,7 @@
             this.button10.AutoSize = true;
             this.button10.BackColor = System.Drawing.Color.Gainsboro;
             this.button10.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(539, 257);
+            this.button10.Location = new System.Drawing.Point(539, 325);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(54, 25);
             this.button10.TabIndex = 32;
@@ -79,7 +82,7 @@
             this.button9.AutoSize = true;
             this.button9.BackColor = System.Drawing.Color.Gainsboro;
             this.button9.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(539, 211);
+            this.button9.Location = new System.Drawing.Point(539, 275);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(54, 25);
             this.button9.TabIndex = 31;
@@ -92,7 +95,7 @@
             this.button8.AutoSize = true;
             this.button8.BackColor = System.Drawing.Color.Gainsboro;
             this.button8.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(539, 165);
+            this.button8.Location = new System.Drawing.Point(539, 225);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(54, 25);
             this.button8.TabIndex = 30;
@@ -105,7 +108,7 @@
             this.button7.AutoSize = true;
             this.button7.BackColor = System.Drawing.Color.Gainsboro;
             this.button7.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(539, 119);
+            this.button7.Location = new System.Drawing.Point(539, 125);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(54, 25);
             this.button7.TabIndex = 29;
@@ -117,7 +120,7 @@
             // 
             this.textBox6.Enabled = false;
             this.textBox6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(134, 304);
+            this.textBox6.Location = new System.Drawing.Point(134, 375);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(388, 25);
@@ -127,7 +130,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 305);
+            this.label7.Location = new System.Drawing.Point(28, 375);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 18);
             this.label7.TabIndex = 27;
@@ -137,7 +140,7 @@
             // 
             this.textBox5.Enabled = false;
             this.textBox5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(134, 252);
+            this.textBox5.Location = new System.Drawing.Point(134, 325);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(388, 25);
@@ -147,7 +150,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 253);
+            this.label6.Location = new System.Drawing.Point(28, 325);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 18);
             this.label6.TabIndex = 25;
@@ -157,7 +160,7 @@
             // 
             this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(134, 207);
+            this.textBox4.Location = new System.Drawing.Point(134, 275);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(388, 25);
@@ -167,7 +170,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 208);
+            this.label5.Location = new System.Drawing.Point(28, 275);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 18);
             this.label5.TabIndex = 23;
@@ -177,7 +180,7 @@
             // 
             this.textBox3.Enabled = false;
             this.textBox3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(134, 162);
+            this.textBox3.Location = new System.Drawing.Point(134, 225);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(388, 25);
@@ -187,17 +190,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 163);
+            this.label4.Location = new System.Drawing.Point(28, 225);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 18);
             this.label4.TabIndex = 21;
-            this.label4.Text = "玩家姓名:";
+            this.label4.Text = "角色名稱:";
             // 
             // textBox2
             // 
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(134, 119);
+            this.textBox2.Location = new System.Drawing.Point(134, 125);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.ReadOnly = true;
@@ -209,7 +212,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 120);
+            this.label3.Location = new System.Drawing.Point(28, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 18);
             this.label3.TabIndex = 19;
@@ -235,6 +238,40 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "會員帳號:";
             // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(539, 175);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(54, 25);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "修改";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox7
+            // 
+            this.textBox7.Enabled = false;
+            this.textBox7.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(134, 175);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.PasswordChar = '*';
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(388, 25);
+            this.textBox7.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 18);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "會員姓名:";
+            // 
             // MemberInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -242,7 +279,10 @@
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(713, 404);
+            this.ClientSize = new System.Drawing.Size(713, 444);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
@@ -286,5 +326,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label1;
     }
 }

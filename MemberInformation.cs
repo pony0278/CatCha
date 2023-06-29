@@ -24,149 +24,232 @@ namespace LinqLabs
         //載入預設資料
         private void prepareMaterials()
         {
-            var q = from p in dbContext.Shop_會員資訊
-                    where p.會員ID == 1
-                    select new
-                    {
-                        會員帳號 = p.會員帳號,
-                        密碼 = p.密碼,
-                        姓名 = p.姓名,
-                        電子郵件 = p.電子郵件,
-                        手機號碼 = p.手機號碼,
-                        地址 = p.地址,
-                    };
+            try
+            {
+                var q = from p in dbContext.Shop_Member_Info
+                        where p.Member_ID == 6
+                        select new
+                        {
+                            會員帳號 = p.Member_Account,
+                            密碼 = p.Password,
+                            會員姓名 = p.Name,
+                            角色名稱 = p.Character_Name,
+                            電子郵件 = p.Email,
+                            手機號碼 = p.Phone_Number,
+                            地址 = p.Address,
+                        };
 
-            var result = q.FirstOrDefault();
+                var result = q.FirstOrDefault();
 
-            textBox1.Text = result.會員帳號.ToString();
-            //textBox2.Text = new string('*', result.密碼.Length);
-            textBox2.Text = result.密碼.ToString();
-            textBox3.Text = result.姓名.ToString();
-            textBox4.Text = result.電子郵件.ToString();
-            textBox5.Text = result.手機號碼.ToString() ;
-            textBox6.Text = result.地址.ToString();
+                textBox1.Text = result.會員帳號.ToString();
+                //textBox2.Text = new string('*', result.密碼.Length);
+                textBox2.Text = result.密碼.ToString();
+                textBox7.Text = result.會員姓名.ToString() ;
+                textBox3.Text = result.角色名稱.ToString();
+                textBox4.Text = result.電子郵件.ToString();
+                textBox5.Text = result.手機號碼.ToString();
+                textBox6.Text = result.地址.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
-        貓抓抓Entities dbContext = new 貓抓抓Entities();
+
+        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
         //放在類別中供各地方可使用全域，先讓dbContext取得資料
 
         //會員密碼修改
         private void button7_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         //玩家姓名修改
         private void button8_Click(object sender, EventArgs e)
         {
-            if (button8.Text == "修改")
+            try
             {
-                button8.Text = "確定";
-                button8.BackColor = Color.Yellow;
-                textBox3.ReadOnly = false;
-                textBox3.Enabled = true;
-            } 
-            else if (button8.Text =="確定" && string.IsNullOrWhiteSpace(textBox3.Text))
-            {
-                MessageBox.Show("請於框中輸入資料");
+                if (button8.Text == "修改")
+                {
+                    button8.Text = "確定";
+                    button8.BackColor = Color.Yellow;
+                    textBox3.ReadOnly = false;
+                    textBox3.Enabled = true;
+                }
+                else if (button8.Text == "確定" && string.IsNullOrWhiteSpace(textBox3.Text))
+                {
+                    MessageBox.Show("請於框中輸入資料");
+                }
+                else if (button8.Text == "確定")
+                {
+                    button8.Text = "修改";
+                    button8.BackColor = Color.Gainsboro;
+
+                    // 取得要修改的資料
+                    var q = dbContext.Shop_Member_Info.FirstOrDefault(p => p.Member_ID == 1);
+
+                    q.Character_Name = textBox3.Text;
+                    dbContext.SaveChanges();
+
+                    MessageBox.Show("修改成功");
+                    textBox3.ReadOnly = true;
+                    textBox3.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("您輸入的資料格式不正確");
+                }
             }
-            else if (button8.Text == "確定")
+            catch (Exception ex)
             {
-                button8.Text = "修改";
-                button8.BackColor = Color.Gainsboro;
-                MessageBox.Show("修改成功");
-                textBox3.ReadOnly = true;
-                textBox3.Enabled = false;
+                MessageBox.Show(ex.Message);
             }
-            else
-            {
-                MessageBox.Show("您輸入的資料格式不正確");
-            }
+            
         }
 
         //電子郵件修改
         private void button9_Click(object sender, EventArgs e)
         {
-            if (button9.Text == "修改")
+            try
             {
-                button9.Text = "確定";
-                button9.BackColor = Color.Yellow;
-                textBox4.ReadOnly = false;
-                textBox4.Enabled = true;
+                if (button9.Text == "修改")
+                {
+                    button9.Text = "確定";
+                    button9.BackColor = Color.Yellow;
+                    textBox4.ReadOnly = false;
+                    textBox4.Enabled = true;
+                }
+                else if (button9.Text == "確定" && string.IsNullOrWhiteSpace(textBox4.Text))
+                {
+                    MessageBox.Show("請於框中輸入資料");
+                }
+                else if (button9.Text == "確定")
+                {
+                    button9.Text = "修改";
+                    button9.BackColor = Color.Gainsboro;
+
+                    // 取得要修改的資料
+                    var q = dbContext.Shop_Member_Info.FirstOrDefault(p => p.Member_ID == 1);
+
+                    q.Email = textBox4.Text;
+                    dbContext.SaveChanges();
+
+                    MessageBox.Show("修改成功");
+                    textBox4.ReadOnly = true;
+                    textBox4.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("您輸入的資料格式不正確");
+                }
             }
-            else if (button9.Text == "確定" && string.IsNullOrWhiteSpace(textBox4.Text))
+            catch (Exception ex)
             {
-                MessageBox.Show("請於框中輸入資料");
+                MessageBox.Show(ex.Message);
             }
-            else if (button9.Text == "確定")
-            {
-                button9.Text = "修改";
-                button9.BackColor = Color.Gainsboro;
-                MessageBox.Show("修改成功");
-                textBox4.ReadOnly = true;
-                textBox4.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show("您輸入的資料格式不正確");
-            }
+
         }
 
         //手機號碼修改
         private void button10_Click(object sender, EventArgs e)
         {
-            if (button10.Text == "修改")
+            try
             {
-                button10.Text = "確定";
-                button10.BackColor = Color.Yellow;
-                textBox5.ReadOnly = false;
-                textBox5.Enabled = true;
+                if (button10.Text == "修改")
+                {
+                    button10.Text = "確定";
+                    button10.BackColor = Color.Yellow;
+                    textBox5.ReadOnly = false;
+                    textBox5.Enabled = true;
+                }
+                else if (button10.Text == "確定" && string.IsNullOrWhiteSpace(textBox5.Text))
+                {
+                    MessageBox.Show("請於框中輸入資料");
+                }
+                else if (button10.Text == "確定")
+                {
+                    button10.Text = "修改";
+                    button10.BackColor = Color.Gainsboro;
+
+                    // 取得要修改的資料
+                    var q = dbContext.Shop_Member_Info.FirstOrDefault(p => p.Member_ID == 1);
+
+                    q.Phone_Number = textBox5.Text;
+                    dbContext.SaveChanges();
+
+                    MessageBox.Show("修改成功");
+                    textBox5.ReadOnly = true;
+                    textBox5.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("您輸入的資料格式不正確");
+                }
             }
-            else if (button10.Text == "確定" && string.IsNullOrWhiteSpace(textBox5.Text))
+            catch (Exception ex)
             {
-                MessageBox.Show("請於框中輸入資料");
+                MessageBox.Show(ex.Message);
             }
-            else if (button10.Text == "確定")
-            {
-                button10.Text = "修改";
-                button10.BackColor = Color.Gainsboro;
-                MessageBox.Show("修改成功");
-                textBox5.ReadOnly = true;
-                textBox5.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show("您輸入的資料格式不正確");
-            }
+
         }
 
         //通訊地址修改
         private void button11_Click(object sender, EventArgs e)
         {
-            if (button11.Text == "修改")
+            try
             {
-                button11.Text = "確定";
-                button11.BackColor = Color.Yellow;
-                textBox6.ReadOnly = false;
-                textBox6.Enabled = true;
+                if (button11.Text == "修改")
+                {
+                    button11.Text = "確定";
+                    button11.BackColor = Color.Yellow;
+                    textBox6.ReadOnly = false;
+                    textBox6.Enabled = true;
+                }
+                else if (button11.Text == "確定" && string.IsNullOrWhiteSpace(textBox6.Text))
+                {
+                    MessageBox.Show("請於框中輸入資料");
+                }
+                else if (button11.Text == "確定")
+                {
+                    button11.Text = "修改";
+                    button11.BackColor = Color.Gainsboro;
+
+                    // 取得要修改的資料
+                    var q = dbContext.Shop_Member_Info.FirstOrDefault(p => p.Member_ID == 1);
+
+                    q.Address = textBox6.Text;
+                    dbContext.SaveChanges();
+
+                    MessageBox.Show("修改成功");
+                    textBox6.ReadOnly = true;
+                    textBox6.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("您輸入的資料格式不正確");
+                }
             }
-            else if (button11.Text == "確定" && string.IsNullOrWhiteSpace(textBox6.Text))
+            catch (Exception ex)
             {
-                MessageBox.Show("請於框中輸入資料");
+                MessageBox.Show(ex.Message);
             }
-            else if (button11.Text == "確定")
-            {
-                button11.Text = "修改";
-                button11.BackColor = Color.Gainsboro;
-                MessageBox.Show("修改成功");
-                textBox6.ReadOnly = true;
-                textBox6.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show("您輸入的資料格式不正確");
-            }
+
         }
 
+        //會員姓名修改
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

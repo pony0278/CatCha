@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Announcement_Type_datum.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="CatChaEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,82 +91,73 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Game.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Game.Designer.cs">
-      <DependentUpon>Game.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Game_1on1訊息資料表.cs">
+    <Compile Include="Game_1on1MessageData.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_shop_文章類型資料庫.cs">
+    <Compile Include="Game_Achievement_List.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Shop公告.cs">
+    <Compile Include="Game_Achievement_Reward_List.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Shop部落格資料表.cs">
+    <Compile Include="Game_Character_Achievement.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_任務條件資料表.cs">
+    <Compile Include="Game_Character_Info.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_任務總表.cs">
+    <Compile Include="Game_Coin_Exchange_Record.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_全頻道聊天資料表.cs">
+    <Compile Include="Game_Friend_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_商品總表.cs">
+    <Compile Include="Game_Friend_List_Chat_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_商品類別表.cs">
+    <Compile Include="Game_Gacha_Record_Table.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_好友列表聊天室資料表.cs">
+    <Compile Include="Game_Global_Chat_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_好友資料表.cs">
+    <Compile Include="Game_Item_Purchase_Record.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_寵物.cs">
+    <Compile Include="Game_Member_B_Message_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_寵物總表.cs">
+    <Compile Include="Game_Member_Task.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_成就獎勵總表.cs">
+    <Compile Include="Game_Pet.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_成就總表.cs">
+    <Compile Include="Game_Pet_Total.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_扭蛋紀錄表.cs">
+    <Compile Include="Game_Product_Category.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_會員B訊息資料表.cs">
+    <Compile Include="Game_Product_Total.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_會員任務.cs">
+    <Compile Include="Game_Rank_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_物品購買紀錄表.cs">
+    <Compile Include="Game_ShopAnnouncement.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_等級排位資料表.cs">
+    <Compile Include="Game_shopArticleType.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_背包物品總表.cs">
+    <Compile Include="Game_Shop_Blog_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_角色成就.cs">
+    <Compile Include="Game_Task_Condition_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_角色資訊.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_貓幣兌換紀錄.cs">
+    <Compile Include="Game_Task_List.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="MemberInformation.cs">
@@ -171,6 +165,9 @@
     </Compile>
     <Compile Include="MemberInformation.Designer.cs">
       <DependentUpon>MemberInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message_Type_datum.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="OrderDetails.cs">
       <SubType>Form</SubType>
@@ -198,82 +195,76 @@
     <Compile Include="ReturnDetails.Designer.cs">
       <DependentUpon>ReturnDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Game_後臺管理員資料.cs">
+    <Compile Include="Shop_Appeal_Category_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_付款方式資料表.cs">
+    <Compile Include="Shop_Case_Data_Table.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_優惠券使用狀態表.cs">
+    <Compile Include="Shop_Common_Address_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_優惠券總表.cs">
+    <Compile Include="Shop_Complaint_Status_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_商品圖片表.cs">
+    <Compile Include="Shop_Coupon_Status_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_商品總表.cs">
+    <Compile Include="Shop_Coupon_Total.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_商品評論表.cs">
+    <Compile Include="Shop_Favorite_Data_Table.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_商品類別表.cs">
+    <Compile Include="Shop_Game_Admin_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_回覆資料表.cs">
+    <Compile Include="Shop_Member_Complaint_Case.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_客訴狀態資料表.cs">
+    <Compile Include="Shop_Member_Coupon_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_常用地址資料表.cs">
+    <Compile Include="Shop_Member_Info.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_我的最愛資料表.cs">
+    <Compile Include="Shop_Order_Detail_Table.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_會員優惠券資料表.cs">
+    <Compile Include="Shop_Order_Status_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_會員客訴案件表.cs">
+    <Compile Include="Shop_Order_Total_Table.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_會員折價券資料表.cs">
+    <Compile Include="Shop_Payment_Method_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_會員資訊.cs">
+    <Compile Include="Shop_Product_Category.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_案件資料表.cs">
+    <Compile Include="Shop_Product_Image_Table.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_產品供應商.cs">
+    <Compile Include="Shop_Product_Review_Table.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_申訴類別資料表.cs">
+    <Compile Include="Shop_Product_Supplier.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_訂單明細表.cs">
+    <Compile Include="Shop_Product_Total.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_訂單狀態資料表.cs">
+    <Compile Include="Shop_Reply_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_訂單總表.cs">
+    <Compile Include="Shop_Return_Data_Table.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_購物車.cs">
+    <Compile Include="Shop_Return_Reason_Data_Table.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_退換貨原因資料表.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_退換貨處理狀態資料表.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_退換貨資料表.cs">
+    <Compile Include="Shop_Return_Status_Data_Table.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
@@ -283,12 +274,6 @@
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="公告類型資料表.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="訊息類型資料表.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="ＭemberCenter.cs">
@@ -302,9 +287,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerService.resx">
       <DependentUpon>CustomerService.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Game.resx">
-      <DependentUpon>Game.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberInformation.resx">
       <DependentUpon>MemberInformation.cs</DependentUpon>
