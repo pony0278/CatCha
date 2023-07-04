@@ -19,7 +19,7 @@ namespace catcha
 {
     public partial class ProductControl : UserControl
     {
-        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
+        ProjectsModel dbContext = new ProjectsModel();
 
         private int productID;
 

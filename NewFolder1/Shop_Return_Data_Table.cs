@@ -19,7 +19,6 @@ namespace CatCaha.NewFolder1
         public Nullable<int> Processing_Status_ID { get; set; }
         public Nullable<System.DateTime> Return_Date { get; set; }
     
-        public virtual Shop_Order_Total_Table Shop_Order_Total_Table { get; set; }
         public virtual Shop_Return_Reason_Data_Table Shop_Return_Reason_Data_Table { get; set; }
         public virtual Shop_Return_Status_Data_Table Shop_Return_Status_Data_Table { get; set; }
     }

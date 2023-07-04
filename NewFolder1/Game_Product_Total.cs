@@ -18,7 +18,6 @@ namespace CatCaha.NewFolder1
         public Game_Product_Total()
         {
             this.Game_Item_Purchase_Record = new HashSet<Game_Item_Purchase_Record>();
-            this.Game_Pet = new HashSet<Game_Pet>();
         }
     
         public string Product_Name { get; set; }
@@ -29,11 +28,10 @@ namespace CatCaha.NewFolder1
         public byte[] Product_Image { get; set; }
         public string Purchased_Quantity { get; set; }
         public string Remaining_Quantity { get; set; }
+        public Nullable<decimal> Lottery_Probability { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Game_Item_Purchase_Record> Game_Item_Purchase_Record { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Game_Pet> Game_Pet { get; set; }
         public virtual Game_Product_Category Game_Product_Category { get; set; }
     }
 }

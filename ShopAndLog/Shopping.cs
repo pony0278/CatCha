@@ -22,7 +22,7 @@ namespace CatChaForms
             InitializeComponent();
         }
 
-        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
+        ProjectsModel dbContext = new ProjectsModel();
         private void Shopping_Load(object sender, EventArgs e)
         {
             ComboBoxSort.SelectedIndex = 0;

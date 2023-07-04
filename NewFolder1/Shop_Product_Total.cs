@@ -33,7 +33,6 @@ namespace CatCaha.NewFolder1
         public string Weight { get; set; }
         public Nullable<System.DateTime> Release_Date { get; set; }
         public Nullable<bool> Discontinued { get; set; }
-        public Nullable<int> Purchased_Quantity { get; set; }
         public Nullable<int> Remaining_Quantity { get; set; }
         public Nullable<int> Supplier_ID { get; set; }
     

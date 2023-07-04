@@ -16,7 +16,7 @@ namespace CatChaForms
 {
     public partial class Signup : Form
     {
-        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
+        ProjectsModel dbContext = new ProjectsModel();
         public Signup()
         {
             InitializeComponent();

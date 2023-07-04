@@ -14,12 +14,20 @@ namespace CatCaha.NewFolder1
     
     public partial class Shop_Common_Address_Data
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Shop_Common_Address_Data()
+        {
+            this.Shop_Order_Total_Table = new HashSet<Shop_Order_Total_Table>();
+        }
+    
         public Nullable<int> Member_ID { get; set; }
         public int Address_ID { get; set; }
         public string Recipient_Name { get; set; }
         public string Recipient_Phone { get; set; }
         public string Recipient_Address { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shop_Order_Total_Table> Shop_Order_Total_Table { get; set; }
         public virtual Shop_Member_Info Shop_Member_Info { get; set; }
     }
 }

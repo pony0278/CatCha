@@ -22,7 +22,7 @@ namespace CatCaha
 
             now_Member_ID = DataProperty;
         }
-
+        ProjectsModel dbContext = new ProjectsModel();
         //確認送出
         private void button1_Click(object sender, EventArgs e)
         {
@@ -66,7 +66,7 @@ namespace CatCaha
         }
 
         int now_Member_ID;
-        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
+      
         //放在類別中供各地方可使用全域，先讓dbContext取得資料
 
         //傳遞資料

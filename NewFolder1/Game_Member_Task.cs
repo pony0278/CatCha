@@ -22,6 +22,7 @@ namespace CatCaha.NewFolder1
     
         public Nullable<int> Member_ID { get; set; }
         public int Task_ID { get; set; }
+        public Nullable<System.DateTime> Complete_Date { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Game_Task_List> Game_Task_List { get; set; }

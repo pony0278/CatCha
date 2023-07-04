@@ -58,7 +58,7 @@ namespace CatCaha
                         .Select(p => p.Coupon_ID)
                         .DefaultIfEmpty();
 
-                textBox4.Text = "0" + q.Average();
+                //textBox4.Text = "0" + q.Average();
                 textBox6.Text = "" + s.Average();
 
 
@@ -92,7 +92,7 @@ namespace CatCaha
         }
 
         int now_Member_ID, now_Order_ID;
-        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
+        ProjectsModel dbContext = new ProjectsModel();
         //放在類別中供各地方可使用全域，先讓dbContext取得資料
 
         //傳遞資料

@@ -65,7 +65,7 @@ namespace CatCaha.MemberCenter
 
 
         int now_Member_ID;
-        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
+        ProjectsModel dbContext = new ProjectsModel();
 
         private void button1_Click(object sender, EventArgs e)
         {

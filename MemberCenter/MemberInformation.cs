@@ -287,7 +287,7 @@ namespace LinqLabs
         }
 
         int now_Member_ID;
-        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
+        ProjectsModel dbContext = new ProjectsModel();
 
         //傳遞資料
         public int DataProperty { get; set; }

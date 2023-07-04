@@ -16,7 +16,7 @@ namespace CatChaForms
 {
     public partial class Signin : Form
     {
-        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
+        ProjectsModel dbContext = new ProjectsModel();
         internal object panelOverlay;
 
         public Signin()
