@@ -1,0 +1,843 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CatChaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Shop_Common Address Data">
+          <Key>
+            <PropertyRef Name="Address ID" />
+          </Key>
+          <Property Name="Member ID" Type="int" />
+          <Property Name="Address ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Recipient Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Recipient Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Recipient Address" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Shop_Coupon Total">
+          <Key>
+            <PropertyRef Name="Coupon ID" />
+          </Key>
+          <Property Name="Coupon ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Coupon Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Coupon Content" Type="nvarchar(max)" />
+          <Property Name="Expiry Date" Type="datetime" />
+          <Property Name="Total Quantity" Type="int" />
+          <Property Name="Usable" Type="bit" />
+        </EntityType>
+        <EntityType Name="Shop_Member Coupon Data">
+          <Key>
+            <PropertyRef Name="Member Coupon Data ID" />
+          </Key>
+          <Property Name="Member ID" Type="int" />
+          <Property Name="Coupon ID" Type="int" />
+          <Property Name="Coupon Status ID" Type="bit" />
+          <Property Name="Member Coupon Data ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Shop_Member Info">
+          <Key>
+            <PropertyRef Name="Member ID" />
+          </Key>
+          <Property Name="Member ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Member Account" Type="nvarchar" MaxLength="50" />
+          <Property Name="Character Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Level ID" Type="int" />
+          <Property Name="Password" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Birthday" Type="date" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Phone Number" Type="nvarchar" MaxLength="10" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Cat Coin Quantity" Type="int" />
+          <Property Name="Loyalty Points" Type="int" />
+          <Property Name="Registration Time" Type="datetime" />
+          <Property Name="Last Login Time" Type="datetime" />
+          <Property Name="Favorite ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Shop_Order Detail Table">
+          <Key>
+            <PropertyRef Name="Order Detail ID" />
+          </Key>
+          <Property Name="Order ID" Type="int" />
+          <Property Name="Product ID" Type="int" />
+          <Property Name="Product Quantity" Type="int" />
+          <Property Name="Order Detail ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Shop_Order Status Data">
+          <Key>
+            <PropertyRef Name="Order Status ID" />
+          </Key>
+          <Property Name="Order Status ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status Name" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Shop_Order Total Table">
+          <Key>
+            <PropertyRef Name="Order ID" />
+          </Key>
+          <Property Name="Member ID" Type="int" />
+          <Property Name="Order ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Order Creation Date" Type="datetime" />
+          <Property Name="Last Update Time" Type="datetime" />
+          <Property Name="Address ID" Type="int" />
+          <Property Name="Recipient Address" Type="nvarchar(max)" />
+          <Property Name="Recipient Name" Type="nchar" MaxLength="20" />
+          <Property Name="Recipient Phone" Type="nchar" MaxLength="10" />
+          <Property Name="Order Status ID" Type="int" />
+          <Property Name="Payment Method ID" Type="int" />
+          <Property Name="Coupon ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Shop_Payment Method Data">
+          <Key>
+            <PropertyRef Name="Payment Method ID" />
+          </Key>
+          <Property Name="Payment Method ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Payment Method Name" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Shop_Product Category">
+          <Key>
+            <PropertyRef Name="Product Category ID" />
+          </Key>
+          <Property Name="Product Category ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Category Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Category Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Shop_Product Image Table">
+          <Key>
+            <PropertyRef Name="Product Image ID" />
+          </Key>
+          <Property Name="Product ID" Type="int" />
+          <Property Name="Product Photo" Type="varbinary(max)" />
+          <Property Name="Product Image ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Shop_Product Total">
+          <Key>
+            <PropertyRef Name="Product ID" />
+          </Key>
+          <Property Name="Product Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Product ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Product Category ID" Type="int" />
+          <Property Name="Product Description" Type="nvarchar(max)" />
+          <Property Name="Product Price" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Size" Type="nvarchar" MaxLength="50" />
+          <Property Name="Weight" Type="nvarchar" MaxLength="50" />
+          <Property Name="Release Date" Type="date" />
+          <Property Name="Discontinued" Type="bit" />
+          <Property Name="Remaining Quantity" Type="int" />
+          <Property Name="Supplier ID" Type="int" />
+        </EntityType>
+        <Association Name="FK_Orders_Details_Orders">
+          <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="0..1" />
+          <End Role="Shop_Order Detail Table" Type="Self.Shop_Order Detail Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Order Total Table">
+              <PropertyRef Name="Order ID" />
+            </Principal>
+            <Dependent Role="Shop_Order Detail Table">
+              <PropertyRef Name="Order ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Details_Products">
+          <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="0..1" />
+          <End Role="Shop_Order Detail Table" Type="Self.Shop_Order Detail Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Product Total">
+              <PropertyRef Name="Product ID" />
+            </Principal>
+            <Dependent Role="Shop_Order Detail Table">
+              <PropertyRef Name="Product ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Image_Products">
+          <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="0..1" />
+          <End Role="Shop_Product Image Table" Type="Self.Shop_Product Image Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Product Total">
+              <PropertyRef Name="Product ID" />
+            </Principal>
+            <Dependent Role="Shop_Product Image Table">
+              <PropertyRef Name="Product ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Products_Categories">
+          <End Role="Shop_Product Category" Type="Self.Shop_Product Category" Multiplicity="0..1" />
+          <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Product Category">
+              <PropertyRef Name="Product Category ID" />
+            </Principal>
+            <Dependent Role="Shop_Product Total">
+              <PropertyRef Name="Product Category ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_Order Total Table_Shop_Common Address Data">
+          <End Role="Shop_Common Address Data" Type="Self.Shop_Common Address Data" Multiplicity="0..1" />
+          <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Common Address Data">
+              <PropertyRef Name="Address ID" />
+            </Principal>
+            <Dependent Role="Shop_Order Total Table">
+              <PropertyRef Name="Address ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_訂單總表_Shop_付款方式資料表">
+          <End Role="Shop_Payment Method Data" Type="Self.Shop_Payment Method Data" Multiplicity="0..1" />
+          <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Payment Method Data">
+              <PropertyRef Name="Payment Method ID" />
+            </Principal>
+            <Dependent Role="Shop_Order Total Table">
+              <PropertyRef Name="Payment Method ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_訂單總表_Shop_訂單狀態資料表">
+          <End Role="Shop_Order Status Data" Type="Self.Shop_Order Status Data" Multiplicity="0..1" />
+          <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Order Status Data">
+              <PropertyRef Name="Order Status ID" />
+            </Principal>
+            <Dependent Role="Shop_Order Total Table">
+              <PropertyRef Name="Order Status ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_訂單總表_Shop_會員資訊">
+          <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+          <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Member Info">
+              <PropertyRef Name="Member ID" />
+            </Principal>
+            <Dependent Role="Shop_Order Total Table">
+              <PropertyRef Name="Member ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_常用地址資料表_Shop_會員資訊">
+          <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+          <End Role="Shop_Common Address Data" Type="Self.Shop_Common Address Data" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Member Info">
+              <PropertyRef Name="Member ID" />
+            </Principal>
+            <Dependent Role="Shop_Common Address Data">
+              <PropertyRef Name="Member ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_會員折價券資料表_Shop_會員資訊">
+          <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+          <End Role="Shop_Member Coupon Data" Type="Self.Shop_Member Coupon Data" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Member Info">
+              <PropertyRef Name="Member ID" />
+            </Principal>
+            <Dependent Role="Shop_Member Coupon Data">
+              <PropertyRef Name="Member ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_會員折價券資料表_Shop_優惠券總表">
+          <End Role="Shop_Coupon Total" Type="Self.Shop_Coupon Total" Multiplicity="0..1" />
+          <End Role="Shop_Member Coupon Data" Type="Self.Shop_Member Coupon Data" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Coupon Total">
+              <PropertyRef Name="Coupon ID" />
+            </Principal>
+            <Dependent Role="Shop_Member Coupon Data">
+              <PropertyRef Name="Coupon ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CatChaModelStoreContainer">
+          <EntitySet Name="Shop_Common Address Data" EntityType="Self.Shop_Common Address Data" Schema="dbo" Table="Shop.Common Address Data" store:Type="Tables" />
+          <EntitySet Name="Shop_Coupon Total" EntityType="Self.Shop_Coupon Total" Schema="dbo" Table="Shop.Coupon Total" store:Type="Tables" />
+          <EntitySet Name="Shop_Member Coupon Data" EntityType="Self.Shop_Member Coupon Data" Schema="dbo" Table="Shop.Member Coupon Data" store:Type="Tables" />
+          <EntitySet Name="Shop_Member Info" EntityType="Self.Shop_Member Info" Schema="dbo" Table="Shop.Member Info" store:Type="Tables" />
+          <EntitySet Name="Shop_Order Detail Table" EntityType="Self.Shop_Order Detail Table" Schema="dbo" Table="Shop.Order Detail Table" store:Type="Tables" />
+          <EntitySet Name="Shop_Order Status Data" EntityType="Self.Shop_Order Status Data" Schema="dbo" Table="Shop.Order Status Data" store:Type="Tables" />
+          <EntitySet Name="Shop_Order Total Table" EntityType="Self.Shop_Order Total Table" Schema="dbo" Table="Shop.Order Total Table" store:Type="Tables" />
+          <EntitySet Name="Shop_Payment Method Data" EntityType="Self.Shop_Payment Method Data" Schema="dbo" Table="Shop.Payment Method Data" store:Type="Tables" />
+          <EntitySet Name="Shop_Product Category" EntityType="Self.Shop_Product Category" Schema="dbo" Table="Shop.Product Category" store:Type="Tables" />
+          <EntitySet Name="Shop_Product Image Table" EntityType="Self.Shop_Product Image Table" Schema="dbo" Table="Shop.Product Image Table" store:Type="Tables" />
+          <EntitySet Name="Shop_Product Total" EntityType="Self.Shop_Product Total" Schema="dbo" Table="Shop.Product Total" store:Type="Tables" />
+          <AssociationSet Name="FK_Orders_Details_Orders" Association="Self.FK_Orders_Details_Orders">
+            <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+            <End Role="Shop_Order Detail Table" EntitySet="Shop_Order Detail Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Details_Products" Association="Self.FK_Orders_Details_Products">
+            <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+            <End Role="Shop_Order Detail Table" EntitySet="Shop_Order Detail Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Image_Products" Association="Self.FK_Products_Image_Products">
+            <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+            <End Role="Shop_Product Image Table" EntitySet="Shop_Product Image Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Products_Categories" Association="Self.FK_Products_Products_Categories">
+            <End Role="Shop_Product Category" EntitySet="Shop_Product Category" />
+            <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_Order Total Table_Shop_Common Address Data" Association="Self.FK_Shop_Order Total Table_Shop_Common Address Data">
+            <End Role="Shop_Common Address Data" EntitySet="Shop_Common Address Data" />
+            <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_訂單總表_Shop_付款方式資料表" Association="Self.FK_Shop_訂單總表_Shop_付款方式資料表">
+            <End Role="Shop_Payment Method Data" EntitySet="Shop_Payment Method Data" />
+            <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_訂單總表_Shop_訂單狀態資料表" Association="Self.FK_Shop_訂單總表_Shop_訂單狀態資料表">
+            <End Role="Shop_Order Status Data" EntitySet="Shop_Order Status Data" />
+            <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_訂單總表_Shop_會員資訊" Association="Self.FK_Shop_訂單總表_Shop_會員資訊">
+            <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+            <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_常用地址資料表_Shop_會員資訊" Association="Self.FK_Shop_常用地址資料表_Shop_會員資訊">
+            <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+            <End Role="Shop_Common Address Data" EntitySet="Shop_Common Address Data" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_會員折價券資料表_Shop_會員資訊" Association="Self.FK_Shop_會員折價券資料表_Shop_會員資訊">
+            <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+            <End Role="Shop_Member Coupon Data" EntitySet="Shop_Member Coupon Data" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_會員折價券資料表_Shop_優惠券總表" Association="Self.FK_Shop_會員折價券資料表_Shop_優惠券總表">
+            <End Role="Shop_Coupon Total" EntitySet="Shop_Coupon Total" />
+            <End Role="Shop_Member Coupon Data" EntitySet="Shop_Member Coupon Data" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CatChaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Shop_Common_Address_Data">
+          <Key>
+            <PropertyRef Name="Address_ID" />
+          </Key>
+          <Property Name="Member_ID" Type="Int32" />
+          <Property Name="Address_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Recipient_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Recipient_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Recipient_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Shop_Order_Total_Table" Relationship="Self.FK_Shop_Order_Total_Table_Shop_Common_Address_Data" FromRole="Shop_Common_Address_Data" ToRole="Shop_Order_Total_Table" />
+          <NavigationProperty Name="Shop_Member_Info" Relationship="Self.FK_Shop_常用地址資料表_Shop_會員資訊" FromRole="Shop_Common_Address_Data" ToRole="Shop_Member_Info" />
+        </EntityType>
+        <EntityType Name="Shop_Coupon_Total">
+          <Key>
+            <PropertyRef Name="Coupon_ID" />
+          </Key>
+          <Property Name="Coupon_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Coupon_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Coupon_Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Expiry_Date" Type="DateTime" Precision="3" />
+          <Property Name="Total_Quantity" Type="Int32" />
+          <Property Name="Usable" Type="Boolean" />
+          <NavigationProperty Name="Shop_Member_Coupon_Data" Relationship="Self.FK_Shop_會員折價券資料表_Shop_優惠券總表" FromRole="Shop_Coupon_Total" ToRole="Shop_Member_Coupon_Data" />
+        </EntityType>
+        <EntityType Name="Shop_Member_Coupon_Data">
+          <Key>
+            <PropertyRef Name="Member_Coupon_Data_ID" />
+          </Key>
+          <Property Name="Member_ID" Type="Int32" />
+          <Property Name="Coupon_ID" Type="Int32" />
+          <Property Name="Coupon_Status_ID" Type="Boolean" />
+          <Property Name="Member_Coupon_Data_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Shop_Coupon_Total" Relationship="Self.FK_Shop_會員折價券資料表_Shop_優惠券總表" FromRole="Shop_Member_Coupon_Data" ToRole="Shop_Coupon_Total" />
+          <NavigationProperty Name="Shop_Member_Info" Relationship="Self.FK_Shop_會員折價券資料表_Shop_會員資訊" FromRole="Shop_Member_Coupon_Data" ToRole="Shop_Member_Info" />
+        </EntityType>
+        <EntityType Name="Shop_Member_Info">
+          <Key>
+            <PropertyRef Name="Member_ID" />
+          </Key>
+          <Property Name="Member_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Member_Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Character_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Level_ID" Type="Int32" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="0" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Number" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Cat_Coin_Quantity" Type="Int32" />
+          <Property Name="Loyalty_Points" Type="Int32" />
+          <Property Name="Registration_Time" Type="DateTime" Precision="3" />
+          <Property Name="Last_Login_Time" Type="DateTime" Precision="3" />
+          <Property Name="Favorite_ID" Type="Int32" />
+          <NavigationProperty Name="Shop_Common_Address_Data" Relationship="Self.FK_Shop_常用地址資料表_Shop_會員資訊" FromRole="Shop_Member_Info" ToRole="Shop_Common_Address_Data" />
+          <NavigationProperty Name="Shop_Member_Coupon_Data" Relationship="Self.FK_Shop_會員折價券資料表_Shop_會員資訊" FromRole="Shop_Member_Info" ToRole="Shop_Member_Coupon_Data" />
+          <NavigationProperty Name="Shop_Order_Total_Table" Relationship="Self.FK_Shop_訂單總表_Shop_會員資訊" FromRole="Shop_Member_Info" ToRole="Shop_Order_Total_Table" />
+        </EntityType>
+        <EntityType Name="Shop_Order_Detail_Table">
+          <Key>
+            <PropertyRef Name="Order_Detail_ID" />
+          </Key>
+          <Property Name="Order_ID" Type="Int32" />
+          <Property Name="Product_ID" Type="Int32" />
+          <Property Name="Product_Quantity" Type="Int32" />
+          <Property Name="Order_Detail_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Shop_Order_Total_Table" Relationship="Self.FK_Orders_Details_Orders" FromRole="Shop_Order_Detail_Table" ToRole="Shop_Order_Total_Table" />
+          <NavigationProperty Name="Shop_Product_Total" Relationship="Self.FK_Orders_Details_Products" FromRole="Shop_Order_Detail_Table" ToRole="Shop_Product_Total" />
+        </EntityType>
+        <EntityType Name="Shop_Order_Status_Data">
+          <Key>
+            <PropertyRef Name="Order_Status_ID" />
+          </Key>
+          <Property Name="Order_Status_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Shop_Order_Total_Table" Relationship="Self.FK_Shop_訂單總表_Shop_訂單狀態資料表" FromRole="Shop_Order_Status_Data" ToRole="Shop_Order_Total_Table" />
+        </EntityType>
+        <EntityType Name="Shop_Order_Total_Table">
+          <Key>
+            <PropertyRef Name="Order_ID" />
+          </Key>
+          <Property Name="Member_ID" Type="Int32" />
+          <Property Name="Order_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Order_Creation_Date" Type="DateTime" Precision="3" />
+          <Property Name="Last_Update_Time" Type="DateTime" Precision="3" />
+          <Property Name="Address_ID" Type="Int32" />
+          <Property Name="Recipient_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Recipient_Name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Recipient_Phone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Order_Status_ID" Type="Int32" />
+          <Property Name="Payment_Method_ID" Type="Int32" />
+          <Property Name="Coupon_ID" Type="Int32" />
+          <NavigationProperty Name="Shop_Common_Address_Data" Relationship="Self.FK_Shop_Order_Total_Table_Shop_Common_Address_Data" FromRole="Shop_Order_Total_Table" ToRole="Shop_Common_Address_Data" />
+          <NavigationProperty Name="Shop_Member_Info" Relationship="Self.FK_Shop_訂單總表_Shop_會員資訊" FromRole="Shop_Order_Total_Table" ToRole="Shop_Member_Info" />
+          <NavigationProperty Name="Shop_Order_Detail_Table" Relationship="Self.FK_Orders_Details_Orders" FromRole="Shop_Order_Total_Table" ToRole="Shop_Order_Detail_Table" />
+          <NavigationProperty Name="Shop_Order_Status_Data" Relationship="Self.FK_Shop_訂單總表_Shop_訂單狀態資料表" FromRole="Shop_Order_Total_Table" ToRole="Shop_Order_Status_Data" />
+          <NavigationProperty Name="Shop_Payment_Method_Data" Relationship="Self.FK_Shop_訂單總表_Shop_付款方式資料表" FromRole="Shop_Order_Total_Table" ToRole="Shop_Payment_Method_Data" />
+        </EntityType>
+        <EntityType Name="Shop_Payment_Method_Data">
+          <Key>
+            <PropertyRef Name="Payment_Method_ID" />
+          </Key>
+          <Property Name="Payment_Method_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Payment_Method_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Shop_Order_Total_Table" Relationship="Self.FK_Shop_訂單總表_Shop_付款方式資料表" FromRole="Shop_Payment_Method_Data" ToRole="Shop_Order_Total_Table" />
+        </EntityType>
+        <EntityType Name="Shop_Product_Category">
+          <Key>
+            <PropertyRef Name="Product_Category_ID" />
+          </Key>
+          <Property Name="Product_Category_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Category_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Category_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Shop_Product_Total" Relationship="Self.FK_Products_Products_Categories" FromRole="Shop_Product_Category" ToRole="Shop_Product_Total" />
+        </EntityType>
+        <EntityType Name="Shop_Product_Image_Table">
+          <Key>
+            <PropertyRef Name="Product_Image_ID" />
+          </Key>
+          <Property Name="Product_ID" Type="Int32" />
+          <Property Name="Product_Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Product_Image_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Shop_Product_Total" Relationship="Self.FK_Products_Image_Products" FromRole="Shop_Product_Image_Table" ToRole="Shop_Product_Total" />
+        </EntityType>
+        <EntityType Name="Shop_Product_Total">
+          <Key>
+            <PropertyRef Name="Product_ID" />
+          </Key>
+          <Property Name="Product_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Product_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Product_Category_ID" Type="Int32" />
+          <Property Name="Product_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Product_Price" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Release_Date" Type="DateTime" Precision="0" />
+          <Property Name="Discontinued" Type="Boolean" />
+          <Property Name="Remaining_Quantity" Type="Int32" />
+          <Property Name="Supplier_ID" Type="Int32" />
+          <NavigationProperty Name="Shop_Order_Detail_Table" Relationship="Self.FK_Orders_Details_Products" FromRole="Shop_Product_Total" ToRole="Shop_Order_Detail_Table" />
+          <NavigationProperty Name="Shop_Product_Category" Relationship="Self.FK_Products_Products_Categories" FromRole="Shop_Product_Total" ToRole="Shop_Product_Category" />
+          <NavigationProperty Name="Shop_Product_Image_Table" Relationship="Self.FK_Products_Image_Products" FromRole="Shop_Product_Total" ToRole="Shop_Product_Image_Table" />
+        </EntityType>
+        <Association Name="FK_Shop_Order_Total_Table_Shop_Common_Address_Data">
+          <End Role="Shop_Common_Address_Data" Type="Self.Shop_Common_Address_Data" Multiplicity="0..1" />
+          <End Role="Shop_Order_Total_Table" Type="Self.Shop_Order_Total_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Common_Address_Data">
+              <PropertyRef Name="Address_ID" />
+            </Principal>
+            <Dependent Role="Shop_Order_Total_Table">
+              <PropertyRef Name="Address_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_常用地址資料表_Shop_會員資訊">
+          <End Role="Shop_Member_Info" Type="Self.Shop_Member_Info" Multiplicity="0..1" />
+          <End Role="Shop_Common_Address_Data" Type="Self.Shop_Common_Address_Data" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Member_Info">
+              <PropertyRef Name="Member_ID" />
+            </Principal>
+            <Dependent Role="Shop_Common_Address_Data">
+              <PropertyRef Name="Member_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_會員折價券資料表_Shop_優惠券總表">
+          <End Role="Shop_Coupon_Total" Type="Self.Shop_Coupon_Total" Multiplicity="0..1" />
+          <End Role="Shop_Member_Coupon_Data" Type="Self.Shop_Member_Coupon_Data" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Coupon_Total">
+              <PropertyRef Name="Coupon_ID" />
+            </Principal>
+            <Dependent Role="Shop_Member_Coupon_Data">
+              <PropertyRef Name="Coupon_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_會員折價券資料表_Shop_會員資訊">
+          <End Role="Shop_Member_Info" Type="Self.Shop_Member_Info" Multiplicity="0..1" />
+          <End Role="Shop_Member_Coupon_Data" Type="Self.Shop_Member_Coupon_Data" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Member_Info">
+              <PropertyRef Name="Member_ID" />
+            </Principal>
+            <Dependent Role="Shop_Member_Coupon_Data">
+              <PropertyRef Name="Member_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_訂單總表_Shop_會員資訊">
+          <End Role="Shop_Member_Info" Type="Self.Shop_Member_Info" Multiplicity="0..1" />
+          <End Role="Shop_Order_Total_Table" Type="Self.Shop_Order_Total_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Member_Info">
+              <PropertyRef Name="Member_ID" />
+            </Principal>
+            <Dependent Role="Shop_Order_Total_Table">
+              <PropertyRef Name="Member_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Details_Orders">
+          <End Role="Shop_Order_Total_Table" Type="Self.Shop_Order_Total_Table" Multiplicity="0..1" />
+          <End Role="Shop_Order_Detail_Table" Type="Self.Shop_Order_Detail_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Order_Total_Table">
+              <PropertyRef Name="Order_ID" />
+            </Principal>
+            <Dependent Role="Shop_Order_Detail_Table">
+              <PropertyRef Name="Order_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Details_Products">
+          <End Role="Shop_Product_Total" Type="Self.Shop_Product_Total" Multiplicity="0..1" />
+          <End Role="Shop_Order_Detail_Table" Type="Self.Shop_Order_Detail_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Product_Total">
+              <PropertyRef Name="Product_ID" />
+            </Principal>
+            <Dependent Role="Shop_Order_Detail_Table">
+              <PropertyRef Name="Product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_訂單總表_Shop_訂單狀態資料表">
+          <End Role="Shop_Order_Status_Data" Type="Self.Shop_Order_Status_Data" Multiplicity="0..1" />
+          <End Role="Shop_Order_Total_Table" Type="Self.Shop_Order_Total_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Order_Status_Data">
+              <PropertyRef Name="Order_Status_ID" />
+            </Principal>
+            <Dependent Role="Shop_Order_Total_Table">
+              <PropertyRef Name="Order_Status_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_訂單總表_Shop_付款方式資料表">
+          <End Role="Shop_Payment_Method_Data" Type="Self.Shop_Payment_Method_Data" Multiplicity="0..1" />
+          <End Role="Shop_Order_Total_Table" Type="Self.Shop_Order_Total_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Payment_Method_Data">
+              <PropertyRef Name="Payment_Method_ID" />
+            </Principal>
+            <Dependent Role="Shop_Order_Total_Table">
+              <PropertyRef Name="Payment_Method_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Products_Categories">
+          <End Role="Shop_Product_Category" Type="Self.Shop_Product_Category" Multiplicity="0..1" />
+          <End Role="Shop_Product_Total" Type="Self.Shop_Product_Total" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Product_Category">
+              <PropertyRef Name="Product_Category_ID" />
+            </Principal>
+            <Dependent Role="Shop_Product_Total">
+              <PropertyRef Name="Product_Category_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Image_Products">
+          <End Role="Shop_Product_Total" Type="Self.Shop_Product_Total" Multiplicity="0..1" />
+          <End Role="Shop_Product_Image_Table" Type="Self.Shop_Product_Image_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Product_Total">
+              <PropertyRef Name="Product_ID" />
+            </Principal>
+            <Dependent Role="Shop_Product_Image_Table">
+              <PropertyRef Name="Product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CatChaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Shop_Common_Address_Data" EntityType="Self.Shop_Common_Address_Data" />
+          <EntitySet Name="Shop_Coupon_Total" EntityType="Self.Shop_Coupon_Total" />
+          <EntitySet Name="Shop_Member_Coupon_Data" EntityType="Self.Shop_Member_Coupon_Data" />
+          <EntitySet Name="Shop_Member_Info" EntityType="Self.Shop_Member_Info" />
+          <EntitySet Name="Shop_Order_Detail_Table" EntityType="Self.Shop_Order_Detail_Table" />
+          <EntitySet Name="Shop_Order_Status_Data" EntityType="Self.Shop_Order_Status_Data" />
+          <EntitySet Name="Shop_Order_Total_Table" EntityType="Self.Shop_Order_Total_Table" />
+          <EntitySet Name="Shop_Payment_Method_Data" EntityType="Self.Shop_Payment_Method_Data" />
+          <EntitySet Name="Shop_Product_Category" EntityType="Self.Shop_Product_Category" />
+          <EntitySet Name="Shop_Product_Image_Table" EntityType="Self.Shop_Product_Image_Table" />
+          <EntitySet Name="Shop_Product_Total" EntityType="Self.Shop_Product_Total" />
+          <AssociationSet Name="FK_Shop_Order_Total_Table_Shop_Common_Address_Data" Association="Self.FK_Shop_Order_Total_Table_Shop_Common_Address_Data">
+            <End Role="Shop_Common_Address_Data" EntitySet="Shop_Common_Address_Data" />
+            <End Role="Shop_Order_Total_Table" EntitySet="Shop_Order_Total_Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_常用地址資料表_Shop_會員資訊" Association="Self.FK_Shop_常用地址資料表_Shop_會員資訊">
+            <End Role="Shop_Member_Info" EntitySet="Shop_Member_Info" />
+            <End Role="Shop_Common_Address_Data" EntitySet="Shop_Common_Address_Data" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_會員折價券資料表_Shop_優惠券總表" Association="Self.FK_Shop_會員折價券資料表_Shop_優惠券總表">
+            <End Role="Shop_Coupon_Total" EntitySet="Shop_Coupon_Total" />
+            <End Role="Shop_Member_Coupon_Data" EntitySet="Shop_Member_Coupon_Data" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_會員折價券資料表_Shop_會員資訊" Association="Self.FK_Shop_會員折價券資料表_Shop_會員資訊">
+            <End Role="Shop_Member_Info" EntitySet="Shop_Member_Info" />
+            <End Role="Shop_Member_Coupon_Data" EntitySet="Shop_Member_Coupon_Data" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_訂單總表_Shop_會員資訊" Association="Self.FK_Shop_訂單總表_Shop_會員資訊">
+            <End Role="Shop_Member_Info" EntitySet="Shop_Member_Info" />
+            <End Role="Shop_Order_Total_Table" EntitySet="Shop_Order_Total_Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Details_Orders" Association="Self.FK_Orders_Details_Orders">
+            <End Role="Shop_Order_Total_Table" EntitySet="Shop_Order_Total_Table" />
+            <End Role="Shop_Order_Detail_Table" EntitySet="Shop_Order_Detail_Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Details_Products" Association="Self.FK_Orders_Details_Products">
+            <End Role="Shop_Product_Total" EntitySet="Shop_Product_Total" />
+            <End Role="Shop_Order_Detail_Table" EntitySet="Shop_Order_Detail_Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_訂單總表_Shop_訂單狀態資料表" Association="Self.FK_Shop_訂單總表_Shop_訂單狀態資料表">
+            <End Role="Shop_Order_Status_Data" EntitySet="Shop_Order_Status_Data" />
+            <End Role="Shop_Order_Total_Table" EntitySet="Shop_Order_Total_Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_訂單總表_Shop_付款方式資料表" Association="Self.FK_Shop_訂單總表_Shop_付款方式資料表">
+            <End Role="Shop_Payment_Method_Data" EntitySet="Shop_Payment_Method_Data" />
+            <End Role="Shop_Order_Total_Table" EntitySet="Shop_Order_Total_Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Products_Categories" Association="Self.FK_Products_Products_Categories">
+            <End Role="Shop_Product_Category" EntitySet="Shop_Product_Category" />
+            <End Role="Shop_Product_Total" EntitySet="Shop_Product_Total" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Image_Products" Association="Self.FK_Products_Image_Products">
+            <End Role="Shop_Product_Total" EntitySet="Shop_Product_Total" />
+            <End Role="Shop_Product_Image_Table" EntitySet="Shop_Product_Image_Table" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CatChaModelStoreContainer" CdmEntityContainer="CatChaEntities">
+          <EntitySetMapping Name="Shop_Common_Address_Data">
+            <EntityTypeMapping TypeName="CatChaModel.Shop_Common_Address_Data">
+              <MappingFragment StoreEntitySet="Shop_Common Address Data">
+                <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+                <ScalarProperty Name="Address_ID" ColumnName="Address ID" />
+                <ScalarProperty Name="Recipient_Name" ColumnName="Recipient Name" />
+                <ScalarProperty Name="Recipient_Phone" ColumnName="Recipient Phone" />
+                <ScalarProperty Name="Recipient_Address" ColumnName="Recipient Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shop_Coupon_Total">
+            <EntityTypeMapping TypeName="CatChaModel.Shop_Coupon_Total">
+              <MappingFragment StoreEntitySet="Shop_Coupon Total">
+                <ScalarProperty Name="Coupon_ID" ColumnName="Coupon ID" />
+                <ScalarProperty Name="Coupon_Name" ColumnName="Coupon Name" />
+                <ScalarProperty Name="Coupon_Content" ColumnName="Coupon Content" />
+                <ScalarProperty Name="Expiry_Date" ColumnName="Expiry Date" />
+                <ScalarProperty Name="Total_Quantity" ColumnName="Total Quantity" />
+                <ScalarProperty Name="Usable" ColumnName="Usable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shop_Member_Coupon_Data">
+            <EntityTypeMapping TypeName="CatChaModel.Shop_Member_Coupon_Data">
+              <MappingFragment StoreEntitySet="Shop_Member Coupon Data">
+                <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+                <ScalarProperty Name="Coupon_ID" ColumnName="Coupon ID" />
+                <ScalarProperty Name="Coupon_Status_ID" ColumnName="Coupon Status ID" />
+                <ScalarProperty Name="Member_Coupon_Data_ID" ColumnName="Member Coupon Data ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shop_Member_Info">
+            <EntityTypeMapping TypeName="CatChaModel.Shop_Member_Info">
+              <MappingFragment StoreEntitySet="Shop_Member Info">
+                <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+                <ScalarProperty Name="Member_Account" ColumnName="Member Account" />
+                <ScalarProperty Name="Character_Name" ColumnName="Character Name" />
+                <ScalarProperty Name="Level_ID" ColumnName="Level ID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone_Number" ColumnName="Phone Number" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Cat_Coin_Quantity" ColumnName="Cat Coin Quantity" />
+                <ScalarProperty Name="Loyalty_Points" ColumnName="Loyalty Points" />
+                <ScalarProperty Name="Registration_Time" ColumnName="Registration Time" />
+                <ScalarProperty Name="Last_Login_Time" ColumnName="Last Login Time" />
+                <ScalarProperty Name="Favorite_ID" ColumnName="Favorite ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shop_Order_Detail_Table">
+            <EntityTypeMapping TypeName="CatChaModel.Shop_Order_Detail_Table">
+              <MappingFragment StoreEntitySet="Shop_Order Detail Table">
+                <ScalarProperty Name="Order_ID" ColumnName="Order ID" />
+                <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+                <ScalarProperty Name="Product_Quantity" ColumnName="Product Quantity" />
+                <ScalarProperty Name="Order_Detail_ID" ColumnName="Order Detail ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shop_Order_Status_Data">
+            <EntityTypeMapping TypeName="CatChaModel.Shop_Order_Status_Data">
+              <MappingFragment StoreEntitySet="Shop_Order Status Data">
+                <ScalarProperty Name="Order_Status_ID" ColumnName="Order Status ID" />
+                <ScalarProperty Name="Status_Name" ColumnName="Status Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shop_Order_Total_Table">
+            <EntityTypeMapping TypeName="CatChaModel.Shop_Order_Total_Table">
+              <MappingFragment StoreEntitySet="Shop_Order Total Table">
+                <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+                <ScalarProperty Name="Order_ID" ColumnName="Order ID" />
+                <ScalarProperty Name="Order_Creation_Date" ColumnName="Order Creation Date" />
+                <ScalarProperty Name="Last_Update_Time" ColumnName="Last Update Time" />
+                <ScalarProperty Name="Address_ID" ColumnName="Address ID" />
+                <ScalarProperty Name="Recipient_Address" ColumnName="Recipient Address" />
+                <ScalarProperty Name="Recipient_Name" ColumnName="Recipient Name" />
+                <ScalarProperty Name="Recipient_Phone" ColumnName="Recipient Phone" />
+                <ScalarProperty Name="Order_Status_ID" ColumnName="Order Status ID" />
+                <ScalarProperty Name="Payment_Method_ID" ColumnName="Payment Method ID" />
+                <ScalarProperty Name="Coupon_ID" ColumnName="Coupon ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shop_Payment_Method_Data">
+            <EntityTypeMapping TypeName="CatChaModel.Shop_Payment_Method_Data">
+              <MappingFragment StoreEntitySet="Shop_Payment Method Data">
+                <ScalarProperty Name="Payment_Method_ID" ColumnName="Payment Method ID" />
+                <ScalarProperty Name="Payment_Method_Name" ColumnName="Payment Method Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shop_Product_Category">
+            <EntityTypeMapping TypeName="CatChaModel.Shop_Product_Category">
+              <MappingFragment StoreEntitySet="Shop_Product Category">
+                <ScalarProperty Name="Product_Category_ID" ColumnName="Product Category ID" />
+                <ScalarProperty Name="Category_Name" ColumnName="Category Name" />
+                <ScalarProperty Name="Category_Description" ColumnName="Category Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shop_Product_Image_Table">
+            <EntityTypeMapping TypeName="CatChaModel.Shop_Product_Image_Table">
+              <MappingFragment StoreEntitySet="Shop_Product Image Table">
+                <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+                <ScalarProperty Name="Product_Photo" ColumnName="Product Photo" />
+                <ScalarProperty Name="Product_Image_ID" ColumnName="Product Image ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shop_Product_Total">
+            <EntityTypeMapping TypeName="CatChaModel.Shop_Product_Total">
+              <MappingFragment StoreEntitySet="Shop_Product Total">
+                <ScalarProperty Name="Product_Name" ColumnName="Product Name" />
+                <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+                <ScalarProperty Name="Product_Category_ID" ColumnName="Product Category ID" />
+                <ScalarProperty Name="Product_Description" ColumnName="Product Description" />
+                <ScalarProperty Name="Product_Price" ColumnName="Product Price" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Release_Date" ColumnName="Release Date" />
+                <ScalarProperty Name="Discontinued" ColumnName="Discontinued" />
+                <ScalarProperty Name="Remaining_Quantity" ColumnName="Remaining Quantity" />
+                <ScalarProperty Name="Supplier_ID" ColumnName="Supplier ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram DiagramId="4fe06572db4a4bc0a06a09f78081ef2c" Name="Diagram1">
+        <EntityTypeShape EntityType="CatChaModel.Shop_Common_Address_Data" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatChaModel.Shop_Coupon_Total" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatChaModel.Shop_Member_Coupon_Data" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatChaModel.Shop_Member_Info" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatChaModel.Shop_Order_Detail_Table" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatChaModel.Shop_Order_Status_Data" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatChaModel.Shop_Order_Total_Table" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatChaModel.Shop_Payment_Method_Data" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatChaModel.Shop_Product_Category" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatChaModel.Shop_Product_Image_Table" Width="1.5" PointX="7.5" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatChaModel.Shop_Product_Total" Width="1.5" PointX="5.25" PointY="13" IsExpanded="true" />
+        <AssociationConnector Association="CatChaModel.FK_Shop_Order_Total_Table_Shop_Common_Address_Data" ManuallyRouted="false" />
+        <AssociationConnector Association="CatChaModel.FK_Shop_常用地址資料表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="CatChaModel.FK_Shop_會員折價券資料表_Shop_優惠券總表" ManuallyRouted="false" />
+        <AssociationConnector Association="CatChaModel.FK_Shop_會員折價券資料表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="CatChaModel.FK_Shop_訂單總表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="CatChaModel.FK_Orders_Details_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="CatChaModel.FK_Orders_Details_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="CatChaModel.FK_Shop_訂單總表_Shop_訂單狀態資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="CatChaModel.FK_Shop_訂單總表_Shop_付款方式資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="CatChaModel.FK_Products_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="CatChaModel.FK_Products_Image_Products" ManuallyRouted="false" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
