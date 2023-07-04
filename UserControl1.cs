@@ -1,4 +1,5 @@
-﻿using CatChaForms;
+﻿using CatCaha;
+using CatChaForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace catcha
 {
     public partial class ProductControl : UserControl
     {
-        貓抓抓Entities dbContext = new 貓抓抓Entities();
+        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
 
         private int productID;
 

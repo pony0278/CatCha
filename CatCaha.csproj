@@ -44,6 +44,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -227,6 +228,9 @@
     </Compile>
     <Compile Include="Shopping.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shopping.designer.cs">
+      <DependentUpon>Shopping.cs</DependentUpon>
     </Compile>
     <Compile Include="Shop_Appeal_Category_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>

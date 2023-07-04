@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CatCaha;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace CatChaForms
 {
     public partial class ChangePwd : Form
     {
-        貓抓抓Entities dbContext = new 貓抓抓Entities();
+        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
         public ChangePwd()
         {
             InitializeComponent();

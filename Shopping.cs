@@ -1,4 +1,5 @@
-﻿using catcha;
+﻿using CatCaha;
+using catcha;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,7 @@ namespace CatChaForms
             InitializeComponent();
         }
 
-        貓抓抓Entities dbContext = new 貓抓抓Entities();
+        貓抓抓Entities1 dbContext = new 貓抓抓Entities1();
         private void Shopping_Load(object sender, EventArgs e)
         {
             ComboBoxSort.SelectedIndex = 0;
@@ -175,18 +176,6 @@ namespace CatChaForms
             public int Discontinued { get; set; }
             public int? Remaining_Quantity { get; set; }
             public int Supplier_ID { get; set; }
-        }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // Shopping
-            // 
-            this.ClientSize = new System.Drawing.Size(1049, 643);
-            this.Name = "Shopping";
-            this.ResumeLayout(false);
-
         }
     }
 }
