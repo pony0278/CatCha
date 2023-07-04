@@ -284,11 +284,11 @@
     <Compile Include="RefundStatus.Designer.cs">
       <DependentUpon>RefundStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZongHanForm\gPurchasePageUserControl.cs">
+    <Compile Include="ZongHanForm\gPurchasePageUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ZongHanForm\gPurchasePageUserControl.Designer.cs">
-      <DependentUpon>gPurchasePageUserControl.cs</DependentUpon>
+    <Compile Include="ZongHanForm\gPurchasePageUC.Designer.cs">
+      <DependentUpon>gPurchasePageUC.cs</DependentUpon>
     </Compile>
     <Compile Include="ZongHanCompoents\UserControlManger\UserControlManager.cs" />
     <Compile Include="ZongHanCompoents\UserData\UserProperties.cs" />
@@ -337,8 +337,8 @@
     <EmbeddedResource Include="RefundStatus.resx">
       <DependentUpon>RefundStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZongHanForm\gPurchasePageUserControl.resx">
-      <DependentUpon>gPurchasePageUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="ZongHanForm\gPurchasePageUC.resx">
+      <DependentUpon>gPurchasePageUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ＭemberCenter.resx">
       <DependentUpon>ＭemberCenter.cs</DependentUpon>

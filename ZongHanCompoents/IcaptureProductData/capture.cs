@@ -45,7 +45,7 @@ namespace CatCaha.IcaptureData
             }
 
             // Get current number of user controls
-            int currentControlCount = flowLayoutPanel.Controls.OfType<gPurchasePageUserControl1>().Count();
+            int currentControlCount = flowLayoutPanel.Controls.OfType<gPurchasePageUC>().Count();
 
             // Remove excess user controls
             while (currentControlCount > GetData.Count)
@@ -57,7 +57,7 @@ namespace CatCaha.IcaptureData
             // Add additional user controls
             while (currentControlCount < GetData.Count)
             {
-                gPurchasePageUserControl1 uc = new gPurchasePageUserControl1();
+                gPurchasePageUC uc = new gPurchasePageUC();
                 //uc.Dock = DockStyle.Top;
                 flowLayoutPanel.Controls.Add(uc);
                 currentControlCount++;
@@ -66,7 +66,7 @@ namespace CatCaha.IcaptureData
             // Set data for user controls
             for (int i = 0; i < GetData.Count; i++)
             {
-                gPurchasePageUserControl1 uc1 = (gPurchasePageUserControl1)flowLayoutPanel.Controls[i];
+                gPurchasePageUC uc1 = (gPurchasePageUC)flowLayoutPanel.Controls[i];
                 uc1.SetImage(GetData[i].Image);
                 uc1.SetProductName(GetData[i].ProductsName);
                 uc1.SetProductPrice(GetData[i].ProductsPrice);

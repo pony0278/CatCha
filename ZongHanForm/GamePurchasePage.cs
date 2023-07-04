@@ -20,7 +20,7 @@ namespace CatCaha
     {
         CallDataToFormm.CallDataToForm callTeacherData = new CallDataToFormm.CallDataToForm();
         Button button = new Button();
-        gPurchasePageUserControl1 userControl;
+        gPurchasePageUC userControl;
 
         public GamePurchasePage()
         {
