@@ -1,5 +1,4 @@
-﻿using CatCaha;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CatCaha.NewFolder1;
 
 namespace CatChaForms
 {
@@ -36,8 +36,8 @@ namespace CatChaForms
 
         private bool ValidateInputs()
         {
-            ClearErrorLabels(); // 清除之前的錯誤訊息
-            bool isValid = true; // 默認為true
+            ClearErrorLabels(); // 清除之前的错误消息
+            bool isValid = true; // 默认为 true
 
             //========帳號
             if (string.IsNullOrWhiteSpace(AccountText.Text))
@@ -100,10 +100,6 @@ namespace CatChaForms
                 SetErrorLabel(errorPwd, "請輸入密碼");
                 isValid = false;
             }
-            else if (PasswordText.Text.Length <= 6) {
-                SetErrorLabel(errorPwd, "密碼需大於6個字元");
-                isValid = false;
-            }
 
             //確認密碼
             if (string.IsNullOrWhiteSpace(CheckPwdText.Text))
@@ -117,6 +113,7 @@ namespace CatChaForms
                 SetErrorLabel(errorCheckPwd, "確認密碼與密碼不相符");
                 isValid = false;
             }
+
             return isValid;
         }
 
@@ -158,9 +155,16 @@ namespace CatChaForms
             {
                 try
                 {
+                    //MemberID - 時間撮timestamp
+                    //var MemberID = new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds();
+                    //資料庫不吃 要改成nvchar
+
                     string Account = this.AccountText.Text;
                     string Name = this.NameText.Text;
                     string Gender = this.GenderComboBox.SelectedItem.ToString();
+
+                    //string Birth = this.BirthDateTimePicker.Value.ToString("yyyy-MM-dd");
+
                     string Email = this.EmailText.Text;
                     string CellPhone = this.CellPhoneText.Text;
                     string Address = this.AddressText.Text;
@@ -180,6 +184,7 @@ namespace CatChaForms
                     {
                         Member_Account = Account,
                         Character_Name = "",
+                        //Level_ID = 1,
                         Password = Password,
                         Name = Name,
                         Gender = Gender,
@@ -191,6 +196,7 @@ namespace CatChaForms
                         Loyalty_Points = Bonus,
                         Registration_Time = DateTime.Now,
                         //=================有在database 修改欄位的地方記得edmx也要重新整理(右鍵->從資料庫更新模型)
+                        //Favorite_ID = 1
                     };
                     dbContext.Shop_Member_Info.Add(member);
 
@@ -202,6 +208,7 @@ namespace CatChaForms
                     Signin form = new Signin();
                     form.ShowDialog();
                     this.Hide(); //視窗
+
                 }
                 catch (Exception ex)
                 {
@@ -243,6 +250,13 @@ namespace CatChaForms
         {
             CheckPwdText.PasswordChar = '*'; //設定密碼顯示跟網頁一樣不顯示內容
         }
+
+        //private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        //{
+        //    Signin form = new Signin();
+        //    form.Show();
+        //    this.Hide(); //關閉註冊的視窗
+        //}
     }
     public class Person
     {

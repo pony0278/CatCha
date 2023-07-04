@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.PropertyGridInternal;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+using CatCaha.NewFolder1;
 
 namespace LinqLabs
 {

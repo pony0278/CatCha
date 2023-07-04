@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Data.Entity;
 using System.Data.SqlTypes;
+using CatCaha.NewFolder1;
 
 namespace LinqLabs
 {

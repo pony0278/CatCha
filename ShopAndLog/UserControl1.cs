@@ -1,5 +1,4 @@
-﻿using CatCaha;
-using CatChaForms;
+﻿using CatChaForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +13,7 @@ using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using CatCaha.NewFolder1;
 
 namespace catcha
 {
@@ -58,6 +58,11 @@ namespace catcha
             set { label2.Text = value; }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(productID.ToString());
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             //===================傳商品ID過去
@@ -80,7 +85,7 @@ namespace catcha
                 //===================表示有登入，可以新增
                 //==============//先判斷OrderTotal是否存在這個會員跟訂單狀態，如果兩個條件都沒有符合則新增到OrderTotal
 
-                // 查詢條件
+                // 查询条件
                 var existingOrder = dbContext.Shop_Order_Total_Table.FirstOrDefault(o => o.Member_ID == LoggedInUser.ID && o.Order_Status_ID == 1);
 
                     //====================沒有符合條件的
@@ -92,7 +97,13 @@ namespace catcha
                             Member_ID = LoggedInUser.ID,
                             Order_Creation_Date = DateTime.Now,
                             Last_Update_Time = DateTime.Now,
+                            //Address_ID = memberId,
+                            //Recipient_Address = "",
+                            //Recipient_Name = "",
+                            //Recipient_Phone = "",
                             Order_Status_ID = 1,
+                            //Payment_Method_ID = "",
+                            //Coupon_ID = "",
                         };
 
                         //=============寫入資料庫
@@ -110,8 +121,9 @@ namespace catcha
                     
                     var getOrderID = dbContext.Shop_Order_Total_Table.FirstOrDefault(o => o.Member_ID == LoggedInUser.ID);
                     GetOrderID = getOrderID.Order_ID;
+                    //MessageBox.Show(".........." + GetOrderID);
 
-                    // 查詢條件
+                    // 查询条件
                     var existingDetail = dbContext.Shop_Order_Detail_Table.FirstOrDefault(o => o.Product_ID == getProductId && o.Order_ID == GetOrderID);
 
                     //====================沒有符合條件的直接新增
@@ -126,7 +138,7 @@ namespace catcha
                         // 更新產品数量
                         existingDetail.Product_Quantity++;
 
-                        // 保存更改到DB
+                        // 保存更改到数据库
                         dbContext.SaveChanges();
                         MessageBox.Show("新增至購物車成功!");
                     }
@@ -151,12 +163,6 @@ namespace catcha
             dbContext.SaveChanges();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            // 觸發Button的Click事件
-            button3.PerformClick();
-        }
-
         public class OrderTotal
         {
             public int Member_ID { get; set; }
@@ -177,6 +183,12 @@ namespace catcha
             public int Product_ID { get; set; }
             public int Product_Quantity { get; set; }
             public int Order_Detail_ID { get; set; }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // 觸發Button的Click事件
+            button3.PerformClick();
         }
     }
 }

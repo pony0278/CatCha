@@ -1,5 +1,4 @@
-﻿using CatCaha;
-using catcha;
+﻿using catcha;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static CatChaForms.Shopping;
+using CatCaha.NewFolder1;
+
 
 namespace CatChaForms
 {
@@ -38,7 +39,7 @@ namespace CatChaForms
                 x.Text = qq[i].Category_Name;
                 x.Tag = qq[i].Product_Category_ID;
 
-                x.Font = new Font("微軟正黑體", 15); // 設置字體，大小
+                x.Font = new Font("微軟正黑體", 15); // 设置字体为Arial，大小为12
 
                 x.Width = 200;
                 x.Height = 70;
@@ -76,11 +77,11 @@ namespace CatChaForms
             {
                 ProductControl productControl = new ProductControl();
 
-                // 設置商品名稱
+                // 设置商品名称
                 productControl.NameLabelText = productData.Product_Name;
-                // 設置商品上架日期
+                // 设置商品上架日期
                 productControl.getDate = productData.Release_Date?.ToString("yyyy-MM-dd");
-                // 設置商品價格
+                // 设置商品价格
                 productControl.PriceLabelText = string.Format("{0:C0}", productData.Product_Price); // 格式化为货币字符串
 
                 // ----------------------------------------------------------------------------
@@ -101,14 +102,14 @@ namespace CatChaForms
 
                 productControl.getProductId = productData.Product_ID;
 
-                //將商品控件添加到 FlowLayoutPanel
+                // 将商品控件添加到 FlowLayoutPanel
                 flowLayoutPanel1.Controls.Add(productControl);
             }
         }
 
         private void TextBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            string searchText = TextBoxSearch.Text.Trim(); //獲取文本框的內容並去除首尾空格
+            string searchText = TextBoxSearch.Text.Trim(); // 获取文本框的内容并去除首尾空格
 
             var matchedProducts = dbContext.Shop_Product_Total
             .Where(p => p.Product_Name.Contains(searchText))
@@ -122,10 +123,10 @@ namespace CatChaForms
             })
             .ToList();
 
-            // 清空現有的商品控件
+            // 清空现有的商品控件
             flowLayoutPanel1.Controls.Clear();
 
-            // 顯示匹配的商品控件
+            // 显示匹配的商品控件
             GetProductDataFromSource(matchedProducts);
 
             label2.Text = (searchText == "") ? "" : "共找到" + matchedProducts.Count + "項 符合「 " + searchText + "」的商品";
@@ -142,6 +143,7 @@ namespace CatChaForms
                 Release_Date = p.Release_Date
             });
 
+            //=============日期資料庫格式有問題
             if (ComboBoxSort.SelectedIndex == 1)
             {
                 query = query.OrderBy(p => p.Release_Date);
@@ -176,6 +178,11 @@ namespace CatChaForms
             public int Discontinued { get; set; }
             public int? Remaining_Quantity { get; set; }
             public int Supplier_ID { get; set; }
+        }
+
+        private void userToolStrip1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

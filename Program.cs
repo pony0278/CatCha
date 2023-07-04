@@ -1,4 +1,5 @@
 ﻿using CatCaha.MemberCenter;
+using CatChaForms;
 using LinqLabs;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace CatCaha
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ＭemberCenter());
+            Application.Run(new Shopping());
         }
     }
 }

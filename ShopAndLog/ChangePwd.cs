@@ -1,5 +1,4 @@
-﻿using CatCaha;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CatCaha.NewFolder1;
 
 namespace CatChaForms
 {
@@ -33,11 +33,6 @@ namespace CatChaForms
             else if (newCheckPwd.Text.Trim() == "")
             {
                 SetErrorLabel(label4, "請再次輸入新密碼");
-                check = false;
-            }
-            else if (newCheckPwd.Text.Length <= 6)
-            {
-                SetErrorLabel(label4, "新密碼需大於6個字元");
                 check = false;
             }
             else if (newPwd.Text != newCheckPwd.Text)
@@ -83,8 +78,16 @@ namespace CatChaForms
             label4.Text = "你好," + ForgetPwd.userAcc;
         }
 
+        //private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        //{
+        //    Signin formLogin = new Signin();
+        //    formLogin.Show();
+        //    this.Hide();
+        //}
+
         private void ClearErrorLabels()
         {
+            // 清除其他错误消息的 Label 可见性...
             label4.Visible = false;
         }
 

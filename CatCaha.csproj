@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Member.cs" />
     <Compile Include="NewFolder1\Announcement_Type_datum.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
@@ -74,16 +75,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CatChaEntities.edmx</DependentUpon>
     </Compile>
-    <Compile Include="ChangePwd.cs">
+    <Compile Include="ShopAndLog\ChangePwd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangePwd.designer.cs">
+    <Compile Include="ShopAndLog\ChangePwd.designer.cs">
       <DependentUpon>ChangePwd.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForgetPwd.cs">
+    <Compile Include="ShopAndLog\ForgetPwd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgetPwd.designer.cs">
+    <Compile Include="ShopAndLog\ForgetPwd.designer.cs">
       <DependentUpon>ForgetPwd.cs</DependentUpon>
     </Compile>
     <Compile Include="MemberCenter\CheckPassword.cs">
@@ -206,12 +207,6 @@
     <Compile Include="MemberCenter\PersonalAchievement.Designer.cs">
       <DependentUpon>PersonalAchievement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Product.designer.cs">
-      <DependentUpon>Product.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MemberCenter\RefundStatus.cs">
@@ -225,12 +220,6 @@
     </Compile>
     <Compile Include="MemberCenter\ReturnDetails.Designer.cs">
       <DependentUpon>ReturnDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Shopping.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shopping.designer.cs">
-      <DependentUpon>Shopping.cs</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Appeal_Category_Data.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
@@ -304,18 +293,6 @@
     <Compile Include="NewFolder1\Shop_Return_Status_Data_Table.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Signin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Signin.designer.cs">
-      <DependentUpon>Signin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Signup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Signup.designer.cs">
-      <DependentUpon>Signup.cs</DependentUpon>
-    </Compile>
     <Compile Include="NewFolder1\sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>CatChaEntities.tt</DependentUpon>
     </Compile>
@@ -331,22 +308,46 @@
     <Compile Include="MemberCenter\ＭemberCenter.Designer.cs">
       <DependentUpon>ＭemberCenter.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
+    <Compile Include="ShopAndLog\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopAndLog\Product.designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopAndLog\Shopping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopAndLog\Shopping.designer.cs">
+      <DependentUpon>Shopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopAndLog\Signin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopAndLog\Signin.designer.cs">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopAndLog\Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopAndLog\Signup.designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopAndLog\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.designer.cs">
+    <Compile Include="ShopAndLog\UserControl1.designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserToolStrip.cs">
+    <Compile Include="ShopAndLog\UserToolStrip.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserToolStrip.designer.cs">
+    <Compile Include="ShopAndLog\UserToolStrip.designer.cs">
       <DependentUpon>UserToolStrip.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ChangePwd.resx">
+    <EmbeddedResource Include="ShopAndLog\ChangePwd.resx">
       <DependentUpon>ChangePwd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForgetPwd.resx">
+    <EmbeddedResource Include="ShopAndLog\ForgetPwd.resx">
       <DependentUpon>ForgetPwd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberCenter\CheckPassword.resx">
@@ -370,9 +371,6 @@
     <EmbeddedResource Include="MemberCenter\test1.resx">
       <DependentUpon>test1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Product.resx">
-      <DependentUpon>Product.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -392,19 +390,22 @@
     <EmbeddedResource Include="MemberCenter\ＭemberCenter.resx">
       <DependentUpon>ＭemberCenter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Shopping.resx">
+    <EmbeddedResource Include="ShopAndLog\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopAndLog\Shopping.resx">
       <DependentUpon>Shopping.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Signin.resx">
+    <EmbeddedResource Include="ShopAndLog\Signin.resx">
       <DependentUpon>Signin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Signup.resx">
+    <EmbeddedResource Include="ShopAndLog\Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
+    <EmbeddedResource Include="ShopAndLog\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserToolStrip.resx">
+    <EmbeddedResource Include="ShopAndLog\UserToolStrip.resx">
       <DependentUpon>UserToolStrip.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="NewFolder1\CatChaEntities.edmx">
@@ -471,5 +472,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

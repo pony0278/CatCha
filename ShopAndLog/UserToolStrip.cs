@@ -1,4 +1,5 @@
 ﻿using CatChaForms;
+using LinqLabs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,8 @@ namespace CatCha
                 form.ShowDialog();
             }
             else {
-                MessageBox.Show("進入會員中心");
+                ＭemberCenter form = new ＭemberCenter();
+                form.ShowDialog();
             }
         }
 

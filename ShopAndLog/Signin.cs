@@ -1,5 +1,4 @@
-﻿using CatCaha;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +9,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CatCaha.NewFolder1;
+using LinqLabs;
 
 namespace CatChaForms
 {
@@ -33,7 +34,7 @@ namespace CatChaForms
         //==============先做異常檢測
         private bool checkTextBox()
         {
-            ClearErrorLabels(); //清除之前的錯誤訊息
+            ClearErrorLabels(); // 清除之前的错误消息
             bool check = true; //默認為true
 
             //異常檢測
@@ -64,18 +65,27 @@ namespace CatChaForms
                 {
                     Shop_Member_Info user = dbContext.Shop_Member_Info.FirstOrDefault(u => u.Member_Account == loginAcc);
 
-                    // 驗證是否有此會員
+                    // 验证是否有此會員
                     if (user != null)
                     {
                         // 哈希加密提供的密码
                         string hashedPassword = HashPassword(loginPwd, hashAlgorithm);
 
-                        // 驗證哈希後的密碼是否匹配數據庫中的哈希值
+                        // 验证哈希后的密码是否匹配数据库中的哈希值
                         if (user.Password == hashedPassword)
+                        //if (user.Password == loginPwd)
                         {
+
                             //============記住登入的使用者資訊
+                            //LoggedInUser.ID = user.Member_ID;
                             LoggedInUser.SetID(user.Member_ID);
+
                             LoggedInUser.Username = user.Name;
+
+
+
+                            // 驗證成功
+                            SetErrorLabel(SigninMsg, "登入成功");
 
                             // 驗證成功
                             MessageBox.Show("Hello~" + user.Name + "，歡迎回來!");
@@ -110,7 +120,7 @@ namespace CatChaForms
 
         private void ClearErrorLabels()
         {
-            // 清除其他錯誤消息的 Label 可見性...
+            // 清除其他错误消息的 Label 可见性...
             SigninMsg.Visible = false;
         }
 
@@ -153,14 +163,14 @@ namespace CatChaForms
         {
             Signup form = new Signup();
             form.ShowDialog();
-            this.Hide(); //關閉視窗
+            this.Hide(); //關閉登入的視窗
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ForgetPwd form = new ForgetPwd();
             form.ShowDialog();
-            this.Hide(); //關閉視窗
+            this.Hide(); //關閉登入的視窗
         }
     }
 }
