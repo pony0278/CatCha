@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="76340e79c91144e092408da491986ae7" Name="Diagram1">
+        <EntityTypeShape EntityType="catchaModel.Announcement_Type_Data" Width="1.5" PointX="13.25" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_1on1MessageData" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Achievement_List" Width="1.5" PointX="7.5" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Achievement_Reward_List" Width="1.5" PointX="5.25" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_CheckIn" Width="1.5" PointX="5.25" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Coin_Exchange_Record" Width="1.5" PointX="5.25" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Friend_Data" Width="1.5" PointX="5.25" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Friend_List_Chat_Data" Width="1.5" PointX="8.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Global_Chat_Data" Width="1.5" PointX="5.25" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Item_Purchase_Record" Width="1.5" PointX="10.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Member_B_Message_Data" Width="1.5" PointX="11" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Member_Task" Width="1.5" PointX="5.25" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Pet_Total" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Product_Category" Width="1.5" PointX="5.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Product_Total" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Rank_Data" Width="1.5" PointX="0.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Shop_Blog_Data" Width="1.5" PointX="12.5" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_ShopAnnouncement" Width="1.5" PointX="15.5" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_shopArticleType" Width="1.5" PointX="10.25" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Task_Condition_Data" Width="1.5" PointX="5.25" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Task_List" Width="1.5" PointX="7.5" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Message_Type_Data" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Appeal_Category_Data" Width="1.5" PointX="8" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Case_Data_Table" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Common_Address_Data" Width="1.5" PointX="5.25" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Complaint_Status_Data" Width="1.5" PointX="8" PointY="33.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Coupon_Total" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Favorite_Data_Table" Width="1.5" PointX="8.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Game_Admin_Data" Width="1.5" PointX="10.25" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Member_Complaint_Case" Width="1.5" PointX="10.25" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Member_Coupon_Data" Width="1.5" PointX="8.25" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Member_Info" Width="1.5" PointX="3" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Order_Detail_Table" Width="1.5" PointX="12.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Order_Status_Data" Width="1.5" PointX="5.25" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Order_Total_Table" Width="1.5" PointX="7.5" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Payment_Method_Data" Width="1.5" PointX="5.25" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Product_Category" Width="1.5" PointX="8.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Product_Image_Table" Width="1.5" PointX="12.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Product_Review_Table" Width="1.5" PointX="14.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Product_Supplier" Width="1.5" PointX="8.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Product_Total" Width="1.5" PointX="10.5" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Reply_Data" Width="1.5" PointX="12.5" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Return_Reason_Data_Table" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Return_Status_Data_Table" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Game_Character_Info" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catchaModel.Shop_Return_Data_Table" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="catchaModel.FK_Game_Shop公告_公告類型資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_1on1訊息資料表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_1on1訊息資料表_Shop_會員資訊1" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_成就總表_Game_任務條件資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_成就總表_Game_成就獎勵總表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_CheckIn_Shop_Member_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_遊戲幣兌換紀錄_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_Friend_Data_Shop_Member_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_Friend_Data_Shop_Member_Info1" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_好友列表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_全頻道聊天資料表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_物品購買紀錄表_Game_商品總表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_任務總表_Game_會員任務" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_會員任務_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_商品總表_Game_商品類別表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_會員資訊_Game_等級排位資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_Shop部落格資料表_Game_shop_文章類型資料庫" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_Shop部落格資料表_Shop_Game_後臺管理員資料" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_Shop公告_Shop_Game_後臺管理員資料2" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Game_任務總表_Game_任務條件資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_會員客訴案件表_Shop_申訴類別資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_Order_Total_Table_Shop_Common_Address_Data" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_常用地址資料表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_會員客訴案件表_Shop_客訴狀態資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_會員折價券資料表_Shop_優惠券總表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_我的最愛資料表_Shop_商品總表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_我的最愛資料表_Shop_會員資訊1" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_回覆資料表_Shop_Game_後臺管理員資料" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_回覆資料表_Shop_會員客訴案件表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_會員客訴案件表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_會員折價券資料表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_訂單總表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_商品評論表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Orders_Details_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_訂單總表_Shop_訂單狀態資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_訂單總表_Shop_付款方式資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Products_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Products_Image_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Products_Reviews_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_商品總表_Shop_產品供應商" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_退換貨資料表_Shop_退換貨原因資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.FK_Shop_退換貨資料表_Shop_退換貨處理狀態資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.Game_Message_Data" ManuallyRouted="false" />
+        <AssociationConnector Association="catchaModel.Shop_Favorite_Product_Table" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
