@@ -14,6 +14,7 @@ namespace CatCaha
     
     public partial class Game_Item_Purchase_Record
     {
+        public Nullable<int> Member_ID { get; set; }
         public Nullable<int> Product_ID { get; set; }
         public string Character_Name { get; set; }
         public string Purchase_Time { get; set; }

@@ -25,6 +25,9 @@ namespace CatCaha
         public Nullable<System.DateTime> Order_Creation_Date { get; set; }
         public Nullable<System.DateTime> Last_Update_Time { get; set; }
         public Nullable<int> Address_ID { get; set; }
+        public string Recipient_Address { get; set; }
+        public string Recipient_Name { get; set; }
+        public string Recipient_Phone { get; set; }
         public Nullable<int> Order_Status_ID { get; set; }
         public Nullable<int> Payment_Method_ID { get; set; }
         public Nullable<int> Coupon_ID { get; set; }

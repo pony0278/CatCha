@@ -14,20 +14,12 @@ namespace CatCaha
     
     public partial class Game_Friend_Data
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Game_Friend_Data()
-        {
-            this.Game_Friend_List_Chat_Data = new HashSet<Game_Friend_List_Chat_Data>();
-        }
-    
-        public string Role_Name { get; set; }
-        public string Friend_Name { get; set; }
-        public string Friend_Level { get; set; }
-        public Nullable<int> Member_ID { get; set; }
+        public int Member_ID { get; set; }
         public int Friend_ID { get; set; }
+        public int Friend_Data_ID { get; set; }
     
         public virtual Shop_Member_Info Shop_Member_Info { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Game_Friend_List_Chat_Data> Game_Friend_List_Chat_Data { get; set; }
+        public virtual Shop_Member_Info Shop_Member_Info1 { get; set; }
+        public virtual Shop_Member_Info Shop_Member_Info2 { get; set; }
     }
 }

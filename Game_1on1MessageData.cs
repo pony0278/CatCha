@@ -20,6 +20,7 @@ namespace CatCaha
         public Nullable<int> ReceiverID { get; set; }
         public string ReceiverContent { get; set; }
         public Nullable<System.DateTime> SentTime { get; set; }
+        public Nullable<int> Group_ID { get; set; }
     
         public virtual Shop_Member_Info Shop_Member_Info { get; set; }
         public virtual Shop_Member_Info Shop_Member_Info1 { get; set; }

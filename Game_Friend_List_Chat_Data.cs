@@ -23,7 +23,6 @@ namespace CatCaha
         public int Friend_ID { get; set; }
         public int Chat_Room_ID { get; set; }
     
-        public virtual Game_Friend_Data Game_Friend_Data { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Game_Member_B_Message_Data> Game_Member_B_Message_Data { get; set; }
     }
