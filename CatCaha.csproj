@@ -56,215 +56,215 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Announcement_Type_Data.cs">
+    <Compile Include="ZongHan\Announcement_Type_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CatChaModel.Context.cs">
+    <Compile Include="ZongHan\CatChaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CatChaModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="CatChaModel.cs">
+    <Compile Include="ZongHan\CatChaModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CatChaModel.Designer.cs">
+    <Compile Include="ZongHan\CatChaModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CatChaModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Game_1on1MessageData.cs">
+    <Compile Include="ZongHan\Game_1on1MessageData.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Achievement_List.cs">
+    <Compile Include="ZongHan\Game_Achievement_List.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Achievement_Reward_List.cs">
+    <Compile Include="ZongHan\Game_Achievement_Reward_List.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Character_Info.cs">
+    <Compile Include="ZongHan\Game_Character_Info.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_CheckIn.cs">
+    <Compile Include="ZongHan\Game_CheckIn.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Coin_Exchange_Record.cs">
+    <Compile Include="ZongHan\Game_Coin_Exchange_Record.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Friend_Data.cs">
+    <Compile Include="ZongHan\Game_Friend_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Friend_List_Chat_Data.cs">
+    <Compile Include="ZongHan\Game_Friend_List_Chat_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Global_Chat_Data.cs">
+    <Compile Include="ZongHan\Game_Global_Chat_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Item_Purchase_Record.cs">
+    <Compile Include="ZongHan\Game_Item_Purchase_Record.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Member_B_Message_Data.cs">
+    <Compile Include="ZongHan\Game_Member_B_Message_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Member_Task.cs">
+    <Compile Include="ZongHan\Game_Member_Task.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Pet_Total.cs">
+    <Compile Include="ZongHan\Game_Pet_Total.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Product_Category.cs">
+    <Compile Include="ZongHan\Game_Product_Category.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Product_Total.cs">
+    <Compile Include="ZongHan\Game_Product_Total.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Rank_Data.cs">
+    <Compile Include="ZongHan\Game_Rank_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_ShopAnnouncement.cs">
+    <Compile Include="ZongHan\Game_ShopAnnouncement.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_shopArticleType.cs">
+    <Compile Include="ZongHan\Game_shopArticleType.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Shop_Blog_Data.cs">
+    <Compile Include="ZongHan\Game_Shop_Blog_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Task_Condition_Data.cs">
+    <Compile Include="ZongHan\Game_Task_Condition_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Game_Task_List.cs">
+    <Compile Include="ZongHan\Game_Task_List.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Message_Type_Data.cs">
+    <Compile Include="ZongHan\Message_Type_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Appeal_Category_Data.cs">
+    <Compile Include="ZongHan\Shop_Appeal_Category_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Case_Data_Table.cs">
+    <Compile Include="ZongHan\Shop_Case_Data_Table.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Common_Address_Data.cs">
+    <Compile Include="ZongHan\Shop_Common_Address_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Complaint_Status_Data.cs">
+    <Compile Include="ZongHan\Shop_Complaint_Status_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Coupon_Total.cs">
+    <Compile Include="ZongHan\Shop_Coupon_Total.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Favorite_Data_Table.cs">
+    <Compile Include="ZongHan\Shop_Favorite_Data_Table.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Game_Admin_Data.cs">
+    <Compile Include="ZongHan\Shop_Game_Admin_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Member_Complaint_Case.cs">
+    <Compile Include="ZongHan\Shop_Member_Complaint_Case.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Member_Coupon_Data.cs">
+    <Compile Include="ZongHan\Shop_Member_Coupon_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Member_Info.cs">
+    <Compile Include="ZongHan\Shop_Member_Info.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Order_Detail_Table.cs">
+    <Compile Include="ZongHan\Shop_Order_Detail_Table.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Order_Status_Data.cs">
+    <Compile Include="ZongHan\Shop_Order_Status_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Order_Total_Table.cs">
+    <Compile Include="ZongHan\Shop_Order_Total_Table.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Payment_Method_Data.cs">
+    <Compile Include="ZongHan\Shop_Payment_Method_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Product_Category.cs">
+    <Compile Include="ZongHan\Shop_Product_Category.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Product_Image_Table.cs">
+    <Compile Include="ZongHan\Shop_Product_Image_Table.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Product_Review_Table.cs">
+    <Compile Include="ZongHan\Shop_Product_Review_Table.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Product_Supplier.cs">
+    <Compile Include="ZongHan\Shop_Product_Supplier.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Product_Total.cs">
+    <Compile Include="ZongHan\Shop_Product_Total.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Reply_Data.cs">
+    <Compile Include="ZongHan\Shop_Reply_Data.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Return_Data_Table.cs">
+    <Compile Include="ZongHan\Shop_Return_Data_Table.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Return_Reason_Data_Table.cs">
+    <Compile Include="ZongHan\Shop_Return_Reason_Data_Table.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shop_Return_Status_Data_Table.cs">
+    <Compile Include="ZongHan\Shop_Return_Status_Data_Table.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+    <Compile Include="ZongHan\sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
+    <Compile Include="ZongHan\sp_helpdiagrams_Result.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
+    <Compile Include="ZongHan\sysdiagrams.cs">
       <DependentUpon>CatChaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ZongHanCompoents\CallDataToForm\CallDataToForm.cs" />
-    <Compile Include="ZongHanCompoents\IbuySomeThing\ChargeCoin.cs" />
-    <Compile Include="ZongHanCompoents\IbuySomeThing\IChargeCoin.cs" />
-    <Compile Include="ZongHanForm\detilView.cs">
+    <Compile Include="ZongHan\ZongHanCompoents\CallDataToForm\CallDataToForm.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\IbuySomeThing\ChargeCoin.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\IbuySomeThing\IChargeCoin.cs" />
+    <Compile Include="ZongHan\ZongHanForm\detilView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZongHanForm\detilView.Designer.cs">
+    <Compile Include="ZongHan\ZongHanForm\detilView.Designer.cs">
       <DependentUpon>detilView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZongHanForm\GamePurchasePage.cs">
+    <Compile Include="ZongHan\ZongHanForm\GamePurchasePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZongHanForm\GamePurchasePage.Designer.cs">
+    <Compile Include="ZongHan\ZongHanForm\GamePurchasePage.Designer.cs">
       <DependentUpon>GamePurchasePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZongHanCompoents\IbuySomeThing\buy.cs" />
-    <Compile Include="ZongHanCompoents\IcaptureProductData\capture.cs" />
-    <Compile Include="ZongHanCompoents\IcaptureProductData\catpureDataManger.cs" />
-    <Compile Include="ZongHanCompoents\IcaptureProductData\IcaptureImage.cs" />
-    <Compile Include="ZongHanCompoents\IcaptureProductData\IcaptureText.cs" />
-    <Compile Include="ZongHanCompoents\IcaptureUserData\captureUser.cs" />
-    <Compile Include="ZongHanCompoents\IcaptureUserData\captureUserDataManager.cs" />
-    <Compile Include="ZongHanCompoents\IcaptureUserData\IcaptureData.cs" />
-    <Compile Include="ZongHanCompoents\ProductsList\LListData.cs" />
-    <Compile Include="ZongHanCompoents\ProductsList\ProductsProperties.cs" />
-    <Compile Include="ZongHanCompoents\ProductsList\Products.cs" />
-    <Compile Include="ZongHanCompoents\ProductsList\ProductsDataFromLinq.cs" />
-    <Compile Include="ZongHanCompoents\IbuySomeThing\IBuyItems.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\IbuySomeThing\buy.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\IcaptureProductData\capture.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\IcaptureProductData\catpureDataManger.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\IcaptureProductData\IcaptureImage.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\IcaptureProductData\IcaptureText.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\IcaptureUserData\captureUser.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\IcaptureUserData\captureUserDataManager.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\IcaptureUserData\IcaptureData.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\ProductsList\LListData.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\ProductsList\ProductsProperties.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\ProductsList\Products.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\ProductsList\ProductsDataFromLinq.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\IbuySomeThing\IBuyItems.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ZongHanForm\gPurchasePageUserControl1.cs">
+    <Compile Include="ZongHan\ZongHanForm\ZUserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ZongHanForm\gPurchasePageUserControl1.Designer.cs">
-      <DependentUpon>gPurchasePageUserControl1.cs</DependentUpon>
+    <Compile Include="ZongHan\ZongHanForm\ZUserControl1.Designer.cs">
+      <DependentUpon>ZUserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZongHanCompoents\UserControlManger\UserControlManager.cs" />
-    <Compile Include="ZongHanCompoents\UserData\UserProperties.cs" />
-    <Compile Include="ZongHanCompoents\UserData\UserData.cs" />
-    <Compile Include="ZongHanCompoents\UserData\UserDataFromLinq.cs" />
-    <Compile Include="ZongHanCompoents\UserOderData\userGameOrder.cs" />
-    <Compile Include="ZongHanCompoents\UserOderData\userGameOrderFromLinq.cs" />
-    <Compile Include="ZongHanCompoents\UserOderData\IuserGameOrderPropertites.cs" />
-    <EmbeddedResource Include="ZongHanForm\detilView.resx">
+    <Compile Include="ZongHan\ZongHanCompoents\UserControlManger\UserControlManager.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\UserData\UserProperties.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\UserData\UserData.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\UserData\UserDataFromLinq.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\UserOderData\userGameOrder.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\UserOderData\userGameOrderFromLinq.cs" />
+    <Compile Include="ZongHan\ZongHanCompoents\UserOderData\IuserGameOrderPropertites.cs" />
+    <EmbeddedResource Include="ZongHan\ZongHanForm\detilView.resx">
       <DependentUpon>detilView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZongHanForm\GamePurchasePage.resx">
+    <EmbeddedResource Include="ZongHan\ZongHanForm\GamePurchasePage.resx">
       <DependentUpon>GamePurchasePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -277,14 +277,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ZongHanForm\gPurchasePageUserControl1.resx">
-      <DependentUpon>gPurchasePageUserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="ZongHan\ZongHanForm\ZUserControl1.resx">
+      <DependentUpon>ZUserControl1.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="CatChaModel.edmx">
+    <EntityDeploy Include="ZongHan\CatChaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CatChaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="CatChaModel.edmx.diagram">
+    <None Include="ZongHan\CatChaModel.edmx.diagram">
       <DependentUpon>CatChaModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -303,12 +303,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\eQc4d3.gif" />
-    <Content Include="CatChaModel.Context.tt">
+    <Content Include="ZongHan\CatChaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>CatChaModel.Context.cs</LastGenOutput>
       <DependentUpon>CatChaModel.edmx</DependentUpon>
     </Content>
-    <Content Include="CatChaModel.tt">
+    <Content Include="ZongHan\CatChaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CatChaModel.edmx</DependentUpon>
       <LastGenOutput>CatChaModel.cs</LastGenOutput>
