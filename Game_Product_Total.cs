@@ -29,6 +29,7 @@ namespace CatCaha
         public byte[] Product_Image { get; set; }
         public string Purchased_Quantity { get; set; }
         public string Remaining_Quantity { get; set; }
+        public Nullable<decimal> Lottery_Probability { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Game_Item_Purchase_Record> Game_Item_Purchase_Record { get; set; }

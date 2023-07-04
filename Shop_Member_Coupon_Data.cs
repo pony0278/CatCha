@@ -16,7 +16,6 @@ namespace CatCaha
     {
         public Nullable<int> Member_ID { get; set; }
         public Nullable<int> Coupon_ID { get; set; }
-        public Nullable<int> Coupon_Status_ID { get; set; }
         public int Member_Coupon_Data_ID { get; set; }
     
         public virtual Shop_Coupon_Status_Data Shop_Coupon_Status_Data { get; set; }

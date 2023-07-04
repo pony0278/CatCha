@@ -22,7 +22,6 @@ namespace CatCaha
             this.Game_Character_Achievement = new HashSet<Game_Character_Achievement>();
             this.Game_Coin_Exchange_Record = new HashSet<Game_Coin_Exchange_Record>();
             this.Game_Friend_Data = new HashSet<Game_Friend_Data>();
-            this.Game_Gacha_Record_Table = new HashSet<Game_Gacha_Record_Table>();
             this.Game_Global_Chat_Data = new HashSet<Game_Global_Chat_Data>();
             this.Game_Member_Task = new HashSet<Game_Member_Task>();
             this.Shop_Common_Address_Data = new HashSet<Shop_Common_Address_Data>();
@@ -36,7 +35,6 @@ namespace CatCaha
         public int Member_ID { get; set; }
         public string Member_Account { get; set; }
         public string Character_Name { get; set; }
-        public int Level_ID { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
         public string Gender { get; set; }
@@ -44,24 +42,16 @@ namespace CatCaha
         public string Email { get; set; }
         public string Phone_Number { get; set; }
         public string Address { get; set; }
-        public int Cat_Coin_Quantity { get; set; }
-        public int Loyalty_Points { get; set; }
-        public System.DateTime Registration_Time { get; set; }
-        public System.DateTime Last_Login_Time { get; set; }
-        public int Favorite_ID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Game_1on1MessageData> Game_1on1MessageData { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Game_1on1MessageData> Game_1on1MessageData1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Game_Character_Achievement> Game_Character_Achievement { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Game_Coin_Exchange_Record> Game_Coin_Exchange_Record { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Game_Friend_Data> Game_Friend_Data { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Game_Gacha_Record_Table> Game_Gacha_Record_Table { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Game_Global_Chat_Data> Game_Global_Chat_Data { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

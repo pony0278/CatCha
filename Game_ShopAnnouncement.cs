@@ -29,7 +29,6 @@ namespace CatCaha
         public int AnnouncementType_ID { get; set; }
         public string AnnouncementImage_Content_ { get; set; }
     
-        public virtual Announcement_Type_datum Announcement_Type_Data { get; set; }
         public virtual Shop_Game_Admin_Data Shop_Game_Admin_Data { get; set; }
     }
 }

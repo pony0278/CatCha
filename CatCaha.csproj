@@ -33,12 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -55,25 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Announcement_Type_datum.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CatChaEntities.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CatChaEntities.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CatChaEntities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CatChaEntities.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CatChaEntities.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="ChangePwd.cs">
+    <Compile Include="ConsumptionRecord.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChangePwd.designer.cs">
@@ -109,82 +85,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Game_1on1MessageData.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Achievement_List.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Achievement_Reward_List.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Character_Achievement.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Character_Info.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Coin_Exchange_Record.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Friend_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Friend_List_Chat_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Gacha_Record_Table.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Global_Chat_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Item_Purchase_Record.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Member_B_Message_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Member_Task.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Pet.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Pet_Total.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Product_Category.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Product_Total.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Rank_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_ShopAnnouncement.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_shopArticleType.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Shop_Blog_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Task_Condition_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Game_Task_List.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MemberCenter\MemberInformation.cs">
+    <Compile Include="Game.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MemberCenter\MemberInformation.Designer.cs">
       <DependentUpon>MemberInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberCenter\test1.cs">
+    <Compile Include="MemberInformation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MemberCenter\test1.Designer.cs">
@@ -205,12 +112,6 @@
     <Compile Include="MemberCenter\PersonalAchievement.Designer.cs">
       <DependentUpon>PersonalAchievement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Product.designer.cs">
-      <DependentUpon>Product.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MemberCenter\RefundStatus.cs">
@@ -219,88 +120,7 @@
     <Compile Include="MemberCenter\RefundStatus.Designer.cs">
       <DependentUpon>RefundStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberCenter\ReturnDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MemberCenter\ReturnDetails.Designer.cs">
-      <DependentUpon>ReturnDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Shopping.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shop_Appeal_Category_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Case_Data_Table.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Common_Address_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Complaint_Status_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Coupon_Status_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Coupon_Total.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Favorite_Data_Table.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Game_Admin_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Member_Complaint_Case.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Member_Coupon_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Member_Info.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Order_Detail_Table.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Order_Status_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Order_Total_Table.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Payment_Method_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Product_Category.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Product_Image_Table.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Product_Review_Table.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Product_Supplier.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Product_Total.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Reply_Data.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Return_Data_Table.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Return_Reason_Data_Table.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shop_Return_Status_Data_Table.cs">
-      <DependentUpon>CatChaEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Signin.cs">
+    <Compile Include="ＭemberCenter.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Signin.designer.cs">
@@ -354,7 +174,10 @@
     <EmbeddedResource Include="MemberCenter\CustomerService.resx">
       <DependentUpon>CustomerService.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberCenter\MemberInformation.resx">
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberInformation.resx">
       <DependentUpon>MemberInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberCenter\OrderDetails.resx">
@@ -382,35 +205,9 @@
     <EmbeddedResource Include="MemberCenter\RefundStatus.resx">
       <DependentUpon>RefundStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberCenter\ReturnDetails.resx">
-      <DependentUpon>ReturnDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MemberCenter\ＭemberCenter.resx">
+    <EmbeddedResource Include="ＭemberCenter.resx">
       <DependentUpon>ＭemberCenter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Shopping.resx">
-      <DependentUpon>Shopping.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Signin.resx">
-      <DependentUpon>Signin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Signup.resx">
-      <DependentUpon>Signup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserToolStrip.resx">
-      <DependentUpon>UserToolStrip.cs</DependentUpon>
-    </EmbeddedResource>
-    <EntityDeploy Include="CatChaEntities.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CatChaEntities.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="CatChaEntities.edmx.diagram">
-      <DependentUpon>CatChaEntities.edmx</DependentUpon>
-    </None>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -426,46 +223,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\eQc4d3.gif" />
-    <None Include="Resources\gif1.gif" />
-    <None Include="Resources\5RTG.gif" />
-    <None Include="Resources\Xcqp-unscreen.gif" />
-    <None Include="Resources\HHcU-unscreen.gif" />
-    <None Include="Resources\LCPT.gif" />
-    <None Include="Resources\eQc4d3.gif" />
-    <None Include="bin\Debug\gif\eQc4d3.gif" />
-    <Content Include="CatChaEntities.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CatChaEntities.edmx</DependentUpon>
-      <LastGenOutput>CatChaEntities.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="CatChaEntities.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CatChaEntities.edmx</DependentUpon>
-      <LastGenOutput>CatChaEntities.cs</LastGenOutput>
-    </Content>
-    <None Include="Resources\cat7.gif" />
-    <None Include="Resources\cat6.gif" />
-    <None Include="Resources\cat5.gif" />
-    <None Include="Resources\cat4.gif" />
-    <None Include="Resources\cat3.gif" />
-    <None Include="Resources\cat2.gif" />
-    <None Include="Resources\cat1.gif" />
-    <None Include="Resources\y2.gif" />
-    <None Include="Resources\1_12.png" />
-    <None Include="Resources\1_11.png" />
-    <None Include="Resources\1_10.png" />
-    <None Include="Resources\1_9.png" />
-    <None Include="Resources\1_8.png" />
-    <None Include="Resources\1_7.png" />
-    <None Include="Resources\1_6.png" />
-    <None Include="Resources\1_5.png" />
-    <None Include="Resources\1_4.png" />
-    <None Include="Resources\1_3.png" />
-    <None Include="Resources\1_2.png" />
-    <None Include="Resources\1_1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

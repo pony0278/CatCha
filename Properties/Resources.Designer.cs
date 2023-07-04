@@ -63,9 +63,9 @@ namespace CatCaha.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap _5RTG {
+        internal static System.Drawing.Bitmap _catcoin {
             get {
-                object obj = ResourceManager.GetObject("_5RTG", resourceCulture);
+                object obj = ResourceManager.GetObject("_catcoin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace CatCaha.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap cat1 {
+        internal static System.Drawing.Bitmap background_default {
             get {
-                object obj = ResourceManager.GetObject("cat1", resourceCulture);
+                object obj = ResourceManager.GetObject("background_default", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,79 +83,9 @@ namespace CatCaha.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap cat2 {
+        internal static System.Drawing.Bitmap ruby {
             get {
-                object obj = ResourceManager.GetObject("cat2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
-        internal static System.Drawing.Bitmap cat3 {
-            get {
-                object obj = ResourceManager.GetObject("cat3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
-        internal static System.Drawing.Bitmap cat4 {
-            get {
-                object obj = ResourceManager.GetObject("cat4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
-        internal static System.Drawing.Bitmap cat5 {
-            get {
-                object obj = ResourceManager.GetObject("cat5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
-        internal static System.Drawing.Bitmap cat6 {
-            get {
-                object obj = ResourceManager.GetObject("cat6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
-        internal static System.Drawing.Bitmap cat7 {
-            get {
-                object obj = ResourceManager.GetObject("cat7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
-        internal static System.Drawing.Bitmap eQc4d3 {
-            get {
-                object obj = ResourceManager.GetObject("eQc4d3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
-        internal static System.Drawing.Bitmap gif1 {
-            get {
-                object obj = ResourceManager.GetObject("gif1", resourceCulture);
+                object obj = ResourceManager.GetObject("ruby", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

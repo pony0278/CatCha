@@ -1,9 +1,5 @@
-﻿using CatCaha.MemberCenter;
-using LinqLabs;
+﻿using LinqLabs;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CatCaha
@@ -24,7 +20,7 @@ namespace CatCaha
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ＭemberCenter());
+            Application.Run(new Form1());
         }
     }
 }
