@@ -14,12 +14,6 @@ namespace CatCaha
     
     public partial class Game_Achievement_List
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Game_Achievement_List()
-        {
-            this.Game_Character_Achievement = new HashSet<Game_Character_Achievement>();
-        }
-    
         public int Achievement_ID { get; set; }
         public string Achievement_Name { get; set; }
         public Nullable<int> Achievement_Reward_ID { get; set; }
@@ -27,7 +21,5 @@ namespace CatCaha
     
         public virtual Game_Task_Condition_Data Game_Task_Condition_Data { get; set; }
         public virtual Game_Achievement_Reward_List Game_Achievement_Reward_List { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Game_Character_Achievement> Game_Character_Achievement { get; set; }
     }
 }

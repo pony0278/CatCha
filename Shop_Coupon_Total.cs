@@ -17,7 +17,6 @@ namespace CatCaha
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Shop_Coupon_Total()
         {
-            this.Game_Gacha_Record_Table = new HashSet<Game_Gacha_Record_Table>();
             this.Shop_Member_Coupon_Data = new HashSet<Shop_Member_Coupon_Data>();
         }
     
@@ -28,8 +27,6 @@ namespace CatCaha
         public Nullable<int> Total_Quantity { get; set; }
         public Nullable<bool> Usable { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Game_Gacha_Record_Table> Game_Gacha_Record_Table { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Shop_Member_Coupon_Data> Shop_Member_Coupon_Data { get; set; }
     }
