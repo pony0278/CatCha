@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.ComboBoxSort = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.userToolStrip2 = new CatCha.UserToolStrip();
             this.userToolStrip1 = new CatCha.UserToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -55,8 +56,9 @@
             // 
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1052, 457);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(767, 399);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // splitContainer1
@@ -64,7 +66,8 @@
             this.splitContainer1.BackColor = System.Drawing.Color.White;
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 49);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -74,18 +77,18 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1207, 544);
-            this.splitContainer1.SplitterDistance = 148;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(905, 474);
+            this.splitContainer1.SplitterDistance = 132;
             this.splitContainer1.TabIndex = 2;
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(57, 54, 57, 54);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(146, 542);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(43, 43, 43, 43);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(130, 472);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // splitContainer2
@@ -94,6 +97,7 @@
             this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -104,8 +108,9 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
-            this.splitContainer2.Size = new System.Drawing.Size(1054, 544);
-            this.splitContainer2.SplitterDistance = 81;
+            this.splitContainer2.Size = new System.Drawing.Size(769, 474);
+            this.splitContainer2.SplitterDistance = 70;
+            this.splitContainer2.SplitterWidth = 3;
             this.splitContainer2.TabIndex = 4;
             // 
             // tableLayoutPanel1
@@ -113,9 +118,9 @@
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.4731F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.5269F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.TextBoxSearch, 3, 0);
@@ -124,11 +129,12 @@
             this.tableLayoutPanel1.Controls.Add(this.label4, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.60493F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1052, 79);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(767, 68);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -136,9 +142,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 26.18182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 13);
+            this.label1.Size = new System.Drawing.Size(159, 14);
             this.label1.TabIndex = 0;
             this.label1.Text = "購物商城";
             // 
@@ -147,18 +154,20 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(539, 0);
+            this.label2.Location = new System.Drawing.Point(380, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 14);
             this.label2.TabIndex = 4;
             // 
             // TextBoxSearch
             // 
             this.TextBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.TextBoxSearch.Font = new System.Drawing.Font("微軟正黑體", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.TextBoxSearch.Location = new System.Drawing.Point(772, 3);
+            this.TextBoxSearch.Location = new System.Drawing.Point(554, 2);
+            this.TextBoxSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TextBoxSearch.Name = "TextBoxSearch";
-            this.TextBoxSearch.Size = new System.Drawing.Size(146, 29);
+            this.TextBoxSearch.Size = new System.Drawing.Size(110, 25);
             this.TextBoxSearch.TabIndex = 1;
             this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
             // 
@@ -167,9 +176,10 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(701, 0);
+            this.label3.Location = new System.Drawing.Point(498, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(36, 14);
             this.label3.TabIndex = 5;
             this.label3.Text = "搜尋";
             // 
@@ -182,9 +192,10 @@
             "最新商品",
             "價格低至高",
             "價格高至低"});
-            this.ComboBoxSort.Location = new System.Drawing.Point(772, 34);
+            this.ComboBoxSort.Location = new System.Drawing.Point(554, 31);
+            this.ComboBoxSort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ComboBoxSort.Name = "ComboBoxSort";
-            this.ComboBoxSort.Size = new System.Drawing.Size(146, 23);
+            this.ComboBoxSort.Size = new System.Drawing.Size(110, 20);
             this.ComboBoxSort.TabIndex = 3;
             this.ComboBoxSort.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSort_SelectedIndexChanged);
             // 
@@ -193,11 +204,20 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(701, 35);
+            this.label4.Location = new System.Drawing.Point(498, 32);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 22);
+            this.label4.Size = new System.Drawing.Size(36, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "排序";
+            // 
+            // userToolStrip2
+            // 
+            this.userToolStrip2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.userToolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.userToolStrip2.Name = "userToolStrip2";
+            this.userToolStrip2.Size = new System.Drawing.Size(905, 39);
+            this.userToolStrip2.TabIndex = 0;
             // 
             // userToolStrip1
             // 
@@ -210,11 +230,12 @@
             // 
             // Shopping
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1207, 593);
+            this.ClientSize = new System.Drawing.Size(905, 474);
+            this.Controls.Add(this.userToolStrip2);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.userToolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Shopping";
             this.Text = "貓抓抓 商城";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -247,5 +268,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox ComboBoxSort;
         private System.Windows.Forms.Label label4;
+        private CatCha.UserToolStrip userToolStrip2;
     }
 }
