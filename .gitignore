@@ -361,3 +361,17 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/新增資料夾 (2)-1.zip
+/新增資料夾 (2).zip
+/List/TeacherListData.cs
+/List/Teacher.cs
+/List/StudentListData.cs
+/List/Student.cs
+/List/Person.cs
+/List/LListData.cs
+/List/ListData.cs
+/ImageResauces
+/IcaptureUserData
+/IcaptureProductData
+/IbuySomeThing
+/CallDataToForm
