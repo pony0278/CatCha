@@ -1,6 +1,6 @@
 ﻿namespace CatCaha
 {
-    partial class UserControl1
+    partial class gPurchasePageUserControl1
     {
         /// <summary> 
         /// 設計工具所需的變數。

@@ -13,7 +13,7 @@ namespace CatCaha.UserControlManger
         {
             foreach (Control control in flowLayoutPanel.Controls)
             {
-                if (control is UserControl1 uc1)
+                if (control is gPurchasePageUserControl1 uc1)
                 {
                     uc1.ClearData();
                 }

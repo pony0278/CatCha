@@ -19,7 +19,7 @@ using System.Threading;
 
 namespace CatCaha
 {
-    public partial class UserControl1 : UserControl
+    public partial class gPurchasePageUserControl1 : UserControl
     {
         private BuyItems buyItems;
         private IUserProperties user;
@@ -28,7 +28,7 @@ namespace CatCaha
         private UserDataFromLinq userDataList = new UserDataFromLinq();
         private GamePurchasePage gamePurchasePage;
 
-        public UserControl1()
+        public gPurchasePageUserControl1()
         {
             InitializeComponent();
             button1.Region = new Region(CreateRoundRectPath(button1.ClientRectangle, 10));
