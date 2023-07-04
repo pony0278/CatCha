@@ -43,6 +43,7 @@ namespace CatCaha
             product = product;
             coin = new ChargeCoin();
             this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            string i = "h";
         }
 
         private GraphicsPath CreateRoundRectPath(Rectangle rectangle, int cornerRadius)
