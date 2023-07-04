@@ -88,5 +88,10 @@ namespace LinqLabs
 
         //傳遞資料
         public int DataProperty { get; set; }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = textBox3.Text + label4.Text + textBox4.Text + "\r\n";
+        }
     }
 }

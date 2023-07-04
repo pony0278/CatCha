@@ -81,7 +81,7 @@ namespace CatCaha
                     totalPrice = totalPrice + item.優惠總額.Value;
                 }
                 
-                textBox5.Text = totalPrice.ToString();
+                textBox5.Text = "NT$ " + Convert.ToInt32(totalPrice);
                 //這裡還要乘上優惠券的折扣後，轉decimal的型別為int
             }
             catch (Exception ex)
