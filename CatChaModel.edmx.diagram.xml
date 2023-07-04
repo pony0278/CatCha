@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3ee06af8f534427fab63cc4977b1dae3" Name="Diagram1">
+        <EntityTypeShape EntityType="貓抓抓Model.Announcement_Type_datum" Width="1.5" PointX="11.25" PointY="12.25" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_1on1MessageData" Width="1.5" PointX="5.25" PointY="38.875" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Achievement_List" Width="1.5" PointX="7.5" PointY="42.5" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Achievement_Reward_List" Width="1.5" PointX="5.25" PointY="45.75" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_CheckIn" Width="1.5" PointX="5.25" PointY="31.25" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Coin_Exchange_Record" Width="1.5" PointX="5.25" PointY="17" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Friend_Data" Width="1.5" PointX="5.25" PointY="14.125" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Friend_List_Chat_Data" Width="1.5" PointX="0.75" PointY="5" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Global_Chat_Data" Width="1.5" PointX="5.25" PointY="36" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Item_Purchase_Record" Width="1.5" PointX="5.25" PointY="1.25" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Member_B_Message_Data" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Member_Task" Width="1.5" PointX="5.25" PointY="25.5" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Pet_Total" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Product_Category" Width="1.5" PointX="0.75" PointY="1.625" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Product_Total" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Rank_Data" Width="1.5" PointX="0.75" PointY="20.25" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Shop_Blog_Data" Width="1.5" PointX="16.5" PointY="14.625" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_ShopAnnouncement" Width="1.5" PointX="13.5" PointY="13.125" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_shopArticleType" Width="1.5" PointX="14.25" PointY="10.25" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Task_Condition_Data" Width="1.5" PointX="5.25" PointY="42.625" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Task_List" Width="1.5" PointX="7.5" PointY="25.375" />
+        <EntityTypeShape EntityType="貓抓抓Model.Message_Type_datum" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Appeal_Category_Data" Width="1.5" PointX="3" PointY="25.5" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Case_Data_Table" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Common_Address_Data" Width="1.5" PointX="5.25" PointY="28.25" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Complaint_Status_Data" Width="1.5" PointX="3" PointY="15.125" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Coupon_Total" Width="1.5" PointX="6" PointY="11" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Favorite_Data_Table" Width="1.5" PointX="8.25" PointY="20" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Game_Admin_Data" Width="1.5" PointX="11.25" PointY="15" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Member_Complaint_Case" Width="1.5" PointX="5.25" PointY="20.625" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Member_Coupon_Data" Width="1.5" PointX="8.25" PointY="17" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Member_Info" Width="1.5" PointX="3" PointY="17.625" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Order_Detail_Table" Width="1.5" PointX="12.75" PointY="24.5" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Order_Status_Data" Width="1.5" PointX="8.25" PointY="34.5" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Order_Total_Table" Width="1.5" PointX="10.5" PointY="23" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Payment_Method_Data" Width="1.5" PointX="8.25" PointY="32.125" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Product_Category" Width="1.5" PointX="8.25" PointY="13.875" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Product_Image_Table" Width="1.5" PointX="12.75" PointY="18.25" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Product_Review_Table" Width="1.5" PointX="15.75" PointY="20" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Product_Supplier" Width="1.5" PointX="8.25" PointY="29.375" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Product_Total" Width="1.5" PointX="10.5" PointY="17.875" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Reply_Data" Width="1.5" PointX="13.5" PointY="21" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Return_Reason_Data_Table" Width="1.5" PointX="13.5" PointY="30.5" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Return_Status_Data_Table" Width="1.5" PointX="13.5" PointY="28.125" />
+        <EntityTypeShape EntityType="貓抓抓Model.sysdiagram" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="貓抓抓Model.Game_Character_Info" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="貓抓抓Model.Shop_Return_Data_Table" Width="1.5" PointX="15.75" PointY="23.875" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_Shop公告_公告類型資料表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_1on1訊息資料表_Shop_會員資訊" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_1on1訊息資料表_Shop_會員資訊1" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_成就總表_Game_任務條件資料表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_成就總表_Game_成就獎勵總表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_CheckIn_Shop_Member_Info" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_遊戲幣兌換紀錄_Shop_會員資訊" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_Friend_Data_Shop_Member_Info" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_Friend_Data_Shop_Member_Info1" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_好友列表_Shop_會員資訊" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_全頻道聊天資料表_Shop_會員資訊" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_物品購買紀錄表_Game_商品總表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_任務總表_Game_會員任務" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_會員任務_Shop_會員資訊" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_商品總表_Game_商品類別表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_會員資訊_Game_等級排位資料表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_Shop部落格資料表_Game_shop_文章類型資料庫" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_Shop部落格資料表_Shop_Game_後臺管理員資料" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_Shop公告_Shop_Game_後臺管理員資料2" />
+        <AssociationConnector Association="貓抓抓Model.FK_Game_任務總表_Game_任務條件資料表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_會員客訴案件表_Shop_申訴類別資料表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_Order_Total_Table_Shop_Common_Address_Data" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_常用地址資料表_Shop_會員資訊" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_會員客訴案件表_Shop_客訴狀態資料表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_會員折價券資料表_Shop_優惠券總表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_我的最愛資料表_Shop_商品總表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_我的最愛資料表_Shop_會員資訊1" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_回覆資料表_Shop_Game_後臺管理員資料" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_回覆資料表_Shop_會員客訴案件表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_會員客訴案件表_Shop_會員資訊" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_會員折價券資料表_Shop_會員資訊" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_訂單總表_Shop_會員資訊" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_商品評論表_Shop_會員資訊" />
+        <AssociationConnector Association="貓抓抓Model.FK_Orders_Details_Orders" />
+        <AssociationConnector Association="貓抓抓Model.FK_Orders_Details_Products" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_訂單總表_Shop_訂單狀態資料表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_訂單總表_Shop_付款方式資料表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_退換貨資料表_Shop_訂單總表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Products_Products_Categories" />
+        <AssociationConnector Association="貓抓抓Model.FK_Products_Image_Products" />
+        <AssociationConnector Association="貓抓抓Model.FK_Products_Reviews_Products" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_商品總表_Shop_產品供應商" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_退換貨資料表_Shop_退換貨原因資料表" />
+        <AssociationConnector Association="貓抓抓Model.FK_Shop_退換貨資料表_Shop_退換貨處理狀態資料表" />
+        <AssociationConnector Association="貓抓抓Model.Game_Message_Data" />
+        <AssociationConnector Association="貓抓抓Model.Shop_Favorite_Product_Table" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
