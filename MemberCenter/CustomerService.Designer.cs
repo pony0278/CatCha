@@ -199,11 +199,12 @@
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Enabled = false;
             this.textBox3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(120, 25);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox3.Size = new System.Drawing.Size(589, 279);
             this.textBox3.TabIndex = 1;
             // 

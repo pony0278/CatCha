@@ -79,6 +79,7 @@ namespace LinqLabs
 
         //取得使用者登入後的會員ID
         int now_Member_ID = 4;
+        //int now_Member_ID = LoggedInUser.ID;
 
     }
 }
