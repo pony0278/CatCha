@@ -94,8 +94,6 @@ namespace CatChaEntities
             set { txtRecipientPhone.Text = value; }
         }
 
-
-
         public Shop_Order_Total_Table ModifiedOrder { get;  set; }
 
         private void txtUpdate_Click(object sender, EventArgs e)
