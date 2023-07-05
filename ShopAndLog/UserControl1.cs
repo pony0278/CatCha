@@ -23,7 +23,6 @@ namespace catcha
         ProjectsModel dbContext = new ProjectsModel();
 
         private int productID;
-        private Color defaultBackColor; // 原始的背景色
         public ProductControl()
         {
             InitializeComponent();
@@ -60,11 +59,6 @@ namespace catcha
         {
             get { return label2.Text; }
             set { label2.Text = value; }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(productID.ToString());
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -157,7 +151,7 @@ namespace catcha
 
             GetOrderID = getOrderID.Order_ID;
 
-            MessageBox.Show("GetOrderID = " + GetOrderID);
+            //MessageBox.Show("GetOrderID = " + GetOrderID);
 
             Shop_Order_Detail_Table orderDetail = new Shop_Order_Detail_Table
             {
@@ -198,20 +192,5 @@ namespace catcha
             // 觸發Button的Click事件
             button3.PerformClick();
         }
-
-        //private void button3_MouseEnter(object sender, EventArgs e)
-        //{
-        //    button3.BackColor = Color.FromArgb(228, 187, 151);
-        //}
-
-        //private void button3_MouseEnter(object sender, EventArgs e)
-        //{
-        //    button3.BackColor = Color.FromArgb(228, 187, 151); ;
-        //}
-
-        //private void button3_MouseLeave(object sender, EventArgs e)
-        //{
-        //    button3.BackColor = Color.FromArgb(228, 187, 151); ;
-        //}
     }
 }

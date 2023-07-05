@@ -155,10 +155,6 @@ namespace CatChaForms
             {
                 try
                 {
-                    //MemberID - 時間撮timestamp
-                    //var MemberID = new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds();
-                    //資料庫不吃 要改成nvchar
-
                     string Account = this.AccountText.Text;
                     string Name = this.NameText.Text;
                     string Gender = this.GenderComboBox.SelectedItem.ToString();
@@ -250,13 +246,6 @@ namespace CatChaForms
         {
             CheckPwdText.PasswordChar = '*'; //設定密碼顯示跟網頁一樣不顯示內容
         }
-
-        //private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        //{
-        //    Signin form = new Signin();
-        //    form.Show();
-        //    this.Hide(); //關閉註冊的視窗
-        //}
     }
     public class Person
     {
