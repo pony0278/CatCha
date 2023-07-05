@@ -63,6 +63,23 @@ namespace LinqLabs
             ShowForm(form);
         }
 
+        //button5是  登出
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("您確定要登出嗎?", "登出", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
+                //LoggedInUser.Logout();
+                //呼叫Member.cs的Logout方法
+
+                MessageBox.Show("登出成功");
+            }
+            else if (result == DialogResult.Cancel)
+            {
+                
+            }
+        }
+
         //展示各表單的方法
         private void ShowForm(Form form)
         {
