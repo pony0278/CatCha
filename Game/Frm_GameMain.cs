@@ -20,7 +20,7 @@ namespace FormResize
 
     public partial class Frm_GameMain : Form
     {
-
+        private ZUserControl1 userControl1;
         C_Query q = new C_Query();
         C_Cats cat_g;
         C_Cats cat_y;
@@ -40,7 +40,8 @@ namespace FormResize
             txt_CatCoin.Text = q._GameCatCoin();
             //載入紅利金額
             txt_RedStone.Text = q._GameRLPoint();
-
+            userControl1 = new ZUserControl1();
+            userControl1.frm_GameMain = this;
 
             //x = this.Width;
             //y = this.Height;
