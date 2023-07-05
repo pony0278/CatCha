@@ -157,4 +157,169 @@
   <data name="pink_paw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pink_paw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="achieve_BackPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\achieve_BackPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\background_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background_03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\background_03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background_default" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\background_default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat1_stopL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat1_stopL.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat1_stopR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat1_stopR.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat1_walk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat1_walk.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat1_walkL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat1_walkL.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat1_walkR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat1_walkR.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat1_walk_unscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat1-walk-unscreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CatCoin1000x1000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\CatCoin1000x1000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CatCoin_365x375" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\CatCoin 365x375.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="catpowBTN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\catpowBTN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_g_sL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_g_sL.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_g_sR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_g_sR.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_g_wL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_g_wL.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_g_wR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_g_wR.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_pic1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_pic1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_pic2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_pic2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_pic3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_pic3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_w_sL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_w_sL.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_w_sR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_w_sR.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_w_wL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_w_wL.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_w_wR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_w_wR.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_y_sL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_y_sL.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_y_sR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_y_sR.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_y_wL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_y_wL.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_y_wR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\cat_y_wR.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checked_CCoin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\checked_CCoin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checked_Coupon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\checked_Coupon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checked_Ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\checked_Ruby.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checkin_CCoin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\checkin_CCoin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checkin_Coupon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\checkin_Coupon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checkin_Ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\checkin_Ruby.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gacha_Animate_A_v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\gacha_Animate_A_v2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gacha_Animate_SS_v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\gacha_Animate_SS_v2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gacha_Animate_S_v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\gacha_Animate_S_v2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="notification_bell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\notification-bell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="P_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\P_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="P_bowl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\P_bowl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="P_coupon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\P_coupon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="P_food" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\P_food.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="P_lamp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\P_lamp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="P_water" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\P_water.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\ruby.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="summonBTN_CCoin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\summonBTN_CCoin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="summonBTN_Ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\summonBTN_Ruby.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="summonName_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\summonName_Back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_catcoin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\_catcoin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_checkin__001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\_checkin._001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_NameUI__001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\_NameUI._001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_summonBG_v3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\_summonBG_v3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_summonBG_v3__001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\_summonBG_v3._001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_summon_back_v2__001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\_summon_back_v2._001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_testbox__001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GamePicture\_testbox._001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

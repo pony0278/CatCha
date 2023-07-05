@@ -1,4 +1,5 @@
 ﻿using CatChaForms;
+using FormResize;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace CatCaha
 {
     public partial class Index : Form
     {
+        Frm_GameMain main = new Frm_GameMain();
+        C_Query q = new C_Query();
         public Index()
         {
             InitializeComponent();
@@ -46,12 +49,22 @@ namespace CatCaha
             {
                 MessageBox.Show("請先登入");
                 Signin form = new Signin();
-                form.ShowDialog();
+                form.ShowDialog();  
             }
             else
             {
+                string GameName = LoggedInUser.Username;
+                int MemberID = LoggedInUser.ID;
+                GameName= MemberID.ToString();
                 //...........進入遊戲畫面
-                MessageBox.Show("進入遊戲大廳");
+                //MessageBox.Show("進入遊戲大廳");
+                main.Show();
+                //載入遊戲名稱
+                main.txt_ID.Text = q._GameName().ToString();
+                //載入貓幣金額
+                main.txt_CatCoin.Text = q._GameCatCoin();
+                //載入紅利金額
+                main.txt_RedStone.Text = q._GameRLPoint();
             }
         }
 

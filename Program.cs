@@ -1,5 +1,6 @@
 ﻿using CatCaha.MemberCenter;
 using CatChaForms;
+using FormResize;
 using LinqLabs;
 using System;
 using System.Collections.Generic;
