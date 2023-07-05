@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProjectsModelEStoreContainer" CdmEntityContainer="ProjectsModel">
+    <EntitySetMapping Name="Announcement_Type_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Announcement_Type_datum">
+        <MappingFragment StoreEntitySet="Announcement Type Data">
+          <ScalarProperty Name="Announcement_Type_ID" ColumnName="Announcement Type ID" />
+          <ScalarProperty Name="Announcement_Type_Name" ColumnName="Announcement Type Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_1on1MessageData">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_1on1MessageData">
+        <MappingFragment StoreEntitySet="Game_1on1MessageData">
+          <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+          <ScalarProperty Name="DialogueID" ColumnName="DialogueID" />
+          <ScalarProperty Name="SenderID" ColumnName="SenderID" />
+          <ScalarProperty Name="ReceiverID" ColumnName="ReceiverID" />
+          <ScalarProperty Name="ReceiverContent" ColumnName="ReceiverContent" />
+          <ScalarProperty Name="SentTime" ColumnName="SentTime" />
+          <ScalarProperty Name="Group_ID" ColumnName="Group ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Achievement_List">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Achievement_List">
+        <MappingFragment StoreEntitySet="Game_Achievement List">
+          <ScalarProperty Name="Achievement_ID" ColumnName="Achievement ID" />
+          <ScalarProperty Name="Achievement_Name" ColumnName="Achievement Name" />
+          <ScalarProperty Name="Achievement_Reward_ID" ColumnName="Achievement Reward ID" />
+          <ScalarProperty Name="Achievement_Condition_ID" ColumnName="Achievement Condition ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Achievement_Reward_List">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Achievement_Reward_List">
+        <MappingFragment StoreEntitySet="Game_Achievement Reward List">
+          <ScalarProperty Name="Achievement_Reward_ID" ColumnName="Achievement Reward ID" />
+          <ScalarProperty Name="Achievement_Reward_Name" ColumnName="Achievement Reward Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Coin_Exchange_Record">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Coin_Exchange_Record">
+        <MappingFragment StoreEntitySet="Game_Coin Exchange Record">
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Exchange_Time" ColumnName="Exchange Time" />
+          <ScalarProperty Name="Exchange_Quantity" ColumnName="Exchange Quantity" />
+          <ScalarProperty Name="Coin_Exchange_Record_ID" ColumnName="Coin Exchange Record ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Friend_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Friend_Data">
+        <MappingFragment StoreEntitySet="Game_Friend Data">
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Friend_ID" ColumnName="Friend ID" />
+          <ScalarProperty Name="Friend_Data_ID" ColumnName="Friend Data ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Friend_List_Chat_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Friend_List_Chat_Data">
+        <MappingFragment StoreEntitySet="Game_Friend List Chat Data">
+          <ScalarProperty Name="Friend_ID" ColumnName="Friend ID" />
+          <ScalarProperty Name="Chat_Room_ID" ColumnName="Chat Room ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Global_Chat_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Global_Chat_Data">
+        <MappingFragment StoreEntitySet="Game_Global Chat Data">
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Message_ID" ColumnName="Message ID" />
+          <ScalarProperty Name="Message_Content" ColumnName="Message Content" />
+          <ScalarProperty Name="Sent_Time" ColumnName="Sent Time" />
+          <ScalarProperty Name="Hide_Message" ColumnName="Hide Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Item_Purchase_Record">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Item_Purchase_Record">
+        <MappingFragment StoreEntitySet="Game_Item Purchase Record">
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+          <ScalarProperty Name="Character_Name" ColumnName="Character Name" />
+          <ScalarProperty Name="Purchase_Time" ColumnName="Purchase Time" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item Name" />
+          <ScalarProperty Name="Game_Item_Purchase_Record_ID" ColumnName="Game Item Purchase Record ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Member_B_Message_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Member_B_Message_Data">
+        <MappingFragment StoreEntitySet="Game_Member B Message Data">
+          <ScalarProperty Name="Member__B__ID" ColumnName="Member (B) ID" />
+          <ScalarProperty Name="C_訊息_發送者_內容" ColumnName="[訊息(發送者)內容" />
+          <ScalarProperty Name="Sent_Time" ColumnName="Sent Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Member_Task">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Member_Task">
+        <MappingFragment StoreEntitySet="Game_Member Task">
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Task_ID" ColumnName="Task ID" />
+          <ScalarProperty Name="Complete_Date" ColumnName="Complete Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Pet_Total">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Pet_Total">
+        <MappingFragment StoreEntitySet="Game_Pet Total">
+          <ScalarProperty Name="Character_Name" ColumnName="Character Name" />
+          <ScalarProperty Name="Pet_Name" ColumnName="Pet Name" />
+          <ScalarProperty Name="Pet_Level" ColumnName="Pet Level" />
+          <ScalarProperty Name="Pet_Skill" ColumnName="Pet Skill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Product_Category">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Product_Category">
+        <MappingFragment StoreEntitySet="Game_Product Category">
+          <ScalarProperty Name="Product_Category_ID" ColumnName="Product Category ID" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Product_Total">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Product_Total">
+        <MappingFragment StoreEntitySet="Game_Product Total">
+          <ScalarProperty Name="Product_Name" ColumnName="Product Name" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+          <ScalarProperty Name="Product_Category_ID" ColumnName="Product Category ID" />
+          <ScalarProperty Name="Product_Description" ColumnName="Product Description" />
+          <ScalarProperty Name="Product_Price" ColumnName="Product Price" />
+          <ScalarProperty Name="Product_Image" ColumnName="Product Image" />
+          <ScalarProperty Name="Purchased_Quantity" ColumnName="Purchased Quantity" />
+          <ScalarProperty Name="Remaining_Quantity" ColumnName="Remaining Quantity" />
+          <ScalarProperty Name="Lottery_Probability" ColumnName="Lottery Probability" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Rank_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Rank_Data">
+        <MappingFragment StoreEntitySet="Game_Rank Data">
+          <ScalarProperty Name="Rank_ID" ColumnName="Rank ID" />
+          <ScalarProperty Name="Rank_Name" ColumnName="Rank Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Shop_Blog_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Shop_Blog_Data">
+        <MappingFragment StoreEntitySet="Game_Shop Blog Data">
+          <ScalarProperty Name="Blog_Article_ID" ColumnName="Blog Article ID" />
+          <ScalarProperty Name="Article_Title" ColumnName="Article Title" />
+          <ScalarProperty Name="Article_Content" ColumnName="Article Content" />
+          <ScalarProperty Name="Publish_Time" ColumnName="Publish Time" />
+          <ScalarProperty Name="Admin_ID" ColumnName="Admin ID" />
+          <ScalarProperty Name="Display_Status" ColumnName="Display Status" />
+          <ScalarProperty Name="Pin_to_Top" ColumnName="Pin to Top" />
+          <ScalarProperty Name="Sync_with_Game_and_Shop_Display" ColumnName="Sync with Game and Shop Display" />
+          <ScalarProperty Name="Article_Type_ID" ColumnName="Article Type ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_ShopAnnouncement">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_ShopAnnouncement">
+        <MappingFragment StoreEntitySet="Game_ShopAnnouncement">
+          <ScalarProperty Name="AnnouncementID" ColumnName="AnnouncementID" />
+          <ScalarProperty Name="AnnouncementTitle" ColumnName="AnnouncementTitle" />
+          <ScalarProperty Name="AnnouncementContent" ColumnName="AnnouncementContent" />
+          <ScalarProperty Name="AnnouncementImage_Header_" ColumnName="AnnouncementImage(Header)" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+          <ScalarProperty Name="PublishTime" ColumnName="PublishTime" />
+          <ScalarProperty Name="DisplayOrNot" ColumnName="DisplayOrNot" />
+          <ScalarProperty Name="SyncWithGameAndShopDisplay" ColumnName="SyncWithGameAndShopDisplay" />
+          <ScalarProperty Name="HideIn_gameDisplay" ColumnName="HideIn-gameDisplay" />
+          <ScalarProperty Name="ConvertToMarquee" ColumnName="ConvertToMarquee" />
+          <ScalarProperty Name="PinToTop" ColumnName="PinToTop" />
+          <ScalarProperty Name="AnnouncementType_ID" ColumnName="AnnouncementType ID" />
+          <ScalarProperty Name="AnnouncementImage_Content_" ColumnName="AnnouncementImage(Content)" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_shopArticleType">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_shopArticleType">
+        <MappingFragment StoreEntitySet="Game_shopArticleType">
+          <ScalarProperty Name="ArticleTypeID" ColumnName="ArticleTypeID" />
+          <ScalarProperty Name="ArticleTypeName" ColumnName="ArticleTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Task_Condition_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Task_Condition_Data">
+        <MappingFragment StoreEntitySet="Game_Task Condition Data">
+          <ScalarProperty Name="Task_Condition_ID" ColumnName="Task Condition ID" />
+          <ScalarProperty Name="Condition_Name" ColumnName="Condition Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Task_List">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Task_List">
+        <MappingFragment StoreEntitySet="Game_Task List">
+          <ScalarProperty Name="Task_ID" ColumnName="Task ID" />
+          <ScalarProperty Name="Task_Name" ColumnName="Task Name" />
+          <ScalarProperty Name="Task_Description" ColumnName="Task Description" />
+          <ScalarProperty Name="Task_Reward" ColumnName="Task Reward" />
+          <ScalarProperty Name="Task_Condition_ID" ColumnName="Task Condition ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Message_Type_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Message_Type_datum">
+        <MappingFragment StoreEntitySet="Message Type Data">
+          <ScalarProperty Name="Message_Type_ID" ColumnName="Message Type ID" />
+          <ScalarProperty Name="Message_Type" ColumnName="Message Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Appeal_Category_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Appeal_Category_Data">
+        <MappingFragment StoreEntitySet="Shop_Appeal Category Data">
+          <ScalarProperty Name="Appeal_Category_ID" ColumnName="Appeal Category ID" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Case_Data_Table">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Case_Data_Table">
+        <MappingFragment StoreEntitySet="Shop_Case Data Table">
+          <ScalarProperty Name="Case_ID" ColumnName="Case ID" />
+          <ScalarProperty Name="Message_ID" ColumnName="Message ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Common_Address_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Common_Address_Data">
+        <MappingFragment StoreEntitySet="Shop_Common Address Data">
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Address_ID" ColumnName="Address ID" />
+          <ScalarProperty Name="Recipient_Name" ColumnName="Recipient Name" />
+          <ScalarProperty Name="Recipient_Phone" ColumnName="Recipient Phone" />
+          <ScalarProperty Name="Recipient_Address" ColumnName="Recipient Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Complaint_Status_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Complaint_Status_Data">
+        <MappingFragment StoreEntitySet="Shop_Complaint Status Data">
+          <ScalarProperty Name="Complaint_Status_ID" ColumnName="Complaint Status ID" />
+          <ScalarProperty Name="Complaint_Status_Name" ColumnName="Complaint Status Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Coupon_Total">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Coupon_Total">
+        <MappingFragment StoreEntitySet="Shop_Coupon Total">
+          <ScalarProperty Name="Coupon_ID" ColumnName="Coupon ID" />
+          <ScalarProperty Name="Coupon_Name" ColumnName="Coupon Name" />
+          <ScalarProperty Name="Coupon_Content" ColumnName="Coupon Content" />
+          <ScalarProperty Name="Expiry_Date" ColumnName="Expiry Date" />
+          <ScalarProperty Name="Total_Quantity" ColumnName="Total Quantity" />
+          <ScalarProperty Name="Usable" ColumnName="Usable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Favorite_Data_Table">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Favorite_Data_Table">
+        <MappingFragment StoreEntitySet="Shop_Favorite Data Table">
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Favorite_ID" ColumnName="Favorite ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+          <ScalarProperty Name="Creation_Date" ColumnName="Creation Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Game_Admin_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Game_Admin_Data">
+        <MappingFragment StoreEntitySet="Shop_Game Admin Data">
+          <ScalarProperty Name="Admin_ID" ColumnName="Admin ID" />
+          <ScalarProperty Name="Admin_Username" ColumnName="Admin Username" />
+          <ScalarProperty Name="Admin_Password" ColumnName="Admin Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Member_Complaint_Case">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Member_Complaint_Case">
+        <MappingFragment StoreEntitySet="Shop_Member Complaint Case">
+          <ScalarProperty Name="Complaint_Case_ID" ColumnName="Complaint Case ID" />
+          <ScalarProperty Name="Complaint_Title" ColumnName="Complaint Title" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Complaint_Content" ColumnName="Complaint Content" />
+          <ScalarProperty Name="Complaint_Status_ID" ColumnName="Complaint Status ID" />
+          <ScalarProperty Name="Complaint_Category_ID" ColumnName="Complaint Category ID" />
+          <ScalarProperty Name="Creation_Time" ColumnName="Creation Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Member_Coupon_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Member_Coupon_Data">
+        <MappingFragment StoreEntitySet="Shop_Member Coupon Data">
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Coupon_ID" ColumnName="Coupon ID" />
+          <ScalarProperty Name="Coupon_Status_ID" ColumnName="Coupon Status ID" />
+          <ScalarProperty Name="Member_Coupon_Data_ID" ColumnName="Member Coupon Data ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Member_Info">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Member_Info">
+        <MappingFragment StoreEntitySet="Shop_Member Info">
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Member_Account" ColumnName="Member Account" />
+          <ScalarProperty Name="Character_Name" ColumnName="Character Name" />
+          <ScalarProperty Name="Level_ID" ColumnName="Level ID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone Number" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Cat_Coin_Quantity" ColumnName="Cat Coin Quantity" />
+          <ScalarProperty Name="Loyalty_Points" ColumnName="Loyalty Points" />
+          <ScalarProperty Name="Registration_Time" ColumnName="Registration Time" />
+          <ScalarProperty Name="Last_Login_Time" ColumnName="Last Login Time" />
+          <ScalarProperty Name="Favorite_ID" ColumnName="Favorite ID" />
+          <ScalarProperty Name="CheckinDayCount" ColumnName="CheckinDayCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Order_Detail_Table">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Order_Detail_Table">
+        <MappingFragment StoreEntitySet="Shop_Order Detail Table">
+          <ScalarProperty Name="Order_ID" ColumnName="Order ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+          <ScalarProperty Name="Product_Quantity" ColumnName="Product Quantity" />
+          <ScalarProperty Name="Order_Detail_ID" ColumnName="Order Detail ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Order_Status_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Order_Status_Data">
+        <MappingFragment StoreEntitySet="Shop_Order Status Data">
+          <ScalarProperty Name="Order_Status_ID" ColumnName="Order Status ID" />
+          <ScalarProperty Name="Status_Name" ColumnName="Status Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Order_Total_Table">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Order_Total_Table">
+        <MappingFragment StoreEntitySet="Shop_Order Total Table">
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order ID" />
+          <ScalarProperty Name="Order_Creation_Date" ColumnName="Order Creation Date" />
+          <ScalarProperty Name="Last_Update_Time" ColumnName="Last Update Time" />
+          <ScalarProperty Name="Address_ID" ColumnName="Address ID" />
+          <ScalarProperty Name="Recipient_Address" ColumnName="Recipient Address" />
+          <ScalarProperty Name="Recipient_Name" ColumnName="Recipient Name" />
+          <ScalarProperty Name="Recipient_Phone" ColumnName="Recipient Phone" />
+          <ScalarProperty Name="Order_Status_ID" ColumnName="Order Status ID" />
+          <ScalarProperty Name="Payment_Method_ID" ColumnName="Payment Method ID" />
+          <ScalarProperty Name="Coupon_ID" ColumnName="Coupon ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Payment_Method_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Payment_Method_Data">
+        <MappingFragment StoreEntitySet="Shop_Payment Method Data">
+          <ScalarProperty Name="Payment_Method_ID" ColumnName="Payment Method ID" />
+          <ScalarProperty Name="Payment_Method_Name" ColumnName="Payment Method Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Product_Category">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Product_Category">
+        <MappingFragment StoreEntitySet="Shop_Product Category">
+          <ScalarProperty Name="Product_Category_ID" ColumnName="Product Category ID" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category Name" />
+          <ScalarProperty Name="Category_Description" ColumnName="Category Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Product_Image_Table">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Product_Image_Table">
+        <MappingFragment StoreEntitySet="Shop_Product Image Table">
+          <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+          <ScalarProperty Name="Product_Photo" ColumnName="Product Photo" />
+          <ScalarProperty Name="Product_Image_ID" ColumnName="Product Image ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Product_Review_Table">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Product_Review_Table">
+        <MappingFragment StoreEntitySet="Shop_Product Review Table">
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+          <ScalarProperty Name="Review_Content" ColumnName="Review Content" />
+          <ScalarProperty Name="Product_Rating" ColumnName="Product Rating" />
+          <ScalarProperty Name="Product_Review_ID" ColumnName="Product Review ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Product_Supplier">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Product_Supplier">
+        <MappingFragment StoreEntitySet="Shop_Product Supplier">
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier ID" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+          <ScalarProperty Name="Contact_Phone" ColumnName="Contact Phone" />
+          <ScalarProperty Name="Company_Address" ColumnName="Company Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Product_Total">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Product_Total">
+        <MappingFragment StoreEntitySet="Shop_Product Total">
+          <ScalarProperty Name="Product_Name" ColumnName="Product Name" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+          <ScalarProperty Name="Product_Category_ID" ColumnName="Product Category ID" />
+          <ScalarProperty Name="Product_Description" ColumnName="Product Description" />
+          <ScalarProperty Name="Product_Price" ColumnName="Product Price" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Release_Date" ColumnName="Release Date" />
+          <ScalarProperty Name="Discontinued" ColumnName="Discontinued" />
+          <ScalarProperty Name="Remaining_Quantity" ColumnName="Remaining Quantity" />
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Reply_Data">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Reply_Data">
+        <MappingFragment StoreEntitySet="Shop_Reply Data">
+          <ScalarProperty Name="Reply_ID" ColumnName="Reply ID" />
+          <ScalarProperty Name="Complaint_Case_ID" ColumnName="Complaint Case ID" />
+          <ScalarProperty Name="Receiver_ID__Official_" ColumnName="Receiver ID (Official)" />
+          <ScalarProperty Name="Message__Recipient__Content" ColumnName="Message (Recipient) Content" />
+          <ScalarProperty Name="Sent_Time" ColumnName="Sent Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Return_Reason_Data_Table">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Return_Reason_Data_Table">
+        <MappingFragment StoreEntitySet="Shop_Return Reason Data Table">
+          <ScalarProperty Name="Return_Reason_ID" ColumnName="Return Reason ID" />
+          <ScalarProperty Name="Return_Reason" ColumnName="Return Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Return_Status_Data_Table">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Return_Status_Data_Table">
+        <MappingFragment StoreEntitySet="Shop_Return Status Data Table">
+          <ScalarProperty Name="Processing_Status_ID" ColumnName="Processing Status ID" />
+          <ScalarProperty Name="Status_Name" ColumnName="Status Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ProjectsModelE.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game_Character_Info">
+      <EntityTypeMapping TypeName="ProjectsModelE.Game_Character_Info">
+        <MappingFragment StoreEntitySet="Game_Character Info">
+          <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+          <ScalarProperty Name="Character_Name" ColumnName="Character Name" />
+          <ScalarProperty Name="Character_Level" ColumnName="Character Level" />
+          <ScalarProperty Name="Character_Equipment" ColumnName="Character Equipment" />
+          <ScalarProperty Name="Character_Items" ColumnName="Character Items" />
+          <ScalarProperty Name="Gacha_Ticket_Quantity" ColumnName="Gacha Ticket Quantity" />
+          <ScalarProperty Name="Game_Coin_Quantity" ColumnName="Game Coin Quantity" />
+          <ScalarProperty Name="Discount_Coin_Quantity" ColumnName="Discount Coin Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Return_Data_Table">
+      <EntityTypeMapping TypeName="ProjectsModelE.Shop_Return_Data_Table">
+        <MappingFragment StoreEntitySet="Shop_Return Data Table">
+          <ScalarProperty Name="Order_ID" ColumnName="Order ID" />
+          <ScalarProperty Name="Return_Reason_ID" ColumnName="Return Reason ID" />
+          <ScalarProperty Name="Processing_Status_ID" ColumnName="Processing Status ID" />
+          <ScalarProperty Name="Return_Date" ColumnName="Return Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Game_Message_Data" TypeName="ProjectsModelE.Game_Message_Data" StoreEntitySet="Game_Message Data">
+      <EndProperty Name="Game_Friend_List_Chat_Data">
+        <ScalarProperty Name="Chat_Room_ID" ColumnName="Chat Room ID" />
+      </EndProperty>
+      <EndProperty Name="Game_Member_B_Message_Data">
+        <ScalarProperty Name="Member__B__ID" ColumnName="Member (B) ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Shop_Favorite_Product_Table" TypeName="ProjectsModelE.Shop_Favorite_Product_Table" StoreEntitySet="Shop_Favorite-Product Table">
+      <EndProperty Name="Shop_Favorite_Data_Table">
+        <ScalarProperty Name="Favorite_ID" ColumnName="Favorite ID" />
+      </EndProperty>
+      <EndProperty Name="Shop_Product_Total">
+        <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

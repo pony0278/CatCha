@@ -1,0 +1,1387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CatChaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Announcement Type Data">
+    <Key>
+      <PropertyRef Name="Announcement Type ID" />
+    </Key>
+    <Property Name="Announcement Type ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Announcement Type Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Game_1on1MessageData">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="int" Nullable="false" />
+    <Property Name="DialogueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SenderID" Type="int" />
+    <Property Name="ReceiverID" Type="int" />
+    <Property Name="ReceiverContent" Type="nvarchar(max)" />
+    <Property Name="SentTime" Type="datetime" />
+    <Property Name="Group ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Game_Achievement List">
+    <Key>
+      <PropertyRef Name="Achievement ID" />
+    </Key>
+    <Property Name="Achievement ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Achievement Name" Type="nvarchar(max)" />
+    <Property Name="Achievement Reward ID" Type="int" />
+    <Property Name="Achievement Condition ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Game_Achievement Reward List">
+    <Key>
+      <PropertyRef Name="Achievement Reward ID" />
+    </Key>
+    <Property Name="Achievement Reward ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Achievement Reward Name" Type="nvarchar(max)" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 '貓抓抓.dbo.Game.Character Info' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="Game_Character Info">
+    <Key>
+      <PropertyRef Name="Member ID" />
+      <PropertyRef Name="Character Name" />
+      <PropertyRef Name="Character Level" />
+      <PropertyRef Name="Character Equipment" />
+      <PropertyRef Name="Character Items" />
+      <PropertyRef Name="Gacha Ticket Quantity" />
+      <PropertyRef Name="Game Coin Quantity" />
+      <PropertyRef Name="Discount Coin Quantity" />
+    </Key>
+    <Property Name="Member ID" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Character Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Character Level" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Character Equipment" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Character Items" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gacha Ticket Quantity" Type="int" Nullable="false" />
+    <Property Name="Game Coin Quantity" Type="int" Nullable="false" />
+    <Property Name="Discount Coin Quantity" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Game_CheckIn">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="MemberID" Type="int" Nullable="false" />
+    <Property Name="Day1" Type="bit" />
+    <Property Name="Day2" Type="bit" />
+    <Property Name="Day3" Type="bit" />
+    <Property Name="Day4" Type="bit" />
+    <Property Name="Day5" Type="bit" />
+    <Property Name="Day6" Type="bit" />
+    <Property Name="Day7" Type="bit" />
+    <Property Name="Day8" Type="bit" />
+    <Property Name="Day9" Type="bit" />
+    <Property Name="Day10" Type="bit" />
+    <Property Name="Day11" Type="bit" />
+    <Property Name="Day12" Type="bit" />
+    <Property Name="Day13" Type="bit" />
+    <Property Name="Day14" Type="bit" />
+  </EntityType>
+  <EntityType Name="Game_Coin Exchange Record">
+    <Key>
+      <PropertyRef Name="Coin Exchange Record ID" />
+    </Key>
+    <Property Name="Member ID" Type="int" />
+    <Property Name="Exchange Time" Type="datetime" />
+    <Property Name="Exchange Quantity" Type="int" />
+    <Property Name="Coin Exchange Record ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Game_Friend Data">
+    <Key>
+      <PropertyRef Name="Friend Data ID" />
+    </Key>
+    <Property Name="Member ID" Type="int" Nullable="false" />
+    <Property Name="Friend ID" Type="int" Nullable="false" />
+    <Property Name="Friend Data ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Game_Friend List Chat Data">
+    <Key>
+      <PropertyRef Name="Chat Room ID" />
+    </Key>
+    <Property Name="Friend ID" Type="int" Nullable="false" />
+    <Property Name="Chat Room ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Game_Global Chat Data">
+    <Key>
+      <PropertyRef Name="Message ID" />
+    </Key>
+    <Property Name="Member ID" Type="int" />
+    <Property Name="Message ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Message Content" Type="nvarchar(max)" />
+    <Property Name="Sent Time" Type="datetime" />
+    <Property Name="Hide Message" Type="bit" />
+  </EntityType>
+  <EntityType Name="Game_Item Purchase Record">
+    <Key>
+      <PropertyRef Name="Game Item Purchase Record ID" />
+    </Key>
+    <Property Name="Member ID" Type="int" />
+    <Property Name="Product ID" Type="int" />
+    <Property Name="Character Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Purchase Time" Type="nvarchar" MaxLength="50" />
+    <Property Name="Item Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Game Item Purchase Record ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Game_Member B Message Data">
+    <Key>
+      <PropertyRef Name="Member (B) ID" />
+    </Key>
+    <Property Name="Member (B) ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="[訊息(發送者)內容" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sent Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Game_Member Task">
+    <Key>
+      <PropertyRef Name="Task ID" />
+    </Key>
+    <Property Name="Member ID" Type="int" />
+    <Property Name="Task ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Complete Date" Type="datetime" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 '貓抓抓.dbo.Game.Message Data' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="Game_Message Data">
+    <Key>
+      <PropertyRef Name="Chat Room ID" />
+      <PropertyRef Name="Member (B) ID" />
+    </Key>
+    <Property Name="Chat Room ID" Type="int" Nullable="false" />
+    <Property Name="Member (B) ID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 '貓抓抓.dbo.Game.Pet' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="Game_Pet">
+          <Property Name="Product ID" Type="int" />
+          <Property Name="Pet Level ID" Type="int" />
+          <Property Name="Pet Skill ID" Type="int" />
+          <Property Name="Pet Rarity ID" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Game_Pet Total">
+    <Key>
+      <PropertyRef Name="Pet Name" />
+    </Key>
+    <Property Name="Character Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pet Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pet Level" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pet Skill" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Game_Product Category">
+    <Key>
+      <PropertyRef Name="Product Category ID" />
+    </Key>
+    <Property Name="Product Category ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Game_Product Total">
+    <Key>
+      <PropertyRef Name="Product ID" />
+    </Key>
+    <Property Name="Product Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Product ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Product Category ID" Type="int" />
+    <Property Name="Product Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Product Price" Type="int" />
+    <Property Name="Product Image" Type="varbinary(max)" />
+    <Property Name="Purchased Quantity" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remaining Quantity" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lottery Probability" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Game_Rank Data">
+    <Key>
+      <PropertyRef Name="Rank ID" />
+    </Key>
+    <Property Name="Rank ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Rank Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Game_Shop Blog Data">
+    <Key>
+      <PropertyRef Name="Blog Article ID" />
+    </Key>
+    <Property Name="Blog Article ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Article Title" Type="nvarchar(max)" />
+    <Property Name="Article Content" Type="nvarchar(max)" />
+    <Property Name="Publish Time" Type="datetime" />
+    <Property Name="Admin ID" Type="int" />
+    <Property Name="Display Status" Type="bit" />
+    <Property Name="Pin to Top" Type="bit" />
+    <Property Name="Sync with Game and Shop Display" Type="bit" />
+    <Property Name="Article Type ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Game_ShopAnnouncement">
+    <Key>
+      <PropertyRef Name="AnnouncementID" />
+    </Key>
+    <Property Name="AnnouncementID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AnnouncementTitle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AnnouncementContent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AnnouncementImage(Header)" Type="varbinary(max)" />
+    <Property Name="AdminID" Type="int" Nullable="false" />
+    <Property Name="EditTime" Type="datetime" Nullable="false" />
+    <Property Name="PublishTime" Type="datetime" Nullable="false" />
+    <Property Name="DisplayOrNot" Type="bit" Nullable="false" />
+    <Property Name="SyncWithGameAndShopDisplay" Type="bit" Nullable="false" />
+    <Property Name="HideIn-gameDisplay" Type="bit" Nullable="false" />
+    <Property Name="ConvertToMarquee" Type="bit" Nullable="false" />
+    <Property Name="PinToTop" Type="bit" Nullable="false" />
+    <Property Name="AnnouncementType ID" Type="int" Nullable="false" />
+    <Property Name="AnnouncementImage(Content)" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Game_shopArticleType">
+    <Key>
+      <PropertyRef Name="ArticleTypeID" />
+    </Key>
+    <Property Name="ArticleTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ArticleTypeName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Game_Task Condition Data">
+    <Key>
+      <PropertyRef Name="Task Condition ID" />
+    </Key>
+    <Property Name="Task Condition ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Condition Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Game_Task List">
+    <Key>
+      <PropertyRef Name="Task Name" />
+    </Key>
+    <Property Name="Task ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Task Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Task Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Task Reward" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Task Condition ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Message Type Data">
+    <Key>
+      <PropertyRef Name="Message Type ID" />
+    </Key>
+    <Property Name="Message Type ID" Type="int" Nullable="false" />
+    <Property Name="Message Type" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shop_Appeal Category Data">
+    <Key>
+      <PropertyRef Name="Appeal Category ID" />
+    </Key>
+    <Property Name="Appeal Category ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Shop_Case Data Table">
+    <Key>
+      <PropertyRef Name="Case ID" />
+    </Key>
+    <Property Name="Case ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Message ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shop_Common Address Data">
+    <Key>
+      <PropertyRef Name="Address ID" />
+    </Key>
+    <Property Name="Member ID" Type="int" />
+    <Property Name="Address ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Recipient Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Recipient Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Recipient Address" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Shop_Complaint Status Data">
+    <Key>
+      <PropertyRef Name="Complaint Status ID" />
+    </Key>
+    <Property Name="Complaint Status ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Complaint Status Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Shop_Coupon Total">
+    <Key>
+      <PropertyRef Name="Coupon ID" />
+    </Key>
+    <Property Name="Coupon ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Coupon Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Coupon Content" Type="nvarchar(max)" />
+    <Property Name="Expiry Date" Type="datetime" />
+    <Property Name="Total Quantity" Type="int" />
+    <Property Name="Usable" Type="bit" />
+  </EntityType>
+  <EntityType Name="Shop_Favorite Data Table">
+    <Key>
+      <PropertyRef Name="Favorite ID" />
+    </Key>
+    <Property Name="Member ID" Type="int" />
+    <Property Name="Favorite ID" Type="int" Nullable="false" />
+    <Property Name="Product ID" Type="int" />
+    <Property Name="Creation Date" Type="int" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 '貓抓抓.dbo.Shop.Favorite-Product Table' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="Shop_Favorite-Product Table">
+    <Key>
+      <PropertyRef Name="Favorite ID" />
+      <PropertyRef Name="Product ID" />
+    </Key>
+    <Property Name="Favorite ID" Type="int" Nullable="false" />
+    <Property Name="Product ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shop_Game Admin Data">
+    <Key>
+      <PropertyRef Name="Admin ID" />
+    </Key>
+    <Property Name="Admin ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Admin Username" Type="nvarchar(max)" />
+    <Property Name="Admin Password" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Shop_Member Complaint Case">
+    <Key>
+      <PropertyRef Name="Complaint Case ID" />
+    </Key>
+    <Property Name="Complaint Case ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Complaint Title" Type="nvarchar(max)" />
+    <Property Name="Member ID" Type="int" />
+    <Property Name="Complaint Content" Type="nvarchar(max)" />
+    <Property Name="Complaint Status ID" Type="int" />
+    <Property Name="Complaint Category ID" Type="int" />
+    <Property Name="Creation Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Shop_Member Coupon Data">
+    <Key>
+      <PropertyRef Name="Member Coupon Data ID" />
+    </Key>
+    <Property Name="Member ID" Type="int" />
+    <Property Name="Coupon ID" Type="int" />
+    <Property Name="Coupon Status ID" Type="bit" />
+    <Property Name="Member Coupon Data ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shop_Member Info">
+    <Key>
+      <PropertyRef Name="Member ID" />
+    </Key>
+    <Property Name="Member ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Member Account" Type="nvarchar" MaxLength="50" />
+    <Property Name="Character Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Level ID" Type="int" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="date" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Phone Number" Type="nvarchar" MaxLength="10" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Cat Coin Quantity" Type="int" />
+    <Property Name="Loyalty Points" Type="int" />
+    <Property Name="Registration Time" Type="datetime" />
+    <Property Name="Last Login Time" Type="datetime" />
+    <Property Name="Favorite ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Shop_Order Detail Table">
+    <Key>
+      <PropertyRef Name="Order Detail ID" />
+    </Key>
+    <Property Name="Order ID" Type="int" />
+    <Property Name="Product ID" Type="int" />
+    <Property Name="Product Quantity" Type="int" />
+    <Property Name="Order Detail ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shop_Order Status Data">
+    <Key>
+      <PropertyRef Name="Order Status ID" />
+    </Key>
+    <Property Name="Order Status ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Shop_Order Total Table">
+    <Key>
+      <PropertyRef Name="Order ID" />
+    </Key>
+    <Property Name="Member ID" Type="int" />
+    <Property Name="Order ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Order Creation Date" Type="datetime" />
+    <Property Name="Last Update Time" Type="datetime" />
+    <Property Name="Address ID" Type="int" />
+    <Property Name="Recipient Address" Type="nvarchar(max)" />
+    <Property Name="Recipient Name" Type="nchar" MaxLength="20" />
+    <Property Name="Recipient Phone" Type="nchar" MaxLength="10" />
+    <Property Name="Order Status ID" Type="int" />
+    <Property Name="Payment Method ID" Type="int" />
+    <Property Name="Coupon ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Shop_Payment Method Data">
+    <Key>
+      <PropertyRef Name="Payment Method ID" />
+    </Key>
+    <Property Name="Payment Method ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Payment Method Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Shop_Product Category">
+    <Key>
+      <PropertyRef Name="Product Category ID" />
+    </Key>
+    <Property Name="Product Category ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Category Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Shop_Product Image Table">
+    <Key>
+      <PropertyRef Name="Product Image ID" />
+    </Key>
+    <Property Name="Product ID" Type="int" />
+    <Property Name="Product Photo" Type="varbinary(max)" />
+    <Property Name="Product Image ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shop_Product Review Table">
+    <Key>
+      <PropertyRef Name="Product Review ID" />
+    </Key>
+    <Property Name="Member ID" Type="int" />
+    <Property Name="Product ID" Type="int" />
+    <Property Name="Review Content" Type="nvarchar(max)" />
+    <Property Name="Product Rating" Type="int" />
+    <Property Name="Product Review ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shop_Product Supplier">
+    <Key>
+      <PropertyRef Name="Supplier ID" />
+    </Key>
+    <Property Name="Supplier ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contact Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Company Address" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Shop_Product Total">
+    <Key>
+      <PropertyRef Name="Product ID" />
+    </Key>
+    <Property Name="Product Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Product ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Product Category ID" Type="int" />
+    <Property Name="Product Description" Type="nvarchar(max)" />
+    <Property Name="Product Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Size" Type="nvarchar" MaxLength="50" />
+    <Property Name="Weight" Type="nvarchar" MaxLength="50" />
+    <Property Name="Release Date" Type="date" />
+    <Property Name="Discontinued" Type="bit" />
+    <Property Name="Remaining Quantity" Type="int" />
+    <Property Name="Supplier ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Shop_Reply Data">
+    <Key>
+      <PropertyRef Name="Reply ID" />
+    </Key>
+    <Property Name="Reply ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Complaint Case ID" Type="int" Nullable="false" />
+    <Property Name="Receiver ID (Official)" Type="int" Nullable="false" />
+    <Property Name="Message (Recipient) Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sent Time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 '貓抓抓.dbo.Shop.Return Data Table' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="Shop_Return Data Table">
+    <Key>
+      <PropertyRef Name="Order ID" />
+    </Key>
+    <Property Name="Order ID" Type="int" Nullable="false" />
+    <Property Name="Return Reason ID" Type="int" />
+    <Property Name="Processing Status ID" Type="int" />
+    <Property Name="Return Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Shop_Return Reason Data Table">
+    <Key>
+      <PropertyRef Name="Return Reason ID" />
+    </Key>
+    <Property Name="Return Reason ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Return Reason" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Shop_Return Status Data Table">
+    <Key>
+      <PropertyRef Name="Processing Status ID" />
+    </Key>
+    <Property Name="Processing Status ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Game_1on1訊息資料表_Shop_會員資訊">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+    <End Role="Game_1on1MessageData" Type="Self.Game_1on1MessageData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Game_1on1MessageData">
+        <PropertyRef Name="SenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_1on1訊息資料表_Shop_會員資訊1">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+    <End Role="Game_1on1MessageData" Type="Self.Game_1on1MessageData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Game_1on1MessageData">
+        <PropertyRef Name="ReceiverID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_CheckIn_Shop_Member Info">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="1" />
+    <End Role="Game_CheckIn" Type="Self.Game_CheckIn" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Game_CheckIn">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_Friend Data_Shop_Member Info">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="1" />
+    <End Role="Game_Friend Data" Type="Self.Game_Friend Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Game_Friend Data">
+        <PropertyRef Name="Member ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_Friend Data_Shop_Member Info1">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="1" />
+    <End Role="Game_Friend Data" Type="Self.Game_Friend Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Game_Friend Data">
+        <PropertyRef Name="Friend ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_Shop公告_Shop_Game 後臺管理員資料2">
+    <End Role="Shop_Game Admin Data" Type="Self.Shop_Game Admin Data" Multiplicity="1" />
+    <End Role="Game_ShopAnnouncement" Type="Self.Game_ShopAnnouncement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Game Admin Data">
+        <PropertyRef Name="Admin ID" />
+      </Principal>
+      <Dependent Role="Game_ShopAnnouncement">
+        <PropertyRef Name="AdminID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_Shop公告_公告類型資料表">
+    <End Role="Announcement Type Data" Type="Self.Announcement Type Data" Multiplicity="1" />
+    <End Role="Game_ShopAnnouncement" Type="Self.Game_ShopAnnouncement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Announcement Type Data">
+        <PropertyRef Name="Announcement Type ID" />
+      </Principal>
+      <Dependent Role="Game_ShopAnnouncement">
+        <PropertyRef Name="AnnouncementType ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_Shop部落格資料表_Game_shop 文章類型資料庫">
+    <End Role="Game_shopArticleType" Type="Self.Game_shopArticleType" Multiplicity="0..1" />
+    <End Role="Game_Shop Blog Data" Type="Self.Game_Shop Blog Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game_shopArticleType">
+        <PropertyRef Name="ArticleTypeID" />
+      </Principal>
+      <Dependent Role="Game_Shop Blog Data">
+        <PropertyRef Name="Article Type ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_Shop部落格資料表_Shop_Game 後臺管理員資料">
+    <End Role="Shop_Game Admin Data" Type="Self.Shop_Game Admin Data" Multiplicity="0..1" />
+    <End Role="Game_Shop Blog Data" Type="Self.Game_Shop Blog Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Game Admin Data">
+        <PropertyRef Name="Admin ID" />
+      </Principal>
+      <Dependent Role="Game_Shop Blog Data">
+        <PropertyRef Name="Admin ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_任務總表_Game_任務條件資料表">
+    <End Role="Game_Task Condition Data" Type="Self.Game_Task Condition Data" Multiplicity="1" />
+    <End Role="Game_Task List" Type="Self.Game_Task List" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game_Task Condition Data">
+        <PropertyRef Name="Task Condition ID" />
+      </Principal>
+      <Dependent Role="Game_Task List">
+        <PropertyRef Name="Task Condition ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_任務總表_Game_會員任務">
+    <End Role="Game_Member Task" Type="Self.Game_Member Task" Multiplicity="1" />
+    <End Role="Game_Task List" Type="Self.Game_Task List" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game_Member Task">
+        <PropertyRef Name="Task ID" />
+      </Principal>
+      <Dependent Role="Game_Task List">
+        <PropertyRef Name="Task ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_全頻道聊天資料表_Shop_會員資訊">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+    <End Role="Game_Global Chat Data" Type="Self.Game_Global Chat Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Game_Global Chat Data">
+        <PropertyRef Name="Member ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_好友列表_Shop_會員資訊">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="1" />
+    <End Role="Game_Friend Data" Type="Self.Game_Friend Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Game_Friend Data">
+        <PropertyRef Name="Member ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_成就總表_Game_任務條件資料表">
+    <End Role="Game_Task Condition Data" Type="Self.Game_Task Condition Data" Multiplicity="0..1" />
+    <End Role="Game_Achievement List" Type="Self.Game_Achievement List" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game_Task Condition Data">
+        <PropertyRef Name="Task Condition ID" />
+      </Principal>
+      <Dependent Role="Game_Achievement List">
+        <PropertyRef Name="Achievement Condition ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_成就總表_Game_成就獎勵總表">
+    <End Role="Game_Achievement Reward List" Type="Self.Game_Achievement Reward List" Multiplicity="0..1" />
+    <End Role="Game_Achievement List" Type="Self.Game_Achievement List" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game_Achievement Reward List">
+        <PropertyRef Name="Achievement Reward ID" />
+      </Principal>
+      <Dependent Role="Game_Achievement List">
+        <PropertyRef Name="Achievement Reward ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_物品購買紀錄表_Game_商品總表">
+    <End Role="Game_Product Total" Type="Self.Game_Product Total" Multiplicity="0..1" />
+    <End Role="Game_Item Purchase Record" Type="Self.Game_Item Purchase Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game_Product Total">
+        <PropertyRef Name="Product ID" />
+      </Principal>
+      <Dependent Role="Game_Item Purchase Record">
+        <PropertyRef Name="Product ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_訊息資料表_Game_好友列表聊天室資料表">
+    <End Role="Game_Friend List Chat Data" Type="Self.Game_Friend List Chat Data" Multiplicity="1" />
+    <End Role="Game_Message Data" Type="Self.Game_Message Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game_Friend List Chat Data">
+        <PropertyRef Name="Chat Room ID" />
+      </Principal>
+      <Dependent Role="Game_Message Data">
+        <PropertyRef Name="Chat Room ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_訊息資料表_Game_會員B訊息資料表">
+    <End Role="Game_Member B Message Data" Type="Self.Game_Member B Message Data" Multiplicity="1" />
+    <End Role="Game_Message Data" Type="Self.Game_Message Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game_Member B Message Data">
+        <PropertyRef Name="Member (B) ID" />
+      </Principal>
+      <Dependent Role="Game_Message Data">
+        <PropertyRef Name="Member (B) ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_商品總表_Game_商品類別表">
+    <End Role="Game_Product Category" Type="Self.Game_Product Category" Multiplicity="0..1" />
+    <End Role="Game_Product Total" Type="Self.Game_Product Total" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game_Product Category">
+        <PropertyRef Name="Product Category ID" />
+      </Principal>
+      <Dependent Role="Game_Product Total">
+        <PropertyRef Name="Product Category ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_會員任務_Shop_會員資訊">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+    <End Role="Game_Member Task" Type="Self.Game_Member Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Game_Member Task">
+        <PropertyRef Name="Member ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_遊戲幣兌換紀錄_Shop_會員資訊">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+    <End Role="Game_Coin Exchange Record" Type="Self.Game_Coin Exchange Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Game_Coin Exchange Record">
+        <PropertyRef Name="Member ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--產生期間發現錯誤:
+錯誤 6004: 資料表 '貓抓抓.dbo.Game.Pet' 被某個關聯性參考，但是找不到。
+        <Association Name="FK_Game_寵物_Game_商品總表" />-->
+  <Association Name="FK_Orders_Details_Orders">
+    <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="0..1" />
+    <End Role="Shop_Order Detail Table" Type="Self.Shop_Order Detail Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Order Total Table">
+        <PropertyRef Name="Order ID" />
+      </Principal>
+      <Dependent Role="Shop_Order Detail Table">
+        <PropertyRef Name="Order ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Details_Products">
+    <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="0..1" />
+    <End Role="Shop_Order Detail Table" Type="Self.Shop_Order Detail Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Product Total">
+        <PropertyRef Name="Product ID" />
+      </Principal>
+      <Dependent Role="Shop_Order Detail Table">
+        <PropertyRef Name="Product ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Image_Products">
+    <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="0..1" />
+    <End Role="Shop_Product Image Table" Type="Self.Shop_Product Image Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Product Total">
+        <PropertyRef Name="Product ID" />
+      </Principal>
+      <Dependent Role="Shop_Product Image Table">
+        <PropertyRef Name="Product ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Reviews_Products">
+    <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="0..1" />
+    <End Role="Shop_Product Review Table" Type="Self.Shop_Product Review Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Product Total">
+        <PropertyRef Name="Product ID" />
+      </Principal>
+      <Dependent Role="Shop_Product Review Table">
+        <PropertyRef Name="Product ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Products_Categories">
+    <End Role="Shop_Product Category" Type="Self.Shop_Product Category" Multiplicity="0..1" />
+    <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Product Category">
+        <PropertyRef Name="Product Category ID" />
+      </Principal>
+      <Dependent Role="Shop_Product Total">
+        <PropertyRef Name="Product Category ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_Order Total Table_Shop_Common Address Data">
+    <End Role="Shop_Common Address Data" Type="Self.Shop_Common Address Data" Multiplicity="0..1" />
+    <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Common Address Data">
+        <PropertyRef Name="Address ID" />
+      </Principal>
+      <Dependent Role="Shop_Order Total Table">
+        <PropertyRef Name="Address ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_回覆資料表_Shop_Game 後臺管理員資料">
+    <End Role="Shop_Game Admin Data" Type="Self.Shop_Game Admin Data" Multiplicity="1" />
+    <End Role="Shop_Reply Data" Type="Self.Shop_Reply Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Game Admin Data">
+        <PropertyRef Name="Admin ID" />
+      </Principal>
+      <Dependent Role="Shop_Reply Data">
+        <PropertyRef Name="Receiver ID (Official)" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_回覆資料表_Shop_會員客訴案件表">
+    <End Role="Shop_Member Complaint Case" Type="Self.Shop_Member Complaint Case" Multiplicity="1" />
+    <End Role="Shop_Reply Data" Type="Self.Shop_Reply Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Complaint Case">
+        <PropertyRef Name="Complaint Case ID" />
+      </Principal>
+      <Dependent Role="Shop_Reply Data">
+        <PropertyRef Name="Complaint Case ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_我的最愛-商品表_Shop_我的最愛資料表">
+    <End Role="Shop_Favorite Data Table" Type="Self.Shop_Favorite Data Table" Multiplicity="1" />
+    <End Role="Shop_Favorite-Product Table" Type="Self.Shop_Favorite-Product Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Favorite Data Table">
+        <PropertyRef Name="Favorite ID" />
+      </Principal>
+      <Dependent Role="Shop_Favorite-Product Table">
+        <PropertyRef Name="Favorite ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_我的最愛-商品表_Shop_商品總表">
+    <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="1" />
+    <End Role="Shop_Favorite-Product Table" Type="Self.Shop_Favorite-Product Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Product Total">
+        <PropertyRef Name="Product ID" />
+      </Principal>
+      <Dependent Role="Shop_Favorite-Product Table">
+        <PropertyRef Name="Product ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_我的最愛資料表_Shop_商品總表">
+    <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="0..1" />
+    <End Role="Shop_Favorite Data Table" Type="Self.Shop_Favorite Data Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Product Total">
+        <PropertyRef Name="Product ID" />
+      </Principal>
+      <Dependent Role="Shop_Favorite Data Table">
+        <PropertyRef Name="Product ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_我的最愛資料表_Shop_會員資訊1">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+    <End Role="Shop_Favorite Data Table" Type="Self.Shop_Favorite Data Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Shop_Favorite Data Table">
+        <PropertyRef Name="Member ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_訂單總表_Shop_付款方式資料表">
+    <End Role="Shop_Payment Method Data" Type="Self.Shop_Payment Method Data" Multiplicity="0..1" />
+    <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Payment Method Data">
+        <PropertyRef Name="Payment Method ID" />
+      </Principal>
+      <Dependent Role="Shop_Order Total Table">
+        <PropertyRef Name="Payment Method ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_訂單總表_Shop_訂單狀態資料表">
+    <End Role="Shop_Order Status Data" Type="Self.Shop_Order Status Data" Multiplicity="0..1" />
+    <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Order Status Data">
+        <PropertyRef Name="Order Status ID" />
+      </Principal>
+      <Dependent Role="Shop_Order Total Table">
+        <PropertyRef Name="Order Status ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_訂單總表_Shop_會員資訊">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+    <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Shop_Order Total Table">
+        <PropertyRef Name="Member ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_退換貨資料表_Shop_訂單總表">
+    <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="1" />
+    <End Role="Shop_Return Data Table" Type="Self.Shop_Return Data Table" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Order Total Table">
+        <PropertyRef Name="Order ID" />
+      </Principal>
+      <Dependent Role="Shop_Return Data Table">
+        <PropertyRef Name="Order ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_退換貨資料表_Shop_退換貨原因資料表">
+    <End Role="Shop_Return Reason Data Table" Type="Self.Shop_Return Reason Data Table" Multiplicity="0..1" />
+    <End Role="Shop_Return Data Table" Type="Self.Shop_Return Data Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Return Reason Data Table">
+        <PropertyRef Name="Return Reason ID" />
+      </Principal>
+      <Dependent Role="Shop_Return Data Table">
+        <PropertyRef Name="Return Reason ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_退換貨資料表_Shop_退換貨處理狀態資料表">
+    <End Role="Shop_Return Status Data Table" Type="Self.Shop_Return Status Data Table" Multiplicity="0..1" />
+    <End Role="Shop_Return Data Table" Type="Self.Shop_Return Data Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Return Status Data Table">
+        <PropertyRef Name="Processing Status ID" />
+      </Principal>
+      <Dependent Role="Shop_Return Data Table">
+        <PropertyRef Name="Processing Status ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_商品評論表_Shop_會員資訊">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+    <End Role="Shop_Product Review Table" Type="Self.Shop_Product Review Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Shop_Product Review Table">
+        <PropertyRef Name="Member ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_商品總表_Shop_產品供應商">
+    <End Role="Shop_Product Supplier" Type="Self.Shop_Product Supplier" Multiplicity="0..1" />
+    <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Product Supplier">
+        <PropertyRef Name="Supplier ID" />
+      </Principal>
+      <Dependent Role="Shop_Product Total">
+        <PropertyRef Name="Supplier ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_常用地址資料表_Shop_會員資訊">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+    <End Role="Shop_Common Address Data" Type="Self.Shop_Common Address Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Shop_Common Address Data">
+        <PropertyRef Name="Member ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_會員折價券資料表_Shop_會員資訊">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+    <End Role="Shop_Member Coupon Data" Type="Self.Shop_Member Coupon Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Shop_Member Coupon Data">
+        <PropertyRef Name="Member ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_會員折價券資料表_Shop_優惠券總表">
+    <End Role="Shop_Coupon Total" Type="Self.Shop_Coupon Total" Multiplicity="0..1" />
+    <End Role="Shop_Member Coupon Data" Type="Self.Shop_Member Coupon Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Coupon Total">
+        <PropertyRef Name="Coupon ID" />
+      </Principal>
+      <Dependent Role="Shop_Member Coupon Data">
+        <PropertyRef Name="Coupon ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_會員客訴案件表_Shop_申訴類別資料表">
+    <End Role="Shop_Appeal Category Data" Type="Self.Shop_Appeal Category Data" Multiplicity="0..1" />
+    <End Role="Shop_Member Complaint Case" Type="Self.Shop_Member Complaint Case" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Appeal Category Data">
+        <PropertyRef Name="Appeal Category ID" />
+      </Principal>
+      <Dependent Role="Shop_Member Complaint Case">
+        <PropertyRef Name="Complaint Category ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_會員客訴案件表_Shop_客訴狀態資料表">
+    <End Role="Shop_Complaint Status Data" Type="Self.Shop_Complaint Status Data" Multiplicity="0..1" />
+    <End Role="Shop_Member Complaint Case" Type="Self.Shop_Member Complaint Case" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Complaint Status Data">
+        <PropertyRef Name="Complaint Status ID" />
+      </Principal>
+      <Dependent Role="Shop_Member Complaint Case">
+        <PropertyRef Name="Complaint Status ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_會員客訴案件表_Shop_會員資訊">
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="0..1" />
+    <End Role="Shop_Member Complaint Case" Type="Self.Shop_Member Complaint Case" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop_Member Info">
+        <PropertyRef Name="Member ID" />
+      </Principal>
+      <Dependent Role="Shop_Member Complaint Case">
+        <PropertyRef Name="Member ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shop_會員資訊_Game_等級排位資料表">
+    <End Role="Game_Rank Data" Type="Self.Game_Rank Data" Multiplicity="0..1" />
+    <End Role="Shop_Member Info" Type="Self.Shop_Member Info" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game_Rank Data">
+        <PropertyRef Name="Rank ID" />
+      </Principal>
+      <Dependent Role="Shop_Member Info">
+        <PropertyRef Name="Level ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="CatChaModelStoreContainer">
+    <EntitySet Name="Announcement Type Data" EntityType="Self.Announcement Type Data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Game_1on1MessageData" EntityType="Self.Game_1on1MessageData" Schema="dbo" Table="Game.1on1MessageData" store:Type="Tables" />
+    <EntitySet Name="Game_Achievement List" EntityType="Self.Game_Achievement List" Schema="dbo" Table="Game.Achievement List" store:Type="Tables" />
+    <EntitySet Name="Game_Achievement Reward List" EntityType="Self.Game_Achievement Reward List" Schema="dbo" Table="Game.Achievement Reward List" store:Type="Tables" />
+    <EntitySet Name="Game_CheckIn" EntityType="Self.Game_CheckIn" Schema="dbo" Table="Game.CheckIn" store:Type="Tables" />
+    <EntitySet Name="Game_Coin Exchange Record" EntityType="Self.Game_Coin Exchange Record" Schema="dbo" Table="Game.Coin Exchange Record" store:Type="Tables" />
+    <EntitySet Name="Game_Friend Data" EntityType="Self.Game_Friend Data" Schema="dbo" Table="Game.Friend Data" store:Type="Tables" />
+    <EntitySet Name="Game_Friend List Chat Data" EntityType="Self.Game_Friend List Chat Data" Schema="dbo" Table="Game.Friend List Chat Data" store:Type="Tables" />
+    <EntitySet Name="Game_Global Chat Data" EntityType="Self.Game_Global Chat Data" Schema="dbo" Table="Game.Global Chat Data" store:Type="Tables" />
+    <EntitySet Name="Game_Item Purchase Record" EntityType="Self.Game_Item Purchase Record" Schema="dbo" Table="Game.Item Purchase Record" store:Type="Tables" />
+    <EntitySet Name="Game_Member B Message Data" EntityType="Self.Game_Member B Message Data" Schema="dbo" Table="Game.Member B Message Data" store:Type="Tables" />
+    <EntitySet Name="Game_Member Task" EntityType="Self.Game_Member Task" Schema="dbo" Table="Game.Member Task" store:Type="Tables" />
+    <EntitySet Name="Game_Pet Total" EntityType="Self.Game_Pet Total" Schema="dbo" Table="Game.Pet Total" store:Type="Tables" />
+    <EntitySet Name="Game_Product Category" EntityType="Self.Game_Product Category" Schema="dbo" Table="Game.Product Category" store:Type="Tables" />
+    <EntitySet Name="Game_Product Total" EntityType="Self.Game_Product Total" Schema="dbo" Table="Game.Product Total" store:Type="Tables" />
+    <EntitySet Name="Game_Rank Data" EntityType="Self.Game_Rank Data" Schema="dbo" Table="Game.Rank Data" store:Type="Tables" />
+    <EntitySet Name="Game_Shop Blog Data" EntityType="Self.Game_Shop Blog Data" Schema="dbo" Table="Game.Shop Blog Data" store:Type="Tables" />
+    <EntitySet Name="Game_ShopAnnouncement" EntityType="Self.Game_ShopAnnouncement" Schema="dbo" Table="Game.ShopAnnouncement" store:Type="Tables" />
+    <EntitySet Name="Game_shopArticleType" EntityType="Self.Game_shopArticleType" Schema="dbo" Table="Game.shopArticleType" store:Type="Tables" />
+    <EntitySet Name="Game_Task Condition Data" EntityType="Self.Game_Task Condition Data" Schema="dbo" Table="Game.Task Condition Data" store:Type="Tables" />
+    <EntitySet Name="Game_Task List" EntityType="Self.Game_Task List" Schema="dbo" Table="Game.Task List" store:Type="Tables" />
+    <EntitySet Name="Message Type Data" EntityType="Self.Message Type Data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shop_Appeal Category Data" EntityType="Self.Shop_Appeal Category Data" Schema="dbo" Table="Shop.Appeal Category Data" store:Type="Tables" />
+    <EntitySet Name="Shop_Case Data Table" EntityType="Self.Shop_Case Data Table" Schema="dbo" Table="Shop.Case Data Table" store:Type="Tables" />
+    <EntitySet Name="Shop_Common Address Data" EntityType="Self.Shop_Common Address Data" Schema="dbo" Table="Shop.Common Address Data" store:Type="Tables" />
+    <EntitySet Name="Shop_Complaint Status Data" EntityType="Self.Shop_Complaint Status Data" Schema="dbo" Table="Shop.Complaint Status Data" store:Type="Tables" />
+    <EntitySet Name="Shop_Coupon Total" EntityType="Self.Shop_Coupon Total" Schema="dbo" Table="Shop.Coupon Total" store:Type="Tables" />
+    <EntitySet Name="Shop_Favorite Data Table" EntityType="Self.Shop_Favorite Data Table" Schema="dbo" Table="Shop.Favorite Data Table" store:Type="Tables" />
+    <EntitySet Name="Shop_Game Admin Data" EntityType="Self.Shop_Game Admin Data" Schema="dbo" Table="Shop.Game Admin Data" store:Type="Tables" />
+    <EntitySet Name="Shop_Member Complaint Case" EntityType="Self.Shop_Member Complaint Case" Schema="dbo" Table="Shop.Member Complaint Case" store:Type="Tables" />
+    <EntitySet Name="Shop_Member Coupon Data" EntityType="Self.Shop_Member Coupon Data" Schema="dbo" Table="Shop.Member Coupon Data" store:Type="Tables" />
+    <EntitySet Name="Shop_Member Info" EntityType="Self.Shop_Member Info" Schema="dbo" Table="Shop.Member Info" store:Type="Tables" />
+    <EntitySet Name="Shop_Order Detail Table" EntityType="Self.Shop_Order Detail Table" Schema="dbo" Table="Shop.Order Detail Table" store:Type="Tables" />
+    <EntitySet Name="Shop_Order Status Data" EntityType="Self.Shop_Order Status Data" Schema="dbo" Table="Shop.Order Status Data" store:Type="Tables" />
+    <EntitySet Name="Shop_Order Total Table" EntityType="Self.Shop_Order Total Table" Schema="dbo" Table="Shop.Order Total Table" store:Type="Tables" />
+    <EntitySet Name="Shop_Payment Method Data" EntityType="Self.Shop_Payment Method Data" Schema="dbo" Table="Shop.Payment Method Data" store:Type="Tables" />
+    <EntitySet Name="Shop_Product Category" EntityType="Self.Shop_Product Category" Schema="dbo" Table="Shop.Product Category" store:Type="Tables" />
+    <EntitySet Name="Shop_Product Image Table" EntityType="Self.Shop_Product Image Table" Schema="dbo" Table="Shop.Product Image Table" store:Type="Tables" />
+    <EntitySet Name="Shop_Product Review Table" EntityType="Self.Shop_Product Review Table" Schema="dbo" Table="Shop.Product Review Table" store:Type="Tables" />
+    <EntitySet Name="Shop_Product Supplier" EntityType="Self.Shop_Product Supplier" Schema="dbo" Table="Shop.Product Supplier" store:Type="Tables" />
+    <EntitySet Name="Shop_Product Total" EntityType="Self.Shop_Product Total" Schema="dbo" Table="Shop.Product Total" store:Type="Tables" />
+    <EntitySet Name="Shop_Reply Data" EntityType="Self.Shop_Reply Data" Schema="dbo" Table="Shop.Reply Data" store:Type="Tables" />
+    <EntitySet Name="Shop_Return Reason Data Table" EntityType="Self.Shop_Return Reason Data Table" Schema="dbo" Table="Shop.Return Reason Data Table" store:Type="Tables" />
+    <EntitySet Name="Shop_Return Status Data Table" EntityType="Self.Shop_Return Status Data Table" Schema="dbo" Table="Shop.Return Status Data Table" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Game_Character Info" EntityType="Self.Game_Character Info" store:Type="Tables" store:Schema="dbo" store:Name="Game.Character Info">
+      <DefiningQuery>SELECT 
+    [Game_Character Info].[Member ID] AS [Member ID], 
+    [Game_Character Info].[Character Name] AS [Character Name], 
+    [Game_Character Info].[Character Level] AS [Character Level], 
+    [Game_Character Info].[Character Equipment] AS [Character Equipment], 
+    [Game_Character Info].[Character Items] AS [Character Items], 
+    [Game_Character Info].[Gacha Ticket Quantity] AS [Gacha Ticket Quantity], 
+    [Game_Character Info].[Game Coin Quantity] AS [Game Coin Quantity], 
+    [Game_Character Info].[Discount Coin Quantity] AS [Discount Coin Quantity]
+    FROM [dbo].[Game.Character Info] AS [Game_Character Info]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Game_Message Data" EntityType="Self.Game_Message Data" store:Type="Tables" store:Schema="dbo" store:Name="Game.Message Data">
+      <DefiningQuery>SELECT 
+    [Game_Message Data].[Chat Room ID] AS [Chat Room ID], 
+    [Game_Message Data].[Member (B) ID] AS [Member (B) ID]
+    FROM [dbo].[Game.Message Data] AS [Game_Message Data]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Shop_Favorite-Product Table" EntityType="Self.Shop_Favorite-Product Table" store:Type="Tables" store:Schema="dbo" store:Name="Shop.Favorite-Product Table">
+      <DefiningQuery>SELECT 
+    [Shop_Favorite-Product Table].[Favorite ID] AS [Favorite ID], 
+    [Shop_Favorite-Product Table].[Product ID] AS [Product ID]
+    FROM [dbo].[Shop.Favorite-Product Table] AS [Shop_Favorite-Product Table]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Shop_Return Data Table" EntityType="Self.Shop_Return Data Table" store:Type="Tables" store:Schema="dbo" store:Name="Shop.Return Data Table">
+      <DefiningQuery>SELECT 
+    [Shop_Return Data Table].[Order ID] AS [Order ID], 
+    [Shop_Return Data Table].[Return Reason ID] AS [Return Reason ID], 
+    [Shop_Return Data Table].[Processing Status ID] AS [Processing Status ID], 
+    [Shop_Return Data Table].[Return Date] AS [Return Date]
+    FROM [dbo].[Shop.Return Data Table] AS [Shop_Return Data Table]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Game_1on1訊息資料表_Shop_會員資訊" Association="Self.FK_Game_1on1訊息資料表_Shop_會員資訊">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Game_1on1MessageData" EntitySet="Game_1on1MessageData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_1on1訊息資料表_Shop_會員資訊1" Association="Self.FK_Game_1on1訊息資料表_Shop_會員資訊1">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Game_1on1MessageData" EntitySet="Game_1on1MessageData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_CheckIn_Shop_Member Info" Association="Self.FK_Game_CheckIn_Shop_Member Info">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Game_CheckIn" EntitySet="Game_CheckIn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_Friend Data_Shop_Member Info" Association="Self.FK_Game_Friend Data_Shop_Member Info">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Game_Friend Data" EntitySet="Game_Friend Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_Friend Data_Shop_Member Info1" Association="Self.FK_Game_Friend Data_Shop_Member Info1">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Game_Friend Data" EntitySet="Game_Friend Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_Shop公告_Shop_Game 後臺管理員資料2" Association="Self.FK_Game_Shop公告_Shop_Game 後臺管理員資料2">
+      <End Role="Shop_Game Admin Data" EntitySet="Shop_Game Admin Data" />
+      <End Role="Game_ShopAnnouncement" EntitySet="Game_ShopAnnouncement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_Shop公告_公告類型資料表" Association="Self.FK_Game_Shop公告_公告類型資料表">
+      <End Role="Announcement Type Data" EntitySet="Announcement Type Data" />
+      <End Role="Game_ShopAnnouncement" EntitySet="Game_ShopAnnouncement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_Shop部落格資料表_Game_shop 文章類型資料庫" Association="Self.FK_Game_Shop部落格資料表_Game_shop 文章類型資料庫">
+      <End Role="Game_shopArticleType" EntitySet="Game_shopArticleType" />
+      <End Role="Game_Shop Blog Data" EntitySet="Game_Shop Blog Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_Shop部落格資料表_Shop_Game 後臺管理員資料" Association="Self.FK_Game_Shop部落格資料表_Shop_Game 後臺管理員資料">
+      <End Role="Shop_Game Admin Data" EntitySet="Shop_Game Admin Data" />
+      <End Role="Game_Shop Blog Data" EntitySet="Game_Shop Blog Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_任務總表_Game_任務條件資料表" Association="Self.FK_Game_任務總表_Game_任務條件資料表">
+      <End Role="Game_Task Condition Data" EntitySet="Game_Task Condition Data" />
+      <End Role="Game_Task List" EntitySet="Game_Task List" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_任務總表_Game_會員任務" Association="Self.FK_Game_任務總表_Game_會員任務">
+      <End Role="Game_Member Task" EntitySet="Game_Member Task" />
+      <End Role="Game_Task List" EntitySet="Game_Task List" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_全頻道聊天資料表_Shop_會員資訊" Association="Self.FK_Game_全頻道聊天資料表_Shop_會員資訊">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Game_Global Chat Data" EntitySet="Game_Global Chat Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_好友列表_Shop_會員資訊" Association="Self.FK_Game_好友列表_Shop_會員資訊">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Game_Friend Data" EntitySet="Game_Friend Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_成就總表_Game_任務條件資料表" Association="Self.FK_Game_成就總表_Game_任務條件資料表">
+      <End Role="Game_Task Condition Data" EntitySet="Game_Task Condition Data" />
+      <End Role="Game_Achievement List" EntitySet="Game_Achievement List" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_成就總表_Game_成就獎勵總表" Association="Self.FK_Game_成就總表_Game_成就獎勵總表">
+      <End Role="Game_Achievement Reward List" EntitySet="Game_Achievement Reward List" />
+      <End Role="Game_Achievement List" EntitySet="Game_Achievement List" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_物品購買紀錄表_Game_商品總表" Association="Self.FK_Game_物品購買紀錄表_Game_商品總表">
+      <End Role="Game_Product Total" EntitySet="Game_Product Total" />
+      <End Role="Game_Item Purchase Record" EntitySet="Game_Item Purchase Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_訊息資料表_Game_好友列表聊天室資料表" Association="Self.FK_Game_訊息資料表_Game_好友列表聊天室資料表">
+      <End Role="Game_Friend List Chat Data" EntitySet="Game_Friend List Chat Data" />
+      <End Role="Game_Message Data" EntitySet="Game_Message Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_訊息資料表_Game_會員B訊息資料表" Association="Self.FK_Game_訊息資料表_Game_會員B訊息資料表">
+      <End Role="Game_Member B Message Data" EntitySet="Game_Member B Message Data" />
+      <End Role="Game_Message Data" EntitySet="Game_Message Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_商品總表_Game_商品類別表" Association="Self.FK_Game_商品總表_Game_商品類別表">
+      <End Role="Game_Product Category" EntitySet="Game_Product Category" />
+      <End Role="Game_Product Total" EntitySet="Game_Product Total" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_會員任務_Shop_會員資訊" Association="Self.FK_Game_會員任務_Shop_會員資訊">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Game_Member Task" EntitySet="Game_Member Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_遊戲幣兌換紀錄_Shop_會員資訊" Association="Self.FK_Game_遊戲幣兌換紀錄_Shop_會員資訊">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Game_Coin Exchange Record" EntitySet="Game_Coin Exchange Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Details_Orders" Association="Self.FK_Orders_Details_Orders">
+      <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+      <End Role="Shop_Order Detail Table" EntitySet="Shop_Order Detail Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Details_Products" Association="Self.FK_Orders_Details_Products">
+      <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+      <End Role="Shop_Order Detail Table" EntitySet="Shop_Order Detail Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Image_Products" Association="Self.FK_Products_Image_Products">
+      <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+      <End Role="Shop_Product Image Table" EntitySet="Shop_Product Image Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Reviews_Products" Association="Self.FK_Products_Reviews_Products">
+      <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+      <End Role="Shop_Product Review Table" EntitySet="Shop_Product Review Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Products_Categories" Association="Self.FK_Products_Products_Categories">
+      <End Role="Shop_Product Category" EntitySet="Shop_Product Category" />
+      <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_Order Total Table_Shop_Common Address Data" Association="Self.FK_Shop_Order Total Table_Shop_Common Address Data">
+      <End Role="Shop_Common Address Data" EntitySet="Shop_Common Address Data" />
+      <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_回覆資料表_Shop_Game 後臺管理員資料" Association="Self.FK_Shop_回覆資料表_Shop_Game 後臺管理員資料">
+      <End Role="Shop_Game Admin Data" EntitySet="Shop_Game Admin Data" />
+      <End Role="Shop_Reply Data" EntitySet="Shop_Reply Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_回覆資料表_Shop_會員客訴案件表" Association="Self.FK_Shop_回覆資料表_Shop_會員客訴案件表">
+      <End Role="Shop_Member Complaint Case" EntitySet="Shop_Member Complaint Case" />
+      <End Role="Shop_Reply Data" EntitySet="Shop_Reply Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_我的最愛-商品表_Shop_我的最愛資料表" Association="Self.FK_Shop_我的最愛-商品表_Shop_我的最愛資料表">
+      <End Role="Shop_Favorite Data Table" EntitySet="Shop_Favorite Data Table" />
+      <End Role="Shop_Favorite-Product Table" EntitySet="Shop_Favorite-Product Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_我的最愛-商品表_Shop_商品總表" Association="Self.FK_Shop_我的最愛-商品表_Shop_商品總表">
+      <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+      <End Role="Shop_Favorite-Product Table" EntitySet="Shop_Favorite-Product Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_我的最愛資料表_Shop_商品總表" Association="Self.FK_Shop_我的最愛資料表_Shop_商品總表">
+      <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+      <End Role="Shop_Favorite Data Table" EntitySet="Shop_Favorite Data Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_我的最愛資料表_Shop_會員資訊1" Association="Self.FK_Shop_我的最愛資料表_Shop_會員資訊1">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Shop_Favorite Data Table" EntitySet="Shop_Favorite Data Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_訂單總表_Shop_付款方式資料表" Association="Self.FK_Shop_訂單總表_Shop_付款方式資料表">
+      <End Role="Shop_Payment Method Data" EntitySet="Shop_Payment Method Data" />
+      <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_訂單總表_Shop_訂單狀態資料表" Association="Self.FK_Shop_訂單總表_Shop_訂單狀態資料表">
+      <End Role="Shop_Order Status Data" EntitySet="Shop_Order Status Data" />
+      <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_訂單總表_Shop_會員資訊" Association="Self.FK_Shop_訂單總表_Shop_會員資訊">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_退換貨資料表_Shop_訂單總表" Association="Self.FK_Shop_退換貨資料表_Shop_訂單總表">
+      <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+      <End Role="Shop_Return Data Table" EntitySet="Shop_Return Data Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_退換貨資料表_Shop_退換貨原因資料表" Association="Self.FK_Shop_退換貨資料表_Shop_退換貨原因資料表">
+      <End Role="Shop_Return Reason Data Table" EntitySet="Shop_Return Reason Data Table" />
+      <End Role="Shop_Return Data Table" EntitySet="Shop_Return Data Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_退換貨資料表_Shop_退換貨處理狀態資料表" Association="Self.FK_Shop_退換貨資料表_Shop_退換貨處理狀態資料表">
+      <End Role="Shop_Return Status Data Table" EntitySet="Shop_Return Status Data Table" />
+      <End Role="Shop_Return Data Table" EntitySet="Shop_Return Data Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_商品評論表_Shop_會員資訊" Association="Self.FK_Shop_商品評論表_Shop_會員資訊">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Shop_Product Review Table" EntitySet="Shop_Product Review Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_商品總表_Shop_產品供應商" Association="Self.FK_Shop_商品總表_Shop_產品供應商">
+      <End Role="Shop_Product Supplier" EntitySet="Shop_Product Supplier" />
+      <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_常用地址資料表_Shop_會員資訊" Association="Self.FK_Shop_常用地址資料表_Shop_會員資訊">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Shop_Common Address Data" EntitySet="Shop_Common Address Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_會員折價券資料表_Shop_會員資訊" Association="Self.FK_Shop_會員折價券資料表_Shop_會員資訊">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Shop_Member Coupon Data" EntitySet="Shop_Member Coupon Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_會員折價券資料表_Shop_優惠券總表" Association="Self.FK_Shop_會員折價券資料表_Shop_優惠券總表">
+      <End Role="Shop_Coupon Total" EntitySet="Shop_Coupon Total" />
+      <End Role="Shop_Member Coupon Data" EntitySet="Shop_Member Coupon Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_會員客訴案件表_Shop_申訴類別資料表" Association="Self.FK_Shop_會員客訴案件表_Shop_申訴類別資料表">
+      <End Role="Shop_Appeal Category Data" EntitySet="Shop_Appeal Category Data" />
+      <End Role="Shop_Member Complaint Case" EntitySet="Shop_Member Complaint Case" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_會員客訴案件表_Shop_客訴狀態資料表" Association="Self.FK_Shop_會員客訴案件表_Shop_客訴狀態資料表">
+      <End Role="Shop_Complaint Status Data" EntitySet="Shop_Complaint Status Data" />
+      <End Role="Shop_Member Complaint Case" EntitySet="Shop_Member Complaint Case" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_會員客訴案件表_Shop_會員資訊" Association="Self.FK_Shop_會員客訴案件表_Shop_會員資訊">
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+      <End Role="Shop_Member Complaint Case" EntitySet="Shop_Member Complaint Case" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shop_會員資訊_Game_等級排位資料表" Association="Self.FK_Shop_會員資訊_Game_等級排位資料表">
+      <End Role="Game_Rank Data" EntitySet="Game_Rank Data" />
+      <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
