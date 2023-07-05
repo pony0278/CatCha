@@ -33,8 +33,8 @@
             this.flowLayoutPanelbtn = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGameMng = new System.Windows.Forms.Button();
-            this.btnProductsMng = new System.Windows.Forms.Button();
             this.btnMembersMng = new System.Windows.Forms.Button();
+            this.btnProductsMng = new System.Windows.Forms.Button();
             this.btnOrdersMng = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -47,6 +47,7 @@
             // 
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -111,24 +112,6 @@
             this.btnGameMng.UseVisualStyleBackColor = false;
             this.btnGameMng.Click += new System.EventHandler(this.btnGameMng_Click);
             // 
-            // btnProductsMng
-            // 
-            this.btnProductsMng.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProductsMng.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnProductsMng.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnProductsMng.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnProductsMng.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnProductsMng.ForeColor = System.Drawing.Color.Black;
-            this.btnProductsMng.Location = new System.Drawing.Point(20, 351);
-            this.btnProductsMng.Margin = new System.Windows.Forms.Padding(20);
-            this.btnProductsMng.Name = "btnProductsMng";
-            this.btnProductsMng.Size = new System.Drawing.Size(139, 32);
-            this.btnProductsMng.TabIndex = 4;
-            this.btnProductsMng.Text = "商品管理";
-            this.btnProductsMng.UseVisualStyleBackColor = false;
-            this.btnProductsMng.Click += new System.EventHandler(this.btnProductsMng_Click);
-            // 
             // btnMembersMng
             // 
             this.btnMembersMng.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -146,6 +129,24 @@
             this.btnMembersMng.Text = "會員管理";
             this.btnMembersMng.UseVisualStyleBackColor = false;
             this.btnMembersMng.Click += new System.EventHandler(this.btnMembersMng_Click);
+            // 
+            // btnProductsMng
+            // 
+            this.btnProductsMng.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProductsMng.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnProductsMng.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnProductsMng.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnProductsMng.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnProductsMng.ForeColor = System.Drawing.Color.Black;
+            this.btnProductsMng.Location = new System.Drawing.Point(20, 351);
+            this.btnProductsMng.Margin = new System.Windows.Forms.Padding(20);
+            this.btnProductsMng.Name = "btnProductsMng";
+            this.btnProductsMng.Size = new System.Drawing.Size(139, 32);
+            this.btnProductsMng.TabIndex = 4;
+            this.btnProductsMng.Text = "商品管理";
+            this.btnProductsMng.UseVisualStyleBackColor = false;
+            this.btnProductsMng.Click += new System.EventHandler(this.btnProductsMng_Click);
             // 
             // btnOrdersMng
             // 
