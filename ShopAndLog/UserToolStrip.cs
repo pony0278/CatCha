@@ -78,5 +78,19 @@ namespace CatCha
             }
 
         }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            if (LoggedInUser.ID == 0)
+            {
+                Signin form = new Signin();
+                form.ShowDialog();
+            }
+            else
+            {
+                Frm_Cart form = new Frm_Cart();
+                form.ShowDialog();
+            }
+        }
     }
 }

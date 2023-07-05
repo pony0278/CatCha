@@ -146,7 +146,7 @@ namespace CatCha
                     //看到加進的Product_ID及OrderID
                     iuc.ItemProductID = pro.product.Product_ID;
                     iuc.OrderID=orderID.ToList().First();
-                    MessageBox.Show(Convert.ToString(iuc.OrderID),Convert.ToString(iuc.ItemProductID));
+                    //MessageBox.Show(Convert.ToString(iuc.OrderID),Convert.ToString(iuc.ItemProductID));
                     iuc.ItemCount = (int)productQuantity[index];
                     index++;
 
