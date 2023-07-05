@@ -123,7 +123,7 @@ namespace CatChaEntities
 
             else if (frm.DialogResult == DialogResult.Cancel)
             {
-                MessageBox.Show("取消編輯資料");
+                MessageBox.Show("取消新增資料");
             }
         }
 

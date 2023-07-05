@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtGameProductPrice = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cboxCategory = new System.Windows.Forms.ComboBox();
@@ -178,24 +178,24 @@
             this.dataGridViewGameProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewGameProducts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewGameProducts.BackgroundColor = System.Drawing.Color.AntiqueWhite;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LavenderBlush;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGameProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LavenderBlush;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGameProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewGameProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGameProducts.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridViewGameProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGameProducts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewGameProducts.Location = new System.Drawing.Point(3, 37);
+            this.dataGridViewGameProducts.Location = new System.Drawing.Point(3, 46);
             this.dataGridViewGameProducts.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewGameProducts.Name = "dataGridViewGameProducts";
             this.dataGridViewGameProducts.RowHeadersWidth = 50;
             this.dataGridViewGameProducts.RowTemplate.Height = 27;
-            this.dataGridViewGameProducts.Size = new System.Drawing.Size(951, 456);
+            this.dataGridViewGameProducts.Size = new System.Drawing.Size(951, 579);
             this.dataGridViewGameProducts.TabIndex = 8;
             this.dataGridViewGameProducts.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewGameProducts_DataError);
             this.dataGridViewGameProducts.SelectionChanged += new System.EventHandler(this.dataGridViewGameProducts_SelectionChanged);
@@ -286,14 +286,13 @@
             this.dataGridViewCategory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewCategory.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dataGridViewCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewCategory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewCategory.Location = new System.Drawing.Point(959, 37);
+            this.dataGridViewCategory.Location = new System.Drawing.Point(959, 46);
             this.dataGridViewCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewCategory.Name = "dataGridViewCategory";
             this.dataGridViewCategory.RowHeadersWidth = 50;
             this.dataGridViewCategory.RowTemplate.Height = 27;
-            this.dataGridViewCategory.Size = new System.Drawing.Size(322, 456);
+            this.dataGridViewCategory.Size = new System.Drawing.Size(322, 263);
             this.dataGridViewCategory.TabIndex = 10;
             this.dataGridViewCategory.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewCategory_DataError);
             // 
@@ -312,7 +311,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.653226F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.34677F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1284, 497);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1284, 629);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
             // labProduct
@@ -323,7 +322,7 @@
             this.labProduct.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.labProduct.Location = new System.Drawing.Point(4, 1);
             this.labProduct.Name = "labProduct";
-            this.labProduct.Size = new System.Drawing.Size(949, 32);
+            this.labProduct.Size = new System.Drawing.Size(949, 41);
             this.labProduct.TabIndex = 13;
             this.labProduct.Text = "商品總表";
             // 
@@ -335,7 +334,7 @@
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label3.Location = new System.Drawing.Point(960, 1);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(320, 32);
+            this.label3.Size = new System.Drawing.Size(320, 41);
             this.label3.TabIndex = 14;
             this.label3.Text = "商品類別總表";
             // 
@@ -346,7 +345,7 @@
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(1321, 754);
+            this.ClientSize = new System.Drawing.Size(1321, 886);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));

@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dtpTo = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewMembers = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ToolStripDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.txtMemberID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,13 +50,11 @@
             this.bindingSourceM = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ToolStripDelete = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceM)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtMemberName
@@ -135,14 +135,28 @@
             this.dataGridViewMembers.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridViewMembers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewMembers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewMembers.Location = new System.Drawing.Point(5, 34);
+            this.dataGridViewMembers.Location = new System.Drawing.Point(5, 52);
             this.dataGridViewMembers.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewMembers.Name = "dataGridViewMembers";
             this.dataGridViewMembers.RowHeadersWidth = 51;
             this.dataGridViewMembers.RowTemplate.Height = 27;
-            this.dataGridViewMembers.Size = new System.Drawing.Size(1200, 319);
+            this.dataGridViewMembers.Size = new System.Drawing.Size(1200, 561);
             this.dataGridViewMembers.TabIndex = 8;
             this.dataGridViewMembers.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewMembers_DataError);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripDelete});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 26);
+            // 
+            // ToolStripDelete
+            // 
+            this.ToolStripDelete.Name = "ToolStripDelete";
+            this.ToolStripDelete.Size = new System.Drawing.Size(98, 22);
+            this.ToolStripDelete.Text = "刪除";
+            this.ToolStripDelete.Click += new System.EventHandler(this.ToolStripDelete_Click);
             // 
             // dtpFrom
             // 
@@ -253,7 +267,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.164179F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.83582F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1210, 359);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1210, 619);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // label4
@@ -265,24 +279,10 @@
             this.label4.Location = new System.Drawing.Point(5, 3);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1200, 25);
+            this.label4.Size = new System.Drawing.Size(1200, 43);
             this.label4.TabIndex = 9;
             this.label4.Text = "會員資料";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripDelete});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 26);
-            // 
-            // ToolStripDelete
-            // 
-            this.ToolStripDelete.Name = "ToolStripDelete";
-            this.ToolStripDelete.Size = new System.Drawing.Size(98, 22);
-            this.ToolStripDelete.Text = "刪除";
-            this.ToolStripDelete.Click += new System.EventHandler(this.ToolStripDelete_Click);
             // 
             // Frm02_MembersManage
             // 
@@ -290,7 +290,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(1287, 634);
+            this.ClientSize = new System.Drawing.Size(1287, 884);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -299,12 +299,12 @@
             this.Text = "會員管理";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceM)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
