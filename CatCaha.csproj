@@ -39,6 +39,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -304,6 +305,47 @@
     <Compile Include="NewFolder1\sysdiagram.cs">
       <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="PONY\buy.cs" />
+    <Compile Include="PONY\CallDataToForm.cs" />
+    <Compile Include="PONY\CallUserData.cs" />
+    <Compile Include="PONY\capture.cs" />
+    <Compile Include="PONY\captureUser.cs" />
+    <Compile Include="PONY\captureUserDataManager.cs" />
+    <Compile Include="PONY\catpureDataManger.cs" />
+    <Compile Include="PONY\ChargeCoin.cs" />
+    <Compile Include="PONY\detilView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PONY\detilView.designer.cs">
+      <DependentUpon>detilView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PONY\GamePurchasePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PONY\GamePurchasePage.designer.cs">
+      <DependentUpon>GamePurchasePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PONY\IBuyItems.cs" />
+    <Compile Include="PONY\IcaptureData.cs" />
+    <Compile Include="PONY\IcaptureImage.cs" />
+    <Compile Include="PONY\IChargeCoin.cs" />
+    <Compile Include="PONY\ListData.cs" />
+    <Compile Include="PONY\LListData.cs" />
+    <Compile Include="PONY\Products.cs" />
+    <Compile Include="PONY\ProductsDataFromLinq.cs" />
+    <Compile Include="PONY\ProductsListData.cs" />
+    <Compile Include="PONY\ProductsProperties.cs" />
+    <Compile Include="PONY\UserControlManager.cs" />
+    <Compile Include="PONY\UserData.cs" />
+    <Compile Include="PONY\UserDataFromLinq.cs" />
+    <Compile Include="PONY\UserDataList.cs" />
+    <Compile Include="PONY\UserProperties.cs" />
+    <Compile Include="PONY\ZUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PONY\ZUserControl1.designer.cs">
+      <DependentUpon>ZUserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShopAndLog\ChangePwd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -452,6 +494,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemberCenter\ＭemberCenter.resx">
       <DependentUpon>ＭemberCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PONY\detilView.resx">
+      <DependentUpon>detilView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PONY\GamePurchasePage.resx">
+      <DependentUpon>GamePurchasePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PONY\ZUserControl1.resx">
+      <DependentUpon>ZUserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShopAndLog\ChangePwd.resx">
       <DependentUpon>ChangePwd.cs</DependentUpon>

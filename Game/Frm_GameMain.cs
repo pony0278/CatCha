@@ -13,6 +13,7 @@ using CatCaha.Properties;
 
 using 抽卡;
 using CatChaForms;
+using CatCaha;
 
 namespace FormResize
 {
@@ -294,7 +295,9 @@ namespace FormResize
 
         private void txt_GameShop_Click(object sender, EventArgs e)
         {
-
+            GamePurchasePage gamePurchasePage  = new GamePurchasePage(this);
+            GlobelSetting._POPFORMTOCENTER(this, gamePurchasePage);
+            gamePurchasePage.ShowDialog();
         }
 
         private void txt_BackPack_Click(object sender, EventArgs e)
