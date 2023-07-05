@@ -270,6 +270,8 @@
             // 
             // dataGridViewCategory
             // 
+            this.dataGridViewCategory.AllowUserToAddRows = false;
+            this.dataGridViewCategory.AllowUserToDeleteRows = false;
             this.dataGridViewCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -280,6 +282,7 @@
             this.dataGridViewCategory.Location = new System.Drawing.Point(959, 32);
             this.dataGridViewCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewCategory.Name = "dataGridViewCategory";
+            this.dataGridViewCategory.ReadOnly = true;
             this.dataGridViewCategory.RowHeadersWidth = 50;
             this.dataGridViewCategory.RowTemplate.Height = 27;
             this.dataGridViewCategory.Size = new System.Drawing.Size(322, 263);

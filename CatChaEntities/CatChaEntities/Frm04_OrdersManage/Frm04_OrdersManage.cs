@@ -85,6 +85,16 @@ namespace CatChaEntities
                     q = q.Where(p => p.Member_ID == memberID);
                 }
 
+                if (cboxState.SelectedItem != null)
+                {
+                    string selectedStateID = cboxState.SelectedItem.ToString();
+                    if (!string.IsNullOrEmpty(selectedStateID))
+                    {
+                        q = q.Where(p => p.Order_Status_ID.ToString() == selectedStateID);
+                    }
+                }
+
+
                 DateTime creationTimeFrom = dtpFrom.Value.Date;
                 DateTime creationTimeTo = dtpTo.Value.Date.AddDays(1).AddTicks(-1);
                 q = q.Where(p => p.Order_Creation_Date >= creationTimeFrom && p.Order_Creation_Date <= creationTimeTo);
