@@ -39,14 +39,11 @@ namespace CatChaEntities
             // Load Product Image data
             var productImages = dbContext.Shop_Product_Image_Table.ToList();
             bindingSourcePic.DataSource = productImages;
-            dataGridViewPicture.DataSource = bindingSourcePic;
             // Load Product Category data
             var productCategories = dbContext.Shop_Product_Category.ToList();
             bindingSourceC.DataSource = productCategories;
-            dataGridViewCategory.DataSource = bindingSourceC;
             //select change
             this.dataGridViewProducts.SelectionChanged += this.dataGridViewProducts_SelectionChanged;
-            SetImageSize();
         }
 
         //設定圖片欄位的大小
