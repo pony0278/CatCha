@@ -79,6 +79,7 @@ namespace 抽卡
                     g._ConsumeRuby(1);
                     //Lab_Gash.Text = $"紅利:{(Gash -= 100)}";
                     g._REFRESHRuby(mainForm.txt_RedStone);
+                    Btn_back.Visible = false;
                 }
             }
             else
@@ -86,7 +87,6 @@ namespace 抽卡
                 MessageBox.Show("紅利不足");
             }
             Btn_back.Focus();
-            
         }
         //紅利十抽
         private void TenGashDraw_Click(object sender, EventArgs e)
@@ -100,6 +100,7 @@ namespace 抽卡
                     g._ConsumeRuby(9);
                     //Lab_Gash.Text = $"紅利:{(Gash -= 900)}";
                     g._REFRESHRuby(mainForm.txt_RedStone);
+                    Btn_back.Visible = false;
                 }
             }
             else
@@ -119,6 +120,7 @@ namespace 抽卡
                     g._ConsumeCCoin(1);
                     //Lab_CatPoint.Text = $"貓幣:{(CatPoint -= 500)}";
                     g._REFRESHCCoin(mainForm.txt_CatCoin);
+                    Btn_back.Visible = false;
                 }
             }
             else
@@ -138,6 +140,7 @@ namespace 抽卡
                     g._ConsumeCCoin(9);
                     //Lab_CatPoint.Text = $"貓幣:{(CatPoint -= 4500)}";
                     g._REFRESHCCoin(mainForm.txt_CatCoin);
+                    Btn_back.Visible = false;
                 }
             }
             else
@@ -447,6 +450,11 @@ namespace 抽卡
             await Task.Delay(2000);
             panel3.BackColor = Color.FromArgb(255, 255, 112);
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            System.Windows.Forms.Label[] labels = new System.Windows.Forms.Label[] { P_Lab1, P_Lab2, P_Lab3, P_Lab4, P_Lab5, P_Lab6, P_Lab7, P_Lab8, P_Lab9, P_Lab10 , Single_LabPirzeName };
+            foreach (System.Windows.Forms.Label lab in labels)
+            {
+                lab.ForeColor = Color.Black;
+            }
         }
         public async void CatChaGachaSS()
         {
@@ -458,7 +466,7 @@ namespace 抽卡
         }
         void CatChaBackgroundColorA()
         {
-            panel3.BackColor = Color.FromArgb(209, 209, 209);
+            panel3.BackColor = Color.FromArgb(92, 173, 173);
             panel3.BorderStyle = BorderStyle.FixedSingle;
         }
 
@@ -608,6 +616,12 @@ namespace 抽卡
             SwitchTenCatchaM();
             panel3.BackColor = Color.Transparent;
             panel3.BorderStyle = BorderStyle.None;
+            System.Windows.Forms.Label[] labels = new System.Windows.Forms.Label[] { P_Lab1, P_Lab2, P_Lab3, P_Lab4, P_Lab5, P_Lab6, P_Lab7, P_Lab8, P_Lab9, P_Lab10, Single_LabPirzeName };
+            foreach (System.Windows.Forms.Label lab in labels)
+            {
+                lab.ForeColor = Color.White;
+            }
+            Btn_back.Visible = true;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -629,6 +643,12 @@ namespace 抽卡
             SwitchCatchaM();
             panel3.BackColor = Color.Transparent;
             panel3.BorderStyle = BorderStyle.None;
+            System.Windows.Forms.Label[] labels = new System.Windows.Forms.Label[] { P_Lab1, P_Lab2, P_Lab3, P_Lab4, P_Lab5, P_Lab6, P_Lab7, P_Lab8, P_Lab9, P_Lab10, Single_LabPirzeName };
+            foreach (System.Windows.Forms.Label lab in labels)
+            {
+                lab.ForeColor = Color.White;
+            }
+            Btn_back.Visible = true;
         }
     }
 }
