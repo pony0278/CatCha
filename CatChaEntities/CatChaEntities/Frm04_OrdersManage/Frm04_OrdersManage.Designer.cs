@@ -32,7 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnADD = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.dtpTo = new System.Windows.Forms.DateTimePicker();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,17 +44,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cboxState = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.dataGridViewOrderDetail = new System.Windows.Forms.DataGridView();
             this.dataGridViewOrders = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.bindingSourceO = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceOD = new System.Windows.Forms.BindingSource(this.components);
             this.shop_Order_Total_TableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnADD = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).BeginInit();
@@ -109,6 +109,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "搜尋訂單";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelete.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDelete.Location = new System.Drawing.Point(877, 95);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(102, 54);
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "刪除";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Visible = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -118,6 +133,34 @@
             this.label3.Size = new System.Drawing.Size(22, 18);
             this.label3.TabIndex = 13;
             this.label3.Text = "～";
+            // 
+            // btnADD
+            // 
+            this.btnADD.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnADD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnADD.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnADD.Location = new System.Drawing.Point(740, 177);
+            this.btnADD.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnADD.Name = "btnADD";
+            this.btnADD.Size = new System.Drawing.Size(102, 54);
+            this.btnADD.TabIndex = 23;
+            this.btnADD.Text = "新增";
+            this.btnADD.UseVisualStyleBackColor = false;
+            this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEdit.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnEdit.Location = new System.Drawing.Point(877, 177);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(102, 54);
+            this.btnEdit.TabIndex = 20;
+            this.btnEdit.Text = "編輯";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // dtpTo
             // 
@@ -198,20 +241,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "訂單狀態";
             // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEdit.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnEdit.Location = new System.Drawing.Point(877, 177);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(102, 54);
-            this.btnEdit.TabIndex = 20;
-            this.btnEdit.Text = "編輯";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // dataGridViewOrderDetail
             // 
             this.dataGridViewOrderDetail.AllowUserToAddRows = false;
@@ -234,11 +263,11 @@
             this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrders.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewOrders.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewOrders.Location = new System.Drawing.Point(4, 49);
+            this.dataGridViewOrders.Location = new System.Drawing.Point(4, 29);
             this.dataGridViewOrders.Name = "dataGridViewOrders";
             this.dataGridViewOrders.ReadOnly = true;
             this.dataGridViewOrders.RowTemplate.Height = 24;
-            this.dataGridViewOrders.Size = new System.Drawing.Size(992, 315);
+            this.dataGridViewOrders.Size = new System.Drawing.Size(992, 335);
             this.dataGridViewOrders.TabIndex = 4;
             // 
             // tableLayoutPanel1
@@ -255,8 +284,8 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 282);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.0915F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.90849F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.811989F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.18801F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 332F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 728);
@@ -270,7 +299,7 @@
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label6.Location = new System.Drawing.Point(4, 1);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(992, 44);
+            this.label6.Size = new System.Drawing.Size(992, 24);
             this.label6.TabIndex = 5;
             this.label6.Text = "訂單總表";
             // 
@@ -285,35 +314,6 @@
             this.label7.Size = new System.Drawing.Size(992, 25);
             this.label7.TabIndex = 6;
             this.label7.Text = "訂單明細";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelete.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDelete.Location = new System.Drawing.Point(877, 95);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(102, 54);
-            this.btnDelete.TabIndex = 22;
-            this.btnDelete.Text = "刪除";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Visible = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnADD
-            // 
-            this.btnADD.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnADD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnADD.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnADD.Location = new System.Drawing.Point(740, 177);
-            this.btnADD.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnADD.Name = "btnADD";
-            this.btnADD.Size = new System.Drawing.Size(102, 54);
-            this.btnADD.TabIndex = 23;
-            this.btnADD.Text = "新增";
-            this.btnADD.UseVisualStyleBackColor = false;
-            this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
             // 
             // Frm04_OrdersManage
             // 

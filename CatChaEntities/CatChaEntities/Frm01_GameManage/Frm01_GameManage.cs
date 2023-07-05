@@ -258,6 +258,7 @@ namespace CatChaEntities
 
             // 取消預設的錯誤訊息框顯示
             e.ThrowException = false;
+            e.Cancel = true;
         }
 
 

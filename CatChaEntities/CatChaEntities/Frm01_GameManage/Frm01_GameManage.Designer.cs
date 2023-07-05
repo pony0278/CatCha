@@ -188,12 +188,12 @@
             this.dataGridViewGameProducts.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridViewGameProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGameProducts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewGameProducts.Location = new System.Drawing.Point(3, 31);
+            this.dataGridViewGameProducts.Location = new System.Drawing.Point(3, 32);
             this.dataGridViewGameProducts.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewGameProducts.Name = "dataGridViewGameProducts";
             this.dataGridViewGameProducts.RowHeadersWidth = 50;
             this.dataGridViewGameProducts.RowTemplate.Height = 27;
-            this.dataGridViewGameProducts.Size = new System.Drawing.Size(951, 642);
+            this.dataGridViewGameProducts.Size = new System.Drawing.Size(951, 641);
             this.dataGridViewGameProducts.TabIndex = 8;
             this.dataGridViewGameProducts.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewGameProducts_DataError);
             this.dataGridViewGameProducts.SelectionChanged += new System.EventHandler(this.dataGridViewGameProducts_SelectionChanged);
@@ -277,7 +277,7 @@
             this.dataGridViewCategory.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dataGridViewCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCategory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewCategory.Location = new System.Drawing.Point(959, 31);
+            this.dataGridViewCategory.Location = new System.Drawing.Point(959, 32);
             this.dataGridViewCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewCategory.Name = "dataGridViewCategory";
             this.dataGridViewCategory.RowHeadersWidth = 50;
@@ -301,8 +301,8 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 268);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.994083F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96.00592F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.142012F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95.85799F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1284, 677);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
@@ -314,7 +314,7 @@
             this.labProduct.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.labProduct.Location = new System.Drawing.Point(4, 1);
             this.labProduct.Name = "labProduct";
-            this.labProduct.Size = new System.Drawing.Size(949, 26);
+            this.labProduct.Size = new System.Drawing.Size(949, 27);
             this.labProduct.TabIndex = 13;
             this.labProduct.Text = "商品總表";
             // 
@@ -326,7 +326,7 @@
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label3.Location = new System.Drawing.Point(960, 1);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(320, 26);
+            this.label3.Size = new System.Drawing.Size(320, 27);
             this.label3.TabIndex = 14;
             this.label3.Text = "商品類別總表";
             // 
