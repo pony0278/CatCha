@@ -57,12 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Member.cs" />
-    <Compile Include="MemberCenter\ＭemberCenter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MemberCenter\ＭemberCenter.designer.cs">
-      <DependentUpon>ＭemberCenter.cs</DependentUpon>
-    </Compile>
     <Compile Include="NewFolder1\Announcement_Type_datum.cs">
       <DependentUpon>Project.tt</DependentUpon>
     </Compile>
@@ -290,6 +284,12 @@
     <Compile Include="MemberCenter\ReturnDetails.Designer.cs">
       <DependentUpon>ReturnDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberCenter\ＭemberCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberCenter\ＭemberCenter.Designer.cs">
+      <DependentUpon>ＭemberCenter.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShopAndLog\Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,9 +328,6 @@
     </Compile>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MemberCenter\ＭemberCenter.resx">
-      <DependentUpon>ＭemberCenter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShopAndLog\ChangePwd.resx">
       <DependentUpon>ChangePwd.cs</DependentUpon>
@@ -374,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemberCenter\ReturnDetails.resx">
       <DependentUpon>ReturnDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberCenter\ＭemberCenter.resx">
+      <DependentUpon>ＭemberCenter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShopAndLog\Product.resx">
       <DependentUpon>Product.cs</DependentUpon>
@@ -426,6 +426,10 @@
       <DependentUpon>Project.edmx</DependentUpon>
       <LastGenOutput>Project.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\pink_paw1_removebg1.png" />
+    <None Include="Resources\pink_paw1_removebg.png" />
+    <None Include="Resources\blue_paw_removebgw.png" />
+    <None Include="Resources\blue_paw.png" />
     <None Include="Resources\pink_paw.png" />
     <None Include="Resources\_startForm_paw._001-removebg-preview.png" />
     <None Include="Resources\index1.png" />

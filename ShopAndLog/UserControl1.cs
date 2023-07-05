@@ -23,6 +23,7 @@ namespace catcha
         ProjectsModel dbContext = new ProjectsModel();
 
         private int productID;
+        private Color defaultBackColor; // 原始的背景色
         public ProductControl()
         {
             InitializeComponent();
@@ -61,6 +62,11 @@ namespace catcha
             set { label2.Text = value; }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(productID.ToString());
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             //===================傳商品ID過去
@@ -86,7 +92,7 @@ namespace catcha
                 // 查询条件
                 var existingOrder = dbContext.Shop_Order_Total_Table.FirstOrDefault(o => o.Member_ID == LoggedInUser.ID && o.Order_Status_ID == 1);
 
-                //MessageBox.Show("Member ID = " + LoggedInUser.ID);
+                MessageBox.Show("Member ID = " + LoggedInUser.ID);
 
                 //====================沒有符合條件的
                 if (existingOrder == null)
@@ -121,7 +127,7 @@ namespace catcha
                     
                     var getOrderID = dbContext.Shop_Order_Total_Table.FirstOrDefault(o => o.Member_ID == LoggedInUser.ID && o.Order_Status_ID == 1);
                     GetOrderID = getOrderID.Order_ID;
-                    //MessageBox.Show("GetOrderID = " + GetOrderID);
+                    MessageBox.Show("GetOrderID = " + GetOrderID);
 
                     // 查询条件
                     var existingDetail = dbContext.Shop_Order_Detail_Table.FirstOrDefault(o => o.Product_ID == getProductId && o.Order_ID == GetOrderID);
@@ -130,7 +136,7 @@ namespace catcha
                     if (existingDetail == null)
                     {
                         InsertToOrderDetail();
-                        MessageBox.Show("新增至購物車成功!");
+                        MessageBox.Show("沒有符合條件的直接新增");
                     }
                     //====================這裡針對Product Quantity+1
                     else
@@ -140,7 +146,7 @@ namespace catcha
 
                         // 保存更改到数据库
                         dbContext.SaveChanges();
-                        MessageBox.Show("新增至購物車成功!");
+                        MessageBox.Show("這裡針對Product Quantity+1");
                     }
                 }
             }
@@ -151,7 +157,7 @@ namespace catcha
 
             GetOrderID = getOrderID.Order_ID;
 
-            //MessageBox.Show("GetOrderID = " + GetOrderID);
+            MessageBox.Show("GetOrderID = " + GetOrderID);
 
             Shop_Order_Detail_Table orderDetail = new Shop_Order_Detail_Table
             {
@@ -164,6 +170,8 @@ namespace catcha
             dbContext.Shop_Order_Detail_Table.Add(orderDetail);
             dbContext.SaveChanges();
         }
+
+
 
         public class OrderTotal
         {
@@ -191,6 +199,16 @@ namespace catcha
         {
             // 觸發Button的Click事件
             button3.PerformClick();
+        }
+
+        private void button3_MouseEnter(object sender, EventArgs e)
+        {
+            button3.BackColor = Color.FromArgb(228, 187, 151); ;
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            button3.BackColor = defaultBackColor;
         }
     }
 }

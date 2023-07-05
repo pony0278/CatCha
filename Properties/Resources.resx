@@ -121,40 +121,52 @@
   <data name="_5RTG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5RTG.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cat2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_startForm_paw._001-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\_startForm_paw._001-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eQc4d3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eQc4d3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cat7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="gif1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gif1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="index" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\index1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pink_paw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pink_paw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cat4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blue_paw_removebgw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_paw_removebgw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_paw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_paw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cat3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cat7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cat7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="index" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\index1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eQc4d3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eQc4d3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cat2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cat6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat6.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cat4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pink_paw1_removebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pink_paw1_removebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cat1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cat5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat5.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pink_paw" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pink_paw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_startForm_paw._001-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_startForm_paw._001-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pink_paw1_removebg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pink_paw1_removebg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

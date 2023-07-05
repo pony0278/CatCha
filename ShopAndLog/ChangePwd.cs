@@ -78,6 +78,13 @@ namespace CatChaForms
             label4.Text = "你好," + ForgetPwd.userAcc;
         }
 
+        //private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        //{
+        //    Signin formLogin = new Signin();
+        //    formLogin.Show();
+        //    this.Hide();
+        //}
+
         private void ClearErrorLabels()
         {
             // 清除其他错误消息的 Label 可见性...

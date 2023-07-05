@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CatChaForms;
 
 namespace LinqLabs
 {
@@ -64,25 +63,6 @@ namespace LinqLabs
             ShowForm(form);
         }
 
-        //button5是  登出
-        private void button5_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("您確定要登出嗎?", "登出", MessageBoxButtons.OKCancel);
-            if (result == DialogResult.OK)
-            {
-                LoggedInUser.Logout();
-                //呼叫Member.cs的Logout方法
-
-                MessageBox.Show("登出成功");
-
-                this.Close();
-            }
-            else if (result == DialogResult.Cancel)
-            {
-                
-            }
-        }
-
         //展示各表單的方法
         private void ShowForm(Form form)
         {
@@ -98,8 +78,7 @@ namespace LinqLabs
         }
 
         //取得使用者登入後的會員ID
-        //int now_Member_ID = 4;
-        int now_Member_ID = LoggedInUser.ID;
+        int now_Member_ID = 4;
 
     }
 }

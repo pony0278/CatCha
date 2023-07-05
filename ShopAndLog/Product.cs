@@ -13,6 +13,7 @@ namespace CatChaForms
 {
     public partial class Product : Form
     {
+        //貓抓抓Entities dbContext = new 貓抓抓Entities();
         ProjectsModel dbContext = new ProjectsModel();
 
         private int productId;

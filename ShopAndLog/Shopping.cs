@@ -26,7 +26,6 @@ namespace CatChaForms
         private void Shopping_Load(object sender, EventArgs e)
         {
             splitContainer1.BackColor = Color.FromArgb(228, 187, 151);
-            splitContainer2.BackColor = Color.FromArgb(254, 245, 239);
 
             ComboBoxSort.SelectedIndex = 0;
 
@@ -193,6 +192,11 @@ namespace CatChaForms
             public int Discontinued { get; set; }
             public int? Remaining_Quantity { get; set; }
             public int Supplier_ID { get; set; }
+        }
+
+        private void userToolStrip1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

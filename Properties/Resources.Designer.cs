@@ -83,6 +83,26 @@ namespace CatCaha.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap blue_paw {
+            get {
+                object obj = ResourceManager.GetObject("blue_paw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap blue_paw_removebgw {
+            get {
+                object obj = ResourceManager.GetObject("blue_paw_removebgw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap cat1 {
             get {
                 object obj = ResourceManager.GetObject("cat1", resourceCulture);
@@ -186,6 +206,26 @@ namespace CatCaha.Properties {
         internal static System.Drawing.Bitmap pink_paw {
             get {
                 object obj = ResourceManager.GetObject("pink_paw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap pink_paw1_removebg {
+            get {
+                object obj = ResourceManager.GetObject("pink_paw1_removebg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap pink_paw1_removebg1 {
+            get {
+                object obj = ResourceManager.GetObject("pink_paw1_removebg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
