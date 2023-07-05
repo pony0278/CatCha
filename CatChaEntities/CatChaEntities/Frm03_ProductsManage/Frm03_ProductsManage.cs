@@ -28,6 +28,8 @@ namespace CatChaEntities
             dtpFrom.Value = new DateTime(2000, 1, 1);
             dtpTo.Value = DateTime.Today;
         }
+
+        //載入DataBase
         void LoadData()
         {
             // Load Product data
@@ -47,6 +49,7 @@ namespace CatChaEntities
             SetImageSize();
         }
 
+        //設定圖片欄位的大小
         void SetImageSize()
         {
             DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)dataGridViewPicture.Columns[1];
@@ -56,7 +59,7 @@ namespace CatChaEntities
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
 
-
+        //載入商品類別的ComboBox
         void LoadCategory()
         {
             List<string> categoryList = new List<string>();
@@ -70,6 +73,7 @@ namespace CatChaEntities
             this.cboxCategory.Items.AddRange(categoryList.ToArray());
         }
 
+        //載入商品狀態的ComboBox
         void LoadState()
         {
             List<string> categoryList = new List<string>();
@@ -81,7 +85,7 @@ namespace CatChaEntities
             cboxProductState.Items.AddRange(categoryList.ToArray());
         }
 
-
+        //搜尋按鈕
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
@@ -152,30 +156,37 @@ namespace CatChaEntities
             }
         }
 
-
+        //儲存按鈕
         private void btnSave_Click(object sender, EventArgs e)
         {
             SaveChangesToDatabase();
         }
 
+        //儲存資料的方法
         private void SaveChangesToDatabase()
         {
             try
             {
-                // 確定 bindingSource1 的資料來源是 DataSet 中的 "Game_Product_Total"
-                bindingSourceC.EndEdit();
-                bindingSourceP.EndEdit();
-                bindingSourcePic.EndEdit();
+                var newShopProducts = bindingSourceP.DataSource as List<Shop_Product_Total>;
+                if (newShopProducts != null)
+                {
+                    foreach (var product in newShopProducts)
+                    {
+                        if (product.Product_ID == 0)
+                        {
+                            dbContext.Shop_Product_Total.Add(product);
+                        }
+                    }
+                }
 
-                // 使用 TableAdapter 更新資料庫
-                int updatedRowsP = dbContext.SaveChanges();
-                int updatedRowsC = dbContext.SaveChanges();
-                int updatedRowsPic = dbContext.SaveChanges();
+                int updatedRows = dbContext.SaveChanges();
 
                 // 檢查更新結果
-                if (updatedRowsP > 0 || updatedRowsC >0 || updatedRowsPic>0)
+                if (updatedRows > 0)
                 {
                     MessageBox.Show("變更已成功儲存至資料庫。");
+                    LoadData();
+                    SetImageSize();
                 }
                 else
                 {
@@ -188,27 +199,7 @@ namespace CatChaEntities
             }
         }
 
-        private void dataGridViewProducts_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            // 取得發生錯誤的欄位名稱
-            string columnName = dataGridViewProducts.Columns[e.ColumnIndex].HeaderText;
-            // 檢查資料格的值是否為 DBNull
-            object cellValue = dataGridViewProducts.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-            if (cellValue == DBNull.Value)
-            {
-                cellValue = "";
-            }
-
-            // 自訂錯誤訊息
-            string errorMessage = $"欄位 {columnName} 輸入錯誤，請重新輸入正確的資料。";
-
-            // 顯示自訂的訊息框
-            MessageBox.Show(errorMessage, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            // 取消預設的錯誤訊息框顯示
-            e.ThrowException = false;
-        }
-
+        //設定dataGridViewProducts選取欄位時，在dataGridViewCategory、dataGridViewPicture顯示對應類別ID的商品類別、商品圖片資料
         private void dataGridViewProducts_SelectionChanged(object sender, EventArgs e)
         {
             try
@@ -230,5 +221,101 @@ namespace CatChaEntities
             }
         }
 
+        //右鍵刪除
+        private void ToolStripDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewProducts.SelectedRows.Count > 0)
+            {
+                try
+                {
+                    DataGridViewRow selectedRow = dataGridViewProducts.SelectedRows[0];
+                    if (selectedRow.Cells["Product_ID"].Value != null)
+                    {
+                        int productID = (int)selectedRow.Cells["Product_ID"].Value;
+                        Shop_Product_Total productToDelete = dbContext.Shop_Product_Total.Find(productID);
+
+                        DialogResult result = MessageBox.Show("確定要刪除選取的資料行嗎？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            dbContext.Shop_Product_Total.Remove(productToDelete);
+                            int deletedRows = dbContext.SaveChanges();
+
+                            if (deletedRows > 0)
+                            {
+                                MessageBox.Show("資料行已成功刪除。");
+                                LoadData();
+                            }
+                            else
+                            {
+                                MessageBox.Show("刪除失敗，請檢查您的操作。");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("選取的資料行無效，請重新選取。");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("發生錯誤: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("請先選取要刪除的資料行。");
+            }
+        }
+
+        //設定DataGridView編輯時產生的DataError訊息方塊
+        private void dataGridViewProducts_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // 取得發生錯誤的欄位名稱
+            string columnName = dataGridViewProducts.Columns[e.ColumnIndex].HeaderText;
+            // 檢查資料格的值是否為 DBNull
+            object cellValue = dataGridViewProducts.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+            if (cellValue == DBNull.Value)
+            {
+                cellValue = "";
+            }
+
+            // 自訂錯誤訊息
+            string errorMessage = $"欄位 {columnName} 輸入錯誤，請重新輸入正確的資料。";
+
+            // 顯示自訂的訊息框
+            MessageBox.Show(errorMessage, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            // 取消預設的錯誤訊息框顯示
+            e.ThrowException = false;
+        }
+
+        private void dataGridViewCategory_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // 取得發生錯誤的欄位名稱
+            string columnName = dataGridViewCategory.Columns[e.ColumnIndex].HeaderText;
+            // 自訂錯誤訊息
+            string errorMessage = $"欄位 {columnName} 輸入錯誤，請重新輸入正確的資料。";
+
+            // 顯示自訂的訊息框
+            MessageBox.Show(errorMessage, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            // 取消預設的錯誤訊息框顯示
+            e.ThrowException = false;
+        }
+
+        private void dataGridViewPicture_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // 取得發生錯誤的欄位名稱
+            string columnName = dataGridViewPicture.Columns[e.ColumnIndex].HeaderText;
+            // 自訂錯誤訊息
+            string errorMessage = $"欄位 {columnName} 輸入錯誤，請重新輸入正確的資料。";
+
+            // 顯示自訂的訊息框
+            MessageBox.Show(errorMessage, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            // 取消預設的錯誤訊息框顯示
+            e.ThrowException = false;
+        }
     }
 }

@@ -15,19 +15,6 @@ namespace CatChaEntities
         public Frm00_CMS_Home()
         {
             InitializeComponent();
-            //設定視窗位置置中螢幕及視窗大小
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.Size = new Size(1300, 800);
-            this.splitContainer1.Panel2.AutoScroll = true;
-
-            foreach (Control control in flowLayoutPanelbtn.Controls)
-            {
-                if (control is Button button)
-                {
-                    button.Anchor = AnchorStyles.None;
-                    button.TextAlign = ContentAlignment.MiddleCenter;
-                }
-            }
         }
 
 

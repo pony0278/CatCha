@@ -25,6 +25,8 @@ namespace CatChaEntities
             dtpTo.Value = DateTime.Today;
         }
         catchaEntities dbContext = new catchaEntities();
+
+        //載入DataBase
         private void LoadData()
         {
             // Order Total
@@ -34,11 +36,11 @@ namespace CatChaEntities
             // Order Detail
             var orderDetails = dbContext.Shop_Order_Detail_Table.ToList();
             bindingSourceOD.DataSource = orderDetails;
-            dataGridViewOrderDetail.DataSource = bindingSourceOD;
             //SelectionChanged
             this.dataGridViewOrders.SelectionChanged += dataGridViewOrders_SelectionChanged;
         }
 
+        //載入訂單狀態Combox的Item
         private void LoadState()
         {
             List<string> stateList = new List<string>();
@@ -52,6 +54,7 @@ namespace CatChaEntities
             this.cboxState.Items.AddRange(stateList.ToArray());
         }
 
+        //重新整理頁面
         private void ReloadDataGridView()
         {
             dataGridViewOrders.DataSource = null;
@@ -152,9 +155,9 @@ namespace CatChaEntities
                     OrderStatusID = Order_Status_ID,
                     PaymentMethodID = Payment_Method_ID,
                     CouponID = Coupon_ID,
-                    RecipientAddress   = Recipient_Address,
-                    RecipientName  = Recipient_Name,
-                    RecipientPhone =   Recipient_Phone
+                    RecipientAddress = Recipient_Address,
+                    RecipientName = Recipient_Name,
+                    RecipientPhone = Recipient_Phone
                 };
                 DialogResult result = frm.ShowDialog();
 
@@ -209,6 +212,7 @@ namespace CatChaEntities
         }
 
         //刪除按鈕
+        //因OrderDetail關聯表格，無法刪除OrderTotal的資料，故先不顯示該功能
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dataGridViewOrders.SelectedRows.Count > 0)
@@ -282,5 +286,46 @@ namespace CatChaEntities
             e.ThrowException = false;
         }
 
+        //右鍵刪除功能
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            {
+                if (dataGridViewOrders.SelectedRows.Count > 0)
+                {
+                    try
+                    {
+                        DataGridViewRow selectedRow = dataGridViewOrders.SelectedRows[0];
+                        int orderID = (int)selectedRow.Cells["Order_ID"].Value;
+                        Shop_Order_Total_Table orderToDelete = dbContext.Shop_Order_Total_Table.Find(orderID);
+
+                        DialogResult result = MessageBox.Show("確定要刪除選取的資料行嗎？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            dbContext.Shop_Order_Total_Table.Remove(orderToDelete);
+                            int deletedRows = dbContext.SaveChanges();
+
+                            if (deletedRows > 0)
+                            {
+                                MessageBox.Show("資料行已成功刪除。");
+                                ReloadDataGridView();
+                            }
+                            else
+                            {
+                                MessageBox.Show("刪除失敗，請檢查您的操作。");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("發生錯誤: " + ex.Message);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("請先選取要刪除的資料行。");
+                }
+            }
+        }
     }
 }

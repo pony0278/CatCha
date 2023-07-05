@@ -25,7 +25,10 @@ namespace CatChaEntities
             InitializeComponent();
             LoadData();
             LoadCategory();
+            SetImageSize();
         }
+
+        //載入DataBase
         void LoadData()
         {
             // LoadProduct
@@ -37,12 +40,13 @@ namespace CatChaEntities
             // LoadCategoryDetail
             var categories = dbContext.Game_Product_Category.ToList();
             this.bindingSourceC.DataSource = categories;
-            this.dataGridViewCategory.DataSource = bindingSourceC;
             //設定dataGridViewOrders允許拖放
             this.dataGridViewGameProducts.AllowDrop = true;
             this.dataGridViewGameProducts.DragEnter += dataGridViewOrders_DragEnter;
             this.dataGridViewGameProducts.DragDrop += dataGridViewOrders_DragDrop;
         }
+
+        //設定圖片欄位的大小
         void SetImageSize()
         {
             DataGridViewImageColumn imageColumn = (DataGridViewImageColumn)dataGridViewGameProducts.Columns[5];
@@ -66,12 +70,6 @@ namespace CatChaEntities
             this.cboxCategory.Items.Clear();
             this.cboxCategory.Items.AddRange(categoryList.ToArray());
         }
-
-        private void Frm02_GameManage_Load(object sender, EventArgs e)
-        {
-            SetImageSize();
-        }
-
 
         //搜尋按鈕
         private void btnSearch_Click(object sender, EventArgs e)
@@ -117,6 +115,7 @@ namespace CatChaEntities
             SetImageSize();
         }
 
+        //儲存按鈕
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -151,6 +150,8 @@ namespace CatChaEntities
                 if (updatedRows > 0)
                 {
                     MessageBox.Show("變更已成功儲存至資料庫。");
+                    LoadData();
+                    SetImageSize();
                 }
                 else
                 {
@@ -184,8 +185,6 @@ namespace CatChaEntities
             }
         }
 
-
-
         //拖放功能
         private void dataGridViewOrders_DragEnter(object sender, DragEventArgs e)
         {
@@ -200,6 +199,7 @@ namespace CatChaEntities
             return imageExtensions.Contains(extension, StringComparer.OrdinalIgnoreCase);
         }
 
+        //拖放功能
         private void dataGridViewOrders_DragDrop(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -226,19 +226,7 @@ namespace CatChaEntities
             }
         }
 
-
-
-        private void ReloadDataGridView()
-        {
-            dataGridViewGameProducts.DataSource = null;
-            dataGridViewGameProducts.Rows.Clear();
-            dataGridViewGameProducts.Columns.Clear();
-            var gameProducts = dbContext.Game_Product_Total.ToList();
-            this.dataGridViewGameProducts.DataSource = gameProducts;
-            var categories = dbContext.Game_Product_Category.ToList();
-            this.dataGridViewCategory.DataSource = categories;
-        }
-
+        //設定dataGridViewGameProducts選取欄位時，在dataGridViewCategory顯示對應類別ID的商品類別資料
         private void dataGridViewGameProducts_SelectionChanged(object sender, EventArgs e)
         {
             try
@@ -256,6 +244,8 @@ namespace CatChaEntities
             }
         }
 
+
+        //設定DataGridView編輯時產生的DataError訊息方塊
         private void dataGridViewGameProducts_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             // 取得發生錯誤的欄位名稱
@@ -283,6 +273,54 @@ namespace CatChaEntities
 
             // 取消預設的錯誤訊息框顯示
             e.ThrowException = false;
+        }
+
+        //dataGridViewGameProducts的右鍵刪除功能
+        private void toolStripDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewGameProducts.SelectedRows.Count > 0)
+            {
+                try
+                {
+                    DataGridViewRow selectedRow = dataGridViewGameProducts.SelectedRows[0];
+                    if (selectedRow.Cells["Product_ID"].Value != null)
+                    {
+                        int productID = (int)selectedRow.Cells["Product_ID"].Value;
+                        Game_Product_Total productToDelete = dbContext.Game_Product_Total.Find(productID);
+
+                        DialogResult result = MessageBox.Show("確定要刪除選取的資料行嗎？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            dbContext.Game_Product_Total.Remove(productToDelete);
+                            int deletedRows = dbContext.SaveChanges();
+
+                            if (deletedRows > 0)
+                            {
+                                MessageBox.Show("資料行已成功刪除。");
+                                LoadData();
+                                SetImageSize();
+                            }
+                            else
+                            {
+                                MessageBox.Show("刪除失敗，請檢查您的操作。");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("選取的資料行無效，請重新選取。");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("發生錯誤: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("請先選取要刪除的資料行。");
+            }
         }
     }
 }

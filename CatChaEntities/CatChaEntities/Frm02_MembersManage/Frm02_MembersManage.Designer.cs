@@ -48,14 +48,18 @@
             this.bindingSourceM = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ToolStripDelete = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceM)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtMemberName
             // 
+            this.txtMemberName.BackColor = System.Drawing.SystemColors.Window;
             this.txtMemberName.Location = new System.Drawing.Point(127, 106);
             this.txtMemberName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMemberName.Name = "txtMemberName";
@@ -74,6 +78,7 @@
             // 
             // txtMemberAccount
             // 
+            this.txtMemberAccount.BackColor = System.Drawing.SystemColors.Window;
             this.txtMemberAccount.Location = new System.Drawing.Point(127, 65);
             this.txtMemberAccount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMemberAccount.Name = "txtMemberAccount";
@@ -82,13 +87,15 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(598, 75);
+            this.btnSearch.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Location = new System.Drawing.Point(634, 158);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(114, 54);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "搜尋";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label5
@@ -123,14 +130,17 @@
             // 
             this.dataGridViewMembers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewMembers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewMembers.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dataGridViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMembers.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridViewMembers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewMembers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewMembers.Location = new System.Drawing.Point(5, 34);
             this.dataGridViewMembers.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewMembers.Name = "dataGridViewMembers";
             this.dataGridViewMembers.RowHeadersWidth = 51;
             this.dataGridViewMembers.RowTemplate.Height = 27;
-            this.dataGridViewMembers.Size = new System.Drawing.Size(728, 319);
+            this.dataGridViewMembers.Size = new System.Drawing.Size(1200, 319);
             this.dataGridViewMembers.TabIndex = 8;
             this.dataGridViewMembers.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewMembers_DataError);
             // 
@@ -144,6 +154,7 @@
             // 
             // txtMemberID
             // 
+            this.txtMemberID.BackColor = System.Drawing.SystemColors.Window;
             this.txtMemberID.Location = new System.Drawing.Point(127, 24);
             this.txtMemberID.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMemberID.Name = "txtMemberID";
@@ -172,6 +183,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.groupBox1.Controls.Add(this.txtCharacterName);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtMemberName);
@@ -191,13 +203,14 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox1.Size = new System.Drawing.Size(738, 226);
+            this.groupBox1.Size = new System.Drawing.Size(1210, 226);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "搜尋會員";
             // 
             // txtCharacterName
             // 
+            this.txtCharacterName.BackColor = System.Drawing.SystemColors.Window;
             this.txtCharacterName.Location = new System.Drawing.Point(127, 146);
             this.txtCharacterName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCharacterName.Name = "txtCharacterName";
@@ -216,13 +229,15 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(598, 154);
+            this.btnSave.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.Location = new System.Drawing.Point(778, 158);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(114, 54);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "儲存編輯";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // tableLayoutPanel1
@@ -238,41 +253,58 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.164179F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.83582F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(738, 359);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1210, 359);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Linen;
+            this.label4.BackColor = System.Drawing.Color.AntiqueWhite;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label4.Location = new System.Drawing.Point(5, 3);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(728, 25);
+            this.label4.Size = new System.Drawing.Size(1200, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "會員資料";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripDelete});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 26);
+            // 
+            // ToolStripDelete
+            // 
+            this.ToolStripDelete.Name = "ToolStripDelete";
+            this.ToolStripDelete.Size = new System.Drawing.Size(98, 22);
+            this.ToolStripDelete.Text = "刪除";
+            this.ToolStripDelete.Click += new System.EventHandler(this.ToolStripDelete_Click);
             // 
             // Frm02_MembersManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(790, 634);
+            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.ClientSize = new System.Drawing.Size(1287, 634);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Frm02_MembersManage";
             this.Text = "會員管理";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceM)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -298,5 +330,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripDelete;
     }
 }

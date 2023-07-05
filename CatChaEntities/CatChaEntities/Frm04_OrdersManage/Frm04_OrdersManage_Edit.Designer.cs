@@ -191,6 +191,7 @@
             // 
             // txtMember_ID
             // 
+            this.txtMember_ID.BackColor = System.Drawing.SystemColors.Window;
             this.txtMember_ID.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtMember_ID.Location = new System.Drawing.Point(175, 25);
             this.txtMember_ID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -201,6 +202,7 @@
             // 
             // txtOrder_ID
             // 
+            this.txtOrder_ID.BackColor = System.Drawing.SystemColors.Window;
             this.txtOrder_ID.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtOrder_ID.Location = new System.Drawing.Point(175, 87);
             this.txtOrder_ID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -229,6 +231,7 @@
             // 
             // txtAddress_ID
             // 
+            this.txtAddress_ID.BackColor = System.Drawing.SystemColors.Window;
             this.txtAddress_ID.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtAddress_ID.Location = new System.Drawing.Point(545, 20);
             this.txtAddress_ID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -238,6 +241,7 @@
             // 
             // txtOrder_Status_ID
             // 
+            this.txtOrder_Status_ID.BackColor = System.Drawing.SystemColors.Window;
             this.txtOrder_Status_ID.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtOrder_Status_ID.Location = new System.Drawing.Point(545, 82);
             this.txtOrder_Status_ID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -248,6 +252,7 @@
             // 
             // txtPayment_Method_ID
             // 
+            this.txtPayment_Method_ID.BackColor = System.Drawing.SystemColors.Window;
             this.txtPayment_Method_ID.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtPayment_Method_ID.Location = new System.Drawing.Point(545, 144);
             this.txtPayment_Method_ID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -257,6 +262,7 @@
             // 
             // txtCoupon_ID
             // 
+            this.txtCoupon_ID.BackColor = System.Drawing.SystemColors.Window;
             this.txtCoupon_ID.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtCoupon_ID.Location = new System.Drawing.Point(545, 208);
             this.txtCoupon_ID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -266,24 +272,28 @@
             // 
             // txtUpdate
             // 
+            this.txtUpdate.BackColor = System.Drawing.Color.NavajoWhite;
             this.txtUpdate.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.txtUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.txtUpdate.Location = new System.Drawing.Point(388, 366);
             this.txtUpdate.Name = "txtUpdate";
             this.txtUpdate.Size = new System.Drawing.Size(120, 57);
             this.txtUpdate.TabIndex = 19;
             this.txtUpdate.Text = "儲存資料";
-            this.txtUpdate.UseVisualStyleBackColor = true;
+            this.txtUpdate.UseVisualStyleBackColor = false;
             this.txtUpdate.Click += new System.EventHandler(this.txtUpdate_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Location = new System.Drawing.Point(545, 366);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(120, 57);
             this.btnCancel.TabIndex = 20;
             this.btnCancel.Text = "取消";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // tableAdapterManager
             // 
@@ -316,6 +326,7 @@
             // 
             // txtRecipientAddress
             // 
+            this.txtRecipientAddress.BackColor = System.Drawing.SystemColors.Window;
             this.txtRecipientAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.shop_Order_Total_TableBindingSource1, "Recipient Address", true));
             this.txtRecipientAddress.Location = new System.Drawing.Point(175, 273);
             this.txtRecipientAddress.Name = "txtRecipientAddress";
@@ -324,6 +335,7 @@
             // 
             // txtRecipientName
             // 
+            this.txtRecipientName.BackColor = System.Drawing.SystemColors.Window;
             this.txtRecipientName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.shop_Order_Total_TableBindingSource1, "Recipient Name", true));
             this.txtRecipientName.Location = new System.Drawing.Point(175, 335);
             this.txtRecipientName.Name = "txtRecipientName";
@@ -332,6 +344,7 @@
             // 
             // txtRecipientPhone
             // 
+            this.txtRecipientPhone.BackColor = System.Drawing.SystemColors.Window;
             this.txtRecipientPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.shop_Order_Total_TableBindingSource1, "Recipient Phone", true));
             this.txtRecipientPhone.Location = new System.Drawing.Point(175, 397);
             this.txtRecipientPhone.Name = "txtRecipientPhone";
@@ -342,6 +355,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(709, 471);
             this.Controls.Add(recipient_PhoneLabel);
             this.Controls.Add(this.txtRecipientPhone);
@@ -370,7 +384,8 @@
             this.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Frm04_OrdersManage_Edit";
-            this.Text = "Frm06_OrdersManage_ADD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Frm04_OrdersManage_ADD";
             ((System.ComponentModel.ISupportInitialize)(this.shop_Order_Total_TableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.catchaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shop_Order_Total_TableBindingSource1)).EndInit();

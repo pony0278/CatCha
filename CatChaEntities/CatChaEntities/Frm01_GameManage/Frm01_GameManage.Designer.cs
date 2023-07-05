@@ -41,6 +41,8 @@
             this.txtGameProductID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewGameProducts = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBrowseImage = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -52,6 +54,7 @@
             this.labProduct = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGameProducts)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategory)).BeginInit();
@@ -62,7 +65,8 @@
             // 
             // txtGameProductPrice
             // 
-            this.txtGameProductPrice.Location = new System.Drawing.Point(127, 106);
+            this.txtGameProductPrice.BackColor = System.Drawing.SystemColors.Window;
+            this.txtGameProductPrice.Location = new System.Drawing.Point(156, 105);
             this.txtGameProductPrice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtGameProductPrice.Name = "txtGameProductPrice";
             this.txtGameProductPrice.Size = new System.Drawing.Size(90, 26);
@@ -80,8 +84,9 @@
             // 
             // cboxCategory
             // 
+            this.cboxCategory.BackColor = System.Drawing.SystemColors.Window;
             this.cboxCategory.FormattingEnabled = true;
-            this.cboxCategory.Location = new System.Drawing.Point(127, 146);
+            this.cboxCategory.Location = new System.Drawing.Point(156, 145);
             this.cboxCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cboxCategory.Name = "cboxCategory";
             this.cboxCategory.Size = new System.Drawing.Size(110, 26);
@@ -89,7 +94,8 @@
             // 
             // txtRemainingQuantity
             // 
-            this.txtRemainingQuantity.Location = new System.Drawing.Point(127, 189);
+            this.txtRemainingQuantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txtRemainingQuantity.Location = new System.Drawing.Point(156, 188);
             this.txtRemainingQuantity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRemainingQuantity.Name = "txtRemainingQuantity";
             this.txtRemainingQuantity.Size = new System.Drawing.Size(90, 26);
@@ -117,7 +123,8 @@
             // 
             // txtGameProductName
             // 
-            this.txtGameProductName.Location = new System.Drawing.Point(127, 67);
+            this.txtGameProductName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtGameProductName.Location = new System.Drawing.Point(156, 66);
             this.txtGameProductName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtGameProductName.Name = "txtGameProductName";
             this.txtGameProductName.Size = new System.Drawing.Size(90, 26);
@@ -125,13 +132,15 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(326, 153);
+            this.btnSearch.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Location = new System.Drawing.Point(387, 153);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(103, 53);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "搜尋";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label5
@@ -146,7 +155,8 @@
             // 
             // txtGameProductID
             // 
-            this.txtGameProductID.Location = new System.Drawing.Point(127, 27);
+            this.txtGameProductID.BackColor = System.Drawing.SystemColors.Window;
+            this.txtGameProductID.Location = new System.Drawing.Point(156, 26);
             this.txtGameProductID.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtGameProductID.Name = "txtGameProductID";
             this.txtGameProductID.Size = new System.Drawing.Size(90, 26);
@@ -166,24 +176,40 @@
             // 
             this.dataGridViewGameProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewGameProducts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewGameProducts.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dataGridViewGameProducts.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dataGridViewGameProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewGameProducts.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridViewGameProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGameProducts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewGameProducts.Location = new System.Drawing.Point(3, 41);
+            this.dataGridViewGameProducts.Location = new System.Drawing.Point(3, 37);
             this.dataGridViewGameProducts.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewGameProducts.Name = "dataGridViewGameProducts";
             this.dataGridViewGameProducts.RowHeadersWidth = 50;
             this.dataGridViewGameProducts.RowTemplate.Height = 27;
-            this.dataGridViewGameProducts.Size = new System.Drawing.Size(701, 341);
+            this.dataGridViewGameProducts.Size = new System.Drawing.Size(951, 456);
             this.dataGridViewGameProducts.TabIndex = 8;
             this.dataGridViewGameProducts.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewGameProducts_DataError);
             this.dataGridViewGameProducts.SelectionChanged += new System.EventHandler(this.dataGridViewGameProducts_SelectionChanged);
             this.dataGridViewGameProducts.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridViewOrders_DragDrop);
             this.dataGridViewGameProducts.DragEnter += new System.Windows.Forms.DragEventHandler(this.dataGridViewOrders_DragEnter);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDelete});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 26);
+            // 
+            // toolStripDelete
+            // 
+            this.toolStripDelete.Name = "toolStripDelete";
+            this.toolStripDelete.Size = new System.Drawing.Size(98, 22);
+            this.toolStripDelete.Text = "刪除";
+            this.toolStripDelete.Click += new System.EventHandler(this.toolStripDelete_Click);
+            // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.groupBox1.Controls.Add(this.btnBrowseImage);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.txtGameProductPrice);
@@ -203,20 +229,22 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox1.Size = new System.Drawing.Size(1073, 219);
+            this.groupBox1.Size = new System.Drawing.Size(1284, 219);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "搜尋商品";
             // 
             // btnBrowseImage
             // 
-            this.btnBrowseImage.Location = new System.Drawing.Point(463, 153);
+            this.btnBrowseImage.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnBrowseImage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBrowseImage.Location = new System.Drawing.Point(532, 153);
             this.btnBrowseImage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnBrowseImage.Name = "btnBrowseImage";
             this.btnBrowseImage.Size = new System.Drawing.Size(103, 53);
             this.btnBrowseImage.TabIndex = 17;
             this.btnBrowseImage.Text = "瀏覽圖片";
-            this.btnBrowseImage.UseVisualStyleBackColor = true;
+            this.btnBrowseImage.UseVisualStyleBackColor = false;
             this.btnBrowseImage.Click += new System.EventHandler(this.btnBrowseImage_Click);
             // 
             // dataGridView1
@@ -232,29 +260,31 @@
             // 
             // btnSaveP
             // 
-            this.btnSaveP.Location = new System.Drawing.Point(591, 153);
+            this.btnSaveP.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnSaveP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSaveP.Location = new System.Drawing.Point(675, 153);
             this.btnSaveP.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSaveP.Name = "btnSaveP";
             this.btnSaveP.Size = new System.Drawing.Size(103, 53);
             this.btnSaveP.TabIndex = 8;
             this.btnSaveP.Text = "儲存變更";
-            this.btnSaveP.UseVisualStyleBackColor = true;
+            this.btnSaveP.UseVisualStyleBackColor = false;
             this.btnSaveP.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dataGridViewCategory
             // 
             this.dataGridViewCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewCategory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewCategory.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dataGridViewCategory.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dataGridViewCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewCategory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewCategory.Location = new System.Drawing.Point(709, 41);
+            this.dataGridViewCategory.Location = new System.Drawing.Point(959, 37);
             this.dataGridViewCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewCategory.Name = "dataGridViewCategory";
             this.dataGridViewCategory.RowHeadersWidth = 50;
             this.dataGridViewCategory.RowTemplate.Height = 27;
-            this.dataGridViewCategory.Size = new System.Drawing.Size(364, 341);
+            this.dataGridViewCategory.Size = new System.Drawing.Size(322, 456);
             this.dataGridViewCategory.TabIndex = 10;
             this.dataGridViewCategory.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewCategory_DataError);
             // 
@@ -262,8 +292,8 @@
             // 
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.74586F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.25414F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.59081F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.4092F));
             this.tableLayoutPanel1.Controls.Add(this.labProduct, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridViewGameProducts, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.dataGridViewCategory, 1, 1);
@@ -271,30 +301,32 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 245);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.585492F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.41451F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1076, 386);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.653226F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.34677F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1284, 497);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
             // labProduct
             // 
             this.labProduct.AutoSize = true;
+            this.labProduct.BackColor = System.Drawing.Color.AntiqueWhite;
             this.labProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labProduct.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.labProduct.Location = new System.Drawing.Point(4, 1);
             this.labProduct.Name = "labProduct";
-            this.labProduct.Size = new System.Drawing.Size(699, 36);
+            this.labProduct.Size = new System.Drawing.Size(949, 32);
             this.labProduct.TabIndex = 13;
             this.labProduct.Text = "商品總表";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.AntiqueWhite;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(710, 1);
+            this.label3.Location = new System.Drawing.Point(960, 1);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(362, 36);
+            this.label3.Size = new System.Drawing.Size(320, 32);
             this.label3.TabIndex = 14;
             this.label3.Text = "商品類別總表";
             // 
@@ -304,15 +336,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1100, 696);
+            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.ClientSize = new System.Drawing.Size(1321, 754);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Frm01_GameManage";
             this.Text = "遊戲管理";
-            this.Load += new System.EventHandler(this.Frm02_GameManage_Load);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGameProducts)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -349,5 +383,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label labProduct;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripDelete;
     }
 }

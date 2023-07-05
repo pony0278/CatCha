@@ -59,6 +59,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.bindingSourceC = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourcePic = new System.Windows.Forms.BindingSource(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ToolStripDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceP)).BeginInit();
@@ -68,10 +70,12 @@
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePic)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.groupBox1.Controls.Add(this.txtProductPrice);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.label8);
@@ -95,13 +99,14 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox1.Size = new System.Drawing.Size(764, 222);
+            this.groupBox1.Size = new System.Drawing.Size(1083, 239);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "搜尋商品";
             // 
             // txtProductPrice
             // 
+            this.txtProductPrice.BackColor = System.Drawing.SystemColors.Window;
             this.txtProductPrice.Location = new System.Drawing.Point(127, 106);
             this.txtProductPrice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtProductPrice.Name = "txtProductPrice";
@@ -110,13 +115,15 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(614, 153);
+            this.btnSave.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.Location = new System.Drawing.Point(829, 157);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(114, 54);
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "儲存編輯";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label8
@@ -131,6 +138,7 @@
             // 
             // cboxCategory
             // 
+            this.cboxCategory.BackColor = System.Drawing.SystemColors.Window;
             this.cboxCategory.FormattingEnabled = true;
             this.cboxCategory.Location = new System.Drawing.Point(127, 146);
             this.cboxCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -140,6 +148,7 @@
             // 
             // txtRemainingQuantity
             // 
+            this.txtRemainingQuantity.BackColor = System.Drawing.SystemColors.Window;
             this.txtRemainingQuantity.Location = new System.Drawing.Point(470, 64);
             this.txtRemainingQuantity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRemainingQuantity.Name = "txtRemainingQuantity";
@@ -168,6 +177,7 @@
             // 
             // txtProductName
             // 
+            this.txtProductName.BackColor = System.Drawing.SystemColors.Window;
             this.txtProductName.Location = new System.Drawing.Point(127, 67);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtProductName.Name = "txtProductName";
@@ -176,13 +186,15 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(614, 25);
+            this.btnSearch.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Location = new System.Drawing.Point(674, 157);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(114, 54);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "搜尋";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label5
@@ -197,6 +209,7 @@
             // 
             // cboxProductState
             // 
+            this.cboxProductState.BackColor = System.Drawing.SystemColors.Window;
             this.cboxProductState.FormattingEnabled = true;
             this.cboxProductState.Location = new System.Drawing.Point(470, 19);
             this.cboxProductState.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -242,6 +255,7 @@
             // 
             // txtProductID
             // 
+            this.txtProductID.BackColor = System.Drawing.SystemColors.Window;
             this.txtProductID.Location = new System.Drawing.Point(127, 27);
             this.txtProductID.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtProductID.Name = "txtProductID";
@@ -272,74 +286,87 @@
             // 
             this.dataGridViewProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewProducts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewProducts.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dataGridViewProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProducts.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridViewProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewProducts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewProducts.Location = new System.Drawing.Point(3, 33);
+            this.dataGridViewProducts.Location = new System.Drawing.Point(3, 39);
             this.dataGridViewProducts.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewProducts.Name = "dataGridViewProducts";
             this.dataGridViewProducts.RowHeadersWidth = 51;
             this.dataGridViewProducts.RowTemplate.Height = 27;
-            this.dataGridViewProducts.Size = new System.Drawing.Size(757, 215);
+            this.dataGridViewProducts.Size = new System.Drawing.Size(1076, 259);
             this.dataGridViewProducts.TabIndex = 6;
             this.dataGridViewProducts.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewProducts_DataError);
             this.dataGridViewProducts.SelectionChanged += new System.EventHandler(this.dataGridViewProducts_SelectionChanged);
             // 
             // dataGridViewCategory
             // 
+            this.dataGridViewCategory.AllowUserToAddRows = false;
+            this.dataGridViewCategory.AllowUserToDeleteRows = false;
             this.dataGridViewCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewCategory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewCategory.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dataGridViewCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewCategory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewCategory.Location = new System.Drawing.Point(3, 29);
             this.dataGridViewCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewCategory.Name = "dataGridViewCategory";
+            this.dataGridViewCategory.ReadOnly = true;
             this.dataGridViewCategory.RowHeadersWidth = 51;
             this.dataGridViewCategory.RowTemplate.Height = 27;
-            this.dataGridViewCategory.Size = new System.Drawing.Size(428, 239);
+            this.dataGridViewCategory.Size = new System.Drawing.Size(618, 336);
             this.dataGridViewCategory.TabIndex = 7;
+            this.dataGridViewCategory.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewCategory_DataError);
             // 
             // dataGridViewPicture
             // 
+            this.dataGridViewPicture.AllowUserToAddRows = false;
+            this.dataGridViewPicture.AllowUserToDeleteRows = false;
             this.dataGridViewPicture.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewPicture.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewPicture.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dataGridViewPicture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPicture.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewPicture.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewPicture.Location = new System.Drawing.Point(436, 29);
+            this.dataGridViewPicture.Location = new System.Drawing.Point(626, 29);
             this.dataGridViewPicture.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewPicture.Name = "dataGridViewPicture";
+            this.dataGridViewPicture.ReadOnly = true;
             this.dataGridViewPicture.RowHeadersWidth = 51;
             this.dataGridViewPicture.RowTemplate.Height = 27;
-            this.dataGridViewPicture.Size = new System.Drawing.Size(324, 239);
+            this.dataGridViewPicture.Size = new System.Drawing.Size(453, 336);
             this.dataGridViewPicture.TabIndex = 8;
+            this.dataGridViewPicture.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewPicture_DataError);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 328F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 457F));
             this.tableLayoutPanel1.Controls.Add(this.dataGridViewCategory, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridViewPicture, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 530);
+            this.tableLayoutPanel1.Controls.Add(this.label10, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 580);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 245F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(763, 272);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 342F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1082, 369);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label10.Location = new System.Drawing.Point(4, 1);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 18);
+            this.label10.Size = new System.Drawing.Size(616, 24);
             this.label10.TabIndex = 9;
             this.label10.Text = "商品類別明細";
             // 
@@ -347,7 +374,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label11.Location = new System.Drawing.Point(437, 1);
+            this.label11.Location = new System.Drawing.Point(627, 1);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 18);
             this.label11.TabIndex = 10;
@@ -355,6 +382,7 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -365,7 +393,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.50443F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.49557F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(763, 252);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1082, 302);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
             // label9
@@ -378,12 +406,27 @@
             this.label9.TabIndex = 7;
             this.label9.Text = "商品總表";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripDelete});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 26);
+            // 
+            // ToolStripDelete
+            // 
+            this.ToolStripDelete.Name = "ToolStripDelete";
+            this.ToolStripDelete.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripDelete.Text = "刪除";
+            this.ToolStripDelete.Click += new System.EventHandler(this.ToolStripDelete_Click);
+            // 
             // Frm03_ProductsManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(798, 839);
+            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.ClientSize = new System.Drawing.Size(1147, 961);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.groupBox1);
@@ -391,6 +434,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Frm03_ProductsManage";
             this.Text = "商品管理";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
@@ -403,6 +447,7 @@
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePic)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -439,5 +484,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.BindingSource bindingSourceC;
         private System.Windows.Forms.BindingSource bindingSourcePic;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripDelete;
     }
 }

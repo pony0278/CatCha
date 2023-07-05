@@ -17,16 +17,22 @@ namespace CatChaEntities
         public Frm02_MembersManage()
         {
             InitializeComponent();
-            //LoadData
-            var members = dbContext.Shop_Member_Info.ToList();
-            this.bindingSourceM.DataSource = members;
-            dataGridViewMembers.DataSource = bindingSourceM;
+            LoadData();
             //初始化DateTimePicker
             dtpFrom.Value = new DateTime(2000, 1, 1);
             dtpTo.Value = DateTime.Today;
         }
 
-        //搜尋
+        //載入DataBase
+        void LoadData()
+        {
+            //LoadData
+            var members = dbContext.Shop_Member_Info.ToList();
+            this.bindingSourceM.DataSource = members;
+            dataGridViewMembers.DataSource = bindingSourceM;
+        }
+
+        //搜尋按鈕
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
@@ -78,17 +84,30 @@ namespace CatChaEntities
         }
 
 
-        //儲存
+        //儲存按鈕
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
+                var newMember = bindingSourceM.DataSource as List<Shop_Member_Info>;
+                if (newMember != null)
+                {
+                    foreach (var member in newMember)
+                    {
+                        if (member.Member_ID == 0)
+                        {
+                            dbContext.Shop_Member_Info.Add(member);
+                        }
+                    }
+                }
+
                 int updatedRows = dbContext.SaveChanges();
 
                 // 檢查更新結果
                 if (updatedRows > 0)
                 {
                     MessageBox.Show("變更已成功儲存至資料庫。");
+                    LoadData();
                 }
                 else
                 {
@@ -99,8 +118,10 @@ namespace CatChaEntities
             {
                 MessageBox.Show("發生錯誤: " + ex.Message);
             }
+
         }
 
+        //設定DataGridView編輯時產生的DataError訊息方塊
         private void dataGridViewMembers_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             // 取得發生錯誤的欄位名稱
@@ -113,6 +134,53 @@ namespace CatChaEntities
 
             // 取消預設的錯誤訊息框顯示
             e.ThrowException = false;
+        }
+
+        //dataGridViewGameProducts的右鍵刪除功能
+        private void ToolStripDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewMembers.SelectedRows.Count > 0)
+            {
+                try
+                {
+                    DataGridViewRow selectedRow = dataGridViewMembers.SelectedRows[0];
+                    if (selectedRow.Cells["Member_ID"].Value != null)
+                    {
+                        int memberID = (int)selectedRow.Cells["Member_ID"].Value;
+                        Shop_Member_Info membeToDelete = dbContext.Shop_Member_Info.Find(memberID);
+
+                        DialogResult result = MessageBox.Show("確定要刪除選取的資料行嗎？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            dbContext.Shop_Member_Info.Remove(membeToDelete);
+                            int deletedRows = dbContext.SaveChanges();
+
+                            if (deletedRows > 0)
+                            {
+                                MessageBox.Show("資料行已成功刪除。");
+                                LoadData();
+                            }
+                            else
+                            {
+                                MessageBox.Show("刪除失敗，請檢查您的操作。");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("選取的資料行無效，請重新選取。");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("發生錯誤: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("請先選取要刪除的資料行。");
+            }
         }
     }
 }
