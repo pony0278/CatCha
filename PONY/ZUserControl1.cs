@@ -48,6 +48,7 @@ namespace CatCaha
             coin = new ChargeCoin();
             mainForm = new Frm_GameMain();
             this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            string a = "a";
         }
 
         private GraphicsPath CreateRoundRectPath(Rectangle rectangle, int cornerRadius)
@@ -188,6 +189,10 @@ namespace CatCaha
             set { gamePurchasePage = value; }
         }
 
-        public Frm_GameMain frm_GameMain { get { return frm_GameMain; } set { frm_GameMain = value; } }
+        public Frm_GameMain frm_GameMain 
+        { 
+            get { return mainForm; } 
+            set { mainForm = value; } 
+        }
     }
 }
