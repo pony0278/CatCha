@@ -14,7 +14,7 @@ namespace CatChaForms
 {
     public partial class ForgetPwd : Form
     {
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
         public ForgetPwd()
         {
             InitializeComponent();

@@ -13,7 +13,7 @@ namespace FormResize
 {
     public class C_Query
     {
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
 
         Frm_GameMain main;
         

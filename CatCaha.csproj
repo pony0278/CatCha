@@ -57,6 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarttoBill.cs" />
+    <Compile Include="ColorHelper.cs" />
     <Compile Include="C_Game\C_Backpack.cs" />
     <Compile Include="C_Game\C_BackPic.cs" />
     <Compile Include="C_Game\C_Cats.cs" />
@@ -70,6 +72,24 @@
     <Compile Include="C_Game\UserOderData\UserOderData\IuserGameOrderPropertites.cs" />
     <Compile Include="C_Game\UserOderData\UserOderData\userGameOrder.cs" />
     <Compile Include="C_Game\UserOderData\UserOderData\userGameOrderFromLinq.cs" />
+    <Compile Include="Frm_Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cart.designer.cs">
+      <DependentUpon>Frm_Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cart2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cart2.designer.cs">
+      <DependentUpon>Frm_Cart2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cart3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cart3.designer.cs">
+      <DependentUpon>Frm_Cart3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game\Frm_Achievement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +132,12 @@
     <Compile Include="Game\Frm_Summon.designer.cs">
       <DependentUpon>Frm_Summon.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemUserControl.designer.cs">
+      <DependentUpon>ItemUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Member.cs" />
     <Compile Include="MemberCenter\ＭemberCenter.cs">
       <SubType>Form</SubType>
@@ -120,157 +146,163 @@
       <DependentUpon>ＭemberCenter.cs</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Announcement_Type_datum.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_1on1MessageData.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Achievement_List.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Achievement_Reward_List.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Character_Info.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Coin_Exchange_Record.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Friend_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Friend_List_Chat_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Global_Chat_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Item_Purchase_Record.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Member_B_Message_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Member_Task.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Pet_Total.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Product_Category.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Product_Total.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Rank_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_ShopAnnouncement.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_shopArticleType.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Shop_Blog_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Task_Condition_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Game_Task_List.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Message_Type_datum.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\Project.Context.cs">
+    <Compile Include="NewFolder1\project123Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Project.Context.tt</DependentUpon>
+      <DependentUpon>project123Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\Project.cs">
+    <Compile Include="NewFolder1\project123Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\Project.Designer.cs">
+    <Compile Include="NewFolder1\project123Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Project.edmx</DependentUpon>
+      <DependentUpon>project123Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Appeal_Category_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Case_Data_Table.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Common_Address_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Complaint_Status_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Coupon_Total.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Favorite_Data_Table.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Game_Admin_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Member_Complaint_Case.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Member_Coupon_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Member_Info.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Order_Detail_Table.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Order_Status_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Order_Total_Table.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Payment_Method_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Product_Category.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Product_Image_Table.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Product_Review_Table.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Product_Supplier.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Product_Total.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Reply_Data.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Return_Data_Table.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Return_Reason_Data_Table.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Shop_Return_Status_Data_Table.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>project123Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\sp_helpdiagrams_Result.cs">
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\sysdiagram.cs">
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>project123Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="ShopAndLog\ChangePwd.cs">
       <SubType>Form</SubType>
@@ -382,6 +414,15 @@
     <Compile Include="ShopAndLog\UserToolStrip.designer.cs">
       <DependentUpon>UserToolStrip.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Frm_Cart.resx">
+      <DependentUpon>Frm_Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Cart2.resx">
+      <DependentUpon>Frm_Cart2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Cart3.resx">
+      <DependentUpon>Frm_Cart3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Game\Frm_Achievement.resx">
       <DependentUpon>Frm_Achievement.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,6 +446,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemUserControl.resx">
+      <DependentUpon>ItemUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberCenter\ＭemberCenter.resx">
       <DependentUpon>ＭemberCenter.cs</DependentUpon>
@@ -470,12 +514,12 @@
     <EmbeddedResource Include="ShopAndLog\UserToolStrip.resx">
       <DependentUpon>UserToolStrip.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="NewFolder1\Project.edmx">
+    <EntityDeploy Include="NewFolder1\project123Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Project.Designer.cs</LastGenOutput>
+      <LastGenOutput>project123Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="NewFolder1\Project.edmx.diagram">
-      <DependentUpon>Project.edmx</DependentUpon>
+    <None Include="NewFolder1\project123Model1.edmx.diagram">
+      <DependentUpon>project123Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -493,15 +537,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\eQc4d3.gif" />
-    <Content Include="NewFolder1\Project.Context.tt">
+    <Content Include="NewFolder1\project123Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Project.edmx</DependentUpon>
-      <LastGenOutput>Project.Context.cs</LastGenOutput>
+      <DependentUpon>project123Model1.edmx</DependentUpon>
+      <LastGenOutput>project123Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="NewFolder1\Project.tt">
+    <Content Include="NewFolder1\project123Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Project.edmx</DependentUpon>
-      <LastGenOutput>Project.cs</LastGenOutput>
+      <DependentUpon>project123Model1.edmx</DependentUpon>
+      <LastGenOutput>project123Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\GamePicture\achieve_BackPic.png" />
     <Content Include="Resources\GamePicture\background_02.png" />

@@ -13,7 +13,7 @@ namespace CatChaForms
 {
     public partial class ChangePwd : Form
     {
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
         public ChangePwd()
         {
             InitializeComponent();

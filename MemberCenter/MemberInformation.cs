@@ -288,7 +288,7 @@ namespace LinqLabs
         }
 
         int now_Member_ID;
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
 
         //傳遞資料
         public int DataProperty { get; set; }

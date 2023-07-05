@@ -15,7 +15,7 @@ namespace CatCaha.ZongHanCompoents.UserOderData
     {
        
 
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
         
         public List<userGameOrder> GetAllOder()
         {

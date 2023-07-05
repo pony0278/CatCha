@@ -23,7 +23,7 @@ namespace CatCaha.NewFolder1
         public Nullable<int> Member_ID { get; set; }
         public int Favorite_ID { get; set; }
         public Nullable<int> Product_ID { get; set; }
-        public Nullable<int> Creation_Date { get; set; }
+        public Nullable<System.DateTime> Creation_Date { get; set; }
     
         public virtual Shop_Product_Total Shop_Product_Total { get; set; }
         public virtual Shop_Member_Info Shop_Member_Info { get; set; }

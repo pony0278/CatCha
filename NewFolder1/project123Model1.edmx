@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ProjectsModelE.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="project123Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Announcement Type Data">
           <Key>
             <PropertyRef Name="Announcement Type ID" />
@@ -291,7 +291,7 @@
           <Property Name="Member ID" Type="int" />
           <Property Name="Favorite ID" Type="int" Nullable="false" />
           <Property Name="Product ID" Type="int" />
-          <Property Name="Creation Date" Type="int" />
+          <Property Name="Creation Date" Type="datetime" />
         </EntityType>
         <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 '貓抓抓.dbo.Shop.Favorite-Product Table' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
@@ -732,18 +732,6 @@
         <!--產生期間發現錯誤:
 錯誤 6004: 資料表 '貓抓抓.dbo.Game.Pet' 被某個關聯性參考，但是找不到。
         <Association Name="FK_Game_寵物_Game_商品總表" />-->
-        <Association Name="FK_Orders_Details_Products">
-          <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="0..1" />
-          <End Role="Shop_Order Detail Table" Type="Self.Shop_Order Detail Table" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Shop_Product Total">
-              <PropertyRef Name="Product ID" />
-            </Principal>
-            <Dependent Role="Shop_Order Detail Table">
-              <PropertyRef Name="Product ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Products_Image_Products">
           <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="0..1" />
           <End Role="Shop_Product Image Table" Type="Self.Shop_Product Image Table" Multiplicity="*" />
@@ -777,6 +765,30 @@
             </Principal>
             <Dependent Role="Shop_Product Total">
               <PropertyRef Name="Product Category ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_Order Detail Table_Shop_Order Total Table">
+          <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="0..1" />
+          <End Role="Shop_Order Detail Table" Type="Self.Shop_Order Detail Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Order Total Table">
+              <PropertyRef Name="Order ID" />
+            </Principal>
+            <Dependent Role="Shop_Order Detail Table">
+              <PropertyRef Name="Order ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_Order Detail Table_Shop_Product Total">
+          <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="0..1" />
+          <End Role="Shop_Order Detail Table" Type="Self.Shop_Order Detail Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Product Total">
+              <PropertyRef Name="Product ID" />
+            </Principal>
+            <Dependent Role="Shop_Order Detail Table">
+              <PropertyRef Name="Product ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1032,7 +1044,38 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ProjectsModelEStoreContainer">
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="project123ModelStoreContainer">
           <EntitySet Name="Announcement Type Data" EntityType="Self.Announcement Type Data" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Game_1on1MessageData" EntityType="Self.Game_1on1MessageData" Schema="dbo" Table="Game.1on1MessageData" store:Type="Tables" />
           <EntitySet Name="Game_Achievement List" EntityType="Self.Game_Achievement List" Schema="dbo" Table="Game.Achievement List" store:Type="Tables" />
@@ -1189,10 +1232,6 @@
             <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
             <End Role="Game_Coin Exchange Record" EntitySet="Game_Coin Exchange Record" />
           </AssociationSet>
-          <AssociationSet Name="FK_Orders_Details_Products" Association="Self.FK_Orders_Details_Products">
-            <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
-            <End Role="Shop_Order Detail Table" EntitySet="Shop_Order Detail Table" />
-          </AssociationSet>
           <AssociationSet Name="FK_Products_Image_Products" Association="Self.FK_Products_Image_Products">
             <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
             <End Role="Shop_Product Image Table" EntitySet="Shop_Product Image Table" />
@@ -1204,6 +1243,14 @@
           <AssociationSet Name="FK_Products_Products_Categories" Association="Self.FK_Products_Products_Categories">
             <End Role="Shop_Product Category" EntitySet="Shop_Product Category" />
             <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_Order Detail Table_Shop_Order Total Table" Association="Self.FK_Shop_Order Detail Table_Shop_Order Total Table">
+            <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+            <End Role="Shop_Order Detail Table" EntitySet="Shop_Order Detail Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_Order Detail Table_Shop_Product Total" Association="Self.FK_Shop_Order Detail Table_Shop_Product Total">
+            <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+            <End Role="Shop_Order Detail Table" EntitySet="Shop_Order Detail Table" />
           </AssociationSet>
           <AssociationSet Name="FK_Shop_Order Total Table_Shop_Common Address Data" Association="Self.FK_Shop_Order Total Table_Shop_Common Address Data">
             <End Role="Shop_Common Address Data" EntitySet="Shop_Common Address Data" />
@@ -1294,7 +1341,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ProjectsModelE" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="project123Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Announcement_Type_datum">
           <Key>
             <PropertyRef Name="Announcement_Type_ID" />
@@ -1575,7 +1622,7 @@
           <Property Name="Member_ID" Type="Int32" />
           <Property Name="Favorite_ID" Type="Int32" Nullable="false" />
           <Property Name="Product_ID" Type="Int32" />
-          <Property Name="Creation_Date" Type="Int32" />
+          <Property Name="Creation_Date" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Shop_Product_Total" Relationship="Self.FK_Shop_我的最愛資料表_Shop_商品總表" FromRole="Shop_Favorite_Data_Table" ToRole="Shop_Product_Total" />
           <NavigationProperty Name="Shop_Member_Info" Relationship="Self.FK_Shop_我的最愛資料表_Shop_會員資訊1" FromRole="Shop_Favorite_Data_Table" ToRole="Shop_Member_Info" />
           <NavigationProperty Name="Shop_Product_Total1" Relationship="Self.Shop_Favorite_Product_Table" FromRole="Shop_Favorite_Data_Table" ToRole="Shop_Product_Total" />
@@ -1663,7 +1710,8 @@
           <Property Name="Product_ID" Type="Int32" />
           <Property Name="Product_Quantity" Type="Int32" />
           <Property Name="Order_Detail_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Shop_Product_Total" Relationship="Self.FK_Orders_Details_Products" FromRole="Shop_Order_Detail_Table" ToRole="Shop_Product_Total" />
+          <NavigationProperty Name="Shop_Order_Total_Table" Relationship="Self.FK_Shop_Order_Detail_Table_Shop_Order_Total_Table" FromRole="Shop_Order_Detail_Table" ToRole="Shop_Order_Total_Table" />
+          <NavigationProperty Name="Shop_Product_Total" Relationship="Self.FK_Shop_Order_Detail_Table_Shop_Product_Total" FromRole="Shop_Order_Detail_Table" ToRole="Shop_Product_Total" />
         </EntityType>
         <EntityType Name="Shop_Order_Status_Data">
           <Key>
@@ -1690,6 +1738,7 @@
           <Property Name="Coupon_ID" Type="Int32" />
           <NavigationProperty Name="Shop_Common_Address_Data" Relationship="Self.FK_Shop_Order_Total_Table_Shop_Common_Address_Data" FromRole="Shop_Order_Total_Table" ToRole="Shop_Common_Address_Data" />
           <NavigationProperty Name="Shop_Member_Info" Relationship="Self.FK_Shop_訂單總表_Shop_會員資訊" FromRole="Shop_Order_Total_Table" ToRole="Shop_Member_Info" />
+          <NavigationProperty Name="Shop_Order_Detail_Table" Relationship="Self.FK_Shop_Order_Detail_Table_Shop_Order_Total_Table" FromRole="Shop_Order_Total_Table" ToRole="Shop_Order_Detail_Table" />
           <NavigationProperty Name="Shop_Order_Status_Data" Relationship="Self.FK_Shop_訂單總表_Shop_訂單狀態資料表" FromRole="Shop_Order_Total_Table" ToRole="Shop_Order_Status_Data" />
           <NavigationProperty Name="Shop_Payment_Method_Data" Relationship="Self.FK_Shop_訂單總表_Shop_付款方式資料表" FromRole="Shop_Order_Total_Table" ToRole="Shop_Payment_Method_Data" />
         </EntityType>
@@ -1757,7 +1806,7 @@
           <Property Name="Remaining_Quantity" Type="Int32" />
           <Property Name="Supplier_ID" Type="Int32" />
           <NavigationProperty Name="Shop_Favorite_Data_Table" Relationship="Self.FK_Shop_我的最愛資料表_Shop_商品總表" FromRole="Shop_Product_Total" ToRole="Shop_Favorite_Data_Table" />
-          <NavigationProperty Name="Shop_Order_Detail_Table" Relationship="Self.FK_Orders_Details_Products" FromRole="Shop_Product_Total" ToRole="Shop_Order_Detail_Table" />
+          <NavigationProperty Name="Shop_Order_Detail_Table" Relationship="Self.FK_Shop_Order_Detail_Table_Shop_Product_Total" FromRole="Shop_Product_Total" ToRole="Shop_Order_Detail_Table" />
           <NavigationProperty Name="Shop_Product_Category" Relationship="Self.FK_Products_Products_Categories" FromRole="Shop_Product_Total" ToRole="Shop_Product_Category" />
           <NavigationProperty Name="Shop_Product_Image_Table" Relationship="Self.FK_Products_Image_Products" FromRole="Shop_Product_Total" ToRole="Shop_Product_Image_Table" />
           <NavigationProperty Name="Shop_Product_Review_Table" Relationship="Self.FK_Products_Reviews_Products" FromRole="Shop_Product_Total" ToRole="Shop_Product_Review_Table" />
@@ -2217,7 +2266,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Orders_Details_Products">
+        <Association Name="FK_Shop_Order_Detail_Table_Shop_Order_Total_Table">
+          <End Role="Shop_Order_Total_Table" Type="Self.Shop_Order_Total_Table" Multiplicity="0..1" />
+          <End Role="Shop_Order_Detail_Table" Type="Self.Shop_Order_Detail_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Order_Total_Table">
+              <PropertyRef Name="Order_ID" />
+            </Principal>
+            <Dependent Role="Shop_Order_Detail_Table">
+              <PropertyRef Name="Order_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_Order_Detail_Table_Shop_Product_Total">
           <End Role="Shop_Product_Total" Type="Self.Shop_Product_Total" Multiplicity="0..1" />
           <End Role="Shop_Order_Detail_Table" Type="Self.Shop_Order_Detail_Table" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2333,7 +2394,7 @@
           <End Role="Shop_Favorite_Data_Table" Type="Self.Shop_Favorite_Data_Table" Multiplicity="*" />
           <End Role="Shop_Product_Total" Type="Self.Shop_Product_Total" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="ProjectsModel" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="project123Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Announcement_Type_Data" EntityType="Self.Announcement_Type_datum" />
           <EntitySet Name="Game_1on1MessageData" EntityType="Self.Game_1on1MessageData" />
           <EntitySet Name="Game_Achievement_List" EntityType="Self.Game_Achievement_List" />
@@ -2508,7 +2569,11 @@
             <End Role="Shop_Member_Info" EntitySet="Shop_Member_Info" />
             <End Role="Shop_Product_Review_Table" EntitySet="Shop_Product_Review_Table" />
           </AssociationSet>
-          <AssociationSet Name="FK_Orders_Details_Products" Association="Self.FK_Orders_Details_Products">
+          <AssociationSet Name="FK_Shop_Order_Detail_Table_Shop_Order_Total_Table" Association="Self.FK_Shop_Order_Detail_Table_Shop_Order_Total_Table">
+            <End Role="Shop_Order_Total_Table" EntitySet="Shop_Order_Total_Table" />
+            <End Role="Shop_Order_Detail_Table" EntitySet="Shop_Order_Detail_Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_Order_Detail_Table_Shop_Product_Total" Association="Self.FK_Shop_Order_Detail_Table_Shop_Product_Total">
             <End Role="Shop_Product_Total" EntitySet="Shop_Product_Total" />
             <End Role="Shop_Order_Detail_Table" EntitySet="Shop_Order_Detail_Table" />
           </AssociationSet>
@@ -2552,15 +2617,56 @@
             <End Role="Shop_Favorite_Data_Table" EntitySet="Shop_Favorite_Data_Table" />
             <End Role="Shop_Product_Total" EntitySet="Shop_Product_Total" />
           </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(project123Model.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(project123Model.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ProjectsModelEStoreContainer" CdmEntityContainer="ProjectsModel">
+        <EntityContainerMapping StorageEntityContainer="project123ModelStoreContainer" CdmEntityContainer="project123Entities">
           <EntitySetMapping Name="Announcement_Type_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Announcement_Type_datum">
+            <EntityTypeMapping TypeName="project123Model.Announcement_Type_datum">
               <MappingFragment StoreEntitySet="Announcement Type Data">
                 <ScalarProperty Name="Announcement_Type_ID" ColumnName="Announcement Type ID" />
                 <ScalarProperty Name="Announcement_Type_Name" ColumnName="Announcement Type Name" />
@@ -2568,7 +2674,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_1on1MessageData">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_1on1MessageData">
+            <EntityTypeMapping TypeName="project123Model.Game_1on1MessageData">
               <MappingFragment StoreEntitySet="Game_1on1MessageData">
                 <ScalarProperty Name="MessageID" ColumnName="MessageID" />
                 <ScalarProperty Name="DialogueID" ColumnName="DialogueID" />
@@ -2581,7 +2687,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Achievement_List">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Achievement_List">
+            <EntityTypeMapping TypeName="project123Model.Game_Achievement_List">
               <MappingFragment StoreEntitySet="Game_Achievement List">
                 <ScalarProperty Name="Achievement_ID" ColumnName="Achievement ID" />
                 <ScalarProperty Name="Achievement_Name" ColumnName="Achievement Name" />
@@ -2591,7 +2697,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Achievement_Reward_List">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Achievement_Reward_List">
+            <EntityTypeMapping TypeName="project123Model.Game_Achievement_Reward_List">
               <MappingFragment StoreEntitySet="Game_Achievement Reward List">
                 <ScalarProperty Name="Achievement_Reward_ID" ColumnName="Achievement Reward ID" />
                 <ScalarProperty Name="Achievement_Reward_Name" ColumnName="Achievement Reward Name" />
@@ -2599,7 +2705,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Coin_Exchange_Record">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Coin_Exchange_Record">
+            <EntityTypeMapping TypeName="project123Model.Game_Coin_Exchange_Record">
               <MappingFragment StoreEntitySet="Game_Coin Exchange Record">
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Exchange_Time" ColumnName="Exchange Time" />
@@ -2609,7 +2715,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Friend_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Friend_Data">
+            <EntityTypeMapping TypeName="project123Model.Game_Friend_Data">
               <MappingFragment StoreEntitySet="Game_Friend Data">
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Friend_ID" ColumnName="Friend ID" />
@@ -2618,7 +2724,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Friend_List_Chat_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Friend_List_Chat_Data">
+            <EntityTypeMapping TypeName="project123Model.Game_Friend_List_Chat_Data">
               <MappingFragment StoreEntitySet="Game_Friend List Chat Data">
                 <ScalarProperty Name="Friend_ID" ColumnName="Friend ID" />
                 <ScalarProperty Name="Chat_Room_ID" ColumnName="Chat Room ID" />
@@ -2626,7 +2732,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Global_Chat_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Global_Chat_Data">
+            <EntityTypeMapping TypeName="project123Model.Game_Global_Chat_Data">
               <MappingFragment StoreEntitySet="Game_Global Chat Data">
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Message_ID" ColumnName="Message ID" />
@@ -2637,7 +2743,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Item_Purchase_Record">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Item_Purchase_Record">
+            <EntityTypeMapping TypeName="project123Model.Game_Item_Purchase_Record">
               <MappingFragment StoreEntitySet="Game_Item Purchase Record">
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
@@ -2649,7 +2755,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Member_B_Message_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Member_B_Message_Data">
+            <EntityTypeMapping TypeName="project123Model.Game_Member_B_Message_Data">
               <MappingFragment StoreEntitySet="Game_Member B Message Data">
                 <ScalarProperty Name="Member__B__ID" ColumnName="Member (B) ID" />
                 <ScalarProperty Name="C_訊息_發送者_內容" ColumnName="[訊息(發送者)內容" />
@@ -2658,7 +2764,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Member_Task">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Member_Task">
+            <EntityTypeMapping TypeName="project123Model.Game_Member_Task">
               <MappingFragment StoreEntitySet="Game_Member Task">
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Task_ID" ColumnName="Task ID" />
@@ -2667,7 +2773,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Pet_Total">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Pet_Total">
+            <EntityTypeMapping TypeName="project123Model.Game_Pet_Total">
               <MappingFragment StoreEntitySet="Game_Pet Total">
                 <ScalarProperty Name="Character_Name" ColumnName="Character Name" />
                 <ScalarProperty Name="Pet_Name" ColumnName="Pet Name" />
@@ -2677,7 +2783,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Product_Category">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Product_Category">
+            <EntityTypeMapping TypeName="project123Model.Game_Product_Category">
               <MappingFragment StoreEntitySet="Game_Product Category">
                 <ScalarProperty Name="Product_Category_ID" ColumnName="Product Category ID" />
                 <ScalarProperty Name="Category_Name" ColumnName="Category Name" />
@@ -2685,7 +2791,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Product_Total">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Product_Total">
+            <EntityTypeMapping TypeName="project123Model.Game_Product_Total">
               <MappingFragment StoreEntitySet="Game_Product Total">
                 <ScalarProperty Name="Product_Name" ColumnName="Product Name" />
                 <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
@@ -2700,7 +2806,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Rank_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Rank_Data">
+            <EntityTypeMapping TypeName="project123Model.Game_Rank_Data">
               <MappingFragment StoreEntitySet="Game_Rank Data">
                 <ScalarProperty Name="Rank_ID" ColumnName="Rank ID" />
                 <ScalarProperty Name="Rank_Name" ColumnName="Rank Name" />
@@ -2708,7 +2814,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Shop_Blog_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Shop_Blog_Data">
+            <EntityTypeMapping TypeName="project123Model.Game_Shop_Blog_Data">
               <MappingFragment StoreEntitySet="Game_Shop Blog Data">
                 <ScalarProperty Name="Blog_Article_ID" ColumnName="Blog Article ID" />
                 <ScalarProperty Name="Article_Title" ColumnName="Article Title" />
@@ -2723,7 +2829,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_ShopAnnouncement">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_ShopAnnouncement">
+            <EntityTypeMapping TypeName="project123Model.Game_ShopAnnouncement">
               <MappingFragment StoreEntitySet="Game_ShopAnnouncement">
                 <ScalarProperty Name="AnnouncementID" ColumnName="AnnouncementID" />
                 <ScalarProperty Name="AnnouncementTitle" ColumnName="AnnouncementTitle" />
@@ -2743,7 +2849,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_shopArticleType">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_shopArticleType">
+            <EntityTypeMapping TypeName="project123Model.Game_shopArticleType">
               <MappingFragment StoreEntitySet="Game_shopArticleType">
                 <ScalarProperty Name="ArticleTypeID" ColumnName="ArticleTypeID" />
                 <ScalarProperty Name="ArticleTypeName" ColumnName="ArticleTypeName" />
@@ -2751,7 +2857,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Task_Condition_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Task_Condition_Data">
+            <EntityTypeMapping TypeName="project123Model.Game_Task_Condition_Data">
               <MappingFragment StoreEntitySet="Game_Task Condition Data">
                 <ScalarProperty Name="Task_Condition_ID" ColumnName="Task Condition ID" />
                 <ScalarProperty Name="Condition_Name" ColumnName="Condition Name" />
@@ -2759,7 +2865,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Task_List">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Task_List">
+            <EntityTypeMapping TypeName="project123Model.Game_Task_List">
               <MappingFragment StoreEntitySet="Game_Task List">
                 <ScalarProperty Name="Task_ID" ColumnName="Task ID" />
                 <ScalarProperty Name="Task_Name" ColumnName="Task Name" />
@@ -2770,7 +2876,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Message_Type_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Message_Type_datum">
+            <EntityTypeMapping TypeName="project123Model.Message_Type_datum">
               <MappingFragment StoreEntitySet="Message Type Data">
                 <ScalarProperty Name="Message_Type_ID" ColumnName="Message Type ID" />
                 <ScalarProperty Name="Message_Type" ColumnName="Message Type" />
@@ -2778,7 +2884,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Appeal_Category_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Appeal_Category_Data">
+            <EntityTypeMapping TypeName="project123Model.Shop_Appeal_Category_Data">
               <MappingFragment StoreEntitySet="Shop_Appeal Category Data">
                 <ScalarProperty Name="Appeal_Category_ID" ColumnName="Appeal Category ID" />
                 <ScalarProperty Name="Category_Name" ColumnName="Category Name" />
@@ -2786,7 +2892,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Case_Data_Table">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Case_Data_Table">
+            <EntityTypeMapping TypeName="project123Model.Shop_Case_Data_Table">
               <MappingFragment StoreEntitySet="Shop_Case Data Table">
                 <ScalarProperty Name="Case_ID" ColumnName="Case ID" />
                 <ScalarProperty Name="Message_ID" ColumnName="Message ID" />
@@ -2794,7 +2900,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Common_Address_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Common_Address_Data">
+            <EntityTypeMapping TypeName="project123Model.Shop_Common_Address_Data">
               <MappingFragment StoreEntitySet="Shop_Common Address Data">
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Address_ID" ColumnName="Address ID" />
@@ -2805,7 +2911,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Complaint_Status_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Complaint_Status_Data">
+            <EntityTypeMapping TypeName="project123Model.Shop_Complaint_Status_Data">
               <MappingFragment StoreEntitySet="Shop_Complaint Status Data">
                 <ScalarProperty Name="Complaint_Status_ID" ColumnName="Complaint Status ID" />
                 <ScalarProperty Name="Complaint_Status_Name" ColumnName="Complaint Status Name" />
@@ -2813,7 +2919,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Coupon_Total">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Coupon_Total">
+            <EntityTypeMapping TypeName="project123Model.Shop_Coupon_Total">
               <MappingFragment StoreEntitySet="Shop_Coupon Total">
                 <ScalarProperty Name="Coupon_ID" ColumnName="Coupon ID" />
                 <ScalarProperty Name="Coupon_Name" ColumnName="Coupon Name" />
@@ -2825,7 +2931,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Favorite_Data_Table">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Favorite_Data_Table">
+            <EntityTypeMapping TypeName="project123Model.Shop_Favorite_Data_Table">
               <MappingFragment StoreEntitySet="Shop_Favorite Data Table">
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Favorite_ID" ColumnName="Favorite ID" />
@@ -2835,7 +2941,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Game_Admin_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Game_Admin_Data">
+            <EntityTypeMapping TypeName="project123Model.Shop_Game_Admin_Data">
               <MappingFragment StoreEntitySet="Shop_Game Admin Data">
                 <ScalarProperty Name="Admin_ID" ColumnName="Admin ID" />
                 <ScalarProperty Name="Admin_Username" ColumnName="Admin Username" />
@@ -2844,7 +2950,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Member_Complaint_Case">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Member_Complaint_Case">
+            <EntityTypeMapping TypeName="project123Model.Shop_Member_Complaint_Case">
               <MappingFragment StoreEntitySet="Shop_Member Complaint Case">
                 <ScalarProperty Name="Complaint_Case_ID" ColumnName="Complaint Case ID" />
                 <ScalarProperty Name="Complaint_Title" ColumnName="Complaint Title" />
@@ -2857,7 +2963,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Member_Coupon_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Member_Coupon_Data">
+            <EntityTypeMapping TypeName="project123Model.Shop_Member_Coupon_Data">
               <MappingFragment StoreEntitySet="Shop_Member Coupon Data">
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Coupon_ID" ColumnName="Coupon ID" />
@@ -2867,7 +2973,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Member_Info">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Member_Info">
+            <EntityTypeMapping TypeName="project123Model.Shop_Member_Info">
               <MappingFragment StoreEntitySet="Shop_Member Info">
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Member_Account" ColumnName="Member Account" />
@@ -2890,7 +2996,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Order_Detail_Table">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Order_Detail_Table">
+            <EntityTypeMapping TypeName="project123Model.Shop_Order_Detail_Table">
               <MappingFragment StoreEntitySet="Shop_Order Detail Table">
                 <ScalarProperty Name="Order_ID" ColumnName="Order ID" />
                 <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
@@ -2900,7 +3006,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Order_Status_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Order_Status_Data">
+            <EntityTypeMapping TypeName="project123Model.Shop_Order_Status_Data">
               <MappingFragment StoreEntitySet="Shop_Order Status Data">
                 <ScalarProperty Name="Order_Status_ID" ColumnName="Order Status ID" />
                 <ScalarProperty Name="Status_Name" ColumnName="Status Name" />
@@ -2908,7 +3014,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Order_Total_Table">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Order_Total_Table">
+            <EntityTypeMapping TypeName="project123Model.Shop_Order_Total_Table">
               <MappingFragment StoreEntitySet="Shop_Order Total Table">
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Order_ID" ColumnName="Order ID" />
@@ -2925,7 +3031,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Payment_Method_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Payment_Method_Data">
+            <EntityTypeMapping TypeName="project123Model.Shop_Payment_Method_Data">
               <MappingFragment StoreEntitySet="Shop_Payment Method Data">
                 <ScalarProperty Name="Payment_Method_ID" ColumnName="Payment Method ID" />
                 <ScalarProperty Name="Payment_Method_Name" ColumnName="Payment Method Name" />
@@ -2933,7 +3039,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Product_Category">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Product_Category">
+            <EntityTypeMapping TypeName="project123Model.Shop_Product_Category">
               <MappingFragment StoreEntitySet="Shop_Product Category">
                 <ScalarProperty Name="Product_Category_ID" ColumnName="Product Category ID" />
                 <ScalarProperty Name="Category_Name" ColumnName="Category Name" />
@@ -2942,7 +3048,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Product_Image_Table">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Product_Image_Table">
+            <EntityTypeMapping TypeName="project123Model.Shop_Product_Image_Table">
               <MappingFragment StoreEntitySet="Shop_Product Image Table">
                 <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
                 <ScalarProperty Name="Product_Photo" ColumnName="Product Photo" />
@@ -2951,7 +3057,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Product_Review_Table">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Product_Review_Table">
+            <EntityTypeMapping TypeName="project123Model.Shop_Product_Review_Table">
               <MappingFragment StoreEntitySet="Shop_Product Review Table">
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
@@ -2962,7 +3068,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Product_Supplier">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Product_Supplier">
+            <EntityTypeMapping TypeName="project123Model.Shop_Product_Supplier">
               <MappingFragment StoreEntitySet="Shop_Product Supplier">
                 <ScalarProperty Name="Supplier_ID" ColumnName="Supplier ID" />
                 <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
@@ -2972,7 +3078,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Product_Total">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Product_Total">
+            <EntityTypeMapping TypeName="project123Model.Shop_Product_Total">
               <MappingFragment StoreEntitySet="Shop_Product Total">
                 <ScalarProperty Name="Product_Name" ColumnName="Product Name" />
                 <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
@@ -2989,7 +3095,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Reply_Data">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Reply_Data">
+            <EntityTypeMapping TypeName="project123Model.Shop_Reply_Data">
               <MappingFragment StoreEntitySet="Shop_Reply Data">
                 <ScalarProperty Name="Reply_ID" ColumnName="Reply ID" />
                 <ScalarProperty Name="Complaint_Case_ID" ColumnName="Complaint Case ID" />
@@ -3000,7 +3106,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Return_Reason_Data_Table">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Return_Reason_Data_Table">
+            <EntityTypeMapping TypeName="project123Model.Shop_Return_Reason_Data_Table">
               <MappingFragment StoreEntitySet="Shop_Return Reason Data Table">
                 <ScalarProperty Name="Return_Reason_ID" ColumnName="Return Reason ID" />
                 <ScalarProperty Name="Return_Reason" ColumnName="Return Reason" />
@@ -3008,7 +3114,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Return_Status_Data_Table">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Return_Status_Data_Table">
+            <EntityTypeMapping TypeName="project123Model.Shop_Return_Status_Data_Table">
               <MappingFragment StoreEntitySet="Shop_Return Status Data Table">
                 <ScalarProperty Name="Processing_Status_ID" ColumnName="Processing Status ID" />
                 <ScalarProperty Name="Status_Name" ColumnName="Status Name" />
@@ -3016,7 +3122,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="ProjectsModelE.sysdiagram">
+            <EntityTypeMapping TypeName="project123Model.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -3027,7 +3133,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Game_Character_Info">
-            <EntityTypeMapping TypeName="ProjectsModelE.Game_Character_Info">
+            <EntityTypeMapping TypeName="project123Model.Game_Character_Info">
               <MappingFragment StoreEntitySet="Game_Character Info">
                 <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
                 <ScalarProperty Name="Character_Name" ColumnName="Character Name" />
@@ -3041,7 +3147,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop_Return_Data_Table">
-            <EntityTypeMapping TypeName="ProjectsModelE.Shop_Return_Data_Table">
+            <EntityTypeMapping TypeName="project123Model.Shop_Return_Data_Table">
               <MappingFragment StoreEntitySet="Shop_Return Data Table">
                 <ScalarProperty Name="Order_ID" ColumnName="Order ID" />
                 <ScalarProperty Name="Return_Reason_ID" ColumnName="Return Reason ID" />
@@ -3050,7 +3156,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="Game_Message_Data" TypeName="ProjectsModelE.Game_Message_Data" StoreEntitySet="Game_Message Data">
+          <AssociationSetMapping Name="Game_Message_Data" TypeName="project123Model.Game_Message_Data" StoreEntitySet="Game_Message Data">
             <EndProperty Name="Game_Friend_List_Chat_Data">
               <ScalarProperty Name="Chat_Room_ID" ColumnName="Chat Room ID" />
             </EndProperty>
@@ -3058,7 +3164,7 @@
               <ScalarProperty Name="Member__B__ID" ColumnName="Member (B) ID" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="Shop_Favorite_Product_Table" TypeName="ProjectsModelE.Shop_Favorite_Product_Table" StoreEntitySet="Shop_Favorite-Product Table">
+          <AssociationSetMapping Name="Shop_Favorite_Product_Table" TypeName="project123Model.Shop_Favorite_Product_Table" StoreEntitySet="Shop_Favorite-Product Table">
             <EndProperty Name="Shop_Favorite_Data_Table">
               <ScalarProperty Name="Favorite_ID" ColumnName="Favorite ID" />
             </EndProperty>
@@ -3066,6 +3172,30 @@
               <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
             </EndProperty>
           </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="project123Model.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="project123Model.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="project123Model.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="project123Model.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="project123Model.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="project123Model.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="project123Model.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="project123Model.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="project123Model.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -22,7 +22,7 @@ namespace CatCaha
 
             now_Member_ID = DataProperty;
         }
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
         //確認送出
         private void button1_Click(object sender, EventArgs e)
         {

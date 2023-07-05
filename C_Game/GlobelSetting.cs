@@ -123,14 +123,14 @@ namespace FormResize
 
         public void _REFRESHCCoin(Label label)
         {
-            ProjectsModel db = new ProjectsModel();
+            project123Entities db = new project123Entities();
             var qCoinRefresh = db.Shop_Member_Info.Where(n => n.Member_ID == LoggedInUser.ID).Select(n => n.Cat_Coin_Quantity);
             label.Text = qCoinRefresh.FirstOrDefault().ToString();
         }
 
         public void _REFRESHRuby(Label label)
         {
-            ProjectsModel db = new ProjectsModel();
+            project123Entities db = new project123Entities();
             var qCoinRefresh = db.Shop_Member_Info.Where(n => n.Member_ID == LoggedInUser.ID).Select(n => n.Loyalty_Points);
             label.Text = qCoinRefresh.FirstOrDefault().ToString();
         }
@@ -138,7 +138,7 @@ namespace FormResize
 
         public void _ConsumeCCoin(int i) //扭蛋消耗貓幣
         {
-            ProjectsModel db = new ProjectsModel();
+            project123Entities db = new project123Entities();
             var consumeCCoin = db.Shop_Member_Info.FirstOrDefault(n => n.Member_ID == LoggedInUser.ID);
             if (consumeCCoin != null)
             {
@@ -148,7 +148,7 @@ namespace FormResize
         }
         public void _ConsumeRuby(int i) //扭蛋消耗紅利
         {
-            ProjectsModel db = new ProjectsModel();
+            project123Entities db = new project123Entities();
             var consumeRuby = db.Shop_Member_Info.FirstOrDefault(n => n.Member_ID == LoggedInUser.ID);
             if (consumeRuby != null)
             {
@@ -159,13 +159,13 @@ namespace FormResize
 
         public int CCoinCheckBeforeDraw() 
         {
-            ProjectsModel db = new ProjectsModel();
+            project123Entities db = new project123Entities();
             var qCatCoin = from n in db.Shop_Member_Info where n.Member_ID == LoggedInUser.ID select n.Cat_Coin_Quantity;
             return (int)qCatCoin.FirstOrDefault();
         }
         public int RubyCheckBeforeDraw()
         {
-            ProjectsModel db = new ProjectsModel();
+            project123Entities db = new project123Entities();
             var qRuby = from n in db.Shop_Member_Info where n.Member_ID == LoggedInUser.ID select n.Loyalty_Points;
             return (int)qRuby.FirstOrDefault();
         }

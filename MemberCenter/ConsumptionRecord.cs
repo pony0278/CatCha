@@ -126,7 +126,7 @@ namespace LinqLabs
         }
 
         int now_Member_ID;
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
         //放在類別中供各地方可使用全域，先讓dbContext取得資料
 
         //傳遞資料

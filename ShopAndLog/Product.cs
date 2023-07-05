@@ -13,7 +13,7 @@ namespace CatChaForms
 {
     public partial class Product : Form
     {
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
 
         private int productId;
         public Product(int getProductId) //把Product ID傳過來

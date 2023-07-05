@@ -67,7 +67,7 @@ namespace FormResize
             q.updateCCoin();
 
 
-            ProjectsModel dbContext = new ProjectsModel();
+            project123Entities dbContext = new project123Entities();
             var qcheckInDayCount = dbContext.Shop_Member_Info.FirstOrDefault(n => n.Member_ID == LoggedInUser.ID);
             if (qcheckInDayCount != null)
             {
@@ -89,7 +89,7 @@ namespace FormResize
             {
                 dayUnChecked.Add(b);
             }
-            ProjectsModel dbContext = new ProjectsModel();
+            project123Entities dbContext = new project123Entities();
             var qcheckin = dbContext.Shop_Member_Info.FirstOrDefault(n => n.Member_ID == LoggedInUser.ID);
             for (int i = 1; i < qcheckin.CheckinDayCount - 1; i++)
             /*for (int i = 1; i <= Settings.Default.dailyCheckIn; i++)*///再自動還原上次的狀態

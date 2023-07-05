@@ -22,7 +22,7 @@ namespace CatChaForms
             InitializeComponent();
         }
 
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
         private void Shopping_Load(object sender, EventArgs e)
         {
             splitContainer1.BackColor = Color.FromArgb(228, 187, 151);

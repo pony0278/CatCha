@@ -14,6 +14,12 @@ namespace CatCaha.NewFolder1
     
     public partial class Shop_Order_Total_Table
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Shop_Order_Total_Table()
+        {
+            this.Shop_Order_Detail_Table = new HashSet<Shop_Order_Detail_Table>();
+        }
+    
         public Nullable<int> Member_ID { get; set; }
         public int Order_ID { get; set; }
         public Nullable<System.DateTime> Order_Creation_Date { get; set; }
@@ -28,6 +34,8 @@ namespace CatCaha.NewFolder1
     
         public virtual Shop_Common_Address_Data Shop_Common_Address_Data { get; set; }
         public virtual Shop_Member_Info Shop_Member_Info { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shop_Order_Detail_Table> Shop_Order_Detail_Table { get; set; }
         public virtual Shop_Order_Status_Data Shop_Order_Status_Data { get; set; }
         public virtual Shop_Payment_Method_Data Shop_Payment_Method_Data { get; set; }
     }

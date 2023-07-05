@@ -54,7 +54,7 @@
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip2.Size = new System.Drawing.Size(1230, 39);
+            this.toolStrip2.Size = new System.Drawing.Size(922, 39);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -65,7 +65,7 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Margin = new System.Windows.Forms.Padding(10, 1, 40, 2);
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(128, 36);
+            this.toolStripButton1.Size = new System.Drawing.Size(110, 36);
             this.toolStripButton1.Text = "商城首頁";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -76,8 +76,9 @@
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Margin = new System.Windows.Forms.Padding(0, 1, 40, 2);
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(128, 36);
+            this.toolStripButton2.Size = new System.Drawing.Size(110, 36);
             this.toolStripButton2.Text = "遊戲首頁";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -86,7 +87,7 @@
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Margin = new System.Windows.Forms.Padding(0, 1, 40, 2);
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(108, 36);
+            this.toolStripButton3.Size = new System.Drawing.Size(94, 36);
             this.toolStripButton3.Text = "部落格";
             // 
             // toolStripButton4
@@ -97,7 +98,7 @@
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Margin = new System.Windows.Forms.Padding(10, 1, 40, 2);
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(128, 36);
+            this.toolStripButton4.Size = new System.Drawing.Size(110, 36);
             this.toolStripButton4.Text = "客服中心";
             // 
             // toolStripButton7
@@ -108,7 +109,7 @@
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Margin = new System.Windows.Forms.Padding(0, 1, 40, 2);
             this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(128, 36);
+            this.toolStripButton7.Size = new System.Drawing.Size(110, 36);
             this.toolStripButton7.Text = "會員中心";
             this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
@@ -120,7 +121,7 @@
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Margin = new System.Windows.Forms.Padding(0, 1, 40, 2);
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(108, 36);
+            this.toolStripButton6.Size = new System.Drawing.Size(94, 36);
             this.toolStripButton6.Text = "購物車";
             // 
             // toolStripButton5
@@ -131,17 +132,16 @@
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Margin = new System.Windows.Forms.Padding(0, 1, 40, 2);
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(128, 36);
+            this.toolStripButton5.Size = new System.Drawing.Size(110, 36);
             this.toolStripButton5.Text = "收藏清單";
             // 
             // UserToolStrip
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.toolStrip2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserToolStrip";
-            this.Size = new System.Drawing.Size(1230, 49);
+            this.Size = new System.Drawing.Size(922, 39);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);

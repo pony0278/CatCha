@@ -10,16 +10,13 @@
 namespace CatCaha.NewFolder1
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Shop_Order_Detail_Table
+    public partial class sp_helpdiagrams_Result
     {
-        public Nullable<int> Order_ID { get; set; }
-        public Nullable<int> Product_ID { get; set; }
-        public Nullable<int> Product_Quantity { get; set; }
-        public int Order_Detail_ID { get; set; }
-    
-        public virtual Shop_Order_Total_Table Shop_Order_Total_Table { get; set; }
-        public virtual Shop_Product_Total Shop_Product_Total { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace catcha
 {
     public partial class ProductControl : UserControl
     {
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
 
         private int productID;
         private Color defaultBackColor; // 原始的背景色

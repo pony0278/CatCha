@@ -16,7 +16,7 @@ namespace CatChaForms
 {
     public partial class Signin : Form
     {
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
         public Signin()
         {
             this.Activated += YourForm_Activated; //winform表單一開始執行時，不要focus在textbox上

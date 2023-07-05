@@ -32,7 +32,7 @@ namespace 抽卡
         int waterCount = 0;      // Number of Waters
         int coinCount = 0;       // Number of Coins
 
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
         Random random = new Random();
         string imagePath = "../../CatPicture/P_coupon.png";
         public class Item

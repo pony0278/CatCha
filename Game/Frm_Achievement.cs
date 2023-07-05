@@ -142,7 +142,7 @@ namespace FormResize
             crossDay.checkIn(this.btn_D14);
             //Properties.Settings.Default.dailyCheckIn = 0;
             //Properties.Settings.Default.Save();
-            ProjectsModel dbContext = new ProjectsModel();
+            project123Entities dbContext = new project123Entities();
             var qcheckInDayCount = dbContext.Shop_Member_Info.FirstOrDefault(n => n.Member_ID == LoggedInUser.ID);
             if (qcheckInDayCount != null)
             {
@@ -159,7 +159,7 @@ namespace FormResize
 
         private void refreshMain() 
         {
-            ProjectsModel db = new ProjectsModel();
+            project123Entities db = new project123Entities();
             var qCatCoin = db.Shop_Member_Info.Where(n =>  n.Member_ID == LoggedInUser.ID).Select(n => n.Cat_Coin_Quantity);
             mainForm.txt_CatCoin.Text = qCatCoin.FirstOrDefault().ToString();
         }

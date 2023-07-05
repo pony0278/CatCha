@@ -31,7 +31,7 @@ namespace 抽卡
         private bool isSwitchCatchaMOn = false;
         GlobelSetting g =  new GlobelSetting(); 
 
-        ProjectsModel dbContext = new ProjectsModel();
+        project123Entities dbContext = new project123Entities();
         private System.Timers.Timer Timer_CloseGif;
         private System.Timers.Timer Timer_CloseCatcha;
         string Pn;

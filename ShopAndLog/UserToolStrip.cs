@@ -1,4 +1,5 @@
 ﻿using CatChaForms;
+using FormResize;
 using LinqLabs;
 using System;
 using System.Collections.Generic;
@@ -47,6 +48,35 @@ namespace CatCha
             //Form tmp = this.FindForm();
             //tmp.Close();
             //tmp.Dispose();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+          
+            Frm_GameMain frm_GameMain = new Frm_GameMain();
+            C_Query q = new C_Query();
+            if (LoggedInUser.Username == null && LoggedInUser.ID == 0)
+            {
+                MessageBox.Show("請先登入");
+                Signin form = new Signin();
+                form.ShowDialog();
+            }
+            else
+            {
+                string GameName = LoggedInUser.Username;
+                int MemberID = LoggedInUser.ID;
+                GameName = MemberID.ToString();
+                //...........進入遊戲畫面
+                //MessageBox.Show("進入遊戲大廳");
+                frm_GameMain.Show();
+                //載入遊戲名稱
+                frm_GameMain.txt_ID.Text = q._GameName().ToString();
+                //載入貓幣金額
+                frm_GameMain.txt_CatCoin.Text = q._GameCatCoin();
+                //載入紅利金額
+                frm_GameMain.txt_RedStone.Text = q._GameRLPoint();
+            }
+
         }
     }
 }
