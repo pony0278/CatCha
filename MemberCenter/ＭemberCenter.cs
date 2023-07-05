@@ -73,6 +73,8 @@ namespace LinqLabs
                 //呼叫Member.cs的Logout方法
 
                 MessageBox.Show("登出成功");
+
+                this.Close();
             }
             else if (result == DialogResult.Cancel)
             {
