@@ -209,8 +209,8 @@ namespace CatChaEntities
                     int selectedCategoryID = Convert.ToInt32(dataGridViewProducts.CurrentRow.Cells[2].Value);
                     var q1 = this.dbContext.Shop_Product_Category.Where(c => c.Product_Category_ID == selectedCategoryID);
                     dataGridViewCategory.DataSource = q1.ToList();
-                    int selectedPictureID = Convert.ToInt32(dataGridViewProducts.CurrentRow.Cells[1].Value);
-                    var q2 = this.dbContext.Shop_Product_Image_Table.Where(pic =>pic.Product_Image_ID  == selectedPictureID);
+                    int selectedProductID = Convert.ToInt32(dataGridViewProducts.CurrentRow.Cells[1].Value);
+                    var q2 = this.dbContext.Shop_Product_Image_Table.Where(pic =>pic.Product_ID  == selectedProductID);
                     dataGridViewPicture.DataSource = q2.ToList();
                     SetImageSize();
                 }
