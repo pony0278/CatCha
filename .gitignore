@@ -361,3 +361,36 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Member.cs
+/packages.config
+/Program.cs
+/App.config
+/ShopAndLog/Product.cs
+/ShopAndLog/Product.designer.cs
+/ShopAndLog/Product.resx
+/ShopAndLog/Shopping.cs
+/ShopAndLog/Shopping.designer.cs
+/ShopAndLog/Shopping.resx
+/ShopAndLog/Signin.cs
+/ShopAndLog/Signin.designer.cs
+/ShopAndLog/Signin.resx
+/ShopAndLog/Signup.cs
+/ShopAndLog/Signup.designer.cs
+/ShopAndLog/Signup.resx
+/ShopAndLog/UserControl1.cs
+/ShopAndLog/UserControl1.designer.cs
+/ShopAndLog/UserControl1.resx
+/ShopAndLog/UserToolStrip.cs
+/ShopAndLog/UserToolStrip.designer.cs
+/ShopAndLog/UserToolStrip.resx
+/ShopAndLog/ChangePwd.cs
+/ShopAndLog/ChangePwd.designer.cs
+/ShopAndLog/ChangePwd.resx
+/ShopAndLog/ForgetPwd.cs
+/ShopAndLog/ForgetPwd.designer.cs
+/ShopAndLog/ForgetPwd.resx
+/Properties/AssemblyInfo.cs
+/Properties/Resources.Designer.cs
+/Properties/Resources.resx
+/Properties/Settings.Designer.cs
+/Properties/Settings.settings
