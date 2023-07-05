@@ -92,7 +92,7 @@ namespace catcha
                 // 查询条件
                 var existingOrder = dbContext.Shop_Order_Total_Table.FirstOrDefault(o => o.Member_ID == LoggedInUser.ID && o.Order_Status_ID == 1);
 
-                MessageBox.Show("Member ID = " + LoggedInUser.ID);
+                //MessageBox.Show("Member ID = " + LoggedInUser.ID);
 
                 //====================沒有符合條件的
                 if (existingOrder == null)
@@ -127,7 +127,7 @@ namespace catcha
                     
                     var getOrderID = dbContext.Shop_Order_Total_Table.FirstOrDefault(o => o.Member_ID == LoggedInUser.ID && o.Order_Status_ID == 1);
                     GetOrderID = getOrderID.Order_ID;
-                    MessageBox.Show("GetOrderID = " + GetOrderID);
+                    //MessageBox.Show("GetOrderID = " + GetOrderID);
 
                     // 查询条件
                     var existingDetail = dbContext.Shop_Order_Detail_Table.FirstOrDefault(o => o.Product_ID == getProductId && o.Order_ID == GetOrderID);
@@ -136,7 +136,7 @@ namespace catcha
                     if (existingDetail == null)
                     {
                         InsertToOrderDetail();
-                        MessageBox.Show("沒有符合條件的直接新增");
+                        MessageBox.Show("新增至購物車成功!");
                     }
                     //====================這裡針對Product Quantity+1
                     else
@@ -146,7 +146,7 @@ namespace catcha
 
                         // 保存更改到数据库
                         dbContext.SaveChanges();
-                        MessageBox.Show("這裡針對Product Quantity+1");
+                        MessageBox.Show("新增至購物車成功!");
                     }
                 }
             }
