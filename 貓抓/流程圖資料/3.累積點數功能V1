@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" modified="2023-06-09T15:03:47.567Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="yLMgxc_46NIVLQK4oRKC" version="21.3.7" type="google">
+  <diagram name="第 1 页" id="Zqvo1ujAFfrz3i5l5ESM">
+    <mxGraphModel grid="0" page="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="1654" background="#ffffff" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xGS4S_83_H0r_bAf-wXa-18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1030" y="600" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1211" y="1070" />
+              <mxPoint x="1211" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-148" value="會員累積點數功能" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="-719" y="-206" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-177" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;" edge="1" parent="1" source="oTBxhhhIzJSRDRXKg-fm-149" target="oTBxhhhIzJSRDRXKg-fm-176">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-149" value="查看累積點數" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="-382" y="327" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-151" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;" edge="1" parent="1" target="oTBxhhhIzJSRDRXKg-fm-149">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-322" y="299" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-162" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;" edge="1" parent="1" source="oTBxhhhIzJSRDRXKg-fm-152" target="oTBxhhhIzJSRDRXKg-fm-161">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-152" value="訂單完成" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="-382" y="-268" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;" edge="1" parent="1" source="oTBxhhhIzJSRDRXKg-fm-152" target="oTBxhhhIzJSRDRXKg-fm-152">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-163" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;" edge="1" parent="1" source="oTBxhhhIzJSRDRXKg-fm-161" target="oTBxhhhIzJSRDRXKg-fm-166">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-322" y="11" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-170" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;" edge="1" parent="1" source="oTBxhhhIzJSRDRXKg-fm-161" target="oTBxhhhIzJSRDRXKg-fm-171">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-207.00000000000023" y="-106" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-161" value="依照消費金額&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;計算點數" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="-370" y="-154" width="96" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-174" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;" edge="1" parent="1" source="oTBxhhhIzJSRDRXKg-fm-165" target="oTBxhhhIzJSRDRXKg-fm-172">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-165" value="發送點數至&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;會員資料" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="-382" y="107" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-167" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;" edge="1" parent="1" source="oTBxhhhIzJSRDRXKg-fm-166" target="oTBxhhhIzJSRDRXKg-fm-165">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-166" value="達到指定金額" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="-382" y="-4" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-171" value="未達到金額&lt;br&gt;(結束)" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="-198" y="-146" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-173" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;" edge="1" parent="1" source="oTBxhhhIzJSRDRXKg-fm-172" target="oTBxhhhIzJSRDRXKg-fm-149">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-172" value="會員中心" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="-382" y="217" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oTBxhhhIzJSRDRXKg-fm-176" value="結束" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="-382" y="448" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

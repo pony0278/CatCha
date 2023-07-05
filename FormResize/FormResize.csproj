@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43C5708C-0BDD-4BC4-A922-82C3BCCE1F3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FormResize</RootNamespace>
+    <AssemblyName>FormResize</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Announcement_Type_datum.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFormSetting.Designer.cs">
+      <DependentUpon>BaseFormSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatchaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatchaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatchaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatchaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatchaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="C_BackPic.cs" />
+    <Compile Include="C_Cats.cs" />
+    <Compile Include="C_CrossDay.cs" />
+    <Compile Include="C_GameSetting.cs" />
+    <Compile Include="C_Notify.cs" />
+    <Compile Include="Frm_Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Data.Designer.cs">
+      <DependentUpon>Frm_Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game_1on1MessageData.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Achievement_List.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Achievement_Reward_List.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Character_Info.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Coin_Exchange_Record.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Friend_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Friend_List_Chat_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Global_Chat_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Member_B_Message_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Member_Task.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Pet_Total.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Product_Category.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Rank_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_ShopAnnouncement.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_shopArticleType.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Shop_Blog_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Task_Condition_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Task_List.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GlobelSetting.cs" />
+    <Compile Include="C_Backpack.cs" />
+    <Compile Include="C_Query.cs" />
+    <Compile Include="Frm_Achievement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Achievement.Designer.cs">
+      <DependentUpon>Frm_Achievement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_BackGroundPack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_BackGroundPack.Designer.cs">
+      <DependentUpon>Frm_BackGroundPack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_CatMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_CatMove.Designer.cs">
+      <DependentUpon>Frm_CatMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_GameMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_GameMain.designer.cs">
+      <DependentUpon>Frm_GameMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Notify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Notify.Designer.cs">
+      <DependentUpon>Frm_Notify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Backpack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Backpack.Designer.cs">
+      <DependentUpon>Frm_Backpack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game_CheckIn.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Item_Purchase_Record.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Product_Total.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Message_Type_datum.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mixRandomDrow.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Shop_Appeal_Category_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Case_Data_Table.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Common_Address_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Complaint_Status_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Coupon_Total.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Favorite_Data_Table.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Game_Admin_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Member_Complaint_Case.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Member_Coupon_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Member_Info.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Order_Detail_Table.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Order_Status_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Order_Total_Table.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Payment_Method_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Product_Category.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Product_Image_Table.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Product_Review_Table.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Product_Supplier.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Product_Total.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Reply_Data.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Return_Data_Table.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Return_Reason_Data_Table.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Return_Status_Data_Table.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>CatchaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserOderData\UserOderData\IuserGameOrderPropertites.cs" />
+    <Compile Include="UserOderData\UserOderData\userGameOrder.cs" />
+    <Compile Include="UserOderData\UserOderData\userGameOrderFromLinq.cs" />
+    <Compile Include="Frm_Summon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Summon.Designer.cs">
+      <DependentUpon>Frm_Summon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="抽卡主頁.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="抽卡主頁.Designer.cs">
+      <DependentUpon>抽卡主頁.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseFormSetting.resx">
+      <DependentUpon>BaseFormSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Achievement.resx">
+      <DependentUpon>Frm_Achievement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_BackGroundPack.resx">
+      <DependentUpon>Frm_BackGroundPack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_CatMove.resx">
+      <DependentUpon>Frm_CatMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Data.resx">
+      <DependentUpon>Frm_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_GameMain.resx">
+      <DependentUpon>Frm_GameMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Notify.resx">
+      <DependentUpon>Frm_Notify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Backpack.resx">
+      <DependentUpon>Frm_Backpack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Frm_Summon.resx">
+      <DependentUpon>Frm_Summon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="抽卡主頁.resx">
+      <DependentUpon>抽卡主頁.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="CatchaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CatchaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CatchaModel.edmx.diagram">
+      <DependentUpon>CatchaModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat1_walk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat1_stopL.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat1_stopR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat1_walkL.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat1_walkR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_w_sL.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_w_sR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_w_wL.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_w_wR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_g_sL.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_g_sR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_g_wL.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_g_wR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_y_sL.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_y_sR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_y_wL.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_y_wR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_pic1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_pic2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_pic3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CatchaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CatchaModel.Context.cs</LastGenOutput>
+      <DependentUpon>CatchaModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="CatchaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CatchaModel.edmx</DependentUpon>
+      <LastGenOutput>CatchaModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\_summonBG_v3.png" />
+    <None Include="Resources\_summonBG_v3._001.png" />
+    <None Include="Resources\summonBTN_CCoin.png" />
+    <Content Include="Resources\summonBTN_Ruby.png" />
+    <Content Include="Resources\summonName_Back.png" />
+    <None Include="Resources\_summon_back_v2._001.png" />
+    <None Include="Resources\gacha_Animate_SS_v2.gif" />
+    <None Include="Resources\gacha_Animate_S_v2.gif" />
+    <None Include="Resources\gacha_Animate_A_v2.gif" />
+    <None Include="Resources\P_water.png" />
+    <None Include="Resources\P_lamp.png" />
+    <None Include="Resources\P_food.png" />
+    <None Include="Resources\P_coupon.png" />
+    <None Include="Resources\P_bowl.png" />
+    <None Include="Resources\P_background.png" />
+    <None Include="Resources\checkin_Ruby.png" />
+    <None Include="Resources\checkin_Coupon.png" />
+    <None Include="Resources\checkin_CCoin.png" />
+    <None Include="Resources\checked_Ruby.png" />
+    <None Include="Resources\checked_Coupon.png" />
+    <None Include="Resources\checked_CCoin.png" />
+    <None Include="Resources\achieve_BackPic.png" />
+    <None Include="Resources\_NameUI._001.png" />
+    <None Include="Resources\catpowBTN.png" />
+    <None Include="Resources\_testbox._001.png" />
+    <None Include="Resources\_checkin._001.png" />
+    <None Include="Resources\notification-bell.png" />
+    <None Include="Resources\_catcoin.png" />
+    <None Include="Resources\ruby.png" />
+    <None Include="Resources\CatCoin1000x1000.png" />
+    <None Include="Resources\CatCoin 365x375.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

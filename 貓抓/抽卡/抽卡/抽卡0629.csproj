@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0200FDD5-1D32-4B69-A0C9-4A7D4889BEA4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>抽卡</RootNamespace>
+    <AssemblyName>抽卡</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Announcement_Type_datum.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatChaEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatChaEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatChaEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatChaEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatChaEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Game_1on1MessageData.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Achievement_List.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Achievement_Reward_List.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Character_Info.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_CheckIn.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Coin_Exchange_Record.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Friend_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Friend_List_Chat_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Global_Chat_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Item_Purchase_Record.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Member_B_Message_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Member_Task.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Pet_Total.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Product_Category.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Product_Total.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Rank_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_ShopAnnouncement.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_shopArticleType.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Shop_Blog_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Task_Condition_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Game_Task_List.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GashaponAnimation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GashaponAnimation.Designer.cs">
+      <DependentUpon>GashaponAnimation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message_Type_datum.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DrowPirze.cs" />
+    <Compile Include="Model\mixRandomDrow.cs" />
+    <Compile Include="Model\prize.cs" />
+    <Compile Include="Shop_Appeal_Category_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Case_Data_Table.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Common_Address_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Complaint_Status_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Coupon_Total.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Favorite_Data_Table.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Game_Admin_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Member_Complaint_Case.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Member_Coupon_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Member_Info.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Order_Detail_Table.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Order_Status_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Order_Total_Table.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Payment_Method_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Product_Category.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Product_Image_Table.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Product_Review_Table.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Product_Supplier.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Product_Total.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Reply_Data.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Return_Data_Table.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Return_Reason_Data_Table.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop_Return_Status_Data_Table.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>CatChaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="抽卡主頁.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="抽卡主頁.Designer.cs">
+      <DependentUpon>抽卡主頁.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="抽卡.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="抽卡.Designer.cs">
+      <DependentUpon>抽卡.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GashaponAnimation.resx">
+      <DependentUpon>GashaponAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="抽卡主頁.resx">
+      <DependentUpon>抽卡主頁.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="抽卡.resx">
+      <DependentUpon>抽卡.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="CatChaEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CatChaEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CatChaEntities.edmx.diagram">
+      <DependentUpon>CatChaEntities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CatChaEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CatChaEntities.Context.cs</LastGenOutput>
+      <DependentUpon>CatChaEntities.edmx</DependentUpon>
+    </Content>
+    <Content Include="CatChaEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CatChaEntities.edmx</DependentUpon>
+      <LastGenOutput>CatChaEntities.cs</LastGenOutput>
+    </Content>
+    <Content Include="CatPicture\cat1_stopL.gif" />
+    <Content Include="CatPicture\cat1_stopR.gif" />
+    <Content Include="CatPicture\cat1_walkL.gif" />
+    <Content Include="CatPicture\cat1_walkR.gif" />
+    <Content Include="CatPicture\cat_g_sL.gif" />
+    <Content Include="CatPicture\cat_g_sR.gif" />
+    <Content Include="CatPicture\cat_g_wL.gif" />
+    <Content Include="CatPicture\cat_g_wR.gif" />
+    <Content Include="CatPicture\cat_w_sL.gif" />
+    <Content Include="CatPicture\cat_w_sR.gif" />
+    <Content Include="CatPicture\cat_w_wL.gif" />
+    <Content Include="CatPicture\cat_w_wR.gif" />
+    <Content Include="CatPicture\cat_y_sL.gif" />
+    <Content Include="CatPicture\cat_y_sR.gif" />
+    <Content Include="CatPicture\cat_y_wL.gif" />
+    <Content Include="CatPicture\cat_y_wR.gif" />
+    <Content Include="CatPicture\coupon.png" />
+    <Content Include="CatPicture\gacha_Animate_A.gif" />
+    <Content Include="CatPicture\gacha_Animate_A_v2.gif" />
+    <Content Include="CatPicture\gacha_Animate_S.gif" />
+    <Content Include="CatPicture\gacha_Animate_SS.gif" />
+    <Content Include="CatPicture\gacha_Animate_SS_v2.gif" />
+    <Content Include="CatPicture\gacha_Animate_S_v2.gif" />
+    <Content Include="CatPicture\P_background.png" />
+    <Content Include="CatPicture\P_bowl.png" />
+    <Content Include="CatPicture\P_coin.png" />
+    <Content Include="CatPicture\P_coupon.png" />
+    <Content Include="CatPicture\P_food.png" />
+    <Content Include="CatPicture\P_lamp.png" />
+    <Content Include="CatPicture\P_water.png" />
+    <Content Include="CatPicture\ruby.png" />
+    <Content Include="CatPicture\‎catcoin.png" />
+    <Content Include="SnowChests\Chests %281%29.png" />
+    <Content Include="SnowChests\Chests %2810%29.png" />
+    <Content Include="SnowChests\Chests %282%29.png" />
+    <Content Include="SnowChests\Chests %283%29.png" />
+    <Content Include="SnowChests\Chests %284%29.png" />
+    <Content Include="SnowChests\Chests %285%29.png" />
+    <Content Include="SnowChests\Chests %286%29.png" />
+    <Content Include="SnowChests\Chests %287%29.png" />
+    <Content Include="SnowChests\Chests %288%29.png" />
+    <Content Include="SnowChests\Chests %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

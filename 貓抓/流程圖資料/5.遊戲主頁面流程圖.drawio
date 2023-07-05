@@ -1,0 +1,231 @@
+<mxfile host="app.diagrams.net" modified="2023-06-16T13:15:12.326Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="L6Edy4kdFM0gRbxtr52C" version="21.3.8" type="device">
+  <diagram name="第 1 页" id="7AxvImhys1KES0EjwskX">
+    <mxGraphModel dx="1334" dy="532" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="2336" background="#ffffff" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-ReHo5509mN-O1FkP-xh-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;fontSize=14;labelBackgroundColor=none;" parent="1" source="-ReHo5509mN-O1FkP-xh-1" target="-ReHo5509mN-O1FkP-xh-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" source="-ReHo5509mN-O1FkP-xh-1" target="-ReHo5509mN-O1FkP-xh-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" source="-ReHo5509mN-O1FkP-xh-1" target="-ReHo5509mN-O1FkP-xh-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" source="-ReHo5509mN-O1FkP-xh-1" target="-ReHo5509mN-O1FkP-xh-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" parent="1" source="-ReHo5509mN-O1FkP-xh-1" target="-ReHo5509mN-O1FkP-xh-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" parent="1" source="-ReHo5509mN-O1FkP-xh-1" target="-ReHo5509mN-O1FkP-xh-21" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="456" y="275" />
+              <mxPoint x="1066" y="275" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-1" value="遊戲主頁" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="396" y="142" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;fontSize=14;labelBackgroundColor=none;" parent="1" source="-ReHo5509mN-O1FkP-xh-2" target="-ReHo5509mN-O1FkP-xh-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-2" value="(購物商城)&lt;br&gt;跳轉購物商城" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="619" y="4" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-5" value="切換" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#393C56;fontSize=14;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="573" y="55" width="46" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" source="-ReHo5509mN-O1FkP-xh-6" target="-ReHo5509mN-O1FkP-xh-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="43" y="429" />
+              <mxPoint x="-19" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" source="-ReHo5509mN-O1FkP-xh-6" target="-ReHo5509mN-O1FkP-xh-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="43" y="429" />
+              <mxPoint x="114" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" source="-ReHo5509mN-O1FkP-xh-6" target="-ReHo5509mN-O1FkP-xh-17" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="43" y="429" />
+              <mxPoint x="-158" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" source="-ReHo5509mN-O1FkP-xh-6" target="-ReHo5509mN-O1FkP-xh-19" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="43" y="429" />
+              <mxPoint x="254" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" source="-ReHo5509mN-O1FkP-xh-6" target="-ReHo5509mN-O1FkP-xh-33" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="43" y="429" />
+              <mxPoint x="-297" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-6" value="背包&amp;amp;小屋&lt;br&gt;(當前頁面)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-17" y="328" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-7" value="(轉蛋)&lt;br&gt;(當前頁面)&lt;br&gt;跳轉抽獎系統" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="204" y="328" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-12" value="背景欄&lt;br&gt;EX:&lt;br&gt;春、夏、秋、冬.." style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-79" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-15" value="消耗欄&lt;br&gt;EX:&lt;br&gt;水、飼料.." style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="54" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-17" value="特殊欄&lt;br&gt;EX:&lt;br&gt;現金道具^^" style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-218" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-19" value="裝備欄&lt;br&gt;EX:&lt;br&gt;帽子、衣服..&lt;br&gt;" style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="194" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-21" value="遊戲商城&lt;br&gt;(當前頁面)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1006" y="309" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" source="-ReHo5509mN-O1FkP-xh-23" target="-ReHo5509mN-O1FkP-xh-28" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" source="-ReHo5509mN-O1FkP-xh-23" target="-ReHo5509mN-O1FkP-xh-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-23" value="任務&lt;br&gt;(當前頁面)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="442" y="328" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-25" value="顯示:&lt;br&gt;物件ICON、貓幣、紅利、Catcha商標圖" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="110" y="58" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-28" value="每日任務" style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="372" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-29" value="成就任務" style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="512" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-33" value="寵物檔案&lt;br&gt;EX:&lt;br&gt;親密度、等級..." style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-357" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-44" value="背景欄&lt;br&gt;EX:&lt;br&gt;春、夏、秋、冬.." style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-79" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-45" value="消耗欄&lt;br&gt;EX:&lt;br&gt;水、飼料.." style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="54" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-46" value="特殊欄&lt;br&gt;EX:&lt;br&gt;現金道具^^" style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-218" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-47" value="裝備&amp;amp;道具欄&lt;br&gt;EX:&lt;br&gt;家具、帽子、衣服.." style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="194" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-48" value="寵物檔案&lt;br&gt;EX:&lt;br&gt;親密度、等級..." style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-357" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" target="-ReHo5509mN-O1FkP-xh-45" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="43" y="388" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="43" y="429" />
+              <mxPoint x="114" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" target="-ReHo5509mN-O1FkP-xh-47" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="43" y="388" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="43" y="429" />
+              <mxPoint x="254" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="1" target="-ReHo5509mN-O1FkP-xh-44" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="43" y="388" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="43" y="429" />
+              <mxPoint x="-19" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.482;exitY=0.994;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;exitPerimeter=0;" parent="1" source="-ReHo5509mN-O1FkP-xh-21" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1064" y="388" as="sourcePoint" />
+            <mxPoint x="863" y="471" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1064" y="429" />
+              <mxPoint x="863" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;exitX=0.481;exitY=1.006;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="-ReHo5509mN-O1FkP-xh-21" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1064" y="388" as="sourcePoint" />
+            <mxPoint x="724" y="471" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1064" y="429" />
+              <mxPoint x="724" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-54" value="家具、消耗道具" style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="942" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-55" value="紅利&amp;lt;-&amp;gt;貓幣" style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1075" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-56" value="風景" style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="803" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-57" value="寵物" style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1215" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-58" value="寵物玩具&lt;br&gt;貓幣&amp;amp;紅利裝.." style="whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="664" y="471" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.483;exitY=0.996;exitDx=0;exitDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;exitPerimeter=0;" parent="1" source="-ReHo5509mN-O1FkP-xh-21" target="-ReHo5509mN-O1FkP-xh-55" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1064" y="388" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1064" y="429" />
+              <mxPoint x="1135" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.482;exitY=1.003;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;exitPerimeter=0;" parent="1" source="-ReHo5509mN-O1FkP-xh-21" target="-ReHo5509mN-O1FkP-xh-57" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1064" y="388" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1064" y="429" />
+              <mxPoint x="1275" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ReHo5509mN-O1FkP-xh-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E07A5F;fontColor=default;fillColor=#F2CC8F;labelBackgroundColor=none;exitX=0.483;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="-ReHo5509mN-O1FkP-xh-21" target="-ReHo5509mN-O1FkP-xh-54" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1064" y="388" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1064" y="429" />
+              <mxPoint x="1002" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

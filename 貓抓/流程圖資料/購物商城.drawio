@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net" modified="2023-06-16T14:18:51.738Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="4Wug_ATWgC3cEb4k5YFc" version="21.4.0" type="device">
+  <diagram name="第 1 页" id="3L5qZoVK6_yu2xPAR_6M">
+    <mxGraphModel dx="794" dy="852" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="2339" pageHeight="3300" background="#ffffff" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="LM-sZOhF_xXdfVOD9D8M-1" target="LM-sZOhF_xXdfVOD9D8M-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-1" value="遊戲頁面" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" vertex="1" parent="1">
+          <mxGeometry x="374" y="-62" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="LM-sZOhF_xXdfVOD9D8M-2" target="LM-sZOhF_xXdfVOD9D8M-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-2" value="購物商城&lt;br&gt;主頁面" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="374" y="65" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="LM-sZOhF_xXdfVOD9D8M-4" target="LM-sZOhF_xXdfVOD9D8M-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-4" value="點選商品" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="374" y="172" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="LM-sZOhF_xXdfVOD9D8M-6" target="LM-sZOhF_xXdfVOD9D8M-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="417" y="382" />
+              <mxPoint x="329" y="382" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="LM-sZOhF_xXdfVOD9D8M-6" target="LM-sZOhF_xXdfVOD9D8M-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="449" y="382" />
+              <mxPoint x="560" y="382" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.417;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;entryPerimeter=0;" edge="1" parent="1" source="LM-sZOhF_xXdfVOD9D8M-6" target="LM-sZOhF_xXdfVOD9D8M-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="309" />
+              <mxPoint x="560" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-6" value="顯示商品詳細資訊" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="374" y="279" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="LM-sZOhF_xXdfVOD9D8M-8" target="LM-sZOhF_xXdfVOD9D8M-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-8" value="直接購買" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="269" y="425" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="LM-sZOhF_xXdfVOD9D8M-10" target="LM-sZOhF_xXdfVOD9D8M-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="LM-sZOhF_xXdfVOD9D8M-10" target="LM-sZOhF_xXdfVOD9D8M-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-10" value="查看是否登入" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" vertex="1" parent="1">
+          <mxGeometry x="289" y="532" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="LM-sZOhF_xXdfVOD9D8M-12" target="LM-sZOhF_xXdfVOD9D8M-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="154" y="309" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-12" value="跳轉至&lt;br&gt;(會員登入頁面)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="93" y="542" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-16" value="登入後返回&lt;br&gt;商品資訊&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="80" y="495" width="78" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-17" value="跳到轉至&lt;br&gt;(購物車頁面)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="269" y="659" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-19" value="是" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="330" y="612" width="30" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="LM-sZOhF_xXdfVOD9D8M-20" target="LM-sZOhF_xXdfVOD9D8M-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="559" y="538.3333435058594" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-20" value="加到購物車&lt;br&gt;(原商品頁面)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="499" y="425" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-25" value="回上一頁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="489" y="283" width="66" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-27" value="返回&lt;br&gt;購物商城頁面" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="499" y="542" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LM-sZOhF_xXdfVOD9D8M-28" value="否" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="259" y="546" width="30" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
