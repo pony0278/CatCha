@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ProjectsModelE.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ProjectsModelE.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Announcement Type Data">
           <Key>
             <PropertyRef Name="Announcement Type ID" />
@@ -133,14 +133,6 @@
           <Property Name="Chat Room ID" Type="int" Nullable="false" />
           <Property Name="Member (B) ID" Type="int" Nullable="false" />
         </EntityType>
-        <!--產生期間發現錯誤:
-警告 6013: 資料表/檢視 '貓抓抓.dbo.Game.Pet' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
-        <EntityType Name="Game_Pet">
-          <Property Name="Product ID" Type="int" />
-          <Property Name="Pet Level ID" Type="int" />
-          <Property Name="Pet Skill ID" Type="int" />
-          <Property Name="Pet Rarity ID" Type="int" />
-        </EntityType>-->
         <EntityType Name="Game_Pet Total">
           <Key>
             <PropertyRef Name="Pet Name" />
@@ -729,21 +721,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--產生期間發現錯誤:
-錯誤 6004: 資料表 '貓抓抓.dbo.Game.Pet' 被某個關聯性參考，但是找不到。
-        <Association Name="FK_Game_寵物_Game_商品總表" />-->
-        <Association Name="FK_Orders_Details_Products">
-          <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="0..1" />
-          <End Role="Shop_Order Detail Table" Type="Self.Shop_Order Detail Table" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Shop_Product Total">
-              <PropertyRef Name="Product ID" />
-            </Principal>
-            <Dependent Role="Shop_Order Detail Table">
-              <PropertyRef Name="Product ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Products_Image_Products">
           <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="0..1" />
           <End Role="Shop_Product Image Table" Type="Self.Shop_Product Image Table" Multiplicity="*" />
@@ -777,6 +754,30 @@
             </Principal>
             <Dependent Role="Shop_Product Total">
               <PropertyRef Name="Product Category ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_Order Detail Table_Shop_Order Total Table">
+          <End Role="Shop_Order Total Table" Type="Self.Shop_Order Total Table" Multiplicity="0..1" />
+          <End Role="Shop_Order Detail Table" Type="Self.Shop_Order Detail Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Order Total Table">
+              <PropertyRef Name="Order ID" />
+            </Principal>
+            <Dependent Role="Shop_Order Detail Table">
+              <PropertyRef Name="Order ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shop_Order Detail Table_Shop_Product Total">
+          <End Role="Shop_Product Total" Type="Self.Shop_Product Total" Multiplicity="0..1" />
+          <End Role="Shop_Order Detail Table" Type="Self.Shop_Order Detail Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Product Total">
+              <PropertyRef Name="Product ID" />
+            </Principal>
+            <Dependent Role="Shop_Order Detail Table">
+              <PropertyRef Name="Product ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1189,10 +1190,6 @@
             <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
             <End Role="Game_Coin Exchange Record" EntitySet="Game_Coin Exchange Record" />
           </AssociationSet>
-          <AssociationSet Name="FK_Orders_Details_Products" Association="Self.FK_Orders_Details_Products">
-            <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
-            <End Role="Shop_Order Detail Table" EntitySet="Shop_Order Detail Table" />
-          </AssociationSet>
           <AssociationSet Name="FK_Products_Image_Products" Association="Self.FK_Products_Image_Products">
             <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
             <End Role="Shop_Product Image Table" EntitySet="Shop_Product Image Table" />
@@ -1204,6 +1201,14 @@
           <AssociationSet Name="FK_Products_Products_Categories" Association="Self.FK_Products_Products_Categories">
             <End Role="Shop_Product Category" EntitySet="Shop_Product Category" />
             <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_Order Detail Table_Shop_Order Total Table" Association="Self.FK_Shop_Order Detail Table_Shop_Order Total Table">
+            <End Role="Shop_Order Total Table" EntitySet="Shop_Order Total Table" />
+            <End Role="Shop_Order Detail Table" EntitySet="Shop_Order Detail Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shop_Order Detail Table_Shop_Product Total" Association="Self.FK_Shop_Order Detail Table_Shop_Product Total">
+            <End Role="Shop_Product Total" EntitySet="Shop_Product Total" />
+            <End Role="Shop_Order Detail Table" EntitySet="Shop_Order Detail Table" />
           </AssociationSet>
           <AssociationSet Name="FK_Shop_Order Total Table_Shop_Common Address Data" Association="Self.FK_Shop_Order Total Table_Shop_Common Address Data">
             <End Role="Shop_Common Address Data" EntitySet="Shop_Common Address Data" />
@@ -1290,8 +1295,7 @@
             <End Role="Shop_Member Info" EntitySet="Shop_Member Info" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ProjectsModelE" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1664,6 +1668,7 @@
           <Property Name="Product_Quantity" Type="Int32" />
           <Property Name="Order_Detail_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Shop_Product_Total" Relationship="Self.FK_Orders_Details_Products" FromRole="Shop_Order_Detail_Table" ToRole="Shop_Product_Total" />
+          <NavigationProperty Name="Shop_Order_Total_Table" Relationship="ProjectsModelE.FK_Shop_Order_Detail_Table_Shop_Order_Total_Table" FromRole="Shop_Order_Detail_Table" ToRole="Shop_Order_Total_Table" />
         </EntityType>
         <EntityType Name="Shop_Order_Status_Data">
           <Key>
@@ -1692,6 +1697,7 @@
           <NavigationProperty Name="Shop_Member_Info" Relationship="Self.FK_Shop_訂單總表_Shop_會員資訊" FromRole="Shop_Order_Total_Table" ToRole="Shop_Member_Info" />
           <NavigationProperty Name="Shop_Order_Status_Data" Relationship="Self.FK_Shop_訂單總表_Shop_訂單狀態資料表" FromRole="Shop_Order_Total_Table" ToRole="Shop_Order_Status_Data" />
           <NavigationProperty Name="Shop_Payment_Method_Data" Relationship="Self.FK_Shop_訂單總表_Shop_付款方式資料表" FromRole="Shop_Order_Total_Table" ToRole="Shop_Payment_Method_Data" />
+          <NavigationProperty Name="Shop_Order_Detail_Table" Relationship="ProjectsModelE.FK_Shop_Order_Detail_Table_Shop_Order_Total_Table" FromRole="Shop_Order_Total_Table" ToRole="Shop_Order_Detail_Table" />
         </EntityType>
         <EntityType Name="Shop_Payment_Method_Data">
           <Key>
@@ -2552,7 +2558,23 @@
             <End Role="Shop_Favorite_Data_Table" EntitySet="Shop_Favorite_Data_Table" />
             <End Role="Shop_Product_Total" EntitySet="Shop_Product_Total" />
           </AssociationSet>
+          <AssociationSet Name="FK_Shop_Order_Detail_Table_Shop_Order_Total_Table" Association="ProjectsModelE.FK_Shop_Order_Detail_Table_Shop_Order_Total_Table">
+            <End Role="Shop_Order_Total_Table" EntitySet="Shop_Order_Total_Table" />
+            <End Role="Shop_Order_Detail_Table" EntitySet="Shop_Order_Detail_Table" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_Shop_Order_Detail_Table_Shop_Order_Total_Table">
+          <End Type="ProjectsModelE.Shop_Order_Total_Table" Role="Shop_Order_Total_Table" Multiplicity="0..1" />
+          <End Type="ProjectsModelE.Shop_Order_Detail_Table" Role="Shop_Order_Detail_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop_Order_Total_Table">
+              <PropertyRef Name="Order_ID" />
+            </Principal>
+            <Dependent Role="Shop_Order_Detail_Table">
+              <PropertyRef Name="Order_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3087,6 +3109,99 @@
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams></Diagrams>
+    <Diagrams>
+      <Diagram DiagramId="3e9225f9196040288d7c0443892a8047" Name="Diagram1">
+        <EntityTypeShape EntityType="ProjectsModelE.Announcement_Type_datum" Width="1.5" PointX="13.25" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_1on1MessageData" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Achievement_List" Width="1.5" PointX="10.5" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Achievement_Reward_List" Width="1.5" PointX="8.25" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Coin_Exchange_Record" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Friend_Data" Width="1.5" PointX="5.25" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Friend_List_Chat_Data" Width="1.5" PointX="10.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Global_Chat_Data" Width="1.5" PointX="5.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Item_Purchase_Record" Width="1.5" PointX="10.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Member_B_Message_Data" Width="1.5" PointX="13" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Member_Task" Width="1.5" PointX="5.25" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Pet_Total" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Product_Category" Width="1.5" PointX="5.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Product_Total" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Rank_Data" Width="1.5" PointX="0.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Shop_Blog_Data" Width="1.5" PointX="12.5" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_ShopAnnouncement" Width="1.5" PointX="15.5" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_shopArticleType" Width="1.5" PointX="10.25" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Task_Condition_Data" Width="1.5" PointX="5.25" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Task_List" Width="1.5" PointX="7.5" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Message_Type_datum" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Appeal_Category_Data" Width="1.5" PointX="8" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Case_Data_Table" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Common_Address_Data" Width="1.5" PointX="5.25" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Complaint_Status_Data" Width="1.5" PointX="8" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Coupon_Total" Width="1.5" PointX="8" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Favorite_Data_Table" Width="1.5" PointX="8.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Game_Admin_Data" Width="1.5" PointX="10.25" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Member_Complaint_Case" Width="1.5" PointX="10.25" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Member_Coupon_Data" Width="1.5" PointX="10.25" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Member_Info" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Order_Detail_Table" Width="2.625" PointX="12.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Order_Status_Data" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Order_Total_Table" Width="1.5" PointX="8" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Payment_Method_Data" Width="1.5" PointX="5.25" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Product_Category" Width="1.5" PointX="8.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Product_Image_Table" Width="1.5" PointX="12.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Product_Review_Table" Width="1.5" PointX="14.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Product_Supplier" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Product_Total" Width="1.5" PointX="10.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Reply_Data" Width="1.5" PointX="12.5" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Return_Reason_Data_Table" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Return_Status_Data_Table" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.sysdiagram" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Game_Character_Info" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsModelE.Shop_Return_Data_Table" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_Shop公告_公告類型資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_1on1訊息資料表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_1on1訊息資料表_Shop_會員資訊1" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_成就總表_Game_任務條件資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_成就總表_Game_成就獎勵總表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_遊戲幣兌換紀錄_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_Friend_Data_Shop_Member_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_Friend_Data_Shop_Member_Info1" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_好友列表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_全頻道聊天資料表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_物品購買紀錄表_Game_商品總表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_任務總表_Game_會員任務" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_會員任務_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_商品總表_Game_商品類別表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_會員資訊_Game_等級排位資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_Shop部落格資料表_Game_shop_文章類型資料庫" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_Shop部落格資料表_Shop_Game_後臺管理員資料" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_Shop公告_Shop_Game_後臺管理員資料2" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Game_任務總表_Game_任務條件資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_會員客訴案件表_Shop_申訴類別資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_Order_Total_Table_Shop_Common_Address_Data" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_常用地址資料表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_會員客訴案件表_Shop_客訴狀態資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_會員折價券資料表_Shop_優惠券總表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_我的最愛資料表_Shop_商品總表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_我的最愛資料表_Shop_會員資訊1" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_回覆資料表_Shop_Game_後臺管理員資料" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_回覆資料表_Shop_會員客訴案件表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_會員客訴案件表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_會員折價券資料表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_訂單總表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_商品評論表_Shop_會員資訊" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Orders_Details_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_訂單總表_Shop_訂單狀態資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_訂單總表_Shop_付款方式資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Products_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Products_Image_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Products_Reviews_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_商品總表_Shop_產品供應商" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_退換貨資料表_Shop_退換貨原因資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_退換貨資料表_Shop_退換貨處理狀態資料表" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.Game_Message_Data" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.Shop_Favorite_Product_Table" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectsModelE.FK_Shop_Order_Detail_Table_Shop_Order_Total_Table" />
+      </Diagram>
+    </Diagrams>
   </Designer>
 </edmx:Edmx>

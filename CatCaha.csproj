@@ -56,6 +56,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarttoBill.cs" />
+    <Compile Include="ColorHelper.cs" />
+    <Compile Include="ShopAndLog\Frm_Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopAndLog\Frm_Cart.designer.cs">
+      <DependentUpon>Frm_Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopAndLog\Frm_Cart2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopAndLog\Frm_Cart2.designer.cs">
+      <DependentUpon>Frm_Cart2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopAndLog\Frm_Cart3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopAndLog\Frm_Cart3.designer.cs">
+      <DependentUpon>Frm_Cart3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemUserControl.designer.cs">
+      <DependentUpon>ItemUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Member.cs" />
     <Compile Include="NewFolder1\Announcement_Type_datum.cs">
       <DependentUpon>Project.tt</DependentUpon>
@@ -240,12 +266,6 @@
     <Compile Include="MemberCenter\CustomerService.Designer.cs">
       <DependentUpon>CustomerService.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="MemberCenter\MemberInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +346,18 @@
     <Compile Include="ShopAndLog\UserToolStrip.designer.cs">
       <DependentUpon>UserToolStrip.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ShopAndLog\Frm_Cart.resx">
+      <DependentUpon>Frm_Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopAndLog\Frm_Cart2.resx">
+      <DependentUpon>Frm_Cart2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopAndLog\Frm_Cart3.resx">
+      <DependentUpon>Frm_Cart3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemUserControl.resx">
+      <DependentUpon>ItemUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ShopAndLog\ChangePwd.resx">
       <DependentUpon>ChangePwd.cs</DependentUpon>
     </EmbeddedResource>

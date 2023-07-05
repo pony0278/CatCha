@@ -20,5 +20,6 @@ namespace CatCaha.NewFolder1
         public int Order_Detail_ID { get; set; }
     
         public virtual Shop_Product_Total Shop_Product_Total { get; set; }
+        public virtual Shop_Order_Total_Table Shop_Order_Total_Table { get; set; }
     }
 }

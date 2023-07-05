@@ -19,7 +19,7 @@ namespace CatCha
             InitializeComponent();
         }
 
-        private void toolStripButton7_Click(object sender, EventArgs e)
+        private void toolStripBtnMemberCenter_Click(object sender, EventArgs e)
         {
             if (LoggedInUser.ID == 0)
             {
@@ -47,6 +47,21 @@ namespace CatCha
             //Form tmp = this.FindForm();
             //tmp.Close();
             //tmp.Dispose();
+        }
+
+        private void toolStripBtnCart_Click(object sender, EventArgs e)
+        {
+            if (LoggedInUser.ID == 0)
+            {
+                Signin form = new Signin();
+                form.ShowDialog();
+            }
+            else
+            {
+                Frm_Cart frm_Cart = new Frm_Cart();
+                frm_Cart.ShowDialog();
+            }
+           
         }
     }
 }
