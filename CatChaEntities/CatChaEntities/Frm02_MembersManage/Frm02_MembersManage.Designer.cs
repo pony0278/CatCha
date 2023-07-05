@@ -89,7 +89,7 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Location = new System.Drawing.Point(634, 158);
+            this.btnSearch.Location = new System.Drawing.Point(712, 172);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(114, 54);
@@ -135,12 +135,12 @@
             this.dataGridViewMembers.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridViewMembers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewMembers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewMembers.Location = new System.Drawing.Point(5, 52);
+            this.dataGridViewMembers.Location = new System.Drawing.Point(5, 42);
             this.dataGridViewMembers.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewMembers.Name = "dataGridViewMembers";
             this.dataGridViewMembers.RowHeadersWidth = 51;
             this.dataGridViewMembers.RowTemplate.Height = 27;
-            this.dataGridViewMembers.Size = new System.Drawing.Size(1200, 561);
+            this.dataGridViewMembers.Size = new System.Drawing.Size(1200, 556);
             this.dataGridViewMembers.TabIndex = 8;
             this.dataGridViewMembers.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewMembers_DataError);
             // 
@@ -197,6 +197,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.groupBox1.Controls.Add(this.txtCharacterName);
             this.groupBox1.Controls.Add(this.label7);
@@ -217,7 +219,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox1.Size = new System.Drawing.Size(1210, 226);
+            this.groupBox1.Size = new System.Drawing.Size(1210, 241);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "搜尋會員";
@@ -245,7 +247,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.Location = new System.Drawing.Point(778, 158);
+            this.btnSave.Location = new System.Drawing.Point(856, 172);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(114, 54);
@@ -256,18 +258,20 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetDouble;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.dataGridViewMembers, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 254);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 269);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.164179F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.83582F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1210, 619);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.657238F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.34277F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1210, 604);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // label4
@@ -279,7 +283,7 @@
             this.label4.Location = new System.Drawing.Point(5, 3);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1200, 43);
+            this.label4.Size = new System.Drawing.Size(1200, 33);
             this.label4.TabIndex = 9;
             this.label4.Text = "會員資料";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

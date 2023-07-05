@@ -82,8 +82,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.btnADD);
+            this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.dtpTo);
             this.groupBox1.Controls.Add(this.dtpFrom);
             this.groupBox1.Controls.Add(this.label2);
@@ -154,7 +159,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnSearch.Location = new System.Drawing.Point(858, 177);
+            this.btnSearch.Location = new System.Drawing.Point(603, 177);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(102, 54);
@@ -198,7 +203,7 @@
             this.btnEdit.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEdit.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnEdit.Location = new System.Drawing.Point(1059, 441);
+            this.btnEdit.Location = new System.Drawing.Point(877, 177);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(102, 54);
@@ -214,11 +219,11 @@
             this.dataGridViewOrderDetail.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dataGridViewOrderDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrderDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewOrderDetail.Location = new System.Drawing.Point(4, 344);
+            this.dataGridViewOrderDetail.Location = new System.Drawing.Point(4, 397);
             this.dataGridViewOrderDetail.Name = "dataGridViewOrderDetail";
             this.dataGridViewOrderDetail.ReadOnly = true;
             this.dataGridViewOrderDetail.RowTemplate.Height = 24;
-            this.dataGridViewOrderDetail.Size = new System.Drawing.Size(992, 380);
+            this.dataGridViewOrderDetail.Size = new System.Drawing.Size(992, 327);
             this.dataGridViewOrderDetail.TabIndex = 4;
             // 
             // dataGridViewOrders
@@ -229,15 +234,17 @@
             this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrders.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewOrders.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewOrders.Location = new System.Drawing.Point(4, 42);
+            this.dataGridViewOrders.Location = new System.Drawing.Point(4, 49);
             this.dataGridViewOrders.Name = "dataGridViewOrders";
             this.dataGridViewOrders.ReadOnly = true;
             this.dataGridViewOrders.RowTemplate.Height = 24;
-            this.dataGridViewOrders.Size = new System.Drawing.Size(992, 266);
+            this.dataGridViewOrders.Size = new System.Drawing.Size(992, 315);
             this.dataGridViewOrders.TabIndex = 4;
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -250,8 +257,8 @@
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.0915F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.90849F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 385F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 332F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 728);
             this.tableLayoutPanel1.TabIndex = 22;
             // 
@@ -263,7 +270,7 @@
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label6.Location = new System.Drawing.Point(4, 1);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(992, 37);
+            this.label6.Size = new System.Drawing.Size(992, 44);
             this.label6.TabIndex = 5;
             this.label6.Text = "訂單總表";
             // 
@@ -273,9 +280,9 @@
             this.label7.BackColor = System.Drawing.Color.AntiqueWhite;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(4, 312);
+            this.label7.Location = new System.Drawing.Point(4, 368);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(992, 28);
+            this.label7.Size = new System.Drawing.Size(992, 25);
             this.label7.TabIndex = 6;
             this.label7.Text = "訂單明細";
             // 
@@ -284,7 +291,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDelete.Location = new System.Drawing.Point(1059, 512);
+            this.btnDelete.Location = new System.Drawing.Point(877, 95);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(102, 54);
@@ -299,7 +306,7 @@
             this.btnADD.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnADD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnADD.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnADD.Location = new System.Drawing.Point(1059, 367);
+            this.btnADD.Location = new System.Drawing.Point(740, 177);
             this.btnADD.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnADD.Name = "btnADD";
             this.btnADD.Size = new System.Drawing.Size(102, 54);
@@ -314,11 +321,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(1199, 1061);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnADD);
+            this.ClientSize = new System.Drawing.Size(1025, 1061);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
