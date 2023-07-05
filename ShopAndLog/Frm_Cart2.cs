@@ -1,4 +1,5 @@
 ﻿using buttonHelper;
+using CatCaha.NewFolder1;
 using CatCha;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CatChaForms;
 
 namespace Cart2
 {
@@ -32,13 +34,13 @@ namespace Cart2
             this.btnSendOrder.BackColor = ColorTranslator.FromHtml("#E4BB97");
         }
 
-        CatChaEntities dbContext = new CatChaEntities();
+        ProjectsModel dbContext = new ProjectsModel();
         //int memberID = 1;
         //int orderState = 1;
 
         List<CarttoBill> listToBill = new List<CarttoBill>();
         const decimal MaxPointsValue = 0.1M;
-
+        int memberID = LoggedInUser.ID;
         #region 1.開啟時
         private void CartDetailsPage_Load(object sender, EventArgs e)
         {
@@ -46,7 +48,7 @@ namespace Cart2
             //1.常用地址
             //(a)撈到該會員的常用地址資料
             var selectAddress =from a in dbContext.Shop_Common_Address_Data.AsEnumerable()
-                   where a.Member_ID==1/*a.Shop_Member_Info.Member_ID*/
+                   where a.Member_ID== memberID
                     select new { a.Recipient_Name, a.Recipient_Phone ,a.Recipient_Address };
             //(b)姓名.手機.地址各自加入ComboBox
             foreach (var i in selectAddress)
@@ -60,7 +62,7 @@ namespace Cart2
             //(a).查詢符合訂單ID的訂單明細，其中產品
             var listCartDetails = from p in dbContext.Shop_Product_Total
                      from od in p.Shop_Order_Detail_Table
-                     where  /*== od.Shop_Order_Total_Table.Order_ID*/od.Shop_Order_Total_Table.Member_ID==1&&od.Shop_Order_Total_Table.Order_Status_ID==1
+                     where od.Shop_Order_Total_Table.Member_ID== memberID && od.Shop_Order_Total_Table.Order_Status_ID==1
                      select new { 商品名稱 = p.Product_Name, 商品價格 = p.Product_Price.Value, 商品數量 = od.Product_Quantity.Value };
             //把資料加進list裡
             
@@ -91,7 +93,7 @@ namespace Cart2
             //(a)撈到該會員的優惠券資料
             //可用條件:1.Usable==true(未被領完)2.擁有該優惠券3.Coupon_Status_ID==false(未使用)
             var selectCoupon = from c in dbContext.Shop_Member_Coupon_Data.AsEnumerable()
-                    where c.Member_ID == 1/*a.Shop_Member_Info.Member_ID變數*/&& c.Shop_Coupon_Total.Usable == true && c.Coupon_ID==c.Shop_Coupon_Total.Coupon_ID&&c.Coupon_Status_ID==false
+                    where c.Member_ID == memberID && c.Shop_Coupon_Total.Usable == true && c.Coupon_ID==c.Shop_Coupon_Total.Coupon_ID&&c.Coupon_Status_ID==false
                     select c.Shop_Coupon_Total.Coupon_Content;
 
             this.cmbSelectCoupon.Items.Add("不使用");
@@ -113,7 +115,7 @@ namespace Cart2
             //5.提醒使用紅利
 
             var points = (from m in this.dbContext.Shop_Member_Info.AsEnumerable()
-                          where m.Member_ID == 1 /*Memberid變數*/
+                          where m.Member_ID == memberID
                           select m.Loyalty_Points.Value).FirstOrDefault();
             if (points == 0)
             {
@@ -198,7 +200,7 @@ namespace Cart2
 
             //勾選時顯示memberinfo中的name.phone.address欄位資料，常用地址不可選擇
             var asMemberInfo = from m in dbContext.Shop_Member_Info.AsEnumerable()
-                               where m.Member_ID == 1
+                               where m.Member_ID == memberID
                                select new { m.Name, m.Phone_Number, m.Address };
             if (this.recipientAsMemberInfo.Checked)
             {
@@ -327,7 +329,7 @@ namespace Cart2
                 //條件1符合登入會員ID
                 //條件2該訂單狀態為1(處理中)
                 var orderInfo = (from o in this.dbContext.Shop_Order_Total_Table
-                                where o.Member_ID == 1/*member id變數*/ && o.Order_Status_ID == 1
+                                where o.Member_ID == memberID  && o.Order_Status_ID == 1
                                 select o).FirstOrDefault();
 
                 //a.選擇同會員或自訂時:
@@ -341,7 +343,7 @@ namespace Cart2
                 else if (this.recipientAsCommonAddress.Checked)
                 {
                     var commonAddress = from a in dbContext.Shop_Common_Address_Data
-                                        where a.Member_ID == 1
+                                        where a.Member_ID == memberID
                                         select a;
 
                     foreach (var i in commonAddress)
@@ -359,7 +361,7 @@ namespace Cart2
                 }
                 //2.update優惠券資料到該order 資料中
                 var coupon = from c in dbContext.Shop_Member_Coupon_Data
-                             where c.Member_ID == 1/*member id變數*/
+                             where c.Member_ID == memberID 
                              select c;
 
                 foreach (var i in coupon)
@@ -412,8 +414,7 @@ namespace Cart2
                 orderInfo.Order_Status_ID = 2;
                 this.dbContext.SaveChanges();
 
-                test f = new test();
-                f.Show();
+              
             }
         }
         #endregion

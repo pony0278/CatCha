@@ -44,14 +44,7 @@ namespace CatCha
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.userToolStrip1 = new CatCha.UserToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -61,13 +54,12 @@ namespace CatCha
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 39);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -79,8 +71,8 @@ namespace CatCha
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1608, 1016);
-            this.splitContainer1.SplitterDistance = 880;
+            this.splitContainer1.Size = new System.Drawing.Size(1608, 1055);
+            this.splitContainer1.SplitterDistance = 913;
             this.splitContainer1.TabIndex = 20;
             // 
             // splitContainer2
@@ -92,6 +84,7 @@ namespace CatCha
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.userToolStrip1);
             this.splitContainer2.Panel1.Controls.Add(this.flowLayoutPanelProducts);
             this.splitContainer2.Panel1.Controls.Add(this.labBonus);
             this.splitContainer2.Panel1.Controls.Add(this.labTotalAmount);
@@ -102,8 +95,8 @@ namespace CatCha
             // 
             this.splitContainer2.Panel2.Controls.Add(this.btnGoShop);
             this.splitContainer2.Panel2.Controls.Add(this.btnCheckOut);
-            this.splitContainer2.Size = new System.Drawing.Size(1608, 880);
-            this.splitContainer2.SplitterDistance = 725;
+            this.splitContainer2.Size = new System.Drawing.Size(1608, 913);
+            this.splitContainer2.SplitterDistance = 752;
             this.splitContainer2.TabIndex = 9;
             this.splitContainer2.TabStop = false;
             // 
@@ -112,7 +105,7 @@ namespace CatCha
             this.flowLayoutPanelProducts.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.flowLayoutPanelProducts.AutoScroll = true;
             this.flowLayoutPanelProducts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanelProducts.Location = new System.Drawing.Point(142, 178);
+            this.flowLayoutPanelProducts.Location = new System.Drawing.Point(142, 205);
             this.flowLayoutPanelProducts.Name = "flowLayoutPanelProducts";
             this.flowLayoutPanelProducts.Size = new System.Drawing.Size(1411, 449);
             this.flowLayoutPanelProducts.TabIndex = 7;
@@ -122,7 +115,7 @@ namespace CatCha
             this.labBonus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labBonus.AutoSize = true;
             this.labBonus.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labBonus.Location = new System.Drawing.Point(920, 652);
+            this.labBonus.Location = new System.Drawing.Point(920, 679);
             this.labBonus.Name = "labBonus";
             this.labBonus.Size = new System.Drawing.Size(129, 27);
             this.labBonus.TabIndex = 19;
@@ -133,7 +126,7 @@ namespace CatCha
             this.labTotalAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labTotalAmount.AutoSize = true;
             this.labTotalAmount.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labTotalAmount.Location = new System.Drawing.Point(1148, 649);
+            this.labTotalAmount.Location = new System.Drawing.Point(1148, 676);
             this.labTotalAmount.Name = "labTotalAmount";
             this.labTotalAmount.Size = new System.Drawing.Size(27, 30);
             this.labTotalAmount.TabIndex = 17;
@@ -163,7 +156,7 @@ namespace CatCha
             // 
             this.btnGoShop.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnGoShop.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnGoShop.Location = new System.Drawing.Point(628, 41);
+            this.btnGoShop.Location = new System.Drawing.Point(628, 47);
             this.btnGoShop.Name = "btnGoShop";
             this.btnGoShop.Size = new System.Drawing.Size(140, 54);
             this.btnGoShop.TabIndex = 20;
@@ -174,7 +167,7 @@ namespace CatCha
             // 
             this.btnCheckOut.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCheckOut.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnCheckOut.Location = new System.Drawing.Point(841, 41);
+            this.btnCheckOut.Location = new System.Drawing.Point(841, 47);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(140, 54);
             this.btnCheckOut.TabIndex = 21;
@@ -190,7 +183,7 @@ namespace CatCha
             this.tableLayoutPanel1.Controls.Add(this.linkLabel1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(523, 56);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(523, 62);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -238,97 +231,14 @@ namespace CatCha
             this.label9.Text = "Copyright © 2020 All rights reserved";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // toolStripButton1
+            // userToolStrip1
             // 
-            this.toolStripButton1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Margin = new System.Windows.Forms.Padding(10, 1, 40, 2);
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(110, 36);
-            this.toolStripButton1.Text = "商城首頁";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Margin = new System.Windows.Forms.Padding(0, 1, 40, 2);
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(110, 36);
-            this.toolStripButton2.Text = "遊戲首頁";
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Margin = new System.Windows.Forms.Padding(0, 1, 40, 2);
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(94, 36);
-            this.toolStripButton3.Text = "部落格";
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Margin = new System.Windows.Forms.Padding(10, 1, 40, 2);
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(110, 36);
-            this.toolStripButton4.Text = "客服中心";
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Margin = new System.Windows.Forms.Padding(0, 1, 40, 2);
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(110, 36);
-            this.toolStripButton7.Text = "會員中心";
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton6.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Margin = new System.Windows.Forms.Padding(0, 1, 40, 2);
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(94, 36);
-            this.toolStripButton6.Text = "購物車";
-            this.toolStripButton6.Click += new System.EventHandler(this.toolStripBtnGoCart_Click);
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Margin = new System.Windows.Forms.Padding(0, 1, 40, 2);
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(110, 36);
-            this.toolStripButton5.Text = "收藏清單";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4,
-            this.toolStripButton7,
-            this.toolStripButton6,
-            this.toolStripButton5});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1608, 39);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.userToolStrip1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.userToolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.userToolStrip1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.userToolStrip1.Name = "userToolStrip1";
+            this.userToolStrip1.Size = new System.Drawing.Size(1608, 39);
+            this.userToolStrip1.TabIndex = 20;
             // 
             // Frm_Cart
             // 
@@ -337,12 +247,12 @@ namespace CatCha
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1608, 1055);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Frm_Cart";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Frm_Cart_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -354,10 +264,7 @@ namespace CatCha
             this.splitContainer2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -368,14 +275,6 @@ namespace CatCha
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelProducts;
         private System.Windows.Forms.Label label1;
@@ -384,6 +283,7 @@ namespace CatCha
         private System.Windows.Forms.Label labBonus;
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Label labTotalAmount;
+        private UserToolStrip userToolStrip1;
     }
 }
 
