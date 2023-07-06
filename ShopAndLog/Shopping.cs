@@ -26,6 +26,7 @@ namespace CatChaForms
         private void Shopping_Load(object sender, EventArgs e)
         {
             splitContainer1.BackColor = Color.FromArgb(228, 187, 151);
+            splitContainer2.BackColor = Color.FromArgb(254, 245, 239);
 
             ComboBoxSort.SelectedIndex = 0;
 
@@ -78,6 +79,7 @@ namespace CatChaForms
                          Product_ID = pt.Product_ID,
                          Product_Name = pt.Product_Name,
                          Product_Price = pt.Product_Price,
+                         Release_Date = pt.Release_Date,
                      };
 
             var matchedProducts = qq.ToList();

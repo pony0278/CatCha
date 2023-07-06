@@ -30,6 +30,11 @@ namespace catcha
             button3.FlatStyle = FlatStyle.Flat;
             button3.FlatAppearance.BorderSize = 0;
             defaultBackColor = button3.BackColor; // 保存原始的背景色
+
+            AddToCart.BackColor = System.Drawing.Color.FromArgb(228, 187, 151);
+            AddToCart.FlatStyle = FlatStyle.Flat;
+            AddToCart.FlatAppearance.BorderColor = Color.White;
+            AddToCart.FlatAppearance.BorderSize = 1;
         }
 
         public string NameLabelText

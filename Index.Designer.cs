@@ -38,6 +38,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::CatCaha.Properties.Resources.blue_paw_removebgw;
             this.pictureBox1.Location = new System.Drawing.Point(411, 233);
             this.pictureBox1.Name = "pictureBox1";
@@ -51,6 +52,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::CatCaha.Properties.Resources.pink_paw1_removebg1;
             this.pictureBox2.Location = new System.Drawing.Point(65, 211);
             this.pictureBox2.Name = "pictureBox2";

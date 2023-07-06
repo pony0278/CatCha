@@ -75,13 +75,16 @@ namespace catcha
             // 
             // AddToCart
             // 
+            this.AddToCart.BackColor = System.Drawing.SystemColors.Control;
             this.AddToCart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddToCart.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.AddToCart.ForeColor = System.Drawing.Color.Black;
             this.AddToCart.Location = new System.Drawing.Point(186, 264);
             this.AddToCart.Name = "AddToCart";
             this.AddToCart.Size = new System.Drawing.Size(142, 36);
             this.AddToCart.TabIndex = 4;
             this.AddToCart.Text = "加入購物車";
-            this.AddToCart.UseVisualStyleBackColor = true;
+            this.AddToCart.UseVisualStyleBackColor = false;
             this.AddToCart.Click += new System.EventHandler(this.AddToCart_Click);
             // 
             // button3
